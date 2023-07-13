@@ -11,4 +11,4 @@
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=en
 - https://streamlit.io/generative-ai
 
-https://melaniewalsh.github.io/Intro-Cultural-Analytics/07-Mapping/03-Publish-Your-Map.html
+- https://melaniewalsh.github.io/Intro-Cultural-Analytics/07-Mapping/03-Publish-Your-Map.html
