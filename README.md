@@ -5,6 +5,7 @@
 - http://o2tree.carrd.co
 - http://o2tree.github.io/KTHSumberBahari.html
 - http://o2tree.github.io/lahanrumah3.html
+- http://o2tree.github.io/penyubiru.html
 
 - https://github.com/o2tree/o2tree.github.io/tree/main
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
