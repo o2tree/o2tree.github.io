@@ -4,7 +4,7 @@
 - http://tr.ee/UG_IGJ3t3a
 - http://o2tree.carrd.co
 - http://o2tree.github.io/KTHSumberBahari.html
-- htto://o2tree.github.io/tanjungkampeh.html
+- http://o2tree.github.io/tanjungkampeh.html
 
 - http://o2tree.github.io/kth/data/peta_usulan_sumber_bahari.pdf
 - http://o2tree.github.io/lahanrumah3.html
