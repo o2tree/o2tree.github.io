@@ -1,0 +1,3268 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    -2.6029792,
+                    51.4584172
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Campus",
+                "name": "University of Bristol"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -2.5939674,
+                    51.4567143
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Residence",
+                "name": "New Bridewell - Student Accommodation Bristol"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -2.5909599,
+                    51.4556688
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Aylward House",
+                "name": "Aylward House"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -2.6011225,
+                    51.4618507
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "High Kingsdown",
+                "name": "High Kingsdown"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -2.60297,
+                    51.45841
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "center point",
+                "name": "center point"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -9.1393366,
+                    38.7222524
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Lisbon",
+                "name": "Lisbon"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -9.1353092,
+                    38.7247464
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Lisbon City Hotel by City Hotels",
+                "name": "Lisbon City Hotel by City Hotels"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -9.1319758,
+                    38.7788454
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Humberto Delgado Airport",
+                "name": "Humberto Delgado Airport"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -9.2083542,
+                    38.6955029
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Centro Cultural de Belém",
+                "name": "Centro Cultural de Belém"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -8.6773663,
+                    39.6319764
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Wax Museum of Fátima",
+                "name": "Wax Museum of Fátima"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.2891552,
+                    40.8846816
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Naples International Airport",
+                "name": "Naples International Airport"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.4820836,
+                    40.7482705
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Pompeii (UNESCO)",
+                "name": "Pompeii (UNESCO)"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.3764167,
+                    40.6263969
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Sorrento",
+                "name": "Sorrento"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.6028963,
+                    40.6333389
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Amalfi Coast",
+                "name": "Amalfi Coast"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.2593205,
+                    40.8525429
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Cathedral of Santa Maria Assunta",
+                "name": "Cathedral of Santa Maria Assunta"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.2519211,
+                    41.8034632
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Leonardo da Vinci International Airport",
+                "name": "Leonardo da Vinci International Airport"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.2516675,
+                    41.7936718
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Fiumicino Aeroporto",
+                "name": "Fiumicino Aeroporto"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.2723254,
+                    40.8530135
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Napoli Centrale",
+                "name": "Napoli Centrale"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4822025,
+                    41.8967068
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Rome",
+                "name": "Rome"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.5390668,
+                    41.9481802
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Madre Serafina Suore Degli Angeli",
+                "name": "Madre Serafina Suore Degli Angeli"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4567121,
+                    41.9083636
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Laundry Onda srl",
+                "name": "Laundry Onda srl"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.5015756,
+                    41.9012873
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Roma Termini",
+                "name": "Roma Termini"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.5024239,
+                    41.9007927
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Roma Termini",
+                "name": "Roma Termini"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4536413,
+                    41.9064878
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Vatican Museums",
+                "name": "Vatican Museums"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4544835,
+                    41.9029468
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Sistine Chapel",
+                "name": "Sistine Chapel"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.8021341,
+                    41.9597095
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Tivoli",
+                "name": "Tivoli"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4883964,
+                    41.8888346
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Church of San Bonaventura al Palatino",
+                "name": "Church of San Bonaventura al Palatino"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.617478,
+                    43.0705746
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Cathedral of San Rufino",
+                "name": "Cathedral of San Rufino"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4761771,
+                    41.858785
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Basilica of Saint Paul Outside The Walls",
+                "name": "Basilica of Saint Paul Outside The Walls"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.3324601,
+                    45.4252894
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Church of the Most Holy Redeemer",
+                "name": "Church of the Most Holy Redeemer"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.1724514,
+                    45.4756927
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Arco della Pace",
+                "name": "Arco della Pace"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    7.6868565,
+                    45.070312
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Turin",
+                "name": "Turin"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    11.2576706,
+                    43.7699685
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Florence",
+                "name": "Florence"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    11.2466917,
+                    43.7806396
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "florence train station",
+                "name": "florence train station"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    8.9347381,
+                    44.4071448
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Genoa",
+                "name": "Genoa"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.3984836,
+                    43.7084291
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Pisa Centrale",
+                "name": "Pisa Centrale"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.1873705,
+                    45.4844476
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Milano Porta Garibaldi",
+                "name": "Milano Porta Garibaldi"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.2055087,
+                    45.4876184
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Milano Centrale Railway Station",
+                "name": "Milano Centrale Railway Station"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.2367834,
+                    45.4847545
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Milano Lambrate",
+                "name": "Milano Lambrate"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.2319379,
+                    45.482465
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Venice Mestre",
+                "name": "Venice Mestre"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.3466295,
+                    45.5046844
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Venice Marco Polo Airport",
+                "name": "Venice Marco Polo Airport"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4984084,
+                    41.8975986
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Papal Basilica of Saint Mary Major",
+                "name": "Papal Basilica of Saint Mary Major"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    11.2479159,
+                    43.7766715
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Firenze Santa Maria Novella",
+                "name": "Firenze Santa Maria Novella"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    11.9854545,
+                    43.2750249
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Cortona",
+                "name": "Cortona"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    11.2559602,
+                    43.773145
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Cathedral of Santa Maria del Fiore",
+                "name": "Cathedral of Santa Maria del Fiore"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4539367,
+                    41.9021667
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "St. Peter's Basilica",
+                "name": "St. Peter's Basilica"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.505673,
+                    41.8858811
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Basilica of San Giovanni in Laterano",
+                "name": "Basilica of San Giovanni in Laterano"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.3959106,
+                    43.7233518
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Cattedrale di Pisa",
+                "name": "Cattedrale di Pisa"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.3984836,
+                    43.7084291
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Pisa Centrale",
+                "name": "Pisa Centrale"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.396597,
+                    43.722952
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Tower of Pisa",
+                "name": "Tower of Pisa"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.3403894,
+                    45.4337035
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Doge's Palace",
+                "name": "Doge's Palace"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.3210436,
+                    45.4410697
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Stazione di Venezia Santa Lucia",
+                "name": "Stazione di Venezia Santa Lucia"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    8.71129,
+                    45.62714
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Malpensa Aeroporto T1",
+                "name": "Malpensa Aeroporto T1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.3397125,
+                    45.4345606
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Saint Mark's Basilica",
+                "name": "Saint Mark's Basilica"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.3337015,
+                    45.4396774
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Rialto Market",
+                "name": "Rialto Market"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.3523452,
+                    45.4589863
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Murano",
+                "name": "Murano"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    8.7282345,
+                    45.6227139
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Milano Malpensa Airport",
+                "name": "Milano Malpensa Airport"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.7958058,
+                    41.9633123
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Villa d'Este",
+                "name": "Villa d'Este"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4704017,
+                    41.8848294
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Trastevere",
+                "name": "Trastevere"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.1874068,
+                    45.4712356
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Brera",
+                "name": "Brera"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.469825,
+                    41.8903358
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "WASH&DRY",
+                "name": "WASH&DRY"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4737576,
+                    41.9022721
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Laundromat in Rome Alvin Star",
+                "name": "Laundromat in Rome Alvin Star"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.9807003,
+                    43.5671153
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Tuscany",
+                "name": "Tuscany"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.6438793,
+                    44.1460939
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Cinque Terre",
+                "name": "Cinque Terre"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.2571676,
+                    46.0160486
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Lake Como",
+                "name": "Lake Como"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    13.6492617,
+                    47.5622342
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Hallstatt",
+                "name": "Hallstatt"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.649021,
+                    44.1457395
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Monterosso",
+                "name": "Monterosso"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.7123907,
+                    44.128109
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Parco Nazionale delle Cinque Terre",
+                "name": "Parco Nazionale delle Cinque Terre"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.998664,
+                    45.4496535
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Casa di Giulietta,Verona",
+                "name": "Casa di Giulietta,Verona"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.6084144,
+                    45.5017717
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Sirmione,Lake Garda",
+                "name": "Sirmione,Lake Garda"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.354893,
+                    40.808853
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Ercolano Scavi - Herculeum",
+                "name": "Ercolano Scavi - Herculeum"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    14.48125,
+                    40.748623
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Pompei Scavi Villa Dei Misteri",
+                "name": "Pompei Scavi Villa Dei Misteri"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.6144422,
+                    43.0702289
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Centro Amici di Carlo Acutis",
+                "name": "Centro Amici di Carlo Acutis"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.6142764,
+                    43.069638
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Chiesa di Santa Maria Maggiore / Santuario della Spogliazione",
+                "name": "Chiesa di Santa Maria Maggiore / Santuario della Spogliazione"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.5853458,
+                    43.0590721
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Assisi",
+                "name": "Assisi"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.8134318,
+                    44.1113532
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "La Spezia Centrale",
+                "name": "La Spezia Centrale"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.684806,
+                    44.134968
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Vernazza",
+                "name": "Vernazza"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.3941853,
+                    44.2706042
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Sestri Levante • centro storico",
+                "name": "Sestri Levante • centro storico"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.397546,
+                    44.276169
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Sestri Levante",
+                "name": "Sestri Levante"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.7293507,
+                    44.104779
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Manarola",
+                "name": "Manarola"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.7155819,
+                    44.1186723
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Corniglia",
+                "name": "Corniglia"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.1107446,
+                    42.7185068
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Orvieto",
+                "name": "Orvieto"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -0.455051,
+                    51.4679914
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Heathrow Airport",
+                "name": "Heathrow Airport"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -0.144895,
+                    51.498664
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "2km radius Buckinham palace",
+                "name": "2km radius Buckinham palace"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    7.2619532,
+                    43.7101728
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Nice",
+                "name": "Nice"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.822638,
+                    45.7622698
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Basilica of Notre Dame of Fourvière",
+                "name": "Basilica of Notre Dame of Fourvière"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    2.2944813,
+                    48.8583701
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Eiffel Tower",
+                "name": "Eiffel Tower"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4980675,
+                    41.899437
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Termini Station Rooms",
+                "name": "Termini Station Rooms"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    6.1431577,
+                    46.2043907
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Geneva",
+                "name": "Geneva"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    7.685478,
+                    45.0710722
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Palazzo Madama",
+                "name": "Palazzo Madama"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    2.3499021,
+                    48.8529682
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Notre-Dame Cathedral of Paris",
+                "name": "Notre-Dame Cathedral of Paris"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    3.1515764,
+                    46.9922946
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Couvent de Saint-Gildard",
+                "name": "Couvent de Saint-Gildard"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    3.1524854,
+                    46.9917377
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Bernadette Soubirous Nevers",
+                "name": "Bernadette Soubirous Nevers"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    5.9760578,
+                    44.8586296
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Shrine of Our Lady of La Salette",
+                "name": "Shrine of Our Lady of La Salette"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -0.0582921,
+                    43.097419
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Sanctuary of Our Lady of Lourdes",
+                "name": "Sanctuary of Our Lady of Lourdes"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    15.7291361,
+                    41.7066155
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "San Giovanni Rotondo",
+                "name": "San Giovanni Rotondo"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -3.7044495,
+                    42.340864
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Burgos Cathedral",
+                "name": "Burgos Cathedral"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    2.0800095,
+                    41.2983405
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "description": "Josep Tarradellas Barcelona-El Prat Airport",
+                "name": "Josep Tarradellas Barcelona-El Prat Airport"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -2.588582,
+                        51.458409
+                    ],
+                    [
+                        -2.588743,
+                        51.459749
+                    ],
+                    [
+                        -2.589221,
+                        51.461059
+                    ],
+                    [
+                        -2.590006,
+                        51.462309
+                    ],
+                    [
+                        -2.591081,
+                        51.463473
+                    ],
+                    [
+                        -2.592422,
+                        51.464523
+                    ],
+                    [
+                        -2.593998,
+                        51.465437
+                    ],
+                    [
+                        -2.595775,
+                        51.466194
+                    ],
+                    [
+                        -2.597713,
+                        51.466777
+                    ],
+                    [
+                        -2.599768,
+                        51.467173
+                    ],
+                    [
+                        -2.601895,
+                        51.467373
+                    ],
+                    [
+                        -2.604045,
+                        51.467373
+                    ],
+                    [
+                        -2.606172,
+                        51.467173
+                    ],
+                    [
+                        -2.608227,
+                        51.466777
+                    ],
+                    [
+                        -2.610165,
+                        51.466194
+                    ],
+                    [
+                        -2.611942,
+                        51.465437
+                    ],
+                    [
+                        -2.613518,
+                        51.464523
+                    ],
+                    [
+                        -2.614859,
+                        51.463473
+                    ],
+                    [
+                        -2.615934,
+                        51.462309
+                    ],
+                    [
+                        -2.616719,
+                        51.461059
+                    ],
+                    [
+                        -2.617197,
+                        51.459749
+                    ],
+                    [
+                        -2.617358,
+                        51.458409
+                    ],
+                    [
+                        -2.617197,
+                        51.45707
+                    ],
+                    [
+                        -2.616718,
+                        51.45576
+                    ],
+                    [
+                        -2.615932,
+                        51.454509
+                    ],
+                    [
+                        -2.614856,
+                        51.453346
+                    ],
+                    [
+                        -2.613516,
+                        51.452296
+                    ],
+                    [
+                        -2.611939,
+                        51.451382
+                    ],
+                    [
+                        -2.610163,
+                        51.450626
+                    ],
+                    [
+                        -2.608225,
+                        51.450043
+                    ],
+                    [
+                        -2.606171,
+                        51.449647
+                    ],
+                    [
+                        -2.604045,
+                        51.449447
+                    ],
+                    [
+                        -2.601895,
+                        51.449447
+                    ],
+                    [
+                        -2.599769,
+                        51.449647
+                    ],
+                    [
+                        -2.597715,
+                        51.450043
+                    ],
+                    [
+                        -2.595777,
+                        51.450626
+                    ],
+                    [
+                        -2.594001,
+                        51.451382
+                    ],
+                    [
+                        -2.592424,
+                        51.452296
+                    ],
+                    [
+                        -2.591084,
+                        51.453346
+                    ],
+                    [
+                        -2.590008,
+                        51.454509
+                    ],
+                    [
+                        -2.589222,
+                        51.45576
+                    ],
+                    [
+                        -2.588743,
+                        51.45707
+                    ],
+                    [
+                        -2.588582,
+                        51.458409
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Circle-1km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -2.574195,
+                        51.458406
+                    ],
+                    [
+                        -2.574514,
+                        51.461086
+                    ],
+                    [
+                        -2.57547,
+                        51.463705
+                    ],
+                    [
+                        -2.57704,
+                        51.466207
+                    ],
+                    [
+                        -2.579189,
+                        51.468534
+                    ],
+                    [
+                        -2.58187,
+                        51.470635
+                    ],
+                    [
+                        -2.585023,
+                        51.472463
+                    ],
+                    [
+                        -2.588577,
+                        51.473977
+                    ],
+                    [
+                        -2.592453,
+                        51.475143
+                    ],
+                    [
+                        -2.596564,
+                        51.475935
+                    ],
+                    [
+                        -2.600819,
+                        51.476336
+                    ],
+                    [
+                        -2.605121,
+                        51.476336
+                    ],
+                    [
+                        -2.609376,
+                        51.475935
+                    ],
+                    [
+                        -2.613487,
+                        51.475143
+                    ],
+                    [
+                        -2.617363,
+                        51.473977
+                    ],
+                    [
+                        -2.620917,
+                        51.472463
+                    ],
+                    [
+                        -2.62407,
+                        51.470635
+                    ],
+                    [
+                        -2.626751,
+                        51.468534
+                    ],
+                    [
+                        -2.6289,
+                        51.466207
+                    ],
+                    [
+                        -2.63047,
+                        51.463705
+                    ],
+                    [
+                        -2.631426,
+                        51.461086
+                    ],
+                    [
+                        -2.631745,
+                        51.458406
+                    ],
+                    [
+                        -2.631422,
+                        51.455727
+                    ],
+                    [
+                        -2.630464,
+                        51.453108
+                    ],
+                    [
+                        -2.628891,
+                        51.450607
+                    ],
+                    [
+                        -2.62674,
+                        51.448281
+                    ],
+                    [
+                        -2.624058,
+                        51.446181
+                    ],
+                    [
+                        -2.620906,
+                        51.444354
+                    ],
+                    [
+                        -2.617353,
+                        51.442841
+                    ],
+                    [
+                        -2.613479,
+                        51.441676
+                    ],
+                    [
+                        -2.609371,
+                        51.440884
+                    ],
+                    [
+                        -2.60512,
+                        51.440484
+                    ],
+                    [
+                        -2.60082,
+                        51.440484
+                    ],
+                    [
+                        -2.596569,
+                        51.440884
+                    ],
+                    [
+                        -2.592461,
+                        51.441676
+                    ],
+                    [
+                        -2.588587,
+                        51.442841
+                    ],
+                    [
+                        -2.585034,
+                        51.444354
+                    ],
+                    [
+                        -2.581882,
+                        51.446181
+                    ],
+                    [
+                        -2.5792,
+                        51.448281
+                    ],
+                    [
+                        -2.577049,
+                        51.450607
+                    ],
+                    [
+                        -2.575476,
+                        51.453108
+                    ],
+                    [
+                        -2.574518,
+                        51.455727
+                    ],
+                    [
+                        -2.574195,
+                        51.458406
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Circle-2km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -2.531031,
+                        51.458388
+                    ],
+                    [
+                        -2.531825,
+                        51.465087
+                    ],
+                    [
+                        -2.534208,
+                        51.471636
+                    ],
+                    [
+                        -2.538128,
+                        51.477891
+                    ],
+                    [
+                        -2.543499,
+                        51.483711
+                    ],
+                    [
+                        -2.5502,
+                        51.488966
+                    ],
+                    [
+                        -2.558083,
+                        51.493538
+                    ],
+                    [
+                        -2.56697,
+                        51.497324
+                    ],
+                    [
+                        -2.576664,
+                        51.500241
+                    ],
+                    [
+                        -2.586947,
+                        51.502223
+                    ],
+                    [
+                        -2.597589,
+                        51.503225
+                    ],
+                    [
+                        -2.608351,
+                        51.503225
+                    ],
+                    [
+                        -2.618993,
+                        51.502223
+                    ],
+                    [
+                        -2.629276,
+                        51.500241
+                    ],
+                    [
+                        -2.63897,
+                        51.497324
+                    ],
+                    [
+                        -2.647857,
+                        51.493538
+                    ],
+                    [
+                        -2.65574,
+                        51.488966
+                    ],
+                    [
+                        -2.662441,
+                        51.483711
+                    ],
+                    [
+                        -2.667812,
+                        51.477891
+                    ],
+                    [
+                        -2.671732,
+                        51.471636
+                    ],
+                    [
+                        -2.674115,
+                        51.465087
+                    ],
+                    [
+                        -2.674909,
+                        51.458388
+                    ],
+                    [
+                        -2.674095,
+                        51.45169
+                    ],
+                    [
+                        -2.671693,
+                        51.445143
+                    ],
+                    [
+                        -2.667757,
+                        51.438893
+                    ],
+                    [
+                        -2.662376,
+                        51.433079
+                    ],
+                    [
+                        -2.65567,
+                        51.42783
+                    ],
+                    [
+                        -2.647789,
+                        51.423265
+                    ],
+                    [
+                        -2.638909,
+                        51.419484
+                    ],
+                    [
+                        -2.629228,
+                        51.416573
+                    ],
+                    [
+                        -2.618963,
+                        51.414595
+                    ],
+                    [
+                        -2.608341,
+                        51.413594
+                    ],
+                    [
+                        -2.597599,
+                        51.413594
+                    ],
+                    [
+                        -2.586977,
+                        51.414595
+                    ],
+                    [
+                        -2.576712,
+                        51.416573
+                    ],
+                    [
+                        -2.567031,
+                        51.419484
+                    ],
+                    [
+                        -2.558151,
+                        51.423265
+                    ],
+                    [
+                        -2.55027,
+                        51.42783
+                    ],
+                    [
+                        -2.543564,
+                        51.433079
+                    ],
+                    [
+                        -2.538183,
+                        51.438893
+                    ],
+                    [
+                        -2.534247,
+                        51.445143
+                    ],
+                    [
+                        -2.531845,
+                        51.45169
+                    ],
+                    [
+                        -2.531031,
+                        51.458388
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Circle-5km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -2.459093,
+                        51.458322
+                    ],
+                    [
+                        -2.460658,
+                        51.47172
+                    ],
+                    [
+                        -2.465405,
+                        51.484822
+                    ],
+                    [
+                        -2.473231,
+                        51.497336
+                    ],
+                    [
+                        -2.483962,
+                        51.508982
+                    ],
+                    [
+                        -2.49736,
+                        51.519497
+                    ],
+                    [
+                        -2.513126,
+                        51.528648
+                    ],
+                    [
+                        -2.530909,
+                        51.536227
+                    ],
+                    [
+                        -2.550309,
+                        51.542066
+                    ],
+                    [
+                        -2.570893,
+                        51.546033
+                    ],
+                    [
+                        -2.592197,
+                        51.548039
+                    ],
+                    [
+                        -2.613743,
+                        51.548039
+                    ],
+                    [
+                        -2.635047,
+                        51.546033
+                    ],
+                    [
+                        -2.655631,
+                        51.542066
+                    ],
+                    [
+                        -2.675031,
+                        51.536227
+                    ],
+                    [
+                        -2.692814,
+                        51.528648
+                    ],
+                    [
+                        -2.70858,
+                        51.519497
+                    ],
+                    [
+                        -2.721978,
+                        51.508982
+                    ],
+                    [
+                        -2.732709,
+                        51.497336
+                    ],
+                    [
+                        -2.740535,
+                        51.484822
+                    ],
+                    [
+                        -2.745282,
+                        51.47172
+                    ],
+                    [
+                        -2.746847,
+                        51.458322
+                    ],
+                    [
+                        -2.745198,
+                        51.444928
+                    ],
+                    [
+                        -2.740375,
+                        51.431836
+                    ],
+                    [
+                        -2.732488,
+                        51.41934
+                    ],
+                    [
+                        -2.721715,
+                        51.407717
+                    ],
+                    [
+                        -2.708299,
+                        51.397227
+                    ],
+                    [
+                        -2.692538,
+                        51.388103
+                    ],
+                    [
+                        -2.674786,
+                        51.380547
+                    ],
+                    [
+                        -2.655438,
+                        51.374729
+                    ],
+                    [
+                        -2.634925,
+                        51.370777
+                    ],
+                    [
+                        -2.613701,
+                        51.368778
+                    ],
+                    [
+                        -2.592239,
+                        51.368778
+                    ],
+                    [
+                        -2.571015,
+                        51.370777
+                    ],
+                    [
+                        -2.550502,
+                        51.374729
+                    ],
+                    [
+                        -2.531154,
+                        51.380547
+                    ],
+                    [
+                        -2.513402,
+                        51.388103
+                    ],
+                    [
+                        -2.497641,
+                        51.397227
+                    ],
+                    [
+                        -2.484225,
+                        51.407717
+                    ],
+                    [
+                        -2.473452,
+                        51.41934
+                    ],
+                    [
+                        -2.465565,
+                        51.431836
+                    ],
+                    [
+                        -2.460742,
+                        51.444928
+                    ],
+                    [
+                        -2.459093,
+                        51.458322
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Circle-10km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        12.490084,
+                        41.902154
+                    ],
+                    [
+                        12.489683,
+                        41.90618
+                    ],
+                    [
+                        12.488482,
+                        41.910116
+                    ],
+                    [
+                        12.48651,
+                        41.913874
+                    ],
+                    [
+                        12.483809,
+                        41.917371
+                    ],
+                    [
+                        12.480441,
+                        41.920528
+                    ],
+                    [
+                        12.476479,
+                        41.923275
+                    ],
+                    [
+                        12.472014,
+                        41.92555
+                    ],
+                    [
+                        12.467144,
+                        41.927302
+                    ],
+                    [
+                        12.461978,
+                        41.928492
+                    ],
+                    [
+                        12.456633,
+                        41.929094
+                    ],
+                    [
+                        12.451227,
+                        41.929094
+                    ],
+                    [
+                        12.445882,
+                        41.928492
+                    ],
+                    [
+                        12.440716,
+                        41.927302
+                    ],
+                    [
+                        12.435846,
+                        41.92555
+                    ],
+                    [
+                        12.431381,
+                        41.923275
+                    ],
+                    [
+                        12.427419,
+                        41.920528
+                    ],
+                    [
+                        12.424051,
+                        41.917371
+                    ],
+                    [
+                        12.42135,
+                        41.913874
+                    ],
+                    [
+                        12.419378,
+                        41.910116
+                    ],
+                    [
+                        12.418177,
+                        41.90618
+                    ],
+                    [
+                        12.417776,
+                        41.902154
+                    ],
+                    [
+                        12.418182,
+                        41.898129
+                    ],
+                    [
+                        12.419386,
+                        41.894194
+                    ],
+                    [
+                        12.421362,
+                        41.890436
+                    ],
+                    [
+                        12.424065,
+                        41.886941
+                    ],
+                    [
+                        12.427435,
+                        41.883786
+                    ],
+                    [
+                        12.431396,
+                        41.881041
+                    ],
+                    [
+                        12.435859,
+                        41.878767
+                    ],
+                    [
+                        12.440727,
+                        41.877017
+                    ],
+                    [
+                        12.445888,
+                        41.875827
+                    ],
+                    [
+                        12.451229,
+                        41.875226
+                    ],
+                    [
+                        12.456631,
+                        41.875226
+                    ],
+                    [
+                        12.461972,
+                        41.875827
+                    ],
+                    [
+                        12.467133,
+                        41.877017
+                    ],
+                    [
+                        12.472001,
+                        41.878767
+                    ],
+                    [
+                        12.476464,
+                        41.881041
+                    ],
+                    [
+                        12.480425,
+                        41.883786
+                    ],
+                    [
+                        12.483795,
+                        41.886941
+                    ],
+                    [
+                        12.486498,
+                        41.890436
+                    ],
+                    [
+                        12.488474,
+                        41.894194
+                    ],
+                    [
+                        12.489678,
+                        41.898129
+                    ],
+                    [
+                        12.490084,
+                        41.902154
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "vatican 3km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        11.285174,
+                        43.776664
+                    ],
+                    [
+                        11.28476,
+                        43.780688
+                    ],
+                    [
+                        11.283523,
+                        43.784623
+                    ],
+                    [
+                        11.28149,
+                        43.78838
+                    ],
+                    [
+                        11.278707,
+                        43.791876
+                    ],
+                    [
+                        11.275235,
+                        43.795032
+                    ],
+                    [
+                        11.271152,
+                        43.797778
+                    ],
+                    [
+                        11.266549,
+                        43.800052
+                    ],
+                    [
+                        11.26153,
+                        43.801803
+                    ],
+                    [
+                        11.256206,
+                        43.802993
+                    ],
+                    [
+                        11.250696,
+                        43.803595
+                    ],
+                    [
+                        11.245124,
+                        43.803595
+                    ],
+                    [
+                        11.239614,
+                        43.802993
+                    ],
+                    [
+                        11.23429,
+                        43.801803
+                    ],
+                    [
+                        11.229271,
+                        43.800052
+                    ],
+                    [
+                        11.224668,
+                        43.797778
+                    ],
+                    [
+                        11.220585,
+                        43.795032
+                    ],
+                    [
+                        11.217113,
+                        43.791876
+                    ],
+                    [
+                        11.21433,
+                        43.78838
+                    ],
+                    [
+                        11.212297,
+                        43.784623
+                    ],
+                    [
+                        11.21106,
+                        43.780688
+                    ],
+                    [
+                        11.210646,
+                        43.776664
+                    ],
+                    [
+                        11.211065,
+                        43.77264
+                    ],
+                    [
+                        11.212306,
+                        43.768706
+                    ],
+                    [
+                        11.214343,
+                        43.76495
+                    ],
+                    [
+                        11.217129,
+                        43.761456
+                    ],
+                    [
+                        11.220602,
+                        43.758302
+                    ],
+                    [
+                        11.224684,
+                        43.755558
+                    ],
+                    [
+                        11.229285,
+                        43.753285
+                    ],
+                    [
+                        11.234302,
+                        43.751535
+                    ],
+                    [
+                        11.239622,
+                        43.750346
+                    ],
+                    [
+                        11.245126,
+                        43.749745
+                    ],
+                    [
+                        11.250694,
+                        43.749745
+                    ],
+                    [
+                        11.256198,
+                        43.750346
+                    ],
+                    [
+                        11.261518,
+                        43.751535
+                    ],
+                    [
+                        11.266535,
+                        43.753285
+                    ],
+                    [
+                        11.271136,
+                        43.755558
+                    ],
+                    [
+                        11.275218,
+                        43.758302
+                    ],
+                    [
+                        11.278691,
+                        43.761456
+                    ],
+                    [
+                        11.281477,
+                        43.76495
+                    ],
+                    [
+                        11.283514,
+                        43.768706
+                    ],
+                    [
+                        11.284755,
+                        43.77264
+                    ],
+                    [
+                        11.285174,
+                        43.776664
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Central_Florence_3km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        12.359384,
+                        45.441054
+                    ],
+                    [
+                        12.358958,
+                        45.445077
+                    ],
+                    [
+                        12.357685,
+                        45.44901
+                    ],
+                    [
+                        12.355594,
+                        45.452767
+                    ],
+                    [
+                        12.35273,
+                        45.456261
+                    ],
+                    [
+                        12.349157,
+                        45.459416
+                    ],
+                    [
+                        12.344956,
+                        45.462161
+                    ],
+                    [
+                        12.34022,
+                        45.464435
+                    ],
+                    [
+                        12.335055,
+                        45.466186
+                    ],
+                    [
+                        12.329576,
+                        45.467376
+                    ],
+                    [
+                        12.323907,
+                        45.467977
+                    ],
+                    [
+                        12.318173,
+                        45.467977
+                    ],
+                    [
+                        12.312504,
+                        45.467376
+                    ],
+                    [
+                        12.307025,
+                        45.466186
+                    ],
+                    [
+                        12.30186,
+                        45.464435
+                    ],
+                    [
+                        12.297124,
+                        45.462161
+                    ],
+                    [
+                        12.292923,
+                        45.459416
+                    ],
+                    [
+                        12.28935,
+                        45.456261
+                    ],
+                    [
+                        12.286486,
+                        45.452767
+                    ],
+                    [
+                        12.284395,
+                        45.44901
+                    ],
+                    [
+                        12.283122,
+                        45.445077
+                    ],
+                    [
+                        12.282696,
+                        45.441054
+                    ],
+                    [
+                        12.283127,
+                        45.437031
+                    ],
+                    [
+                        12.284405,
+                        45.433098
+                    ],
+                    [
+                        12.286501,
+                        45.429343
+                    ],
+                    [
+                        12.289367,
+                        45.42585
+                    ],
+                    [
+                        12.292941,
+                        45.422697
+                    ],
+                    [
+                        12.297142,
+                        45.419954
+                    ],
+                    [
+                        12.301876,
+                        45.417682
+                    ],
+                    [
+                        12.307038,
+                        45.415932
+                    ],
+                    [
+                        12.312512,
+                        45.414744
+                    ],
+                    [
+                        12.318176,
+                        45.414142
+                    ],
+                    [
+                        12.323904,
+                        45.414142
+                    ],
+                    [
+                        12.329568,
+                        45.414744
+                    ],
+                    [
+                        12.335042,
+                        45.415932
+                    ],
+                    [
+                        12.340204,
+                        45.417682
+                    ],
+                    [
+                        12.344938,
+                        45.419954
+                    ],
+                    [
+                        12.349139,
+                        45.422697
+                    ],
+                    [
+                        12.352713,
+                        45.42585
+                    ],
+                    [
+                        12.355579,
+                        45.429343
+                    ],
+                    [
+                        12.357675,
+                        45.433098
+                    ],
+                    [
+                        12.358953,
+                        45.437031
+                    ],
+                    [
+                        12.359384,
+                        45.441054
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Venice_3km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        9.225743,
+                        45.484434
+                    ],
+                    [
+                        9.225317,
+                        45.488457
+                    ],
+                    [
+                        9.224044,
+                        45.49239
+                    ],
+                    [
+                        9.22195,
+                        45.496146
+                    ],
+                    [
+                        9.219084,
+                        45.499641
+                    ],
+                    [
+                        9.215509,
+                        45.502796
+                    ],
+                    [
+                        9.211304,
+                        45.505541
+                    ],
+                    [
+                        9.206565,
+                        45.507815
+                    ],
+                    [
+                        9.201396,
+                        45.509566
+                    ],
+                    [
+                        9.195913,
+                        45.510756
+                    ],
+                    [
+                        9.190239,
+                        45.511357
+                    ],
+                    [
+                        9.184501,
+                        45.511357
+                    ],
+                    [
+                        9.178827,
+                        45.510756
+                    ],
+                    [
+                        9.173344,
+                        45.509566
+                    ],
+                    [
+                        9.168175,
+                        45.507815
+                    ],
+                    [
+                        9.163436,
+                        45.505541
+                    ],
+                    [
+                        9.159231,
+                        45.502796
+                    ],
+                    [
+                        9.155656,
+                        45.499641
+                    ],
+                    [
+                        9.15279,
+                        45.496146
+                    ],
+                    [
+                        9.150696,
+                        45.49239
+                    ],
+                    [
+                        9.149423,
+                        45.488457
+                    ],
+                    [
+                        9.148997,
+                        45.484434
+                    ],
+                    [
+                        9.149428,
+                        45.480411
+                    ],
+                    [
+                        9.150707,
+                        45.476478
+                    ],
+                    [
+                        9.152804,
+                        45.472723
+                    ],
+                    [
+                        9.155673,
+                        45.46923
+                    ],
+                    [
+                        9.15925,
+                        45.466077
+                    ],
+                    [
+                        9.163454,
+                        45.463334
+                    ],
+                    [
+                        9.168191,
+                        45.461062
+                    ],
+                    [
+                        9.173357,
+                        45.459312
+                    ],
+                    [
+                        9.178835,
+                        45.458124
+                    ],
+                    [
+                        9.184504,
+                        45.457523
+                    ],
+                    [
+                        9.190236,
+                        45.457523
+                    ],
+                    [
+                        9.195905,
+                        45.458124
+                    ],
+                    [
+                        9.201383,
+                        45.459312
+                    ],
+                    [
+                        9.206549,
+                        45.461062
+                    ],
+                    [
+                        9.211286,
+                        45.463334
+                    ],
+                    [
+                        9.21549,
+                        45.466077
+                    ],
+                    [
+                        9.219067,
+                        45.46923
+                    ],
+                    [
+                        9.221936,
+                        45.472723
+                    ],
+                    [
+                        9.224033,
+                        45.476478
+                    ],
+                    [
+                        9.225312,
+                        45.480411
+                    ],
+                    [
+                        9.225743,
+                        45.484434
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Milan_3km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        14.294898,
+                        40.852535
+                    ],
+                    [
+                        14.294502,
+                        40.856561
+                    ],
+                    [
+                        14.293321,
+                        40.860498
+                    ],
+                    [
+                        14.29138,
+                        40.864257
+                    ],
+                    [
+                        14.288722,
+                        40.867754
+                    ],
+                    [
+                        14.285408,
+                        40.870912
+                    ],
+                    [
+                        14.281509,
+                        40.873659
+                    ],
+                    [
+                        14.277115,
+                        40.875934
+                    ],
+                    [
+                        14.272323,
+                        40.877686
+                    ],
+                    [
+                        14.26724,
+                        40.878877
+                    ],
+                    [
+                        14.26198,
+                        40.879479
+                    ],
+                    [
+                        14.25666,
+                        40.879479
+                    ],
+                    [
+                        14.2514,
+                        40.878877
+                    ],
+                    [
+                        14.246317,
+                        40.877686
+                    ],
+                    [
+                        14.241525,
+                        40.875934
+                    ],
+                    [
+                        14.237131,
+                        40.873659
+                    ],
+                    [
+                        14.233232,
+                        40.870912
+                    ],
+                    [
+                        14.229918,
+                        40.867754
+                    ],
+                    [
+                        14.22726,
+                        40.864257
+                    ],
+                    [
+                        14.225319,
+                        40.860498
+                    ],
+                    [
+                        14.224138,
+                        40.856561
+                    ],
+                    [
+                        14.223742,
+                        40.852535
+                    ],
+                    [
+                        14.224142,
+                        40.848508
+                    ],
+                    [
+                        14.225327,
+                        40.844572
+                    ],
+                    [
+                        14.227271,
+                        40.840814
+                    ],
+                    [
+                        14.229931,
+                        40.837318
+                    ],
+                    [
+                        14.233247,
+                        40.834162
+                    ],
+                    [
+                        14.237145,
+                        40.831417
+                    ],
+                    [
+                        14.241537,
+                        40.829143
+                    ],
+                    [
+                        14.246327,
+                        40.827392
+                    ],
+                    [
+                        14.251406,
+                        40.826202
+                    ],
+                    [
+                        14.256662,
+                        40.825601
+                    ],
+                    [
+                        14.261978,
+                        40.825601
+                    ],
+                    [
+                        14.267234,
+                        40.826202
+                    ],
+                    [
+                        14.272313,
+                        40.827392
+                    ],
+                    [
+                        14.277103,
+                        40.829143
+                    ],
+                    [
+                        14.281495,
+                        40.831417
+                    ],
+                    [
+                        14.285393,
+                        40.834162
+                    ],
+                    [
+                        14.288709,
+                        40.837318
+                    ],
+                    [
+                        14.291369,
+                        40.840814
+                    ],
+                    [
+                        14.293313,
+                        40.844572
+                    ],
+                    [
+                        14.294498,
+                        40.848508
+                    ],
+                    [
+                        14.294898,
+                        40.852535
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Naples_3km"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        14.2593205,
+                        40.8525429
+                    ],
+                    [
+                        12.4981436,
+                        41.8993165
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Line 64"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        12.4980675,
+                        41.899437
+                    ],
+                    [
+                        12.4312179,
+                        42.0267992
+                    ],
+                    [
+                        11.2466917,
+                        43.7806396
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Line 65"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        9.2055087,
+                        45.4876184
+                    ],
+                    [
+                        11.2478384,
+                        43.7797771
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "Line 5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        -0.116094,
+                        51.49866
+                    ],
+                    [
+                        -0.116414,
+                        51.50134
+                    ],
+                    [
+                        -0.117371,
+                        51.503959
+                    ],
+                    [
+                        -0.118942,
+                        51.506461
+                    ],
+                    [
+                        -0.121094,
+                        51.508788
+                    ],
+                    [
+                        -0.123777,
+                        51.510889
+                    ],
+                    [
+                        -0.126933,
+                        51.512717
+                    ],
+                    [
+                        -0.13049,
+                        51.514231
+                    ],
+                    [
+                        -0.134369,
+                        51.515397
+                    ],
+                    [
+                        -0.138484,
+                        51.516189
+                    ],
+                    [
+                        -0.142742,
+                        51.51659
+                    ],
+                    [
+                        -0.147048,
+                        51.51659
+                    ],
+                    [
+                        -0.151306,
+                        51.516189
+                    ],
+                    [
+                        -0.155421,
+                        51.515397
+                    ],
+                    [
+                        -0.159301,
+                        51.514231
+                    ],
+                    [
+                        -0.162858,
+                        51.512717
+                    ],
+                    [
+                        -0.166013,
+                        51.510889
+                    ],
+                    [
+                        -0.168697,
+                        51.508788
+                    ],
+                    [
+                        -0.170848,
+                        51.506461
+                    ],
+                    [
+                        -0.17242,
+                        51.503959
+                    ],
+                    [
+                        -0.173376,
+                        51.50134
+                    ],
+                    [
+                        -0.173696,
+                        51.49866
+                    ],
+                    [
+                        -0.173373,
+                        51.495981
+                    ],
+                    [
+                        -0.172413,
+                        51.493362
+                    ],
+                    [
+                        -0.170839,
+                        51.490861
+                    ],
+                    [
+                        -0.168686,
+                        51.488535
+                    ],
+                    [
+                        -0.166002,
+                        51.486435
+                    ],
+                    [
+                        -0.162847,
+                        51.484608
+                    ],
+                    [
+                        -0.159291,
+                        51.483095
+                    ],
+                    [
+                        -0.155413,
+                        51.48193
+                    ],
+                    [
+                        -0.151302,
+                        51.481138
+                    ],
+                    [
+                        -0.147047,
+                        51.480738
+                    ],
+                    [
+                        -0.142744,
+                        51.480738
+                    ],
+                    [
+                        -0.138489,
+                        51.481138
+                    ],
+                    [
+                        -0.134377,
+                        51.48193
+                    ],
+                    [
+                        -0.1305,
+                        51.483095
+                    ],
+                    [
+                        -0.126944,
+                        51.484608
+                    ],
+                    [
+                        -0.123788,
+                        51.486435
+                    ],
+                    [
+                        -0.121104,
+                        51.488535
+                    ],
+                    [
+                        -0.118951,
+                        51.490861
+                    ],
+                    [
+                        -0.117377,
+                        51.493362
+                    ],
+                    [
+                        -0.116418,
+                        51.495981
+                    ],
+                    [
+                        -0.116094,
+                        51.49866
+                    ]
+                ],
+                "type": "LineString"
+            },
+            "properties": {
+                "name": "London_2km"
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}
