@@ -1,0 +1,175 @@
+<html lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+                <title>Italy Tours</title>
+                <script id="sap-ui-bootstrap"
+                        src="https://ui5.sap.com/resources/sap-ui-core.js"
+                        data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal" 
+                        data-sap-ui-compat-version="edge"
+                        data-sap-ui-async="true"
+                        data-sap-ui-on-init="module:my/app/main"
+                        data-sap-ui-resource-roots='{"my.app": "./"}'>
+                </script>
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+</style>
+  </head>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <body class="sapUiBody" id="content">
+
+<div class="mermaid">
+      graph RL
+          A:::someclass --> B
+          classDef someclass fill:#f96;
+          linkStyle default fill:none,stroke-width:3px,stroke:red
+	
+          C --> D
+</div>
+
+
+
+ <div class="mermaid">
+	graph LR
+		A[Naples] == 🚄 01:10/(€19.90-26.90) ==> R0((① Termini Rome))
+		A --🚄 Circumvesuviana train 00:20/€4.00--> C(Pompeii Scavi,Pompei) --01:31/€27.00--> R0
+		C --🚄 Circumvesuviana train --> C1(Ercolano Scavi,Herculaneum) -->  |stay| A
+		C1 <--🚐 bus -->  C2(Mount Vesuvius) 
+		R0 <--02:30/(€14.00-20.00)--> H(Assisi)
+		R0 -- 🚄 01:10/€(20.00-25.00)--> F0((① Florence))
+		C--🚄 01:05/€14.00--> S0{Sorrento} -.->A
+    
+
+click A "https://naplespublictransport.it/public-transports-network-in-naples/" "Naples transport"
+click R0 "https://www.rome.info/transport/public-transport/metro/" "Rome Metro"
+click C2 "https://www.rome.info/transport/public-transport/metro/" "This is a tooltip for a link"
+click S0 "https://www.rome.info/transport/public-transport/metro/" "This is a tooltip for a link"
+click H "https://www.rome.info/transport/public-transport/metro/" "This is a tooltip for a link"
+</div>
+
+<pre class="mermaid">
+flowchart TD
+    B["fab:fa-twitter for peace"]
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner)
+    B-->E(A fa:fa-camera-retro perhaps?)
+    F(fas:fa-church) -->  H(fa:fa-church)
+</pre>
+
+<div class="mermaid">
+   graph TD
+      A[(<img src='https://icon-library.com/images/small-icon-png/small-icon-png-6.jpg' width='40', height='40' />)]:::white
+      Coloseum[(<img src="https://media.istockphoto.com/id/1973069325/photo/colosseum-is-one-of-main-travel-attraction-of-rome-in-italy.jpg?s=2048x2048&w=is&k=20&c=0nMm72pot1QNONqUXoGnnNky-swJ97hPzLtoLHgh1bI=" width="40", height="40" />)]
+      StPeter[<img src="https://media.istockphoto.com/id/174878998/photo/a-photo-view-of-st-peters-basilica-at-vatican-city.jpg?s=1024x1024&w=is&k=20&c=tGJQ5tVxeNE3j-DGfwx8FlkINg1Mh_3q8R7Qf4L9i8Y=" width="40", height="40" />]
+      Sixtine[<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/0b/d6/eb/sistine-chapel.jpg?w=900&h=500&s=1" width="40", height="40" /><br>Sixtine Chapel]
+      ClinqueTerre[<img src="https://dynamic-media.tacdn.com/media/photo-o/2f/38/82/23/caption.jpg?w=1400&h=1000&s=1" width="40", height="40" /><br>Clinque Terre] --> C
+      Pisa[<img src="https://d1c96a4wcgziwl.cloudfront.net/4d28fa.jpg" width="40", height="40" /><br>Pisa]
+      Florence[<img src="https://cdn-imgix.headout.com/media/images/c86d583505c79e6653e54f8727c3ebc7-7632-florence-uffizi-gallery-tickets-014.jpg?w=1680&h=1050&crop=faces&auto=compress%2Cformat&fit=min" width="40", height="40" /><br>Florence]
+      Sixtine4[<img src="https://thumbs.dreamstime.com/z/picturesque-amalfi-coast-lemon-orchard-overlooking-mediterranean-sea-340675980.jpg?ct=jpeg" width="40", height="40" /><br>Sorronto Lemon]
+      StCarlosAcuti[<img src="https://thumbs.dreamstime.com/z/picturesque-amalfi-coast-lemon-orchard-overlooking-mediterranean-sea-340675980.jpg?ct=jpeg" width="40", height="40" /><br>St Carlos Acuti - Assisi]
+      Assisi[<img src="https://dynamic-media.tacdn.com/media/photo-o/2f/24/6e/c3/caption.jpg?w=1400&h=1000&s=1" width="40", height="40" /><br>Assisi] --> StCarlosAcuti
+
+      StCarloi[<img src="https://thumbs.dreamstime.com/z/picturesque-amalfi-coast-lemon-orchard-overlooking-mediterranean-sea-340675980.jpg?ct=jpeg" width="40", height="40" /><br> Assisi]
+      StCarAcuti[<img src="https://thumbs.dreamstime.com/z/picturesque-amalfi-coast-lemon-orchard-overlooking-mediterranean-sea-340675980.jpg?ct=jpeg" width="40", height="40" /><br>St Carlos Acuti - Assisi]
+      StlosAcuti[<img src="https://thumbs.dreamstime.com/z/picturesque-amalfi-coast-lemon-orchard-overlooking-mediterranean-sea-340675980.jpg?ct=jpeg" width="40", height="40" /><br>St Carlos Acuti - Assisi]
+
+      C[<img src="https://www.cinqueterre.eu.com/images/stories/images-maps/cinque-terre-map-footpaths.webp" width="40", height="40" />]
+
+click ClinqueTerre "https://www.exquisitecoasts.com/images/Cinque-Terre-Map.jpg" "many beautiful town"
+click C "https://www.cinqueterre.eu.com/en/cinqueterre-maps" "map"
+click StPeter "https://www.trenitalia.com/en.html" "official train"
+click Florence "https://www.introducingflorence.com/map" "Florence map"
+click StCarlosAcuti "https://carloacutis-en.org" "Acuti @ Assisi"
+click Assisi "https://www.viator.com/tours/Assisi/Assisi-the-Three-Major-Basilicas-St-Francis-St-Clare-and-Porziuncola-chapel/d27667-7233P116" "Assisi"
+
+</div>
+
+
+
+<pre class="mermaid">
+graph LR
+ classDef someclass fill:#f96;
+
+ subgraph ROME_to_Florence
+   direction TB
+   R0((① Termini Rome))== 🚄 01:30/(€20.00-25.00)==> F0((① Florence))
+  end
+R0 == 02:30//€17.00 ==>H1 ==Next day 02:30/€17.00==> F0
+F0((① Florence))--01:30/10:00--> LP["`Lucca 
+          Pisa`"]
+F0 == 02:15/(€22.90~27.00)==> M0(① Milan)
+F0 <--02:30/(€13.00~17.00) --> H1(Assisi)
+F0 <--02:15/€22.90--> G("① Cinque Terre fas:fa-lemon")  
+F0 --02:15/(€23.00~30.00) --> V1(Venice)  
+V1 --> M0
+LP -- "00:50/€13.00 fas:fa-train" ---> L1
+S1(Sistri Levante fas:fa-hotel) --02:31/€23.00 ---> M0
+L1(La Spezia fas:fa-hotel) -- "00:40/€10.00 fas:fa-train  or fas:fa-ship check price" --> G:::someClass  --> S1
+
+click G "https://www.cinqueterre.eu.com/en/corniglia" "cinque terre 5 cities"                     
+</pre>
+
+
+
+
+<pre class="mermaid">
+graph LR
+    M1 <--03:15/(€23.00~30.00) --> G1(② Cinque Terre)  
+    M1((② Milan)) <--01:00/€6.00 --> L(Lake Como)    
+    M1 <--01:41/(€13.00~21.00)--> LG0((Lake Garde/Verona))
+    M1 <==.02:30/(€23.00~30.00).==> V0(Venice  Mestre or santa Lucia)
+    LG0 --01:28/€13.00--> V0
+    M1 == 🚄 00:55/€13.00==> M3[/🛫 Malpensa Airport T1/]
+    M1 <-- 🚄🚄 01:15/€14.00--> T0[\Turin/]
+</pre>
+
+<pre>
+Cinque Terre is not very far from Florence, between these five fabulous villages –
+*  Monterosso al Mare,
+*  Vernazza,
+*  Corniglia,
+*  Manarola and
+*  Riomaggiore 
+– and the Cradle of the Renaissance there are only about 170 km! So, if you are visiting Florence and Cinque Terre is on your wish list,
+ you can easily take a day trip and enjoy this breathtaking coastal landscape.
+
+The most comfortable way to get around Cinque Terre is surely by the 5 Terre Express train: this train connects all five villages, burrowing through tunnels along the cliffs. You can buy the 5 Terre Express day pass in La Spezia and make a stop at every village.
+
+Going from Florence to La Spezia
+---
+By train – the journey lasts approximately 2 hours and a half. From La Spezia railway station, take the 5 Terre Express train or go to the seafront in order to take the ferry boat.
+
+<a href="https://www.introducingflorence.com/map/florence-cathedral" > Live Interactive Florence map </a>
+
+</pre>
+    <script type="module">
+      import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
+    </script>
+    <script type="module">
+     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+      mermaid.registerIconPacks([
+        { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
+        { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
+      ]);
+     mermaid.initialize({ startOnLoad: true });
+</script>
+  </body>
+</html>
