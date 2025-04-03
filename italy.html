@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
-   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
   <meta charset="utf-8">
                 <title>Italy Tours</title>
                 <script id="sap-ui-bootstrap"
@@ -44,7 +47,25 @@
           C --> D
 </div>
 
+<div class="mermaid">
+  graph LR
+     A e1@==> B
+     e1@{ animate: true }
+</div>
 
+<div class="mermaid">
+architecture-beta
+    group api(logos:aws-lambda)[API]
+
+    service db(logos:aws-aurora)[Database] in api
+    service disk1(logos:aws-glacier)[Storage] in api
+    service disk2(logos:aws-s3)[Storage] in api
+    service server(logos:aws-ec2)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+</div>
 
  <div class="mermaid">
 	graph LR
@@ -55,30 +76,23 @@
 		R0 <--02:30/(€14.00-20.00)--> H(Assisi)
 		R0 -- 🚄 01:10/€(20.00-25.00)--> F0((① Florence))
 		C--🚄 01:05/€14.00--> S0{Sorrento} -.->A
+                A--"🚄 <img src="https://cdn-goeuro.com/static_content/web/logos/63/trenitaliareg.png"  width="50%" height="50%"  > 01:10/€6.75" --> Al["Vietri sul Mare-Amalfi"]
+                R0 --"fas:fa-train 03:00/€24.00"---> Foggia --"fas:fa-bus 30km"--> Rotondo["San Giovanni<br> Rotondo"]
+
     
 
 click A "https://naplespublictransport.it/public-transports-network-in-naples/" "Naples transport"
 click R0 "https://www.rome.info/transport/public-transport/metro/" "Rome Metro"
 click C2 "https://www.rome.info/transport/public-transport/metro/" "This is a tooltip for a link"
 click S0 "https://www.rome.info/transport/public-transport/metro/" "This is a tooltip for a link"
-click H "https://www.rome.info/transport/public-transport/metro/" "This is a tooltip for a link"
+click H "htts://www.rome.info/transport/public-transport/metro/" "This is a tooltip for a link"
 </div>
-
-<pre class="mermaid">
-flowchart TD
-    B["fab:fa-twitter for peace"]
-    B-->C[fa:fa-ban forbidden]
-    B-->D(fa:fa-spinner)
-    B-->E(A fa:fa-camera-retro perhaps?)
-    F(fas:fa-church) -->  H(fa:fa-church)
-</pre>
 
 <div class="mermaid">
    graph TD
-      A[(<img src='https://icon-library.com/images/small-icon-png/small-icon-png-6.jpg' width='40', height='40' />)]:::white
       Coloseum[(<img src="https://media.istockphoto.com/id/1973069325/photo/colosseum-is-one-of-main-travel-attraction-of-rome-in-italy.jpg?s=2048x2048&w=is&k=20&c=0nMm72pot1QNONqUXoGnnNky-swJ97hPzLtoLHgh1bI=" width="40", height="40" />)]
       StPeter[<img src="https://media.istockphoto.com/id/174878998/photo/a-photo-view-of-st-peters-basilica-at-vatican-city.jpg?s=1024x1024&w=is&k=20&c=tGJQ5tVxeNE3j-DGfwx8FlkINg1Mh_3q8R7Qf4L9i8Y=" width="40", height="40" />]
-      Sixtine[<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/0b/d6/eb/sistine-chapel.jpg?w=900&h=500&s=1" width="40", height="40" /><br>Sixtine Chapel]
+      Sistine[<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/0b/d6/eb/sistine-chapel.jpg?w=900&h=500&s=1" width="40", height="40" /><br>Sistine Chapel]
       ClinqueTerre[<img src="https://dynamic-media.tacdn.com/media/photo-o/2f/38/82/23/caption.jpg?w=1400&h=1000&s=1" width="40", height="40" /><br>Clinque Terre] --> C
       Pisa[<img src="https://d1c96a4wcgziwl.cloudfront.net/4d28fa.jpg" width="40", height="40" /><br>Pisa]
       Florence[<img src="https://cdn-imgix.headout.com/media/images/c86d583505c79e6653e54f8727c3ebc7-7632-florence-uffizi-gallery-tickets-014.jpg?w=1680&h=1050&crop=faces&auto=compress%2Cformat&fit=min" width="40", height="40" /><br>Florence]
@@ -87,10 +101,34 @@ flowchart TD
       Assisi[<img src="https://dynamic-media.tacdn.com/media/photo-o/2f/24/6e/c3/caption.jpg?w=1400&h=1000&s=1" width="40", height="40" /><br>Assisi] --> StCarlosAcuti
 
       StCarloi[<img src="https://thumbs.dreamstime.com/z/picturesque-amalfi-coast-lemon-orchard-overlooking-mediterranean-sea-340675980.jpg?ct=jpeg" width="40", height="40" /><br> Assisi]
-      StCarAcuti[<img src="https://thumbs.dreamstime.com/z/picturesque-amalfi-coast-lemon-orchard-overlooking-mediterranean-sea-340675980.jpg?ct=jpeg" width="40", height="40" /><br>St Carlos Acuti - Assisi]
-      StlosAcuti[<img src="https://thumbs.dreamstime.com/z/picturesque-amalfi-coast-lemon-orchard-overlooking-mediterranean-sea-340675980.jpg?ct=jpeg" width="40", height="40" /><br>St Carlos Acuti - Assisi]
+      VMuseum[<img src="https://cdn.shortpixel.ai/spai/q_lossy+w_726+h_408+to_auto+ret_img/www.rome.info/wp-content/uploads/f-rome-vatican-museum-dome-building.jpg" width="40", height="40" /><br>Vactican Museum]
 
+      LComo[<img src="https://cdn.getyourguide.com/img/tour/27d4c465ca3ec9a7884a5a70dc024978b9482224818456acab98d406d0e61162.jpg/145.jpg" width="40", height="40" /><br>Lake Como]
+
+      Train[<img src="https://cdn-goeuro.com/static_content/web/logos/63/frecciabianca.png" width="40", height="40" /><br>Train]
+     
       C[<img src="https://www.cinqueterre.eu.com/images/stories/images-maps/cinque-terre-map-footpaths.webp" width="40", height="40" />]
+      subgraph rome ["Rome and Vatican"]
+         subgraph vatican["Vatican City"]
+           Sistine
+	   StPeter
+           VMuseum
+         end
+        Coloseum
+      end
+      subgraph florence["florence and day trip"]
+         Assisi
+         Pisa
+         ClinqueTerre
+         Florence
+      end
+      subgraph milan["Milan and Lake Como"];
+         direction TB;
+         LComo
+         Castle["Sforza Castle"]
+         Piazza["Piazza Mercanti"]
+         Cathedral["Milan Cathedral"]
+      end
 
 click ClinqueTerre "https://www.exquisitecoasts.com/images/Cinque-Terre-Map.jpg" "many beautiful town"
 click C "https://www.cinqueterre.eu.com/en/cinqueterre-maps" "map"
@@ -98,7 +136,7 @@ click StPeter "https://www.trenitalia.com/en.html" "official train"
 click Florence "https://www.introducingflorence.com/map" "Florence map"
 click StCarlosAcuti "https://carloacutis-en.org" "Acuti @ Assisi"
 click Assisi "https://www.viator.com/tours/Assisi/Assisi-the-Three-Major-Basilicas-St-Francis-St-Clare-and-Porziuncola-chapel/d27667-7233P116" "Assisi"
-
+click Sistine "https://www.museivaticani.va/content/museivaticani/en/organizza-visita/tariffe-e-biglietti/biglietto-d-ingresso-ridotto.html#lnav_shop" "Sistine Chapel"
 </div>
 
 
@@ -122,6 +160,7 @@ V1 --> M0
 LP -- "00:50/€13.00 fas:fa-train" ---> L1
 S1(Sistri Levante fas:fa-hotel) --02:31/€23.00 ---> M0
 L1(La Spezia fas:fa-hotel) -- "00:40/€10.00 fas:fa-train  or fas:fa-ship check price" --> G:::someClass  --> S1
+L1 -- direct  03:22/€14.50 --> M0
 
 click G "https://www.cinqueterre.eu.com/en/corniglia" "cinque terre 5 cities"                     
 </pre>
@@ -140,11 +179,11 @@ graph LR
     M1 <-- 🚄🚄 01:15/€14.00--> T0[\Turin/]
 </pre>
 
-<pre>
+ <md-block>
 Cinque Terre is not very far from Florence, between these five fabulous villages –
 *  Monterosso al Mare,
-*  Vernazza,
-*  Corniglia,
+*  **Vernazza**,
+*  ~Corniglia~,
 *  Manarola and
 *  Riomaggiore 
 – and the Cradle of the Renaissance there are only about 170 km! So, if you are visiting Florence and Cinque Terre is on your wish list,
@@ -156,12 +195,13 @@ Going from Florence to La Spezia
 ---
 By train – the journey lasts approximately 2 hours and a half. From La Spezia railway station, take the 5 Terre Express train or go to the seafront in order to take the ferry boat.
 
-<a href="https://www.introducingflorence.com/map/florence-cathedral" > Live Interactive Florence map </a>
+[Live Interactive Florence Map](href="https://www.introducingflorence.com/map/florence-cathedral")
 
-</pre>
+</md-block>
     <script type="module">
       import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
     </script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>    
     <script type="module">
      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 
@@ -169,7 +209,10 @@ By train – the journey lasts approximately 2 hours and a half. From La Spezia 
         { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
         { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
       ]);
-     mermaid.initialize({ startOnLoad: true });
+     mermaid.initialize({ startOnLoad: true,
+          securityLevel: 'loose',
+          logLevel: 1
+       });
 </script>
   </body>
 </html>
