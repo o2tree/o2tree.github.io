@@ -1,0 +1,294 @@
+<html lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
+
+    <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
+
+                <title>BBL-Benur Lobster</title>
+                <script id="sap-ui-bootstrap"
+                        src="https://ui5.sap.com/resources/sap-ui-core.js"
+                        data-sap-ui-theme="sap_horizon"
+                        data-sap-ui-libs='sap.ui.documentation, sap.ui.layout, sap.m, sap.uxap, sap.f, sap.tnt, sap.ui.codeeditor, sap.ui.unified'
+                        data-sap-ui-compat-version="edge"
+                        data-sap-ui-async="true"
+                        data-sap-ui-on-init="module:my/app/main"
+                        data-sap-ui-resource-roots='{"my.app": "./"}'>
+                </script>
+		 <script>
+                        sap.ui.getCore().attachInit(function () {
+                        sap.ui.require(["sap/ui/core/mvc/XMLView"], function (XMLView) {
+                        XMLView.create({ viewName: "Quickstart.App" }).then(function (oView) {
+                            oView.placeAt("content");
+                        });
+                       });
+                     });
+                  </script>
+                  <script>
+                  	var oMenu = new sap.m.Menu({
+			title: "random 2",
+			itemSelected: function (oEvent) {
+				var oItem = oEvent.getParameter("item"),
+					sItemPath = "";
+				while (oItem instanceof sap.m.MenuItem) {
+					sItemPath = oItem.getText() + " > " + sItemPath;
+					oItem = oItem.getParent();
+				}
+
+				sItemPath = sItemPath.substr(0, sItemPath.lastIndexOf(" > "));
+
+				sap.m.MessageToast.show("itemSelected: " + sItemPath);
+			},
+			items: [
+				new sap.m.MenuItem({
+					text: "fridge",
+					icon: "sap-icon://fridge",
+					items: [
+						new sap.m.MenuItem({
+							text: "accidental leave",
+							icon: "sap-icon://accidental-leave",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://factory",
+									text: "factory"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flag",
+									text: "flag"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flight",
+									text: "flight"
+								})
+							]
+						}),
+						new sap.m.MenuItem({
+							text: "iphone",
+							icon: "sap-icon://iphone",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://video",
+									text: "video"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://loan",
+									text: "loan"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://commission-check",
+									text: "commission check"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://doctor",
+									text: "doctor"
+								})
+							]
+						})
+					]
+				}),
+				new sap.m.MenuItem({
+					text: "globe",
+					icon: "sap-icon://globe",
+					items: [
+						new sap.m.MenuItem({
+							text: "e-care",
+							icon: "sap-icon://e-care"
+						})
+					]
+				})
+			]
+		});
+
+                  </script>
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+</style>
+  </head>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <body class="sapUiBody" id="content">
+    <h1>Test Page for <code>sap.ui.unified.Calendar</code></h1>
+    <div>Single day Selection Calendar</div>
+    <br>
+     <div>
+	<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div>
+           <div class="mermaid">
+            graph LR
+            %% This is a comment!!!
+            %% Pelabuhan di Batam
+            A[fas:fa-ship Tajuh Biru Mon & Thu<br>Lingga] --> B0[fas:fa-ship 🦞🐟frozen/live<br> Belakang Padang<br>Batam] -- Singapore GST 9.00%-->
+              S0[/"Singapore GST 9.00+ import tax?<br>Jurong fish port(30% import)<br>Singapore"/] --logistic cost + 2.00SGD -->S1[/Closed March 2024<br>Senoko Fishery Port<br>Singapore/]
+            B1[fas:fa-ship 🦞🐟 frozen/live<br> Sagulung daily<br>Batam] --freight charge 18SGD 100cm x 50cm x 50cm \( 50~90 kg\) -->S0
+            J1["fas:fa-ship Jembatan 6<br>Batam"] <---->|Private Boat 00:45, 16.00km?| P["Pulau Petong 🥽"]
+            J6["fas:fa-ship Pel. Kepri Coral<br>Batan"]<-->P
+            J1  --Private --> A
+            TP["fas:fa-ship Tanjung Pinang"] <-- Public --> A
+            Kerapu["Grouper born: ♀<br>Larva Rearing"]  --"size: 8-12cm" --> FC["Floating cage/Keramba tanjab<br>Grading"] --> FC2["floating cage bigger net size or tambak lebih besar"]
+            Seabass["Seabass born: ♂<br> Larva Rearing"] --"size: 8 - 12cm" --> FC
+            style S1 fill:red
+            click A "https://docs.google.com/forms/d/e/1FAIpQLSfVlANgYbnoqzFn5tKd4520MAiF10Sgqg343FKI2oTYmhcP8Q/viewform?usp=sharing" "budiday lobster"
+            click P "https://batamnewsasia.com/2024/11/11/explore-pulau-petong-batams-underwater-paradise-for-tourists/" "Pulau Petong"
+	    click B1 "https://docs.google.com/forms/d/e/1FAIpQLSfVlANgYbnoqzFn5tKd4520MAiF10Sgqg343FKI2oTYmhcP8Q/viewform?usp=sharing" "Pel Sagulung bpk Hamzah"
+            click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
+            click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
+
+
+          </div>
+      </div>
+
+<pre class="mermaid">
+flowchart TD
+    B["fab:fa-twitter for peace"]
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner)
+    B-->E(A fa:fa-camera-rero perhaps?)
+    F(fa:fa-church)
+    T["Tilapia<br> iBEST (all Male) or<br> iEXCEL (Mixed-sex)"]
+    subgraph hatchery["Hatchery Market<br>Depend on Market"]
+       direction LR
+       Eggs["Eggs"] --> Larvae["Post Larvae"] -->Juvinille["Juvinille"]
+    end
+    subgraph growup ["growup Market size"]
+       direction LR
+       Market["different stage of Market"]
+    end
+    T --> hatchery
+    hatchery --> growup
+</pre>
+
+<div class="mermaid">
+flowchart TD
+    A([this should be black with white letters]) --> B([this should be grey with white letters])
+    style A fill: black, color: white
+    style B fill:grey, color:#fff
+</div>
+
+
+
+<div class="mermaid">
+ flowchart LR
+    subgraph subgraph1["Benur Bening Lobster"]
+        direction TB
+        top1["🦞 ≤ 2 gr (≤ 2months) <br> SR 30%~40% <br>Nature <  0.01%"] --> bottom1["🦞 ≥  5gr (2 - 3 months) SR ≥ 70%~80%"]
+    end
+    subgraph subgraph2["Top floating or/and<br>Bottom floating cage(Krankeng)"]
+        direction TB
+        top2[top] --> bottom2[bottom]
+    end
+    subgraph subgraph3["Top floating or/and<br>Bottom floating cage(Krankeng)"]
+        direction TB
+        top3[topx] --> bottom3[bottomx]
+    end
+
+    outside:::asNode --> subgraph1:::asNode
+    outside ---> top2 -->top3
+
+    style subgraph2 fill:orange
+    classDef asNode fill:grey, color:orange
+
+</div>
+
+<div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
+<div id="consent_blackbar"></div>
+<md-block>
+## Jekyll
+
+* [jekyll github](https://notepad.onghu.com/2023/using-mermaid-in-a-textile-post-jekyll/)
+* [look at github](https://stuff-things.net/2025/01/19/mermaid-diagramming-in-jekyll-in-2025/)
+* [jekyll pwa](https://moldstud.com/articles/p-how-to-create-an-engaging-jekyll-based-pwa-a-step-by-step-guide)
+* Webassembly mermaid
+* https://github.com/open-webui/open-webui
+* https://www.journal.unrika.ac.id/index.php/jurnaldms/article/view/543/0
+* https://www.corenet.gov.sg/ecatalog/Pages/corenet%20add.txt
+
+
+|fish | FCR|culture time|Need fish meal|
+|:-----|:----|:-----------|:-----------|
+|Tuna | 10:1|[swift memory safe](https://forums.swift.org/t/prospective-vision-optional-strict-memory-safety-for-swift/75090)|yes, due to fish oil|
+|salmon|2:1|-|yes, due to fish oil|
+|red grouper| | |yes, due to fish oil|
+|tilapia    | | |No need fish meal, soybeaan protein|
+
+## Markdown Heading
+*   **Something in BOLD**
+*   ~~strikthrough~~
+* Lake Como [84km north of Milan] and Lake Garda [137km from Milan]
+* [style in flowchart mermaid instead of graph](https://www.freecodecamp.org/news/use-mermaid-javascript-library-to-create-flowcharts/)
+* [SAP Ui5 architecture](https://www.tutorialspoint.com/sap_ui5/sap_ui5_architecture.htm)
+* [SAp U5 hana](https://sapui5.hana.ondemand.com/sdk/#/topic/28b59ca857044a7890a22aec8cf1fee9)
+* [sap ui5 example](https://openui5.org/)
+* [sap grid view html](https://experience.sap.com/fiori-design-web/flexible-grid/) 
+##  Safe C++
+
+1. A new "safe" context where only a rigorously safe
+	   subset of C++ is allowed
+2. Borrow checking to prevent use-after-free bugs
+3. Initialization analysis for type safety
+4. Pattern matching, choice types, and borrowing
+5. Thread-safety features similar to Rust's
+		send and sync type traits
+6. Explicit mutation for references
+7. A model for object relocation
+
+## hardshell vs softshell result in high and low salinity shirmp culture
+Hard shell lobsters also have
+less water weight, while soft
+shell lobsters contain more
+water. This difference in yield is
+reflected in the lower pricing of
+soft shell lobsters. For comparison, the average
+yield for hard shells is roughly 20% to 28%
+meat, while soft shells contain around 15% to
+20% meat. 5 Jun 2018
+
+
+Low Salinity
+Less then 5ppt:
+1. Apply sea salt
+	* 100 kg/Acre weekly twice any time
+2. Add high salinity water New worldlife
+3. Feed supplement sea salt for low salinity
+	* 50g/kg feed
+5.Fluctuation Water Parameters
+6.Big Size PL Neworldlife
+7.Insufficient Minerals
+8.Use One or More then Mother Shrimps
+
+## Kerapu
+*  Pencegahaan penyakit dengan mencelupkan kerapu ke air tawar 15 minutes? Membunuh hama air laut
+* Ukuran 7 cm sampai 0.5 kg untuk macan 8 bulan dan bebek 12 bulan
+* Bisa beli telur sampai pendederan benur
+        </md-block>
+</div>
+  <script type="module">
+      import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
+    </script>
+    <script type="module">
+     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+      mermaid.registerIconPacks([
+        { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
+        { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
+      ]);
+     mermaid.initialize({ startOnLoad: true });
+</script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  </body>
+</html>
