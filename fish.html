@@ -124,7 +124,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <body class="sapUiBody" id="content">
-    <h1>Test Page for <code>sap.ui.unified.Calendar</code></h1>
+    <h1>Test Page for Hatchery <code>sap.ui.unified.Calendar</code></h1>
     <div>Single day Selection Calendar</div>
     <br>
      <div>
@@ -136,24 +136,43 @@
             A[fas:fa-ship Tajuh Biru Mon & Thu<br>Lingga] --> B0[fas:fa-ship 🦞🐟frozen/live<br> Belakang Padang<br>Batam] -- Singapore GST 9.00%-->
               S0[/"Singapore GST 9.00+ import tax?<br>Jurong fish port(30% import)<br>Singapore"/] --logistic cost + 2.00SGD -->S1[/Closed March 2024<br>Senoko Fishery Port<br>Singapore/]
             B1[fas:fa-ship 🦞🐟 frozen/live<br> Sagulung daily<br>Batam] --freight charge 18SGD 100cm x 50cm x 50cm \( 50~90 kg\) -->S0
-            J1["fas:fa-ship Jembatan 6<br>Batam"] <---->|Private Boat 00:45, 16.00km?| P["Pulau Petong 🥽"]
-            J6["fas:fa-ship Pel. Kepri Coral<br>Batan"]<-->P
-            J1  --Private --> A
+            J1["fas:fa-ship Pelabuhan Hasim<br>Balerang, Batam"] <---->|Private Boat 00:45, 16.00km?| P["Ke Pulauan Petong 🥽"]
+            J7["fas:fa-ship Pel. Pari Jembatan 6<br> Batam"] <---->|Private Boat 00:45, 16.00km?| PB["Pulan Benan 🥽"]
+            J7 <-->A
+            TPunggur["fas:fa-ship Pelabuhan Teluk Punggur<br>Batam"] <---->|01:45?| PB <---> |00:45 | A 
+
+            J6["fas:fa-ship Pel. Kepri Coral<br>Batam"]<-->P
             TP["fas:fa-ship Tanjung Pinang"] <-- Public --> A
-            Kerapu["Grouper born: ♀<br>Larva Rearing"]  --"size: 8-12cm" --> FC["Floating cage/Keramba tanjab<br>Grading"] --> FC2["floating cage bigger net size or tambak lebih besar"]
-            Seabass["Seabass born: ♂<br> Larva Rearing"] --"size: 8 - 12cm" --> FC
             style S1 fill:red
             click A "https://docs.google.com/forms/d/e/1FAIpQLSfVlANgYbnoqzFn5tKd4520MAiF10Sgqg343FKI2oTYmhcP8Q/viewform?usp=sharing" "budiday lobster"
             click P "https://batamnewsasia.com/2024/11/11/explore-pulau-petong-batams-underwater-paradise-for-tourists/" "Pulau Petong"
-	    click B1 "https://docs.google.com/forms/d/e/1FAIpQLSfVlANgYbnoqzFn5tKd4520MAiF10Sgqg343FKI2oTYmhcP8Q/viewform?usp=sharing" "Pel Sagulung bpk Hamzah"
-            click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
-            click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
-
-
+	    click B1 "https://www.google.com/maps/d/edit?mid=1k7qpHqVpCqY_taRwkaVSyDc8yo8jmFo&usp=sharing" "Pel Sagulung bpk Hamzah"
+            click TPunggur "https://tiketkapal.com/" "Ferry ke pulau"
           </div>
       </div>
 
-<pre class="mermaid">
+
+
+
+        <div class="mermaid">
+            graph LR
+            %% Kerapu and seabass
+
+            FC0["Floating cage<br>Grading"]
+            FC1["Keramba tanjab<br>Berpasir dibawah<br>Grading"]
+            FC2["Keramba dasar (0.5 m dari dasar)<br>Grading"]
+            Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
+            Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
+            Kerapu["Grouper born: ♀<br>Larva Rearing"]  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
+            Kerapu -->|tidak perlu| FC1 --> FC22 --> Kerapu1
+            Seabass["Seabass born: ♂<br> Larva Rearing"] --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
+            click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
+            click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
+          </div>
+
+
+
+<div class="mermaid">
 flowchart TD
     B["fab:fa-twitter for peace"]
     B-->C[fa:fa-ban forbidden]
@@ -171,13 +190,21 @@ flowchart TD
     end
     T --> hatchery
     hatchery --> growup
-</pre>
+</div>
 
 <div class="mermaid">
-flowchart TD
-    A([this should be black with white letters]) --> B([this should be grey with white letters])
+    flowchart  TB
+      subgraph OCEAN9 ["fas:fa-ship OCEAN 9"]
+          direction LR
+           TP([Telaga Punggur])--> A([BENAN]) --> B([Tajuh Biru])  --> C(["S Tenam"])  --> D(["Senayang"]) ---> E(["Pancur"])
+      end
+      subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
+          direction LR
+          CC(["S Tenam"])-->JG([Jagoh])
+      end
     style A fill: black, color: white
     style B fill:grey, color:#fff
+
 </div>
 
 
@@ -219,12 +246,14 @@ flowchart TD
 * https://www.corenet.gov.sg/ecatalog/Pages/corenet%20add.txt
 
 
-|fish | FCR|culture time|Need fish meal|
+|Fish/crustean | FCR|culture time|Need fish meal|
 |:-----|:----|:-----------|:-----------|
 |Tuna | 10:1|[swift memory safe](https://forums.swift.org/t/prospective-vision-optional-strict-memory-safety-for-swift/75090)|yes, due to fish oil|
 |salmon|2:1|-|yes, due to fish oil|
-|red grouper| | |yes, due to fish oil|
-|tilapia    | | |No need fish meal, soybeaan protein|
+|Red grouper(bottom dweller)| | |yes, due to fish oil, candidate for cages like lobster|
+|Black grouper (top dweller)| || |
+|Tilapia    | | |No need fish meal, soybeaan protein|
+|ikan tirusan| | | |
 
 ## Markdown Heading
 *   **Something in BOLD**
@@ -234,6 +263,9 @@ flowchart TD
 * [SAP Ui5 architecture](https://www.tutorialspoint.com/sap_ui5/sap_ui5_architecture.htm)
 * [SAp U5 hana](https://sapui5.hana.ondemand.com/sdk/#/topic/28b59ca857044a7890a22aec8cf1fee9)
 * [sap ui5 example](https://openui5.org/)
+* [sap flori tutorial](https://ui5.sap.com//#/topic/3da5f4be63264db99f2e5b04c5e853db)
+* [Flori web design](https://experience.sap.com/fiori-design-web/action-placement/)
+* [shell flori tool bar](https://experience.sap.com/fiori-design-web/flexible-column-layout/)
 * [sap grid view html](https://experience.sap.com/fiori-design-web/flexible-grid/) 
 ##  Safe C++
 
@@ -248,14 +280,10 @@ flowchart TD
 7. A model for object relocation
 
 ## hardshell vs softshell result in high and low salinity shirmp culture
-Hard shell lobsters also have
-less water weight, while soft
-shell lobsters contain more
-water. This difference in yield is
-reflected in the lower pricing of
-soft shell lobsters. For comparison, the average
-yield for hard shells is roughly 20% to 28%
-meat, while soft shells contain around 15% to
+Hard shell lobsters also have less water weight, while soft
+shell lobsters contain more water. This difference in yield is
+reflected in the lower pricing of soft shell lobsters. For comparison, the average
+yield for hard shells is roughly 20% to 28% meat, while soft shells contain around 15% to
 20% meat. 5 Jun 2018
 
 
@@ -267,14 +295,74 @@ Less then 5ppt:
 3. Feed supplement sea salt for low salinity
 	* 50g/kg feed
 5.Fluctuation Water Parameters
+
 6.Big Size PL Neworldlife
+
 7.Insufficient Minerals
+
 8.Use One or More then Mother Shrimps
 
 ## Kerapu
+### di keramba apung
 *  Pencegahaan penyakit dengan mencelupkan kerapu ke air tawar 15 minutes? Membunuh hama air laut
 * Ukuran 7 cm sampai 0.5 kg untuk macan 8 bulan dan bebek 12 bulan
+
+### di keramba tanjab yang punya pasir
+-tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
+- kerapu sanu mulutnya agak kecil di bandinggkan kerapu cangteng
 * Bisa beli telur sampai pendederan benur
+
+# kepulauhan Petong
+- air laut dati pesisir karang sangat jauh dari bulan ke  bulang... sehingga  keramba ampung maupun dasar harus agak jauh dari panti pulau.
+- tergantung stucture karang
+-[wave et](https://tides4fishing.com/id/kepulauan-riau/tandjungpinang-bintan-island)
+
+
+# Perahu fiber lebih dangkal karena ringgang untuk pulau yang berkarang karena karang bisa membuat perahu itu pecah/rusak
+- figber perahu ika dari malaysia 15 Pka
+- Bor air : 12 m air laut, 30m air tawar
+- di palemenbang 120m dapat air minum
+- kaporit terlalu tinggi di danau di atas petong
+- cumi yang di es berwarna merah keesokan harinya
+- 1 knot =1.852km/hours
+
+# [ikan tirusan-(Otolithoides pama)](https://www.mongabay.co.id/2024/09/16/ikan-tirusan-harga-selangit-jadi-primadona-khawatir-penangkapan-berlebih/)
+- [(Otolithoides pama)](https://www.themimu.info/sites/themimu.info/files/assessment_file_attachments/GOM_Pama_Croaker_croaker.pdf)
+- [xxx](https://eprints.cmfri.org.in/16358/1/MFIS%20252_2022_Subal%20Kumar%20Roul.pdf)
+- gelambung laki jauh lebih mahaldari yang betina
+
+
+Para nelayan di Riau, seperti Indragiri Hilir,  belakangan ini ‘berburu’ mendapatkan ikan tirusan atau tirus karena harga yang selangit. Ikan dengan nama latin  Otolithoides pama, termasuk famili sciaenidae,  harga per ekor bisa mencapai puluhan juta rupiah.
+Yang bernilai tinggi dari ikan tirusan adalah gelembung (limpanya). Pembeli atau pengepul biasa mengupah orang yang ahli lagi untuk membelah perut ikan ini.
+
+Hasil pencatatan BPPMHKP Pekanbaru, pengiriman gelembung ikan sepanjang 2019-2023 mencapai 1.204 kali atau 36.895 kilogram. Sumbernya dari enam daerah penghasil ikan di
+1. Tembilahan,
+2. Bengkalis, 
+3. Dumai,
+4. Selat Panjang, 
+5. Pekanbaru dan 
+6. Panipahan.
+
+Setidaknya ada enam pengirim utama mendominasi dalam perdagangan gelembung ikan di Riau.
+
+Data ini tidak spesifik menyebut jenis ikan penghasil gelembung renang itu. Selain tirusan, gelembung yang biasa diperdagangkan juga produk turunan dari ikan malong (Muraenesox cinereus).
+
+# [Ikan Malong (Muraenesox cinereus)](https://indiabiodiversity.org/species/show/232787)
+Malong ( Muraenesox cinereus )adalah spesies ikan Sidat dalam keluarga pike conger, Muraenesocidae .
+ Mereka terutama hidup di dasar lunak di perairan laut dan air payau hingga kedalaman 800 m (2.600 ft), tapi bisa masuk ke air tawar.
+
+
+
+
+Market trends
+---
+The dried air bladders called fish maws are exported
+mainly to China and Singapore for the manufacture
+of isinglass, which is used in beverage and cosmetic
+industry as well as Chinese traditional medicines (Dutta
+et al., 2014). The lesser and medium sciaenids are mostly
+sold in fresh condition at the local markets or iced and
+transported to distant interior markets of Odisha, West 
         </md-block>
 </div>
   <script type="module">
