@@ -129,6 +129,17 @@
     <br>
      <div>
 	<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div>
+<md-block>
+[Cara Budidaya Kerapu](#kerapu)
+
+[Ikan Tirusan](#ikan-tirusan-otolithoides-pama)
+
+
+[Ikan Malong](#ikan-malong-muraenesox-cinereus)
+
+
+</md-block>
+
            <div class="mermaid">
             graph LR
             %% This is a comment!!!
@@ -139,7 +150,7 @@
             J1["fas:fa-ship Pelabuhan Hasim<br>Balerang, Batam"] <---->|Private Boat 00:45, 16.00km?| P["Ke Pulauan Petong 🥽"]
             J7["fas:fa-ship Pel. Pari Jembatan 6<br> Batam"] <---->|Private Boat 00:45, 16.00km?| PB["Pulan Benan 🥽"]
             J7 <-->A
-            TPunggur["fas:fa-ship Pelabuhan Teluk Punggur<br>Batam"] <---->|01:45?| PB <---> |00:45 | A 
+            TPunggur["fas:fa-ship Pelabuhan Telaga Punggur<br>Batam"] <---->|01:45?| PB <---> |00:45 | A 
 
             J6["fas:fa-ship Pel. Kepri Coral<br>Batam"]<-->P
             TP["fas:fa-ship Tanjung Pinang"] <-- Public --> A
@@ -163,11 +174,13 @@
             FC2["Keramba dasar (0.5 m dari dasar)<br>Grading"]
             Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
             Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
-            Kerapu["Grouper born: ♀<br>Larva Rearing"]  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
+            Kerapu["Grouper: female at birth: ♀<br>Larva Rearing"]  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
             Kerapu -->|tidak perlu| FC1 --> FC22 --> Kerapu1
-            Seabass["Seabass born: ♂<br> Larva Rearing"] --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
+            Seabass["Seabass: Male at birth: ♂<br> Larva Rearing"] --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
             click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
             click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
+            style Kerapu1 fill:gold, color:black
+            style Seabass1 fill:gold, color:black
           </div>
 
 
@@ -180,7 +193,7 @@ flowchart TD
     B-->E(A fa:fa-camera-rero perhaps?)
     F(fa:fa-church)
     T["Tilapia<br> iBEST (all Male) or<br> iEXCEL (Mixed-sex)"]
-    subgraph hatchery["Hatchery Market<br>Depend on Market"]
+    subgraph hatchery["Hatchery Market Depend on Market"]
        direction LR
        Eggs["Eggs"] --> Larvae["Post Larvae"] -->Juvinille["Juvinille"]
     end
@@ -190,20 +203,26 @@ flowchart TD
     end
     T --> hatchery
     hatchery --> growup
+    style Eggs fill:pink, color:black
+
+    click hatchery "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
 </div>
 
 <div class="mermaid">
     flowchart  TB
-      subgraph OCEAN9 ["fas:fa-ship OCEAN 9"]
+      subgraph OCEAN9 ["fas:fa-ship <a https://tiketkapal.com/> OCEAN 9 </a>"]
           direction LR
-           TP([Telaga Punggur])--> A([BENAN]) --> B([Tajuh Biru])  --> C(["S Tenam"])  --> D(["Senayang"]) ---> E(["Pancur"])
+           TP([Telaga Punggur])-->|ferry 11:00 web kapaltiket.com| A([BENAN]) --> |"00:45"| B([Tajuh Biru])  --> C(["Sei Tenam"])  --> D(["Senayang"]) <--->|"from 07:15 Pancur"| E(["Pancur"])
       end
+      direction TB
       subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
           direction LR
-          CC(["S Tenam"])-->JG([Jagoh])
+          CC(["Sei Tenam"])-->JG(["Jagoh"])
       end
+
     style A fill: black, color: white
     style B fill:grey, color:#fff
+    style TP fill:blue, color: white
 
 </div>
 
@@ -246,17 +265,18 @@ flowchart TD
 * https://www.corenet.gov.sg/ecatalog/Pages/corenet%20add.txt
 
 
+[Order form](https://www.seafdec.org.ph/wp-content/uploads/2020/12/Commodity-Order-Form_rev2020.pdf)
+
 |Fish/crustean | FCR|culture time|Need fish meal|
 |:-----|:----|:-----------|:-----------|
 |Tuna | 10:1|[swift memory safe](https://forums.swift.org/t/prospective-vision-optional-strict-memory-safety-for-swift/75090)|yes, due to fish oil|
 |salmon|2:1|-|yes, due to fish oil|
-|Red grouper(bottom dweller)| | |yes, due to fish oil, candidate for cages like lobster|
+|**Red grouper(bottom dweller)**| | |yes, due to fish oil, candidate for cages like lobster|
 |Black grouper (top dweller)| || |
 |Tilapia    | | |No need fish meal, soybeaan protein|
 |ikan tirusan| | | |
 
 ## Markdown Heading
-*   **Something in BOLD**
 *   ~~strikthrough~~
 * Lake Como [84km north of Milan] and Lake Garda [137km from Milan]
 * [style in flowchart mermaid instead of graph](https://www.freecodecamp.org/news/use-mermaid-javascript-library-to-create-flowcharts/)
@@ -306,25 +326,38 @@ Less then 5ppt:
 ### di keramba apung
 *  Pencegahaan penyakit dengan mencelupkan kerapu ke air tawar 15 minutes? Membunuh hama air laut
 * Ukuran 7 cm sampai 0.5 kg untuk macan 8 bulan dan bebek 12 bulan
+* [Grouper Hatchery](https://youtu.be/IkKztRINSkQ?si=8Un_Fzv7SzwtXoNy)
+  - Tiger : take 2 years
+  - hybrid can growth to around 15 kg the second year
+  - Male tiger grouper as broodstock 15kg
+* Prefer dark and rest at the bottom
+* When mature adult feed the whole fish
+
 
 ### di keramba tanjab yang punya pasir
 -tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
 - kerapu sanu mulutnya agak kecil di bandinggkan kerapu cangteng
 * Bisa beli telur sampai pendederan benur
 
-# kepulauhan Petong
+# [Pulau Petong](https://earth.google.com/web/@0.53118441,104.4134147,231.8783569a,778318.1988886d,35y,44.54282763h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA)
+- Bor 12 m ait laut, 30 m air tawar (4" diameter pipe)
+  - 2 pipe air tawar, 1 pipe air laut
+- Pulau petong air tawar pemerintah (kaporit tinggi)
+
 - air laut dati pesisir karang sangat jauh dari bulan ke  bulang... sehingga  keramba ampung maupun dasar harus agak jauh dari panti pulau.
 - tergantung stucture karang
 -[wave et](https://tides4fishing.com/id/kepulauan-riau/tandjungpinang-bintan-island)
 
 
-# Perahu fiber lebih dangkal karena ringgang untuk pulau yang berkarang karena karang bisa membuat perahu itu pecah/rusak
-- figber perahu ika dari malaysia 15 Pka
+# [Fisherman boat](https://explorer.com.my/product/e190-floorboard/)
+##  Perahu fiber lebih dangkal karena ringgang untuk pulau yang berkarang karena karang bisa membuat perahu itu pecah/rusak
+- fiber perahu ika dari malaysia (40HP=40PK- 54juta)-need 15PK (15PK=32 juta)
 - Bor air : 12 m air laut, 30m air tawar
 - di palemenbang 120m dapat air minum
 - kaporit terlalu tinggi di danau di atas petong
 - cumi yang di es berwarna merah keesokan harinya
 - 1 knot =1.852km/hours
+
 
 # [ikan tirusan-(Otolithoides pama)](https://www.mongabay.co.id/2024/09/16/ikan-tirusan-harga-selangit-jadi-primadona-khawatir-penangkapan-berlebih/)
 - [(Otolithoides pama)](https://www.themimu.info/sites/themimu.info/files/assessment_file_attachments/GOM_Pama_Croaker_croaker.pdf)
@@ -351,6 +384,7 @@ Data ini tidak spesifik menyebut jenis ikan penghasil gelembung renang itu. Sela
 Malong ( Muraenesox cinereus )adalah spesies ikan Sidat dalam keluarga pike conger, Muraenesocidae .
  Mereka terutama hidup di dasar lunak di perairan laut dan air payau hingga kedalaman 800 m (2.600 ft), tapi bisa masuk ke air tawar.
 
+# [Gamat Hitam- Teripang hitam ](https://www.mitrausahatani.com/teripang-berhasil-dibudidayakan/)
 
 
 
@@ -362,8 +396,20 @@ of isinglass, which is used in beverage and cosmetic
 industry as well as Chinese traditional medicines (Dutta
 et al., 2014). The lesser and medium sciaenids are mostly
 sold in fresh condition at the local markets or iced and
-transported to distant interior markets of Odisha, West 
+transported to distant interior markets of Odisha, West
+
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+H~2~O
+
+# Oyster
+
+ 
         </md-block>
+
 </div>
   <script type="module">
       import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';

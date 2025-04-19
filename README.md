@@ -11,6 +11,7 @@
 - http://o2tree.github.io/kth/data/peta_usulan_sumber_bahari.pdf
 - http://o2tree.github.io/lahanrumah3.html
 - [PenyuBiru map](http://o2tree.github.io/penyubiru.html)
+- [fish](http://o2tree.github.io/fish.html)
 
 - https://github.com/o2tree/o2tree.github.io/tree/main
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
