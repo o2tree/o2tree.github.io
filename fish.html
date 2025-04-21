@@ -172,11 +172,16 @@
             FC0["Floating cage<br>Grading"]
             FC1["Keramba tanjab<br>Berpasir dibawah<br>Grading"]
             FC2["Keramba dasar (0.5 m dari dasar)<br>Grading"]
+            P0["Pond - outdoor"]
+            P1(["Pond - indoor"])
+            R0{"Rotifer Large"}
+            R1{"Rotifer Small"}
             Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
             Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
-            Kerapu["Grouper: female at birth: ♀<br>Larva Rearing"]  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
+            Kerapu(["Grouper: female at birth: ♀<br>Larva Rearing"])  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
             Kerapu -->|tidak perlu| FC1 --> FC22 --> Kerapu1
-            Seabass["Seabass: Male at birth: ♂<br> Larva Rearing"] --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
+            Seabass(["Asian Seabass: Male at birth: ♂<br> Larva Rearing"]) --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
+            Lobster["Lobster rearing"] -->FC2
             click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
             click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
             style Kerapu1 fill:gold, color:black
@@ -187,11 +192,6 @@
 
 <div class="mermaid">
 flowchart TD
-    B["fab:fa-twitter for peace"]
-    B-->C[fa:fa-ban forbidden]
-    B-->D(fa:fa-spinner)
-    B-->E(A fa:fa-camera-rero perhaps?)
-    F(fa:fa-church)
     T["Tilapia<br> iBEST (all Male) or<br> iEXCEL (Mixed-sex)"]
     subgraph hatchery["Hatchery Market Depend on Market"]
        direction LR
@@ -201,6 +201,7 @@ flowchart TD
        direction LR
        Market["different stage of Market"]
     end
+ 
     T --> hatchery
     hatchery --> growup
     style Eggs fill:pink, color:black
@@ -214,15 +215,20 @@ flowchart TD
           direction LR
            TP([Telaga Punggur])-->|ferry 11:00 web kapaltiket.com| A([BENAN]) --> |"00:45"| B([Tajuh Biru])  --> C(["Sei Tenam"])  --> D(["Senayang"]) <--->|"from 07:15 Pancur"| E(["Pancur"])
       end
-      direction TB
       subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
           direction LR
-          CC(["Sei Tenam"])-->JG(["Jagoh"])
+          TP1(["Telaga punggur"]) --> CC(["Sei Tenam"])-->JG(["Jagoh"])
       end
-
+      subgraph Anambas ["fas:fa-ship Anambas"]
+          direction LR
+          TP2(["Telaga Punggur"]) --"Rp. 494k"--> Letung  --"Rp 495k"-->   Terempa(["Terempa"]) 
+       end
+    TP <--.--> TP1 <--.--> TP2
     style A fill: black, color: white
     style B fill:grey, color:#fff
-    style TP fill:blue, color: white
+    style TP fill:blue, color: whit
+    style TP1 fill:blue, color: white
+    style TP2 fill:blue, color: white
 
 </div>
 
@@ -265,6 +271,14 @@ flowchart TD
 * https://www.corenet.gov.sg/ecatalog/Pages/corenet%20add.txt
 
 
+* The waters around Lim Chu Kang are “more brackish” and suitable for rearing milk fish and grey mullet,
+ and he is currently the biggest producer of both types of fish in Singapore.
+
+* The waters off Changi, meanwhile, are saltier and suitable for fish that are more popular with Singapore consumers.
+ They include red snapper, barramundi (Asian sea bass), golden pomfret and sea perch.
+
+
+
 [Order form](https://www.seafdec.org.ph/wp-content/uploads/2020/12/Commodity-Order-Form_rev2020.pdf)
 
 |Fish/crustean | FCR|culture time|Need fish meal|
@@ -272,9 +286,24 @@ flowchart TD
 |Tuna | 10:1|[swift memory safe](https://forums.swift.org/t/prospective-vision-optional-strict-memory-safety-for-swift/75090)|yes, due to fish oil|
 |salmon|2:1|-|yes, due to fish oil|
 |**Red grouper(bottom dweller)**| | |yes, due to fish oil, candidate for cages like lobster|
+|**Jack red Snapper(Kakap merah bakau)<br>(Lutjanus argentimaculatus)**| ||Telur sifat apung seperti kakap putih<br>juvinelle bisa hidup di air tawar|
 |Black grouper (top dweller)| || |
 |Tilapia    | | |No need fish meal, soybeaan protein|
 |ikan tirusan| | | |
+|Asian seabass male at birth vs black seabass female at birth|||
+
+[Grow-out Culture](https://repository.seafdec.org.ph/bitstream/handle/10862/36/adsea91p003-012.pdf?sequence=1&isAllowed=y)
+---
+Polyculture of sea bass using tilapia as forage fish is often practiced.
+Growth and survival were higher among sea bass reared with tilapia in the same
+compartment than among those reared in ponds with net partition to separate
+the larger prey from predator (Triño, unpublished).
+
+[Tiger Prawn floating cage growout culture](https://eprints.cmfri.org.in/10937/2/46459-150550-1-PB%20%283%29.pdf)
+
+
+
+
 
 ## Markdown Heading
 *   ~~strikthrough~~
@@ -287,6 +316,33 @@ flowchart TD
 * [Flori web design](https://experience.sap.com/fiori-design-web/action-placement/)
 * [shell flori tool bar](https://experience.sap.com/fiori-design-web/flexible-column-layout/)
 * [sap grid view html](https://experience.sap.com/fiori-design-web/flexible-grid/) 
+
+
+## Sebass vs Snapper
+- diffferent
+- which one taste better
+
+
+
+
+|The table below provides a quick comparison of the availability and cost of snapper and grouper:|
+|------------------------------------------------------------------------------------------------|
+
+
+|Fish|	Availability|	Cost|
+|----|--------------|--------|
+|Snapper|	Common in Gulf of Mexico and Caribbean|	Higher price due to demand and difficulty of catching|
+|Grouper|	Common in Atlantic and Pacific oceans|	More affordable due to abundance and ease of catching|
+
+
+
+## Snapper vs Grouper
+Both of these species are known for having firm yet moist meat while having the added health benefit of being low in fat. Snapper is slightly sweeter and the meat more delicate, especially when grilled, than Grouper. Most compare its flavor and texture to be similar to that of halibut or sea bass. Grouper on the other hand is milder or more subtle in flavor making it perfect for absorbing either dressings or marinades
+[Singapore Snapper Hatchery](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/science-poster_development-of-hatchery-technology-for-crs-v4-revised-29-june-2022-003.pdf)
+[Spawing](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/application-of-endocrine-techniques-in-fish-spawning.pdf)
+[Treatment](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/monogeneans-disease-card-v2-english.pdf)
+[Start](https://www.sfa.gov.sg/docs/default-source/food-farming/industry-guides/sfa-sea-farming-guide326598c6-3d7b-4fb5-8f80-9b3228fd595c.pdf/)
+
 ##  Safe C++
 
 1. A new "safe" context where only a rigorously safe
@@ -332,7 +388,21 @@ Less then 5ppt:
   - Male tiger grouper as broodstock 15kg
 * Prefer dark and rest at the bottom
 * When mature adult feed the whole fish
+* [Prevent disease in grouper](https://www.seafdec.org.ph/wp-content/uploads/2021/08/prevention-control-of-parasites-in-groupers.pdf)
 
+* A freshwater dip is a treatment for saltwater fish, like groupers, to help remove parasites.
+ It involves temporarily placing the fish in fresh water for a short period, typically 3-5 minutes, to kill or loosen parasites.
+ This is a pre-quarantine treatment and should not be relied upon as the sole treatment for a disease.
+
+Weak fish:
+Avoid freshwater dips on fish that are already weak or dying, as they can be fatal. 
+
+Potential side effects:
+Some fish may have difficulty returning to their normal salinity after a freshwater dip, and may need assistance to regain their balance. 
+
+Aeration:
+Ensure the freshwater dip container has adequate aeration to provide oxygen to the fish
+  
 
 ### di keramba tanjab yang punya pasir
 -tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
@@ -357,6 +427,8 @@ Less then 5ppt:
 - kaporit terlalu tinggi di danau di atas petong
 - cumi yang di es berwarna merah keesokan harinya
 - 1 knot =1.852km/hours
+- [fisherman boats](https://jixingxincomposite.en.made-in-china.com/product/NJpUiKoPaQYS/China-New-Design-High-Quality-Motor-Boat-Boat-Fishing-Fiberglass-Boat.html)
+
 
 
 # [ikan tirusan-(Otolithoides pama)](https://www.mongabay.co.id/2024/09/16/ikan-tirusan-harga-selangit-jadi-primadona-khawatir-penangkapan-berlebih/)
@@ -385,30 +457,27 @@ Malong ( Muraenesox cinereus )adalah spesies ikan Sidat dalam keluarga pike cong
  Mereka terutama hidup di dasar lunak di perairan laut dan air payau hingga kedalaman 800 m (2.600 ft), tapi bisa masuk ke air tawar.
 
 # [Gamat Hitam- Teripang hitam ](https://www.mitrausahatani.com/teripang-berhasil-dibudidayakan/)
-
+- [teripang](https://youtu.be/3O4dGg5DJc4?si=gpO6H6sVmOFNFKmP)
 
 
 Market trends
 ---
-The dried air bladders called fish maws are exported
-mainly to China and Singapore for the manufacture
-of isinglass, which is used in beverage and cosmetic
-industry as well as Chinese traditional medicines (Dutta
-et al., 2014). The lesser and medium sciaenids are mostly
-sold in fresh condition at the local markets or iced and
-transported to distant interior markets of Odisha, West
-
+The dried air bladders called fish maws are exported mainly to
+*  China and Singapore for the manufacture of isinglass, which is used in beverage and cosmetic
+industry as well as Chinese traditional medicines (Dutta et al., 2014). The lesser and medium sciaenids are mostly
+sold in fresh condition at the local markets or iced and transported to distant interior markets of Odisha, West
 
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
 
-H~2~O
+# [Tilapia](https://youtu.be/7SOVLYYgyCE?si=Z3zplqT-GU7pJFfF)
 
+# [Catfish](https://www.youtube.com/watch?v=YoI2QocTmlQ)
 # Oyster
 
  
-        </md-block>
+</md-block>
 
 </div>
   <script type="module">
