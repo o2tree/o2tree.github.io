@@ -137,6 +137,21 @@
 
 [Ikan Malong](#ikan-malong-muraenesox-cinereus)
 
+* Green phytoplanktons (**Nannochloropsis** oculata,Tetraselmis chui, Chlorella, Dunaliella tertiolecta)
+
+* Golden phytoplanktons (Tisochrysis lutea, Pavlova, Isochrysis galbana, Thalassiosira weissfloggii)
+
+* Red phytoplankton (Rhodomonas salina) 
+
+* Orange phytoplankton (Chaetocerors calcitrans)
+
+* Brown phytoplanktons (Pheaodactylum tricornutum)
+
+
+
+
+
+
 
 </md-block>
 
@@ -176,6 +191,8 @@
             P1(["Pond - indoor"])
             R0{"Rotifer Large"}
             R1{"Rotifer Small"}
+            MicroAlgae["Green phytoplanktons"] -->R0
+            MicroAlgae -->R1
             Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
             Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
             Kerapu(["Grouper: female at birth: ♀<br>Larva Rearing"])  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
@@ -186,6 +203,8 @@
             click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
             style Kerapu1 fill:gold, color:black
             style Seabass1 fill:gold, color:black
+            style R0 fill:blue, color:white
+            style R1 fill:green, color: black
           </div>
 
 
@@ -193,6 +212,16 @@
 <div class="mermaid">
 flowchart TD
     T["Tilapia<br> iBEST (all Male) or<br> iEXCEL (Mixed-sex)"]
+
+    subgraph planton["planton feed to larvae"]
+      PyPL1["Pythoplanton"]
+      R0{"Rotifer Large ΔT"}
+      R1{"Rotifer Small ΔT"}
+      Artemia["Artemia<br>Brine shrmp"]
+      PyPL1  --> Artemia
+      PyPL1  --> R0
+      PyPL1  --> R1
+    end
     subgraph hatchery["Hatchery Market Depend on Market"]
        direction LR
        Eggs["Eggs"] --> Larvae["Post Larvae"] -->Juvinille["Juvinille"]
@@ -203,6 +232,7 @@ flowchart TD
     end
  
     T --> hatchery
+    planton --> hatchery
     hatchery --> growup
     style Eggs fill:pink, color:black
 
@@ -260,11 +290,42 @@ flowchart TD
 <div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
 <div id="consent_blackbar"></div>
 <md-block>
+## check fish blood on mineral
+- contains Mg,Ca, etc
+- compare the feed, blood and wild
+- Check blood to identified short of different mineral
+
+
+## Rotifer
+Copepods and rotifers are both types of small aquatic organisms, particularly important in marine and freshwater ecosystems
+ as they are a food source for many fish and other invertebrates. However, they belong to 
+different groups: copepods are crustaceans (Arthropoda), while rotifers are rotifers (Rotifera).
+Copepods are more common in reef tanks, where they contribute to the tank's overall biodiversity
+and can be cultured. Rotifers, on the other hand, often require specific conditions
+and are typically cultured separately, but they can be a valuable food source, especially for corals. 
+
+Copepods:
+Classification: Crustaceans (Arthropoda). 
+Habitat: Often associated with live rocks in reef tanks. 
+Diet: Primarily feed on phytoplankton, contributing to nutrient cycling in the tank. 
+Reef Tank Role: Provide biodiversity, contribute to nutrient cycling, and serve as a food source for certain fish and invertebrates. 
+Cultures: Can be cultured in refugiums or other dedicated systems. 
+
+Rotifers:
+Classification: Rotifers (Rotifera). 
+Habitat: Found in freshwater environments, including lakes, ponds, and even temporary puddles. 
+Diet: Primarily feed on algae and other small organisms. 
+Reef Tank Role: Serve as a food source, especially for corals and larval fish. 
+Cultures: Typically cultured in separate tanks, often using algae or specialized feed. 
+
+
+
 ## Jekyll
 
 * [jekyll github](https://notepad.onghu.com/2023/using-mermaid-in-a-textile-post-jekyll/)
 * [look at github](https://stuff-things.net/2025/01/19/mermaid-diagramming-in-jekyll-in-2025/)
 * [jekyll pwa](https://moldstud.com/articles/p-how-to-create-an-engaging-jekyll-based-pwa-a-step-by-step-guide)
+* [Markdown Note](https://users.ssc.wisc.edu/~hemken/Stataworkshops/stmd/Markdown/tableandblocks1.html)
 * Webassembly mermaid
 * https://github.com/open-webui/open-webui
 * https://www.journal.unrika.ac.id/index.php/jurnaldms/article/view/543/0
@@ -277,20 +338,84 @@ flowchart TD
 * The waters off Changi, meanwhile, are saltier and suitable for fish that are more popular with Singapore consumers.
  They include red snapper, barramundi (Asian sea bass), golden pomfret and sea perch.
 
+1. item 1
+1. | Column One | Column Two |
+| --- | --- |
+| data cell one | data cell two |
+
+
+- some text
+
+    | Column One | Column Two |
+    | --- | --- |
+    | data cell one | data cell two |
+
+③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
+
+⓪
+① ② ③ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
+⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ 
+
+🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉 
+Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ
+
+
+⓿
+❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿
+⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴
+
+Think of Pieces as a technical Tinkerbell from Peter Pan[^2].
+
+[^2]: This is a fairytale about a forever young boy who takes a group of British children to his home island, Neverland.
+
+Depending on how much cookie dough you eat, you’ll have about ==20-22== cookies from this recipe!
+
+
+<div>
+<p markdown="1">
+b[^2]
+</p>
+</div>
+
+[^b]: Now I am a footnote too.
+
+![Nanochloropsus Japanese Chlorella](https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600)
+![rotifer](https://rlutah.com/cdn/shop/collections/64_ounce_bottle.png?v=1715880245&width=750)
+
+Contains the following phytoplanktons:
+
+* Green phytoplanktons: Nannochloropsis oculata,Tetraselmis chui, Chlorella, Dunaliella tertiolecta, Japanese Chlorella, Chlorella vulgaris. 
+* Golden phytoplanktons: Tisochrysis lutea, Pavlova, Isochrysis galbana.
+* Red phytoplankton: Rhodomonas salina, Rhodomonas lens, Porphyridium creuntum
+* Diatom strains include: Chaetocerors calcitrans, Pheaodactylum tricornutum, Thalassiosira weissfloggii. 
+
+For best shelf life, store in the back of the fridge away from the light, with temperatures ranging from 2.78°C - 5.55°C  degrees. We store phytoplankton at 2.78 degrees in a fridge with no light source.
 
 
 [Order form](https://www.seafdec.org.ph/wp-content/uploads/2020/12/Commodity-Order-Form_rev2020.pdf)
+-----------------
+|Culture Pond |🄰  indoor  or<br> 🄱 outdoor|Pakai HDPE| Symbol|
+|:-----------|:-----------------|:-------|:---------|
+|Floating cage| Outdoor         | ①      |
+|Keramba dasar<br> 0.5m from bottom|Outdoor          | ②      |
+|Keramba tanjab|                |③ |
+|tambak/pond   | Outdoor        |④ |
+|hapa di tambak| Outdoor        |⑤ |
+|              | Indoor         |
+----------------
 
-|Fish/crustean | FCR|culture time|Need fish meal|
-|:-----|:----|:-----------|:-----------|
+---------------
+|Fish/Crustean | FCR wet/dry/<br>pellet(sink/float)|Culture Ponds<br>days/weeks/months|Stage Description<br>Larvae,Juvinele,Adult/<br>Temperature|Need fish meal|
+|:-------------|:------------------------------|:-----------|:-----------|:----------|
+|Tilapia    |Easier and<br> no need much knowledge | |No need fish meal, soybeaan protein|
 |Tuna | 10:1|[swift memory safe](https://forums.swift.org/t/prospective-vision-optional-strict-memory-safety-for-swift/75090)|yes, due to fish oil|
-|salmon|2:1|-|yes, due to fish oil|
-|**Red grouper(bottom dweller)**| | |yes, due to fish oil, candidate for cages like lobster|
-|**Jack red Snapper(Kakap merah bakau)<br>(Lutjanus argentimaculatus)**| ||Telur sifat apung seperti kakap putih<br>juvinelle bisa hidup di air tawar|
+|Salmon|2:1|-|yes, due to fish oil|
+|**Red Grouper(bottom dweller)**| | |yes, due to fish oil, candidate for cages like lobster|
+|**Jack Red Snapper(Kakap merah bakau)<br>(Lutjanus argentimaculatus)**| ||Telur sifat apung seperti kakap putih<br>juvinelle bisa hidup di air tawar|
 |Black grouper (top dweller)| || |
-|Tilapia    | | |No need fish meal, soybeaan protein|
 |ikan tirusan| | | |
 |Asian seabass male at birth vs black seabass female at birth|||
+--------------
 
 [Grow-out Culture](https://repository.seafdec.org.ph/bitstream/handle/10862/36/adsea91p003-012.pdf?sequence=1&isAllowed=y)
 ---
