@@ -6,7 +6,6 @@
   <meta charset="utf-8">
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
-
     <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
 
                 <title>BBL-Benur Lobster</title>
@@ -120,13 +119,23 @@
     }
 </style>
   </head>
-
+  <!-- script src="https://unpkg.com/@tailwindcss/browser@4"></script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <body class="sapUiBody" id="content">
     <h1>Test Page for Hatchery <code>sap.ui.unified.Calendar</code></h1>
     <div>Single day Selection Calendar</div>
     <br>
+      <!-- div class="relative w-[500px]">
+        <img src="https://www.khueapps.com/media/images/2025-02/cute-dog.webp" />
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
+            <h3 class="text-xl text-white font-bold">
+                Hey, I Am The Big Boss</h3>
+            <p class="mt-2 text-sm text-gray-300">Some description text. Some dummy text here. Welcome to KhueApps.com.
+            </p>
+        </div>
+    </div -->
+
      <div>
 	<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div>
 <md-block>
@@ -134,8 +143,9 @@
 
 [Ikan Tirusan](#ikan-tirusan-otolithoides-pama)
 
-
 [Ikan Malong](#ikan-malong-muraenesox-cinereus)
+
+[Ikan sidat](#eel-ikan-sidat)
 
 * Green phytoplanktons (**Nannochloropsis** oculata,Tetraselmis chui, Chlorella, Dunaliella tertiolecta)
 
@@ -253,13 +263,18 @@ flowchart TD
           direction LR
           TP2(["Telaga Punggur"]) --"Rp. 494k"--> Letung  --"Rp 495k"-->   Terempa(["Terempa"]) 
        end
+      subgraph Bintan["Pulau Bintan/Tanjung Pinang"]
+          direction LR
+          BTP(["Tanjung Pinang"])
+      end
     TP <--.--> TP1 <--.--> TP2
     style A fill: black, color: white
     style B fill:grey, color:#fff
     style TP fill:blue, color: whit
     style TP1 fill:blue, color: white
     style TP2 fill:blue, color: white
-
+    click BTP "https://www.welcometobintan.com/images/map.jpg" "Tanjung Pinang"
+    
 </div>
 
 
@@ -286,13 +301,24 @@ flowchart TD
     classDef asNode fill:grey, color:orange
 
 </div>
+<div class="mermaid">
+pie title Investment weighting factor 
+    "Money" :60
+    "Labour" : 35
+    "Technology-Consultant" : 5
+
+</div>
 
 <div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
 <div id="consent_blackbar"></div>
 <md-block>
-## check fish blood on mineral
-- contains Mg,Ca, etc
-- compare the feed, blood and wild
+## Marketing shrimp
+* [di lampung](https://indomina-ils.com/)
+* [Daftar pellet](https://kkp.go.id/storage/Materi/daftar-pakan-ikan-dan-udang-terdaftar67bc05bdc25c3/materi-67bc05bfe464f.pdf)
+
+## Check fish blood on mineral
+- Contains Mg,Ca, etc
+- Compare the feed, blood and wild
 - Check blood to identified short of different mineral
 
 
@@ -318,7 +344,38 @@ Diet: Primarily feed on algae and other small organisms.
 Reef Tank Role: Serve as a food source, especially for corals and larval fish. 
 Cultures: Typically cultured in separate tanks, often using algae or specialized feed. 
 
+# Eel (ikan sidat)
+* Tambak deep 0.80 ~ 1.20m
+* pH : 6.5 ~ 8.5
+* Temperature : 20°C~ 28°C
+* Change water 20% water daily
 
+* RAS change water : 10-30% daily ( mineral deficiency)
+
+## [High pressure (30.40 inHg and higher) and Low Pressure (29.60 inHg or lower)  on Ocean about fish](https://wildhunter.ie/blogs/fishing-blog/effects-of-air-pressure-on-fish)
+
+Barometric pressure is the weight of the atmosphere in a specific area, usually measured in millibars (mb) and inches of Mercury (inHg).
+ A number of factors can influence the barometric pressure in a given area, including altitude, wind patterns, and temperature.
+
+* **A normal barometric pressure reading is typically between 29.70 inHg and 30.40 inHg**
+
+*  when there’s low barometric pressure and less pressure on a fish’s body, the bladder expands.
+   Fish may swim deeper where the water pressure is higher as a way to adjust, becoming less interested in feeding until conditions normalize.
+
+* As we mentioned above, most agree that fishing is slow on both high-pressure and low-pressure days.** If the barometric pressure is above 30.50 inHg or below 29.60 inHg**, you might be better off waiting until the pressure normalizes.
+
+* High Pressure (Good Weather): During periods of high atmospheric pressure, the air pressing down on the water is greater,
+  slightly compressing the water. Fish with swim bladders experience a slight reduction in the organ’s volume,
+  making them naturally sink a bit. To counteract this, they expend energy adjusting their position in the water column,
+  which can make them less active or cautious, influencing their feeding and movement.
+
+* Low Pressure (Bad Weather): When low-pressure systems approach, such as before a storm, the pressure exerted on the water decreases.
+  This reduction causes the swim bladder to expand, making fish feel more buoyant. Fish typically respond by moving to deeper waters
+  to alleviate the over-buoyancy and find stability, often decreasing their feeding activity in these moments.
+  This is why anglers sometimes find it harder to catch fish before a storm.
+
+- impact by the moon daily
+- impact by the sun yearly
 
 ## Jekyll
 
@@ -330,7 +387,8 @@ Cultures: Typically cultured in separate tanks, often using algae or specialized
 * https://github.com/open-webui/open-webui
 * https://www.journal.unrika.ac.id/index.php/jurnaldms/article/view/543/0
 * https://www.corenet.gov.sg/ecatalog/Pages/corenet%20add.txt
-
+* [depth oceans vs o2](https://home.miracosta.edu/jturbeville/dana%20point%20floating%20lab/water%20chemistry.htm)
+* [Overlay image or text](https://imagekit.io/blog/css-image-overlay/)
 
 * The waters around Lim Chu Kang are “more brackish” and suitable for rearing milk fish and grey mullet,
  and he is currently the biggest producer of both types of fish in Singapore.
@@ -427,9 +485,6 @@ the larger prey from predator (Triño, unpublished).
 [Tiger Prawn floating cage growout culture](https://eprints.cmfri.org.in/10937/2/46459-150550-1-PB%20%283%29.pdf)
 
 
-
-
-
 ## Markdown Heading
 *   ~~strikthrough~~
 * Lake Como [84km north of Milan] and Lake Garda [137km from Milan]
@@ -440,9 +495,12 @@ the larger prey from predator (Triño, unpublished).
 * [sap flori tutorial](https://ui5.sap.com//#/topic/3da5f4be63264db99f2e5b04c5e853db)
 * [Flori web design](https://experience.sap.com/fiori-design-web/action-placement/)
 * [shell flori tool bar](https://experience.sap.com/fiori-design-web/flexible-column-layout/)
-* [sap grid view html](https://experience.sap.com/fiori-design-web/flexible-grid/) 
+* [sap grid view html](https://experience.sap.com/fiori-design-web/flexible-grid/)
+* [Dioxus](https://codesandbox.io/p/github/mattdanielbrown/Dioxus-Example-Projects/master?file=%2Fecommerce-site%2Fsrc%2Fmain.rs%3A19%2C26)
+* [Bookmark](https://www.croftsoft.com/library/tutorials/rust-dioxus-project-setup/) 
+* [docsite dioxus tailwind components](https://github.com/42Angouleme/dioxus-tw-components)
 
-
+![Indonesia QRcode](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
 ## Sebass vs Snapper
 - diffferent
 - which one taste better
@@ -503,17 +561,52 @@ Less then 5ppt:
 
 8.Use One or More then Mother Shrimps
 
+Batam
+---
+* Industry sampai jembatan 5.
+* fiber malaysia kapalnya lebih tebal daan berat jadi lebih stabil
+* Mesin kapal bisa jadi dua atau 1 (40 HP atau (2x 15HP)
+* Pulau Ketam malaysia ( hatchery and growth out sea pans)
+
+
+
 ## Kerapu
 ### di keramba apung
 *  Pencegahaan penyakit dengan mencelupkan kerapu ke air tawar 15 minutes? Membunuh hama air laut
 * Ukuran 7 cm sampai 0.5 kg untuk macan 8 bulan dan bebek 12 bulan
+* Grouper culture has three phases:
+	1. the larval stage where fish is reared for 15-60 days, 
+	2.  the nursery stage where fish is cultured for 1-2 months, and 
+	3. the growout stage where fish is reared for 6-8 months.
+   
+	Grouper need to be sorted and size-graded every week to prevent cannibalism. Other routine procedures 
+   include feeding, net maintenance, stock sampling, and monitoring water quality
+
+*  Hatchery phase
+	1. Stock 20-30 larvae/liter in 3-25 tons rearing tanks
+	2. Feed larvae Nannochlorum, rotifer, Artemia, and articial diet
+	3. Transfer larvae to marine cages when larvae reach the total length of 2-3 cm (15-60 days)
+* Nursery phase
+	1. Stock 2-3 cm fry in 1 x 2 x 1.5 m hapa nets at 75-100 fry/m3
+	set inside floating net cages. Uniform fry size should be strictly observed during stocking.
+	2. Install hover-type lamp to attract grouper prey such as copepods, mysids, young fishes, and crustacean larvae
+	3. Feed fry artificial diet or finely chopped frozen or fresh low value fish 4-6 times a day
+	4. Transfer fry to grow-out cages or ponds after 45-60 days or when total length is 6-10cm
+* Feed
+	1. Feed can change color ofsome groupers such as shrimp feed
+	2. head of the shrimp ( trash can be used to  feed the grouper): fresh or uncooked or cook
+
 * [Grouper Hatchery](https://youtu.be/IkKztRINSkQ?si=8Un_Fzv7SzwtXoNy)
   - Tiger : take 2 years
   - hybrid can growth to around 15 kg the second year
   - Male tiger grouper as broodstock 15kg
 * Prefer dark and rest at the bottom
 * When mature adult feed the whole fish
+* adult kerapu feeds: kepala prawn,trash fish, squid, pellet, dll
+
 * [Prevent disease in grouper](https://www.seafdec.org.ph/wp-content/uploads/2021/08/prevention-control-of-parasites-in-groupers.pdf)
+
+* small prawn eats the grouper lice but not too big which groupr will eat the praawn
 
 * A freshwater dip is a treatment for saltwater fish, like groupers, to help remove parasites.
  It involves temporarily placing the fish in fresh water for a short period, typically 3-5 minutes, to kill or loosen parasites.
@@ -528,6 +621,43 @@ Some fish may have difficulty returning to their normal salinity after a freshwa
 Aeration:
 Ensure the freshwater dip container has adequate aeration to provide oxygen to the fish
   
+ * obat bius untuk ikan air tawar 
+   Obat Bius Ikan Ramah Lingkungan dari Daun Pepaya
+
+
+# Minyak cengkeh
+Efektivitas Pemberian Minyak Cengkeh sebagai Obat Bius pada Ikan Kerapu Cantang
+
+Penelitian penggunaan minyak cengkeh dengan konsentrasi 5, 10 dan 15 ppm sebagai bahan anastesi pada transportasi tertutup ikan Kerapu cantang memberikan hasil tingkat kelangsungan hidup sebesar 76,67%, 86,67%, dan 80%, sedangkan tanpa penambahan minyak cengkeh tingkat kelangsungan hidup ikan kerapu adalah 60% pada pada transportasi dengan pemberian MS 222 70 ppm tingkat kelangsungan hidup mencapai 90%.
+Minyak cengkeh merupakan salah satu obat bius alami yang telah dikembangkan dan digunakan sebagai pengganti obat bius kimia seperti MS 222.
+Minyak cengkeh diperoleh dari ekstrak daun, batang dan bunga tanaman cengkeh. Minyak cengkeh diketahui mengandung senyawa eugenol yang bersifat
+analgesik atau mengurangi rasa sakit, selain itu juga mengandung senyawa kartiofilin yang bersifat sebagai antiseptik. Minyak cengkeh digunakan sebagai anestesi lokal pada hewan dan manusia dan memiliki efek sedasi pada hewan air. Namun senyawa tersebut juga memiliki aktivitas insektisida sehingga jika digunakan secara berlebihan dapat menyebabkan kematian pada ikan.
+
+Pemberian anestesi minyak cengkeh juga mempengaruhi total leukosit pada ikan kerapu setelah transportasi selama 10 jam.
+ Pada penelitian ini jumlah leukosit mengalami perbedaan bermakna antara perlakuan negatif dan kontrol.
+ Leukosit merupakan salah satu bagian darah yang berfungsi sebagai antibodi non spesifik. Saat ikan mengalami kondisi stres, 
+jumlah leukosit dapat meningkat sebagai bentuk tindakan pertahanan akibat stresor.
+
+
+**[Tricaine methane sulfonate (MS‐222)](https://ehs.msu.edu/lab-clinic/animal/ms222.html)** is a commonly used fish/amphibian anesthetic. The compound is an isomer of benzocaine.
+It is a solid at room temperature. Tricaine methane sulfonate has an oral rat LD50 of 5200mg/kg,
+which does not meet the OSHA classification of a toxic chemical.
+
+
+
+Teknik Imotilisasi Ikan Kerapu Cantang (Epinephelus sp.) Menggunakan Ekstrak Biji Kecubung (Datura Metel L.)
+---
+
+This study is about fish anesthesia using natural anesthetic ingredients. Natural anesthetic ingredients
+aim to reduce metabolism in Epinephelus sp. grouper fish. The immobilization method can be used to
+minimize high metabolism in Epinephelus sp. grouper fish. The purpose of this study was to obtain the
+influence of Datura metel L. seed extract on the onset time, recovery time, and live graduation of grouper
+fish Epinephelus sp. The results of the study, using extracts of natural anesthetic ingredients Datura
+metel L.seed with concentrations of 25%, 30%, and 35% can be concluded that it has a different influence
+(P<0.05) on the onset and recovered grouper fish. The survival rate of cantang grouper is 100% at each
+concentration. Amethyst seed extract concentration of 35% w
+
+
 
 ### di keramba tanjab yang punya pasir
 -tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
@@ -553,8 +683,19 @@ Ensure the freshwater dip container has adequate aeration to provide oxygen to t
 - cumi yang di es berwarna merah keesokan harinya
 - 1 knot =1.852km/hours
 - [fisherman boats](https://jixingxincomposite.en.made-in-china.com/product/NJpUiKoPaQYS/China-New-Design-High-Quality-Motor-Boat-Boat-Fishing-Fiberglass-Boat.html)
+- inyak 40pk motor (oil consumption 20L/hours)
+- Water coloumn
+  - air laut bataam diambil dari kedalaman 12m, di Norwegia diambil dari kedalamaan 75m dari permukaan laut
+- fiber boat puny hendra pulaupetong:
+  -17" dan 21" (5.5 m ~ 7 m) , boat: 27 juta
+  - mesin yamaha 15HP ( 2x)
+  - supaya temperature nya hampir sama dengan culture temperature
+  - Pulau Benan: Judit, Petong Hendra
+  - pH nya konstant di kedalaman ?
+- [cuaca dan agin di pulau petong](https://www.windy.com/0.629/104.082?0.626,104.094,15)
+- Pulau Ketam , Malaysia
 
-
+-[serial port in rust](https://users.rust-lang.org/t/how-to-use-serial-port-in-dioxus-desktop-app/99845/3)
 
 # [ikan tirusan-(Otolithoides pama)](https://www.mongabay.co.id/2024/09/16/ikan-tirusan-harga-selangit-jadi-primadona-khawatir-penangkapan-berlebih/)
 - [(Otolithoides pama)](https://www.themimu.info/sites/themimu.info/files/assessment_file_attachments/GOM_Pama_Croaker_croaker.pdf)
