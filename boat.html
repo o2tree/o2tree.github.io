@@ -1,0 +1,241 @@
+<html lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
+    <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
+
+                <title>Boat</title>
+                <script id="sap-ui-bootstrap"
+                        src="https://ui5.sap.com/resources/sap-ui-core.js"
+                        data-sap-ui-theme="sap_horizon"
+                        data-sap-ui-libs='sap.ui.documentation, sap.ui.layout, sap.m, sap.uxap, sap.f, sap.tnt, sap.ui.codeeditor, sap.ui.unified'
+                        data-sap-ui-compat-version="edge"
+                        data-sap-ui-async="true"
+                        data-sap-ui-on-init="module:my/app/main"
+                        data-sap-ui-resource-roots='{"my.app": "./"}'>
+                </script>
+		 <script>
+                        sap.ui.getCore().attachInit(function () {
+                        sap.ui.require(["sap/ui/core/mvc/XMLView"], function (XMLView) {
+                        XMLView.create({ viewName: "Quickstart.App" }).then(function (oView) {
+                            oView.placeAt("content");
+                        });
+                       });
+                     });
+                  </script>
+                  <script>
+                  	var oMenu = new sap.m.Menu({
+			title: "random 2",
+			itemSelected: function (oEvent) {
+				var oItem = oEvent.getParameter("item"),
+					sItemPath = "";
+				while (oItem instanceof sap.m.MenuItem) {
+					sItemPath = oItem.getText() + " > " + sItemPath;
+					oItem = oItem.getParent();
+				}
+
+				sItemPath = sItemPath.substr(0, sItemPath.lastIndexOf(" > "));
+
+				sap.m.MessageToast.show("itemSelected: " + sItemPath);
+			},
+			items: [
+				new sap.m.MenuItem({
+					text: "fridge",
+					icon: "sap-icon://fridge",
+					items: [
+						new sap.m.MenuItem({
+							text: "accidental leave",
+							icon: "sap-icon://accidental-leave",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://factory",
+									text: "factory"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flag",
+									text: "flag"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flight",
+									text: "flight"
+								})
+							]
+						}),
+						new sap.m.MenuItem({
+							text: "iphone",
+							icon: "sap-icon://iphone",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://video",
+									text: "video"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://loan",
+									text: "loan"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://commission-check",
+									text: "commission check"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://doctor",
+									text: "doctor"
+								})
+							]
+						})
+					]
+				}),
+				new sap.m.MenuItem({
+					text: "globe",
+					icon: "sap-icon://globe",
+					items: [
+						new sap.m.MenuItem({
+							text: "e-care",
+							icon: "sap-icon://e-care"
+						})
+					]
+				})
+			]
+		});
+
+                  </script>
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+</style>
+  </head>
+  <!-- script src="https://unpkg.com/@tailwindcss/browser@4"></script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <body class="sapUiBody" id="content">
+    <h1>Test Page for Hatchery <code>sap.ui.unified.Calendar</code></h1>
+    <div>Single day Selection Calendar</div>
+    <br>
+      <!-- div class="relative w-[500px]">
+        <img src="https://www.khueapps.com/media/images/2025-02/cute-dog.webp" />
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
+            <h3 class="text-xl text-white font-bold">
+                Hey, I Am The Big Boss</h3>
+            <p class="mt-2 text-sm text-gray-300">Some description text. Some dummy text here. Welcome to KhueApps.com.
+            </p>
+        </div>
+    </div -->
+
+     <div>
+	<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div>
+<md-block>
+
+[Image Maker](https://imageresizer.com/)
+
+[pdfum binary](https://github.com/bblanchon/pdfium-binaries)
+
+#  Boat engine
+  - Yamaha, Suzuki, Honda
+  - Yamabisi (9.9 HP, 7.3kW) - speed 10km/hour
+    - fuel pump
+    - 92 octane
+    - 4 stroke
+
+</md-block>
+
+           <div class="mermaid">
+            graph LR
+            %% This is a comment!!!
+            %% Pelabuhan di Batam
+            A[fas:fa-ship Tajuh Biru Mon & Thu<br>Lingga] --> B0[fas:fa-ship 🦞🐟frozen/live<br> Belakang Padang<br>Batam] -- Singapore GST 9.00%-->
+              S0[/"Singapore GST 9.00+ import tax?<br>Jurong fish port(30% import)<br>Singapore"/] --logistic cost + 2.00SGD -->S1[/Closed March 2024<br>Senoko Fishery Port<br>Singapore/]
+            B1[fas:fa-ship 🦞🐟 frozen/live<br> Sagulung daily<br>Batam] --freight charge 18SGD 100cm x 50cm x 50cm \( 50~90 kg\) -->S0
+            J1["fas:fa-ship Pelabuhan Hasim<br>Balerang, Batam"] <---->|Private Boat 00:45, 16.00km?| P["Ke Pulauan Petong 🥽"]
+            J7["fas:fa-ship Pel. Pari Jembatan 6<br> Batam"] <---->|Private Boat 00:45, 16.00km?| PB["Pulan Benan 🥽"]
+            J7 <-->A
+            TPunggur["fas:fa-ship Pelabuhan Telaga Punggur<br>Batam"] <---->|01:45?| PB <---> |00:45 | A 
+
+            J6["fas:fa-ship Pel. Kepri Coral<br>Batam"]<-->P
+            TP["fas:fa-ship Tanjung Pinang"] <-- Public --> A
+            style S1 fill:red
+            click A "https://docs.google.com/forms/d/e/1FAIpQLSfVlANgYbnoqzFn5tKd4520MAiF10Sgqg343FKI2oTYmhcP8Q/viewform?usp=sharing" "budiday lobster"
+            click P "https://batamnewsasia.com/2024/11/11/explore-pulau-petong-batams-underwater-paradise-for-tourists/" "Pulau Petong"
+	    click B1 "https://www.google.com/maps/d/edit?mid=1k7qpHqVpCqY_taRwkaVSyDc8yo8jmFo&usp=sharing" "Pel Sagulung bpk Hamzah"
+            click TPunggur "https://tiketkapal.com/" "Ferry ke pulau"
+          </div>
+      </div>
+
+<div class="mermaid">
+    flowchart  TB
+      subgraph OCEAN9 ["fas:fa-ship <a https://tiketkapal.com/> OCEAN 9 </a>"]
+          direction LR
+           TP([Telaga Punggur])-->|ferry 11:00 web kapaltiket.com| A([BENAN]) --> |"00:45"| B([Tajuh Biru])  --> C(["Sei Tenam"])  --> D(["Senayang"]) <--->|"from 07:15 Pancur"| E(["Pancur"])
+      end
+      subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
+          direction LR
+          TP1(["Telaga punggur"]) --> CC(["Sei Tenam"])-->JG(["Jagoh"])
+      end
+      subgraph Anambas ["fas:fa-ship Anambas"]
+          direction LR
+          TP2(["Telaga Punggur"]) --"Rp. 494k"--> Letung  --"Rp 495k"-->   Terempa(["Terempa"]) 
+       end
+      subgraph Bintan["Pulau Bintan/Tanjung Pinang"]
+          direction LR
+          BTP(["Tanjung Pinang"])
+      end
+    TP <--.--> TP1 <--.--> TP2
+    style A fill: black, color: white
+    style B fill:grey, color:#fff
+    style TP fill:blue, color: whit
+    style TP1 fill:blue, color: white
+    style TP2 fill:blue, color: white
+    click BTP "https://www.welcometobintan.com/images/map.jpg" "Tanjung Pinang"
+    
+</div>
+
+<div class="mermaid">
+pie title Investment weighting factor 
+    "Money" :60
+    "Labour" : 35
+    "Technology-Consultant" : 5
+
+</div>
+
+<div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
+<div id="consent_blackbar"></div>
+<md-block>
+# example
+|Person |Investor<br>money(60%) | labor (40%--><br> Manager(60%) + worker(40%)| Calculation <br>Propotion|
+|-------|-------------|------|-------------|
+| A     | 100K x 0.6  | 0    | 100K/200K*0.6=0.3         |
+| B     | 100K x 0.6  | 0.4 x 0.6=0.24|30% +24%=54%|
+| C     | 0           | 0.4 x 0.4=0.16 | 16%        |
+
+
+</md-block>
+</div>
+  <script type="module">
+      import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
+    </script>
+    <script type="module">
+     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+      mermaid.registerIconPacks([
+        { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
+        { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
+      ]);
+     mermaid.initialize({ startOnLoad: true });
+</script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  </body>
+</html>

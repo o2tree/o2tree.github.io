@@ -147,6 +147,10 @@
 
 [Ikan sidat](#eel-ikan-sidat)
 
+[Image Maker](https://imageresizer.com/)
+
+[pdfum binary](https://github.com/bblanchon/pdfium-binaries)
+
 * Green phytoplanktons (**Nannochloropsis** oculata,Tetraselmis chui, Chlorella, Dunaliella tertiolecta)
 
 * Golden phytoplanktons (Tisochrysis lutea, Pavlova, Isochrysis galbana, Thalassiosira weissfloggii)
@@ -156,10 +160,6 @@
 * Orange phytoplankton (Chaetocerors calcitrans)
 
 * Brown phytoplanktons (Pheaodactylum tricornutum)
-
-
-
-
 
 
 
@@ -228,6 +228,7 @@ flowchart TD
       R0{"Rotifer Large ΔT"}
       R1{"Rotifer Small ΔT"}
       Artemia["Artemia<br>Brine shrmp"]
+      eggs["Fish Eggs"]
       PyPL1  --> Artemia
       PyPL1  --> R0
       PyPL1  --> R1
@@ -240,11 +241,27 @@ flowchart TD
        direction LR
        Market["different stage of Market"]
     end
+    subgraph artemiaGrowth ["Artemeia Growth up Culture"]
+       direction LR
+       artemeia_eggs["Artemaia Eggs and larvae for feed"]
+    end
+    subgraph vitaamin ["Vitamin C and B12 complex"]
+       direction LR
+       vitamin_feed["feed to rotifer prior to the feed for Hatchery"]
+    end
+    subgraph Pellet_Custard ["Pellet or Custaard"]
+       direction LR
+       Pellet_feed["Pellet feed"]
+       custard["wet or frozen feed"]
+    end
+
+
+
  
     T --> hatchery
     planton --> hatchery
     hatchery --> growup
-    style Eggs fill:pink, color:black
+    style eggs fill:pink, color:black
 
     click hatchery "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
 </div>
@@ -312,6 +329,13 @@ pie title Investment weighting factor
 <div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
 <div id="consent_blackbar"></div>
 <md-block>
+# example
+|Person |Investor<br>money(60%) | labor (40%--><br> Manager(60%) + worker(40%)| Calculation <br>Propotion|
+|-------|-------------|------|-------------|
+| A     | 100K x 0.6  | 0    | 100K/200K*0.6=0.3         |
+| B     | 100K x 0.6  | 0.4 x 0.6=0.24|30% +24%=54%|
+| C     | 0           | 0.4 x 0.4=0.16 | 16%        |
+
 ## Marketing shrimp
 * [di lampung](https://indomina-ils.com/)
 * [Daftar pellet](https://kkp.go.id/storage/Materi/daftar-pakan-ikan-dan-udang-terdaftar67bc05bdc25c3/materi-67bc05bfe464f.pdf)
@@ -381,7 +405,7 @@ Barometric pressure is the weight of the atmosphere in a specific area, usually 
 
 * [jekyll github](https://notepad.onghu.com/2023/using-mermaid-in-a-textile-post-jekyll/)
 * [look at github](https://stuff-things.net/2025/01/19/mermaid-diagramming-in-jekyll-in-2025/)
-* [jekyll pwa](https://moldstud.com/articles/p-how-to-create-an-engaging-jekyll-based-pwa-a-step-by-step-guide)
+* [jekyll pwa](https://moldstud.com/articles/p-how-to-create-an-engaging-jekyll-based-pwa-a-step-by-step-guid
 * [Markdown Note](https://users.ssc.wisc.edu/~hemken/Stataworkshops/stmd/Markdown/tableandblocks1.html)
 * Webassembly mermaid
 * https://github.com/open-webui/open-webui
@@ -389,7 +413,7 @@ Barometric pressure is the weight of the atmosphere in a specific area, usually 
 * https://www.corenet.gov.sg/ecatalog/Pages/corenet%20add.txt
 * [depth oceans vs o2](https://home.miracosta.edu/jturbeville/dana%20point%20floating%20lab/water%20chemistry.htm)
 * [Overlay image or text](https://imagekit.io/blog/css-image-overlay/)
-
+* [c++ plus rust](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
 * The waters around Lim Chu Kang are “more brackish” and suitable for rearing milk fish and grey mullet,
  and he is currently the biggest producer of both types of fish in Singapore.
 
@@ -399,7 +423,7 @@ Barometric pressure is the weight of the atmosphere in a specific area, usually 
 1. item 1
 1. | Column One | Column Two |
 | --- | --- |
-| data cell one | data cell two |
+| <img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">| <img src="https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600" alt="Alt Text" width="500" height="600"> |
 
 
 - some text
@@ -428,6 +452,7 @@ Think of Pieces as a technical Tinkerbell from Peter Pan[^2].
 
 Depending on how much cookie dough you eat, you’ll have about ==20-22== cookies from this recipe!
 
+# [embedded html to pdf](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
 
 <div>
 <p markdown="1">
@@ -501,6 +526,9 @@ the larger prey from predator (Triño, unpublished).
 * [docsite dioxus tailwind components](https://github.com/42Angouleme/dioxus-tw-components)
 
 ![Indonesia QRcode](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
+[Coral](https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg)
+<img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">
+
 ## Sebass vs Snapper
 - diffferent
 - which one taste better
@@ -566,7 +594,8 @@ Batam
 * Industry sampai jembatan 5.
 * fiber malaysia kapalnya lebih tebal daan berat jadi lebih stabil
 * Mesin kapal bisa jadi dua atau 1 (40 HP atau (2x 15HP)
-* Pulau Ketam malaysia ( hatchery and growth out sea pans)
+* Pulau Ketam malaysia ( hatchery and growth out sea pans) - outer island near Kuala Lumpur ( near Riau)
+
 
 
 
@@ -693,7 +722,11 @@ concentration. Amethyst seed extract concentration of 35% w
   - Pulau Benan: Judit, Petong Hendra
   - pH nya konstant di kedalaman ?
 - [cuaca dan agin di pulau petong](https://www.windy.com/0.629/104.082?0.626,104.094,15)
-- Pulau Ketam , Malaysia
+- 65% kapal nelayan adalaah terbuat dari kayu (10`15 year)
+  - Mesin bukan dmeesia kapal akibatnya mudah terjadi korosi
+  
+
+
 
 -[serial port in rust](https://users.rust-lang.org/t/how-to-use-serial-port-in-dioxus-desktop-app/99845/3)
 
