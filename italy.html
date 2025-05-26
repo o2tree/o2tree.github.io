@@ -38,35 +38,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <body class="sapUiBody" id="content">
 
-<div class="mermaid">
-      graph RL
-          A:::someclass --> B
-          classDef someclass fill:#f96;
-          linkStyle default fill:none,stroke-width:3px,stroke:red
-	
-          C --> D
-</div>
-
-<div class="mermaid">
-  graph LR
-     A e1@==> B
-     e1@{ animate: true }
-</div>
-
-<div class="mermaid">
-architecture-beta
-    group api(logos:aws-lambda)[API]
-
-    service db(logos:aws-aurora)[Database] in api
-    service disk1(logos:aws-glacier)[Storage] in api
-    service disk2(logos:aws-s3)[Storage] in api
-    service server(logos:aws-ec2)[Server] in api
-
-    db:L -- R:server
-    disk1:T -- B:server
-    disk2:T -- B:db
-</div>
-
  <div class="mermaid">
 	graph LR
 		A[Naples] == 🚄 01:10/(€19.90-26.90) ==> R0((① Termini Rome))
@@ -124,7 +95,7 @@ click H "htts://www.rome.info/transport/public-transport/metro/" "This is a tool
       end
       subgraph milan["Milan and Lake Como"];
          direction TB;
-         LComo
+         LComo -->|by train| Laguna["Laguna swithzertalnd"]
          Castle["Sforza Castle"]
          Piazza["Piazza Mercanti"]
          Cathedral["Milan Cathedral"]
@@ -137,6 +108,7 @@ click Florence "https://www.introducingflorence.com/map" "Florence map"
 click StCarlosAcuti "https://carloacutis-en.org" "Acuti @ Assisi"
 click Assisi "https://www.viator.com/tours/Assisi/Assisi-the-Three-Major-Basilicas-St-Francis-St-Clare-and-Porziuncola-chapel/d27667-7233P116" "Assisi"
 click Sistine "https://www.museivaticani.va/content/museivaticani/en/organizza-visita/tariffe-e-biglietti/biglietto-d-ingresso-ridotto.html#lnav_shop" "Sistine Chapel"
+click Laguna "https://www.viator.com/tours/Lake-Como/Como-Lugano-and-Bellagio-One-Day-Experience/d26113-6404P35" "laguna"
 </div>
 
 
@@ -195,7 +167,172 @@ Going from Florence to La Spezia
 ---
 By train – the journey lasts approximately 2 hours and a half. From La Spezia railway station, take the 5 Terre Express train or go to the seafront in order to take the ferry boat.
 
-[Live Interactive Florence Map](href="https://www.introducingflorence.com/map/florence-cathedral")
+[Live Interactive Florence Map](https://www.introducingflorence.com/map/florence-cathedral)
+
+[Google map](https://www.google.com/maps/d/edit?mid=1d13KDSTYEPZuoF5k6zK5ZBTnENIijg4&ll=43.257859058041916%2C-10.838433227157514&z=5)
+
+
+
+# [Open Rail Map](https://www.openrailwaymap.org/)
+
+## UK
+[BUCKINGHAM PALACE](https://www.rct.uk/visit/buckingham-palace): 51.49866394530613 -0.1448951992550085
+[Buckingham Palace](https://www.google.com/maps/place/Istana+Buckingham/@51.501364,-0.14189,670m)
+
+[St Giles hotel London](https://sg.hotels.com/ho524612/st-giles-london-a-st-giles-hotel-london-united-kingdom/?chkin=2025-07-05&chkout=2025-07-07) : S$275 per night
+
+[Vicinity Hotel near Buckingham Palace price rate](https://sg.hotels.com/Hotel-Search?destination=St%20Giles%20Hotel%20-%20London%2C%20London%2C%20England%2C%20United%20Kingdom&regionId=2114&latLong=51.517612%2C-0.130687)
+
+[Air Portugal Booking](https://booking.flytap.com/booking)
+
+
+# [Italy tours](https://italiatours.com/)
+* [Italy airline](https://fly.ita-airways.com/booking/shoppng-cart)
+* [Italy Rail Operator buy ticket](https://www.italiarail.com/)
+    * [popular routes](https://www.italiarail.com/routes)  
+    * [Official italian train-Trenitalia](https://www.trenitalia.com/en.html)
+       * [Rail Fare Information](https://www.trenitalia.com/en/html/trenitalia/Info_Tariffe_en_LeFrecce.html)
+    * https://www.trenitalia.com/content/dam/tcom/allegati/trenitalia_2014/informazioni/How_to_buy_your_tickets.pdf
+* [Best western reservation](https://www.bestwestern.com/en_US/book/booking-summary.html)
+* [**Italy Trenitalia** train](https://www.trenitalia.com/en.html)
+* [train Omio time table **Europe**](https://www.omio.com/trains/italy?)
+    * [Italy intercity high-speed train routes](https://www.omio.com/trains/italy?#routes)
+* [Rome](https://hotel.vueling.com/searchresults.en-gb.html)
+    * ~FLO Airport train to downton termini st ( €9.00-15.40)~,Vatican city
+    * [Rome Metro train](https://www.rome.info/transport/public-transport/metro/)
+    * [Madre Serafina Suore Degli Angeli <br>Via Monte Fumaiolo, 00139 Roma RM, Italy](https://www.google.com/maps/dir//Madre+Serafina+Suore+Degli+Angeli,+Via+Monte+Fumaiolo,+00139+Roma+RM,+Itali/@41.9481802,12.5390668,1067m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x132f6405a816a741:0x97384cc59c33b2f8!2m2!1d12.5390668!2d41.948181!3e0?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D)
+    * [Bus 90](https://transitapp.com/en/region/roma/atac/bus-90)
+    * ① [Basilica Papale di Santa Maria Maggiore](https://www.basilicasantamariamaggiore.va/en.html)<br>
+      ② [Piazza spagna shopping area](https://www.rome.net/piazza-di-spagna)<br>
+      ③ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩                                        
+    * [Basilica Papale di Santa Maria Maggiore](https://www.basilicasantamariamaggiore.va/en.html), Colleseo, Basilica San Giovani, Castel sant Angelo
+    * Best Western Hotel Via Palestro 19, Central Station, 00185 Rome, Italy SGD275 per night
+    * The Caesar Roma, Via della Pisana 374 , 00163 Rome, Italy (SGD225 pernight)   
+    * [Holiday Inn](https://www.ihg.com/holidayinn/hotels/gb/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qDest=Holiday%20Inn%20Rome%20-%20Eur%20Parco%20Dei%20Medici&qErm=false&qSlH=romdm&qRms=1&qAdlt=2&qChld=0&qCiD=10&qCiMy=062025&qCoD=14&qCoMy=062025&qAAR=6CBARC&qRtP=6CBARC&setPMCookies=true&qSHBrC=HI&qpMbw=0&qpMn=1&srb_u=1&qRmFltr=)
+    * [Laundrymat Termini station](https://www.yelp.com/search?cflt=laundromat&find_loc=Termini%2C+Rome%2C+Roma)
+    * The Vatican City is free to enter, allowing you to meander the likes of St. Peter's Basilica and St. Peter's Square without dropping a dime.
+       However, if you want to see the Vatican's starring attractions: the Sistine Chapel and Vatican Museums,
+       you will have to pay around €15.00                                       
+                                                
+* [Rotondo , Padre Pio](https://saintpiofoundation.org/san-giovanni-rotondo)
+* [italian street food](https://www.italiarail.com/food/savouring-italys-street-food)                                        
+----                                                
+* [Florence (City is beetween Milan and Venice) ::: Tuscany](https://www.google.com/maps/place/Firenze+Santa+Maria+Novella)
+  * Rome Termini -🚄 [Florence Santa Maria Novella  ( Train)](https://www.google.com/maps/place/Firenze+Santa+Maria+Novella), Luggage storage is in the nearby station                                             
+  * [Rome to florence train : duration 1:30 hour, €15-31](https://www.omio.com/trains/rome/florence)                 
+  
+  * [Florence Attraction](https://www.visitflorence.com/moving-around-florence/by-bus.html)
+    * ① [Flourence duomo](https://www.introducingflorence.com/map)  ② [UFFIZI GALLERY](https://www.ciaoflorence.it/en/tour-detail/7) ③ Museo Ferragamo
+    * ⑤ Accademia Gallery ⑥ Florence Cathedral ⑦ ⑧ ⑨ ⑩ 
+                                                
+  * [Florence Metro](https://www.google.com/maps/d/viewer?mid=18Eqs3MpCNOAv42nYrLRXq9EOJIcZv7g&femb=1&ll=43.77855363803894%2C11.218513150000001&z=13)
+  * [Laundrymat florence](https://www.yelp.com/search?find_desc=Laundromat&find_loc=Florence%2C+Firenze%2C+Italy)
+  * [Apartment for rent Florence](https://www.booking.com/hotel/it/vera-39-s-house-with-garden.en-us.html?aid=327520&label=webp-vf-searchbox-%2Fmoving-around-florence%2Fby-bus.html-Florence&sid=bb3bf27e111448df8f119f62b69eb6a5&all_sr_blocks=303734901_347113369_6_0_0&checkin=2025-07-15&checkout=2025-07-17&dist=0&group_adults=6&group_children=0&hapos=5&highlighted_blocks=303734901_347113369_6_0_0&hpos=5&matching_block_id=303734901_347113369_6_0_0&nflt=price%3DEUR-min-350-1&no_rooms=1&req_adults=6&req_children=0&room1=A%2CA%2CA%2CA%2CA%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=303734901_347113369_6_0_0__59620&srepoch=1742178090&srpvid=4f700fcad98d012f&type=total&ucfs=1&#map_opened-map_trigger_header)                                          
+  * Florence food tour (City food taste- coffee, Gelato, Pasta, etc),[Best Foods in Florence](https://www.youtube.com/watch?v=75kVg0qhhxE) and/or Tuscany wineary tour
+                        
+  * [Cinque Terre](https://www.navigazionegolfodeipoeti.it/)<br>
+    🄰 Going from Florence to La Spezia 01:45 EUR15.00<br>                        
+    🄱 Florence - Pisa 01:00 EUR 10.00 <br>
+    🄲 Pisa - La Spezia 01:40 EUR <br>
+    🄳 Florece - La Spezia -  Moneglia 02:53 EUR18.00<br>
+    🄴 Moneglia ----  La Spzia ---- Pisa -- Florence <br>
+    [Boat ferry price cinque terre](https://www.navigazionegolfodeipoeti.it/en/cinque-terre)
+
+                                  
+  * [Assisi](https://www.ciaoflorence.it/en/page/21) [Assisi Train](https://www.italiarail.com/train-station/assisi-train-station-guide)   
+    * There are 3 ways to get from Assisi to Assisi (Station) by bus, taxi, or foo
+    * Take the bus from P.za Matteotti Assisi to Assisi Stazione E007. Bus. 12 min. €1–3.
+    * Take the taxi from Assisi to Assisi (Station) 4.8 km. Taxi. 6 min. €8–10.
+    * Take the foot from Assisi to Assisi (Station) 4 km. Walk. 48 min. 
+    * Basilica of Saint Francis of Asissi
+                            
+  * West of Florence -tuscany coast
+      * [Florence - Pisa](https://maps.app.goo.gl/rHBt5ej2TDrJfuqD9) 49 minutes, 160?km one way EUR10, operate until 22:00?
+      * [Florence to Cinque Terra day trip](https://www.getyourguide.com/florence-l32/from-florence-cinque-terre-pisa-day-trip-w-optional-hike-t57210/)                                                                            
+                                
+* [Milan](https://www.introducingmilan.com/general-information)
+    * 🚄 Milano centrale train to  Milan airport terminal 1 (**€13.00, 00:51 minutes**)
+    * [Milan Metro](https://metroguides.info/city/milan?ln=en),[Laundrymat in Milan](https://www.yelp.com/search?find_desc=Laundromat&find_loc=Milan%2C+Milano%2C+Italy)    
+    * [Milan Metro transport Pass](https://www.milanpublictransport.com/metro-milan/), [Milan shuttle airport **€10 duration 01:45 hours**](https://www.malpensashuttle.it/en/time-table-and-bus-stops.html)
+    * [Millan Metro Pass + airport to malpanse terminal](https://www.milanpublictransport.com/new-integration-milan-public-transport-malpensa-airport-bus/?_gl=1*1u6onxw*_up*MQ..*_ga*MTM2NTczMTA5MC4xNzQyMTkwNzA1*_ga_1CSPVMQTP1*MTc0MjE5MDcwNC4xLjAuMTc0MjE5MDcwNC4wLjAuMTMxNjQ4NDM0NQ..)
+    * Milan Porta Garibaldi - Turin Porta Susa €10 1.5 hours    
+    * [Da Vinci’s “Last Supper”](https://www.getyourguide.com/milan-l139/milan-historical-tour-the-last-supper-t62890/?ranking_uuid=cd8abc2d-c505-42ca-9985-04d778db060e&utm_medium=sharing&utm_campaign=activity_details_desktop), [The Duomo's Terrace](https://www.getyourguide.com/milan-l139/milan-duomo-rooftop-and-cathedral-guided-tour-with-tickets-t450036/?ranking_uuid=0756526e-e962-4a5f-8c7c-0a74503cf605&utm_medium=sharing&utm_campaign=activity_details_desktop)
+    * **Sforza Castle**,Piazza Mercanti,**Milan Cathedral**,Galleria Vittorio Emanuele II,Piazza della Scala
+    * [Sightseeing tours (Lake como, lake Garda, Clinque Terre,etc) nearby Milan](https://www.introducingmilan.com/two-days-in-milan)
+    * [Where to eat in Milan price including tipping + etc](https://www.introducingmilan.com/two-days-in-milan) 
+    * [Milano central to Malpanse airport](https://shop.italiarail.com/options?departureStationId=830001700&arrivalStationId=830025635&departureDate=2025-07-20&adults=3&children=0)
+    * [Milan Designer store](https://www.youtube.com/shorts/syEpiLrMST0)
+
+* Verona
+    * [Lake Garda vs Lake Como](https://www.thetimes.com/travel/destinations/europe-travel/italy/como-v-garda-which-italian-lake-is-better-9vj9fll35)                               
+
+
+* [Venice](https://www.introducingvenice.com/general-information)
+    * [Venice Mestre]() - Verona Porta Nuova (transfer) - Milano Lambrate €25.00 (3:00 hours)
+    * [Hotel and attraction in Venice](https://www.introducingvenice.com/hotels)
+    * [Venice food tour](https://thetourguy.com/travel-blog/italy/venice/foods-to-try-in-venice-and-where-to-eat-them/)
+    * [Laundrymat in Venice](https://www.yelp.com/search?find_desc=Laundromat&find_loc=Venice%2C+Venezia%2C+Italy)
+    * [Venice food tour](https://thetourguy.com/travel-blog/italy/venice/foods-to-try-in-venice-and-where-to-eat-them/)
+    
+* [Naples, Napoli](https://naplespublictransport.it/public-transports-network-in-naples/)
+    * [Laundrymat in Naples](https://www.yelp.com/search?find_desc=Laundromat&find_loc=Naples%2C+Napoli%2C+Italy)       * [Metro Pass Naples](https://naplespublictransport.it/naples-airport-capodichino/)                  
+    * Rome Termini-Naples Centrale- Napoli, Stazione Centrale -Sorrento, Corso Italia / Piazza Angelina Lauro
+    * Take the bus from Pompei - P.zza Anfiteatro CL to Ercolano - Vesuvio CL 808. Line 808 bus. 55 min. €3–5.
+    * [Naples - Pompei day tour](https://www.getyourguide.com/naples-l162/from-naples-pompeii-and-vesuvius-guided-day-trip-with-lunch-t165716/?ranking_uuid=c39ffed8-6af2-450b-b24a-f82c369843e4&utm_medium=sharing&utm_campaign=activity_details_desktop)                                         
+    * Rome Termini-Naples Centrale- Napoli, Stazione Centrale -Sorrento, Corso Italia / Piazza Angelina Lauro   
+    * The most famous pizzeria in Naples is probably Sorbillo and Michele
+    * [Herculaneum by train/bus](https://www.rome2rio.com/map/Archaeological-Park-of-Herculaneum-Corso-Resina-Ercolano-Metropolitan-City-of-Naples-Italy/Naples)
+    * How to get to Pompeii ruins, Herculaneum, and Vesuvius
+        * The easiest way to reach both Pompeii and Herculaneum is the [Circumvesuviana train](https://www.sorrentoreview.com/circumvesuviana-train-timetables.html) that runs between Naples and Sorrento. From the Circumvesuviana stations, you can easily walk to the ruins or catch a bus for the Mount Vesuvius National Park.
+    * Three main gate entrance to Pompei
+        * [Porta Marina top Pompei entrace station - Pompeii Scavi train station](https://www.pompeii-tickets.com/pompeii-entrances/?ci=1&cm=10750044708_134250028065_c_g___&gad_source=1&gclid=CjwKCAjwnPS-BhBxEiwAZjMF0iI6_9zh2kLOWjdKx3z-ActZg3UVAL4QO81y_6OmASspWE8QlK6xTRoCoPkQAvD_BwE)
+    * Is Mount Vesuvius free to visit? * While access to the national park of Vesuvius is free, you will need a ticket to visit the crater
+    * Herculaneum is an excellent option. Smaller and more preserved than Pompeii, 
+      this ancient town was also buried by the eruption. 
+      You'll have the chance to walk around remarkably well-preserved homes, public buildings, and mosaics,
+      giving you a sense of how life was in the Roman era. Your driver will ensure you have plenty of time
+      to explore and can assist you with any questions you may have during your visit.
+    * [Amafi Lemon](https://www.italiarail.com/food/joys-amalfi-lemon)
+    * **Sorrento** is one of the most visited destinations in Europe.
+
+* the airports are generally 30-45 minutes outside the city center, which eats up precious time on your trip 
+* The main train stations between which you’ll travel on these routes are **Rome Termini, Milan Centrale, Naples Centrale, Venice Santa Lucia and Florence Santa Maria Novello**. These are all large, modern stations with full accessibility facilities, shops and places to eat and drink.
+* Naples Centrale Station, with a couple of trains a day leaving from Napoli Campi Flegrei Station in the morning. You’ll arrive either at Rome Termini Station or Rome Tiburtina Station, (duration 1:15 hours)
+
+
+[Naples](https://www.sorrentoreview.com/naples.html) to Rome
+---
+You can use our platform to book train tickets on another very popular Italian train route, from Naples to Rome. You’ll usually leave from Naples Centrale Station, with a couple of trains a day leaving from Napoli Campi Flegrei Station in the morning. You’ll arrive either at Rome Termini Station or Rome Tiburtina Station, both of which are busy transit hubs. All of these stations have comprehensive services for passengers with limited mobility, making use of the Sala Blu national support programme. There are baby-change facilities, shops, cafes and fast food outlets available, too.
+
+This isn’t a very long journey, and you can expect the Trenitalia or Italo high-speed trains to take roughly 1hr 15min to get you to Rome. Other trains can take up to 3 hours. They leave throughout the day, from around sunrise till just before midnight, with well over 60 trains available at intervals ranging from 2 minutes during peak times, to about 20 minutes at other times.
+
+
+![](https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/016/979/original/88a28f31bdbd596c5d52a78173f256a5/cost-map-italy.png)
+
+![](https://www.trenitalia.com/content/dam/tcom/restyling/le-frecce/1023x440/1023x440_collegamenti-Frecciarossa_03-23.jpg)
+![](https://d1c96a4wcgziwl.cloudfront.net/4b99shutterstock_755152069.jpg)14.00> S0{(Sorrento)}
+
+[Clinque Terre](https://www.exquisitecoasts.com/cinque-terre-map.html)
+
+[Pompei](https://files.caprionline.it/downloads/infographic-vesuvius-pompeii-herculaneum.pdf)
+---
+<img src="https://pompeiisites.org/wp-content/uploads/Mappa_gp_2-scaled.jpg">
+
+Hereculeum
+----
+
+<img src="https://cdn.images.ondaplatform.com/portals_articles/29/cover/hero-herculaneum-l.jpeg?crop=smart&mt=1674552758&longSide=1000">
+
+clinque Terre
+---
+<img src="https://www.exquisitecoasts.com/images/Cinque-Terre-Map.jpg">
+
+<img src="https://www.navigazionegolfodeipoeti.it/img/mappe/mappa-linea04.svg">
+
+Amalfi Coast
+---
+<img src="https://www.exquisitecoasts.com/images/Amalfi-Coast-Beaches.jpg">
+
 
 </md-block>
     <script type="module">

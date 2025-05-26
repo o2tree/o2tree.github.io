@@ -4,7 +4,7 @@
 - http://tr.ee/UG_IGJ3t3a
 - [O2tree main access](http://o2tree.carrd.co)
 - [Kelompok Tani Hutan Sumber Bahari](http://o2tree.github.io/KTHSumberBahari.html)
-- http://o2tree.github.io/tanjungkampeh.html
+- [Tanjung Kampeh Palemebang](http://o2tree.github.io/tanjungkampeh.html)
 - [Italy point of Interest-Testing Mermaid](http://o2tree.github.io/italy.html)
 
 
@@ -12,8 +12,10 @@
 - http://o2tree.github.io/lahanrumah3.html
 - [PenyuBiru map](http://o2tree.github.io/penyubiru.html)
 - [fish](http://o2tree.github.io/fish.html)
+- [Boat and Investment](http://o2tree.github.io/boat.html)
+- [Rust and cpp](http://o2tree.github.io/rustcpp.html)
 
-- https://github.com/o2tree/o2tree.github.io/tree/main
+- [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=en
 - https://streamlit.io/generative-ai
