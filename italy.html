@@ -95,10 +95,11 @@ click H "htts://www.rome.info/transport/public-transport/metro/" "This is a tool
       end
       subgraph milan["Milan and Lake Como"];
          direction TB;
-         LComo -->|by train| Laguna["Laguna swithzertalnd"]
+         LComo -->|by train 🚄| Lugano["Lugano swithzertalnd"]
          Castle["Sforza Castle"]
          Piazza["Piazza Mercanti"]
          Cathedral["Milan Cathedral"]
+         Bellagio["Bellagio"]
       end
 
 click ClinqueTerre "https://www.exquisitecoasts.com/images/Cinque-Terre-Map.jpg" "many beautiful town"
@@ -108,7 +109,7 @@ click Florence "https://www.introducingflorence.com/map" "Florence map"
 click StCarlosAcuti "https://carloacutis-en.org" "Acuti @ Assisi"
 click Assisi "https://www.viator.com/tours/Assisi/Assisi-the-Three-Major-Basilicas-St-Francis-St-Clare-and-Porziuncola-chapel/d27667-7233P116" "Assisi"
 click Sistine "https://www.museivaticani.va/content/museivaticani/en/organizza-visita/tariffe-e-biglietti/biglietto-d-ingresso-ridotto.html#lnav_shop" "Sistine Chapel"
-click Laguna "https://www.viator.com/tours/Lake-Como/Como-Lugano-and-Bellagio-One-Day-Experience/d26113-6404P35" "laguna"
+click Lugano "https://www.viator.com/tours/Lake-Como/Como-Lugano-and-Bellagio-One-Day-Experience/d26113-6404P35" "Lugano"
 </div>
 
 
@@ -143,9 +144,9 @@ click G "https://www.cinqueterre.eu.com/en/corniglia" "cinque terre 5 cities"
 <pre class="mermaid">
 graph LR
     M1 <--03:15/(€23.00~30.00) --> G1(② Cinque Terre)  
-    M1((② Milan)) <--01:00/€6.00 North 84km --> L("Como Logo,Lake Como")
-    M1((② Milan)) <--01:00/€6.00 North 84km --> LC("Como,San Giovanni<br>Lake Como") <-- 00:35/€22.00--> Lugano("Lugano, Swithzheland")
-    M1((② Milan)) <--01:18/€24.00-->Lugano
+    M1((② Milan)) <--01:00/€6.00 North 84km --> L("Como Logo,Lake Como") --"Boat"--> B("Bellafio")
+    M1((② Milan)) <--01:00/€6.00 North 84km --> LC("Como,San Giovanni<br>Lake Como") <-- 00:35/€22.00 🚄 --> Lugano("Lugano, Swithzheland")
+    M1((② Milan)) <--01:18/€24.00 🚐 or 🚄 -->Lugano
     M1 <--01:41/(€13.00~21.00) west 137km--> LG0((Lake Garde/Verona))
     M1 <==.02:30/(€23.00~30.00).==> V0(Venice  Mestre or santa Lucia)
     LG0 --01:28/€13.00--> V0
@@ -268,8 +269,8 @@ By train – the journey lasts approximately 2 hours and a half. From La Spezia 
 * Verona
     * [Lake Garda vs Lake Como](https://www.thetimes.com/travel/destinations/europe-travel/italy/como-v-garda-which-italian-lake-is-better-9vj9fll35)
 
-* Lugano
-    * [lake Como vs Lake lugano](https://togetherinswitzerland.com/lake-lugano-vs-lake-como-differences-similarities/)                               
+* Lugano, Switzerland
+    * [lake Como vs Lake lugano](https://togetherinswitzerland.com/lake-lugano-vs-lake-como-differences-similarities/) **need passport for non EU citizen**                               
 
 
 * [Venice](https://www.introducingvenice.com/general-information)
