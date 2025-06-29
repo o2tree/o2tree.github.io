@@ -147,6 +147,8 @@
 
 [Ikan sidat](#eel-ikan-sidat)
 
+[Teripan atau timun laut](#sea-cucumber)
+
 [Image Maker](https://imageresizer.com/)
 
 [pdfum binary](https://github.com/bblanchon/pdfium-binaries)
@@ -169,14 +171,17 @@
             graph LR
             %% This is a comment!!!
             %% Pelabuhan di Batam
-            A[fas:fa-ship Tajuh Biru Mon & Thu<br>Lingga] --> B0[fas:fa-ship 🦞🐟frozen/live<br> Belakang Padang<br>Batam] -- Singapore GST 9.00%-->
+	    Riau["fas:fa-ship 🦞🐟frozen/live<br> Bengkalis<br>Riau"] -->|"03:00"| S0
+            A["fas:fa-ship Tajuh Biru Mon & Thu<br>Lingga<br>3 company ship SGP"] --> B0[fas:fa-ship 🦞🐟frozen/live<br> Belakang Padang<br>Batam] -- Singapore GST 9.00%-->
               S0[/"Singapore GST 9.00+ import tax?<br>Jurong fish port(30% import)<br>Singapore"/] --logistic cost + 2.00SGD -->S1[/Closed March 2024<br>Senoko Fishery Port<br>Singapore/]
-            B1[fas:fa-ship 🦞🐟 frozen/live<br> Sagulung daily<br>Batam] --freight charge 18SGD 100cm x 50cm x 50cm \( 50~90 kg\) -->S0
-            J1["fas:fa-ship Pelabuhan Hasim<br>Balerang, Batam"] <---->|Private Boat 00:45, 16.00km?| P["Ke Pulauan Petong 🥽"]
-            J7["fas:fa-ship Pel. Pari Jembatan 6<br> Batam"] <---->|Private Boat 00:45, 16.00km?| PB["Pulan Benan 🥽"]
+            B1[fas:fa-ship 🦞🐟 frozen/live<br> Sagulung daily<br>Batam] --freight charge 18.00-40.00SGD<br> 100cm x 50cm x 50cm \( 50~90 kg\) -->S0
+            J1["fas:fa-ship Pelabuhan Hasim<br>Balerang, Batam"] <---->|Private fas:fa-ship 00:45, 16.00km?| P["Ke Pulauan Petong 🥽"]
+            J7["fas:fa-ship Pel. Pari Jembatan 6<br> Batam"] <---->|Private Boat 00:45, 16.00km?| PB["Pulan Benan 🥽 fas:fa-hotel"]
             J7 <-->A
-            TPunggur["fas:fa-ship Pelabuhan Telaga Punggur<br>Batam"] <---->|01:45?| PB <---> |00:45 | A 
-
+            TPunggur["fas:fa-ship Pelabuhan Telaga Punggur<br>Batam"] <---->|01:45?| PB <---> |00:45 | A  <-->|01:30?| STeinam["Sungai Teinam<br>Lingga"] <--->|"01:00"| DS["Djago<br> Dabok Singkep"] <---> |00:20| TB["Tanjung Buton<br> Daek,Lingga fas:fa-hotel"]
+	    STeinam <--->|"fas:fa-car 00:20"| PC["Pancur<br>Lingga fas:fa-hotel"] <-->|"fas:fa-car"| TB
+            STeinam <--->|"fas:fa-ship 00:30"| SN["Senayan fas:fa-hotel"] <---> |"fas:fa-ship 00:20? "| PC
+            PB <--->|"fas:fa-ship Private 00:30"| MS["Masanek<br>Lingga<br>Pusat Teripang"]
             J6["fas:fa-ship Pel. Kepri Coral<br>Batam"]<-->P
             TP["fas:fa-ship Tanjung Pinang"] <-- Public --> A
             style S1 fill:red
@@ -284,7 +289,7 @@ flowchart TD
       end
       subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
           direction LR
-          TP1(["Telaga punggur"]) --> CC(["Sei Tenam"])-->JG(["Jagoh"])
+          TP1(["Telaga punggur"]) --> CC(["Sungai Teinam"])-->JG(["Jagoh"])
       end
       subgraph Anambas ["fas:fa-ship Anambas"]
           direction LR
@@ -536,14 +541,11 @@ the larger prey from predator (Triño, unpublished).
 * [Bookmark](https://www.croftsoft.com/library/tutorials/rust-dioxus-project-setup/) 
 * [docsite dioxus tailwind components](https://github.com/42Angouleme/dioxus-tw-components)
 
-![Indonesia QRcode](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
-![Singapore QRCode](http://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg)
+[Indonesia QRcode](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
+[Singapore QRCode](http://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg)
 
 <img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">
 <img src="https://o2tree.github.io/image/SengkangGeo.svg" alt="sengkang lokasi">
-<img src="https://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg" alt="Singapore WA QRCode">
-
-
 
 ## Sebass vs Snapper
 - diffferent
@@ -586,23 +588,10 @@ Both of these species are known for having firm yet moist meat while having the 
 [budidaya krapu](https://www.bsn.go.id/uploads/attachment/rsni3_9265.pdf)
 [xxx](https://repository.unibos.ac.id/xmlui/bitstream/handle/123456789/634/POTENSI%20PENGEMBANGAN%20BUDIDAYA%20IKAN%20KERAPU%20PERAIRAN%20TELUK%20YAPEN%20PROPINSI%20PAPUA.pdf?isAllowed=y&sequence=1)
 [kerapu wwf](http://awsassets.wwf.or.id/downloads/2_bmp_budidaya_ikan_kerapu_sistem_karamba_jaring_apung___tancap.pdf)
-##  Safe C++
-
-1. A new "safe" context where only a rigorously safe
-	   subset of C++ is allowed
-2. Borrow checking to prevent use-after-free bugs
-3. Initialization analysis for type safety
-4. Pattern matching, choice types, and borrowing
-5. Thread-safety features similar to Rust's
-		send and sync type traits
-6. Explicit mutation for references
-7. A model for object relocation
 
 ## hardshell vs softshell result in high and low salinity shirmp culture
-Hard shell lobsters also have less water weight, while soft
-shell lobsters contain more water. This difference in yield is
-reflected in the lower pricing of soft shell lobsters. For comparison, the average
-yield for hard shells is roughly 20% to 28% meat, while soft shells contain around 15% to
+Hard shell lobsters also have less water weight, while soft shell lobsters contain more water. This difference in yield is
+reflected in the lower pricing of soft shell lobsters. For comparison, the average yield for hard shells is roughly 20% to 28% meat, while soft shells contain around 15% to
 20% meat. 5 Jun 2018
 
 
@@ -685,7 +674,6 @@ Some fish may have difficulty returning to their normal salinity after a freshwa
 
 Aeration:
 Ensure the freshwater dip container has adequate aeration to provide oxygen to the fish
-  
  * obat bius untuk ikan air tawar 
    Obat Bius Ikan Ramah Lingkungan dari Daun Pepaya
 
@@ -708,8 +696,6 @@ jumlah leukosit dapat meningkat sebagai bentuk tindakan pertahanan akibat streso
 It is a solid at room temperature. Tricaine methane sulfonate has an oral rat LD50 of 5200mg/kg,
 which does not meet the OSHA classification of a toxic chemical.
 
-
-
 Teknik Imotilisasi Ikan Kerapu Cantang (Epinephelus sp.) Menggunakan Ekstrak Biji Kecubung (Datura Metel L.)
 ---
 
@@ -722,21 +708,19 @@ metel L.seed with concentrations of 25%, 30%, and 35% can be concluded that it h
 (P<0.05) on the onset and recovered grouper fish. The survival rate of cantang grouper is 100% at each
 concentration. Amethyst seed extract concentration of 35% w
 
-
-
 ### di keramba tanjab yang punya pasir
--tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
+- tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
 - kerapu sanu mulutnya agak kecil di bandinggkan kerapu cangteng
 * Bisa beli telur sampai pendederan benur
 
 # [Pulau Petong](https://earth.google.com/web/@0.53118441,104.4134147,231.8783569a,778318.1988886d,35y,44.54282763h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA)
-- Bor 12 m ait laut, 30 m air tawar (4" diameter pipe)
+- Bor 12 m air laut, 30 m air tawar (4" diameter pipe)
   - 2 pipe air tawar, 1 pipe air laut
 - Pulau petong air tawar pemerintah (kaporit tinggi)
 
 - air laut dati pesisir karang sangat jauh dari bulan ke  bulang... sehingga  keramba ampung maupun dasar harus agak jauh dari panti pulau.
 - tergantung stucture karang
--[wave et](https://tides4fishing.com/id/kepulauan-riau/tandjungpinang-bintan-island)
+- [wave et](https://tides4fishing.com/id/kepulauan-riau/tandjungpinang-bintan-island)
 
 # Ambergis (muntahan ikan paus)
 Why is it illegal
@@ -755,15 +739,16 @@ Since ambergris originates from sperm whales, its trade indirectly promotes the 
 - inyak 40pk motor (oil consumption 20L/hours)
 - Water coloumn
   - air laut bataam diambil dari kedalaman 12m, di Norwegia diambil dari kedalamaan 75m dari permukaan laut
-- fiber boat puny hendra pulaupetong:
+- fiber boat puny hendra pulau petong:
   -17" dan 21" (5.5 m ~ 7 m) , boat: 27 juta
   - mesin yamaha 15HP ( 2x)
   - supaya temperature nya hampir sama dengan culture temperature
-  - Pulau Benan: Judit, Petong Hendra
+  - ~Pulau Benan: Judit, Petong Hendra~
   - pH nya konstant di kedalaman ?
 - [cuaca dan agin di pulau petong](https://www.windy.com/0.629/104.082?0.626,104.094,15)
-- 65% kapal nelayan adalaah terbuat dari kayu (10`15 year)
+- 65% kapal nelayan adalah terbuat dari kayu (10~15 years)
   - Mesin bukan dmeesia kapal akibatnya mudah terjadi korosi
+  - mesin yanmar, yamaasi, suzuki and honda
 
 -[serial port in rust](https://users.rust-lang.org/t/how-to-use-serial-port-in-dioxus-desktop-app/99845/3)
 
@@ -795,6 +780,16 @@ Malong ( Muraenesox cinereus )adalah spesies ikan Sidat dalam keluarga pike cong
 # [Gamat Hitam- Teripang hitam ](https://www.mitrausahatani.com/teripang-berhasil-dibudidayakan/)
 - [teripang](https://youtu.be/3O4dGg5DJc4?si=gpO6H6sVmOFNFKmP)
 
+## keramba tanjab 10m x20m x 2m (depth)
+  - bebas dari ikan
+  - bebas dari kepiting
+  - bebas dari sampah dan lumpur
+### Jenis teripang
+    1. teripang labi-labi
+    2. Teripang emas (Stichopus hermanni)
+    3. teripang gamat batu  teripang batu (Actinopyga mauritiana), https://repository.ubt.ac.id/repository/UBT29-05-2022-015107.pdf,
+    4. teripang pasir
+
 
 Market trends
 ---
@@ -817,8 +812,6 @@ sold in fresh condition at the local markets or iced and transported to distant 
 - catch night time
 
 # sweet patato plant for fish feed?
-
- 
 </md-block>
 
 </div>
