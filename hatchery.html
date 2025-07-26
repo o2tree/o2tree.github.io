@@ -57,6 +57,7 @@
 								}),
 								new sap.m.MenuItem({
 									icon: "sap-icon://flag",
+
 									text: "flag"
 								}),
 								new sap.m.MenuItem({
@@ -186,12 +187,12 @@ meaning the complete loss of water from their body, for long periods of time.
 
 [Collecting rotifers](https://evidentscientific.com/en/insights/rotifers-an-introduction-to-the-microscopic-world-of-wheel-animals#:~:text=Like%20tardigrades%2C%20bdelloid%20rotifers%20have,for%20long%20periods%20of%20time.)
 
-Kedalaman Air: Kedalaman perairan ideal untuk teripang bervariasi antara 1 hingga 3 meter, tergantung pada spesies yang dibudidayakan. Teripang pasir biasanya lebih cocok pada kedalaman 2 meter, sementara teripang gamat dapat hidup di perairan yang sedikit lebih dangkal.
+Kedalaman Air: Kedalaman perairan ideal untuk teripang bervariasi antara 1 hingga 3 meter, tergantung pada spesies yang dibudidayakan.
+ Teripang pasir biasanya lebih cocok pada kedalaman 2 meter, sementara teripang gamat dapat hidup di perairan yang sedikit lebih dangkal.
 
-Mysis Shrimp are nutritionally whole or balanced and provide your fish with plenty of protein, a little fat, and some vitamins and minerals. Brine Shrimp, on the other hand, is like a bag of chips or a handful of french fries. They taste great but really don't provide all that much nutrition by themselves
+Mysis Shrimp are nutritionally whole or balanced and provide your fish with plenty of protein, a little fat, and some vitamins and minerals.
+ Brine Shrimp, on the other hand, is like a bag of chips or a handful of french fries. They taste great but really don't provide all that much nutrition by themselve
 
-
-LiveSeafood, [6/27/25 11:02 PM]
 ### Requirements to Set Up a *Vannamei* Shrimp Hatchery  
 
 To establish a successful Pacific White Shrimp (*Litopenaeus vannamei*) hatchery, you need the following key components:  
@@ -201,6 +202,26 @@ To establish a successful Pacific White Shrimp (*Litopenaeus vannamei*) hatchery
 <img src="https://www.researchgate.net/profile/Jill-Gambill/publication/303013758/figure/fig2/AS:361155353694209@1463117554998/The-life-history-of-shrimp-involves-a-migration-of-adults-offshore-where-fertilized-eggs.png">
 
 <img src="https://www.mdpi.com/genes/genes-15-00837/article_deploy/html/images/genes-15-00837-g001.png" width="800">
+
+|Table 1. Comparison between Brachionus species and Colurella adriatica in terms of size|
+|----------------------------------------------------------------------------------------|
+
+|Rotifer species |Lorica length (µm)| Lorica width (µm)|
+|----------------|------------------|--------------------|
+|C. adriatica  | 47.530- 98.868| 34.308–56.277|
+|B. plicatilis (L type) |130- 340| 116–146|
+|B. rotundiformis (S type) |100- 210| 98–121|
+|B. rotundiformis (SS type)| 58-120| 58 -100|
+
+<img src="https://www.tandfonline.com/cms/asset/791ccd14-7fc3-410e-a9ef-4135a7ccbb89/taar_a_2417052_f0001_ob.jpg">
+
+<img src="https://www.tandfonline.com/cms/asset/1d66da41-369e-4c2c-b589-d4ada8dfbabe/taar_a_2417052_f0003_oc.jpg">
+
+<img src="https://www.tandfonline.com/cms/asset/27b95543-2e78-43a6-a515-a87071ebfbd0/taar_a_2417052_f0004_oc.jpg">
+
+[Food web](https://www.intechopen.com/chapters/1208972)
+
+<img src="./image/F1.png">
 
 [Hatchery](https://youtu.be/nC8ODLchAfI?si=oFTaONLuwqmxWe2v)
 [refenence](https://www.salemmicrobes.com/blog-view.php?id=18)
@@ -267,9 +288,6 @@ Water sterilization requires two steps: prefiltration and disinfection. For pref
  add 20–30 ppm sodium hypochlorite 60 percent, 0.5–2.5 ppm KMnO4, and 10 ppm TCCA to the filtered water. During chemical disinfection,
  maintain maximum aeration. To get rid of the leftover chlorine, multiply the remaining chlorine concentration by three to get the right amount of sodium thiosulphate. Finally, repeat the process two to seven times throughout the course of 24 hours.
 
-
-
-  
 
 Critical Parameters:  
 | Parameter | Optimal Range |  
@@ -1050,8 +1068,14 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
     %% x
     subgraph Pacific["Pacific-Indonesia"]
        direction  LR
-       ocean_Temperature["Pacific surface T= approx 26~30C"]
+       ocean_Temperature["Pacific surface T= approx 26~30C<br>ocean in the eastern part after wallece line is deeper and cooler vs in  the west side"]
     end
+    subgraph Teripand["Teripang"]
+       direction  LR
+       Hatchery["hatchery Teripang"]
+       Growout["grow out in fixed pen(Keramba Tancap)<br>Media subtract sand and seaweet(lumun)<br>+1m  permonth"]
+    end
+
 
     click ocean_Temperature "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "Surface ocean temperature"
 </div>
@@ -1187,11 +1211,11 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
 flowchart TD
     T["Tilapia<br> iBEST (all Male) or<br> iEXCEL (Mixed-sex)"]
 
-    subgraph planton["Plankton feed to Larvae"]
+    subgraph plankton["Plankton feed to Larvae"]
       PyPL1["Pythoplanton"]
       R0{"Rotifer L Type ΔT,<br> 20°C-25°C,Euryhaline<br>B. plicatilis (L)<br>171-238µm "} --> R0_1["Rotifer Large eggs collection"]
       R1{"Rotifer S Type ΔT,<br> 28°C-35°C, Low Salinity<br>B. rotundiformis (S)<br>121-162µm"}-->R2_1["eggs collection<br><font color="red">pick small eggs  to have small size Rotifer</font>"]
-      SR1{"Rotyfer SStype"]
+      R2_1 --> SR1{"Rotifer SStype<br>Choose smallest eggs S type"}
       Copepods["Copepods"]
       Artemia["Artemia<br>Brine shrmp"]
       eggs["Fish Eggs"]
@@ -1199,6 +1223,8 @@ flowchart TD
       PyPL1  --> Copepods
       PyPL1  --> R0
       PyPL1  --> R1
+      PyPL1  --> SR1
+      	
     end
     subgraph hatchery["Hatchery Market Depend on Market"]
        direction LR
@@ -1224,7 +1250,7 @@ flowchart TD
 
 
     T --> hatchery
-    planton --> hatchery
+    plankton --> hatchery
     hatchery --> growup
     style eggs fill:pink, color:black
 
@@ -1291,10 +1317,12 @@ pie title Investment weighting factor
     "Technology-Consultant" : 5
 
 </div>
------
+
+---
+
 <div class="mermaid">
-pie title Investment ssharing
-    "PT Innovare" :75
+pie title Investment Sharing with Masanak Island
+    "PT_Innovare" :75
     "Mitra" : 15
     "Desa" : 10
 
@@ -1484,6 +1512,44 @@ Barometric pressure is the weight of the atmosphere in a specific area, usually 
 - impact by the moon daily
 - impact by the sun yearly
 
+
+##  *Teknik Pembibitan Tiram Mutiara* (Pinctada maxima)
+
+<img src="https://cdn.antaranews.com/cache/1200x800/2024/06/03/1000268029.jpg.webp">
+Kegiatan pendederan tiram mutiara, lanjutnya, merupakan pemeliharaan dari ukuran spat 1-2 cm,
+ hingga menjadi tiram ukuran 6-9 cm dan siap insersi (10 cm atau lebih), menjadi salah satu segmen 
+usaha yang potensial bagi masyarakat pesisir karena segmentasi usaha pendederan tiram mutiara cukup mudah dan murah karena tidak memerlukan pakan
+
+https://sbinews.id/nelayan-nusantara-belajar-budidaya-teripang-di-negeri-tirai-bambu/
+Teripang pasir dapat tumbuh sampai ukuran 40 cm
+dengan bobot 1,5 kg. Kematangan gonad teripang pertama
+kali terjadi pada ukuran rata-rata 220 mm. Teripang betina
+mampu menghasilkan telur dalam jumlah yang sangat
+banyak hingga mencapai sekitar 1,9 juta butir telur. Daur
+hidup biota ini dimulai dengan telur yang dibuahi yang
+akan menetas dalam waktu sekitar 2 hari (Martoyo et al.,
+2000).
+
+
+Biasanya teripang akan muncul di permukaan dasar
+perairan pada malam hari untuk mencari makan. Pada siang
+hari hewan ini membenamkan dirinya di habitatnya seperti
+pasir atau sela-sela batu karang untuk melindungi dirinya
+dari pemangsa. Teripang berperan penting sebagai
+pemakan deposit (deposit feeder) dan pemakan suspensi
+(suspensi feeder).
+
+
+Saat ini BBPBL memiliki 120 lubang KJA modern berbahan High Density Poly­ethylene (HDPE) buatan Aquatec. 
+Pipa-pipa yang terbuat dari bahan Polyethylene ini disusun dengan menggunakan baut stain­less steel grade 304, 
+dilengkapi bantalan sehingga mampu menjaga kelenturan terhadap gelombang laut setinggi 2 m.
+
+
+[manual culture sandfish](https://www.ctsa.org/files/publications/Sandfish_Manual_2024.pdf)  
+##  *Proses Budidaya Abalon* (Haliotis spp.)
+.  
+## [Pakai UV tetapi tetap penyakit](https://fistx.co.id/id/articles/sudah-pakai-uv-di-tambak-udang-tapi-kenapa-masih-ada-penyakit-menyerang)
+
 ## Jekyll
 
 * [jekyll github](https://notepad.onghu.com/2023/using-mermaid-in-a-textile-post-jekyll/)
@@ -1534,6 +1600,19 @@ Think of Pieces as a technical Tinkerbell from Peter Pan[^2].
 [^2]: This is a fairytale about a forever young boy who takes a group of British children to his home island, Neverland.
 
 Depending on how much cookie dough you eat, you’ll have about ==20-22== cookies from this recipe!
+
+
+Benur PL7: Rp. 60 diluar harga transpotasi
+
+Masalah batam kirim ke bengkalis. Tranport di buka.
+
+Di kasih artemia sebelum kirim
+
+Salinitas test
+Chlorine test LD_50
+
+
+
 
 # [embedded html to pdf](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
 
@@ -1860,6 +1939,9 @@ sold in fresh condition at the local markets or iced and transported to distant 
 
 # [Catfish](https://www.youtube.com/watch?v=YoI2QocTmlQ)
 # Oyster
+
+Sea cucumbers, prized for their commercial value, benefit from diets containing microalgae such as Chaetoceros and Isochrysis, which enhance growth and survival rates. Similarly, for sea urchins and seahorses, microalgae like Isochrysis and Chaetoceros are recommended for larvae, promoting survival, growth, and metamorphosis, especially the black-lip pearl oyster (Pinctada margaritifera) [165, 166].
+
 
  
 </md-block>
