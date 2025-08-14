@@ -232,9 +232,22 @@ To establish a successful Pacific White Shrimp (*Litopenaeus vannamei*) hatchery
 ) 
 ## 1. Hatchery Design & Infrastructure  
 ### 📍 Location  
-- Proximity to clean seawater (salinity **25–35 ppt**).  
+- Proximity to clean seawater (salinity **25–35 ppt**).
+- Minimizing the distance for seawater intake reduces pumping costs and potential issues with long pipe runs.
+- Locating the hatchery close to sea level avoids the need for powerful pumps to lift water, reducing operational costs.
+- Raw seawater needs to be filtered to remove debris and potentially sterilized to eliminate harmful bacteria and pathogen 
 - Avoid polluted areas (industrial/agricultural runoff).  
 - Reliable electricity (backup generator required).  
+- Algal Culture:
+	- Independent algal culture system: A dedicated space for producing phytoplankton (algae) is essential for feeding larvae and juveniles. 
+	- Air supply and water treatment: Consider the air supply and water treatment needs for the algal cultures. 
+	- Distribution of algae: Efficient methods for delivering algae to larval and juvenile tanks are necessary
+- Biosecurity:
+    - Segregation of different life stages:
+    - Separate areas for broodstock, larvae, and juveniles minimize the risk of disease transmission.
+    - Controlled access:
+	- Limiting access to the hatchery and implementing strict hygiene protocols are essential. 
+
 
 <img src="./image/1fddc437-786f-40ae-9960-be5b5f1329f2.jpeg" width="800">
 
@@ -363,9 +376,9 @@ Artemia Decapsulation:
 | Regrifrator | store phytoplanton and rotifer|
 | dark and lighting for broodstock emulate summer| 14 hour light, 10 hour dark|
 | [Big aqua botle 25 l? or<br> plastic bag] with wiremesh outside()| Microalgae culture|
-| weight mechine 0.01 g and 0.1 gr and 1gr  resolution| buy aliexpress|
-
-
+| Weight mechine 0.01 g and 0.1 gr and 1gr  resolution| buy aliexpress|
+| 4000W model RRH-2000A seaweed / sargassum blender to 300-400um RRi hong ltd| 2000g Commercial Spice Grinder Electric Grain Mill Grinder High Speed|
+|<img  src="https://i.ebayimg.com/images/g/bmoAAeSw~9FnvTIz/s-l140.webp">|
 
 
 ---
@@ -1059,7 +1072,11 @@ https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplement
 
 
 LUGOL solutions:
-Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycerol is required for flagellates. Please look at European Committee for Standardization, 2015. According to the standard method (European Committee for Standardization 2006), phytoplankton enumerations were carried out under an inverted microscope (Olympus CKX41) at magnifications of 400 and 600X. For each sample, at least 350 settling units of the dominant species were counted. Phytoplankton biovolume was calculated by multiplying the cell density and mean biovolume of the taxon, which was taken approximating geometric shapes of the least 25 individuals (Sun and Liu 2003).
+Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycerol is required for flagellates.
+ Please look at European Committee for Standardization, 2015. According to the standard method (European Committee for Standardization 2006),
+ phytoplankton enumerations were carried out under an inverted microscope (Olympus CKX41) at magnifications of 400 and 600X. For each sample,
+ at least 350 settling units of the dominant species were counted. Phytoplankton biovolume was calculated by multiplying the cell density
+ and mean biovolume of the taxon, which was taken approximating geometric shapes of the least 25 individuals (Sun and Liu 2003).
 
 </md-block>
 <div class="mermaid">
@@ -1168,13 +1185,19 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
 	     %% https://era.dpi.qld.gov.au/id/eprint/10985/1/SS-strain%20rotifer%20culture%20for%20finfish%20larvae%20with%20small%20mouth%20gape.pdf
              culture_both["Chlorella vulgaris is green freshwater microalgae but  seawater tolerance"]
              culture_pytho["Culture Marine pythoplankton/MicroAlgae (chlorella sp)"]
-             culture_fresh_pytho["culture freshwater microalgae Spirulina and Chlorella vulgaris"]
+             culture_fresh_pytho["Culture freshwater microalgae Spirulina and Chlorella vulgaris"]
            end
            
            subgraph MacroAlgae["culture seaweeds/MacroAlage"]
              direction LR
-             seaweed["life green/brown seaweed"] -->Powder_seaweed["Make dry powder seaweed"]
+             seaweed["life green/brown seaweed-Sargassum"] -->Powder_seaweed["Make dry powder seaweed"]
              seaweed---> Process_1["harvest the seed for future propagation"]
+            end 
+            
+            subgraph Sandfish_Scallop["Culture Scallop/Sandfish"]
+             direction LR
+             MacroAlgae -->Sandfish["Sandfish and Scallop feed"]
+             culture_fresh_pytho -->Sandfish
             end 
 
             subgraph plankton["zooplankton culture"]
