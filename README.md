@@ -19,9 +19,11 @@
 - [Sea Cucumber (明玉参)](http://o2tree.github.io/data/sea_cucumber.pdf)
 - [South pearls Osyster](http://o2tree.github.io/pearloyster.html)
 - [Lombok, Sumbawa and Australia](https://www.google.com/maps/d/edit?mid=1jMQpPbBhL5H2xGFchY7RaRPEZ9oamd4&usp=sharing)
-* [Lingga  KPRI](https://www.google.com/maps/d/edit?mid=1tXQBlut4Pmem8AUXbMKZfsg53UBtCIA&usp=drive_link)
+- [Lingga  KPRI](https://www.google.com/maps/d/edit?mid=1tXQBlut4Pmem8AUXbMKZfsg53UBtCIA&usp=drive_link)
 - [Boat and Investment](http://o2tree.github.io/boat.html)
 - [Rust and cpp](http://o2tree.github.io/rustcpp.html)
+- [Indian ocean and Pacific ocean current](https://www.researchgate.net/profile/R-Susanto/publication/251863342/figure/fig1/AS:646486350102540@1531145765920/Map-of-Indonesian-throughflow-pathways-from-the-Pacific-Ocean-to-the-Indian-Ocean-The.png)
+- [salinity of ocean ma](https://www.pmfias.com/ocean-salinity-vertical-horizontal-distribution/)
 - [Indonesia QR contact](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
 - [Singapore QR contact](http://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg)
 
