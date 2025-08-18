@@ -24,6 +24,8 @@
 - [Rust and cpp](http://o2tree.github.io/rustcpp.html)
 - [Indian ocean and Pacific ocean current](https://www.researchgate.net/profile/R-Susanto/publication/251863342/figure/fig1/AS:646486350102540@1531145765920/Map-of-Indonesian-throughflow-pathways-from-the-Pacific-Ocean-to-the-Indian-Ocean-The.png)
 - [salinity of ocean ma](https://www.pmfias.com/ocean-salinity-vertical-horizontal-distribution/)
+- [Chat GPT](https://chat.chatbot.app/gpt5?utm_source=GoogleAds&utm_medium=cpc&utm_campaign={campaign}&utm_id=22665487438&utm_term=182338911722&utm_content=757447283652&gad_source=1&gad_campaignid=22665487438&gclid=EAIaIQobChMIrK38ncCOjwMV9qhmAh3xgS2iEAAYASADEgLAJ_D_BwE)
+- [Peta ombak kpri bintan](https://maritim.bmkg.go.id/cuaca/perairan/perairan-kep-bintan)
 - [Indonesia QR contact](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
 - [Singapore QR contact](http://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg)
 
