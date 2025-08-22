@@ -1,0 +1,1026 @@
+<html lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
+    <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
+
+                <title>Deep water Aquaculture</title>
+                <script id="sap-ui-bootstrap"
+                        src="https://ui5.sap.com/resources/sap-ui-core.js"
+                        data-sap-ui-theme="sap_horizon"
+                        data-sap-ui-libs='sap.ui.documentation, sap.ui.layout, sap.m, sap.uxap, sap.f, sap.tnt, sap.ui.codeeditor, sap.ui.unified'
+                        data-sap-ui-compat-version="edge"
+                        data-sap-ui-async="true"
+                        data-sap-ui-on-init="module:my/app/main"
+                        data-sap-ui-resource-roots='{"my.app": "./"}'>
+                </script>
+		 <script>
+                        sap.ui.getCore().attachInit(function () {
+                        sap.ui.require(["sap/ui/core/mvc/XMLView"], function (XMLView) {
+                        XMLView.create({ viewName: "Quickstart.App" }).then(function (oView) {
+                            oView.placeAt("content");
+                        });
+                       });
+                     });
+                  </script>
+                  <script>
+                  	var oMenu = new sap.m.Menu({
+			title: "random 2",
+			itemSelected: function (oEvent) {
+				var oItem = oEvent.getParameter("item"),
+					sItemPath = "";
+				while (oItem instanceof sap.m.MenuItem) {
+					sItemPath = oItem.getText() + " > " + sItemPath;
+					oItem = oItem.getParent();
+				}
+
+				sItemPath = sItemPath.substr(0, sItemPath.lastIndexOf(" > "));
+
+				sap.m.MessageToast.show("itemSelected: " + sItemPath);
+			},
+			items: [
+				new sap.m.MenuItem({
+					text: "fridge",
+					icon: "sap-icon://fridge",
+					items: [
+						new sap.m.MenuItem({
+							text: "accidental leave",
+							icon: "sap-icon://accidental-leave",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://factory",
+									text: "factory"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flag",
+									text: "flag"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flight",
+									text: "flight"
+								})
+							]
+						}),
+						new sap.m.MenuItem({
+							text: "iphone",
+							icon: "sap-icon://iphone",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://video",
+									text: "video"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://loan",
+									text: "loan"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://commission-check",
+									text: "commission check"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://doctor",
+									text: "doctor"
+								})
+							]
+						})
+					]
+				}),
+				new sap.m.MenuItem({
+					text: "globe",
+					icon: "sap-icon://globe",
+					items: [
+						new sap.m.MenuItem({
+							text: "e-care",
+							icon: "sap-icon://e-care"
+						})
+					]
+				})
+			]
+		});
+
+                  </script>
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+</style>
+  </head>
+  <!-- script src="https://unpkg.com/@tailwindcss/browser@4"></script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <body class="sapUiBody" id="content">
+    <h1>Test Page for Hatchery <code>sap.ui.unified.Calendar</code></h1>
+    <div>Single day Selection Calendar</div>
+    <br>
+      <!-- div class="relative w-[500px]">
+        <img src="https://www.khueapps.com/media/images/2025-02/cute-dog.webp" />
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
+            <h3 class="text-xl text-white font-bold">
+                Hey, I Am The Big Boss</h3>
+            <p class="mt-2 text-sm text-gray-300">Some description text. Some dummy text here. Welcome to KhueApps.com.
+            </p>
+        </div>
+    </div -->
+
+     <div>
+	<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div>
+<md-block>
+
+[Teripan atau timun laut](#sea-cucumber)
+
+[Lombok pearls oyster cultivation analysis](http://www.lombokmutiara.co.id/news/Analisis-Usaha-Pembesaran-Tiram-Mutiara-Pinctada-maxima)
+
+[desertai kerang mutiara](https://repository.unair.ac.id/137472/1/142111133142_25k_Ehb93uxd6wn0-KlNU1--Nd7a2o.pdf)
+
+
+* Green phytoplanktons (**Nannochloropsis** oculata,Tetraselmis chui, Chlorella, Dunaliella tertiolecta)
+
+* Golden phytoplanktons (Tisochrysis lutea, Pavlova, Isochrysis galbana, Thalassiosira weissfloggii)
+
+* Red phytoplankton (Rhodomonas salina) 
+
+* Orange phytoplankton (Chaetocerors calcitrans)
+
+* Brown phytoplanktons (Pheaodactylum tricornutum)
+
+* sandfish ming yu shen (明玉参)
+
+* Biofouling in marine aquaculture
+
+
+# Deep seas aquaculture
+
+
+Water Quality
+---
+The optimal pH value for the larvae of bay scallop ranges from 7.8–8.2, while dissolved oxygen (DO)
+must be maintained at a concentration of not less than 5 ppm. The heavy metal content in seawater
+should be kept at the following concentrations:Hg
+Hg ≤ 0.004 ppm
+Cd ≤ 0.03  ppm
+Pb ≤ 0.1   ppm
+Cu ≤ 0.01  ppm
+Zn ≤ 0.1   ppm
+Al ≤ 0.1   ppm
+
+[unicellular phytoplankton](https://eprints.cmfri.org.in/18753/1/Marine%20Microalgae%20culture%20Techniques_2024_Joe%20K%20Kizhakudan.pdf)
+The naked flagellates, such as Monochrysis lutheri and Isochrysis galbana, are ideal food organisms, 
+which can induce better growth than any organism having cell wall
+Platymonas sp. and Chlorella sp. are also popularly used as feed for bay scallop larvae
+
+</md-block>
+
+  <div class="mermaid">
+
+   timeline
+    title Pearl Oyster P. Maxima Mature Gonad location
+    section Rainy
+    Jan : Rainy : NTB,NTT,Bali,Sulawesi
+    Feb : Rainy : NTB,NTT,Bali,Sulawesi
+    Mar : Rainy : NTB,NTT,Bali,Sulawesi
+    section Dry
+    Apr : Dry : Maluku,Irian  barat
+    May : Dry : Maluku,Irian  barat
+    Jun : Dry : Maluku,Irian  barat
+    Jul : Dry : Maluku,Irian  barat
+    Aug : Dry : Maluku,Irian  barat
+    Sep : Dry : NTB,NTT,Bali,Sulawesi
+    section Rainy
+    Nov : Rainy : NTB,NTT,Bali,Sulawesi
+    Dec : Rainy : NTB,NTT,Bali,Sulawesi
+  </div>
+</div>
+
+
+
+
+        <div class="mermaid">
+            graph LR
+            %% Kerapu and seabass
+
+            FC0["Floating cage<br>Grading"]
+            FC1["Keramba tanjab<br>Berpasir dibawah<br>Grading"]
+            FC2["Keramba dasar (0.5 m dari dasar)<br>Grading"]
+            P0["Pond - outdoor"]
+            P1(["Pond - indoor"])
+            R0{"Rotifer Large"}
+            R1{"Rotifer Small"}
+            MicroAlgae["Green phytoplanktons"] -->R0
+            MicroAlgae -->R1
+            Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
+            Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
+            Kerapu(["Grouper: female at birth: ♀<br>Larva Rearing"])  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
+            Kerapu -->|tidak perlu| FC1 --> FC22 --> Kerapu1
+            Seabass(["Asian Seabass: Male at birth: ♂<br> Larva Rearing"]) --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
+            Lobster["Lobster Rearing"] -->FC2
+            Grading["Monthly Grading"]
+            
+            click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
+            click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
+            style Kerapu1 fill:gold, color:black
+            style Seabass1 fill:gold, color:black
+            style R0 fill:blue, color:white
+            style R1 fill:green, color: black
+           
+          </div>
+
+
+
+<div class="mermaid">
+flowchart TD
+    T["Tilapia<br> iBEST (all Male) or<br> iEXCEL (Mixed-sex)"]
+    
+    subgraph planton["Planton feed to larvae"]
+      
+      PyPL1["Pythoplanton life or dead(microalgae)/harvest microalgae<br>instant microalgae powder"]
+      R0{"Rotifer Large ΔT"} --->AR0["accliminate temperature and salinity to match the larva"]
+      R1{"Rotifer Small ΔT"} --->AR1["accliminate (lower to 28~30C) and salinity"]
+      Artemia["Artemia<br>Brine shrmp"]
+      eggs["Fish Eggs"]
+      PyPL1  --> Artemia
+      PyPL1  --> R0
+      PyPL1  --> R1
+    end
+    subgraph hatchery["Hatchery Market Depend on Market"]
+       direction LR
+       Broodstock["Selection Broodstock<br> and Feed"] --> Eggs["Eggs"] -->Larvae["Larvae"]--> postLarvae["Post Larvae"] -->Juvinille["Juvinille"]
+    end
+    subgraph Selet_Broodstock["Broodstock tank selection"]
+       direction LR
+       Tank_1["Broodstock S,L,T"]
+    end
+
+    subgraph growup ["growup Market size"]
+       direction LR
+       Market["different stage of Market"]
+    end
+    subgraph artemiaGrowth ["Artemeia Growth up Culture"]
+       direction LR
+       artemeia_eggs["Artemaia Eggs and larvae for feed"]
+    end
+    subgraph vitaamin ["Vitamin C and B12 complex"]
+       direction LR
+       vitamin_feed["feed to rotifer prior to the feed for Hatchery"]
+    end
+    subgraph Pellet_Custard ["Pellet or Custard"]
+       direction LR
+       Pellet_feed["Pellet feed"]
+       custard["wet or frozen feed"]
+    end
+    subgraph cacing_nipah["cacing Nipah for broodstock"]
+       direction LR
+       culture_vs_wild["Culture vs wild"]  
+       %% Nypa_Palm_Worm_Namalycastis_rhodohorde
+    end
+    cacing_nipah -->Broodstock
+    SPFeed[("Special shrimp feed to make non red grouper to red grouper")]
+    style SPFeed fill:pink, color black
+
+    Pellet_Custard-->postLarvae
+    T --> hatchery
+    planton --> Larvae
+    hatchery --> growup
+    SPFeed --> |"special feed<br> for changing color<br>Black to RED"| growup
+    style eggs fill:pink, color:black
+
+    click hatchery "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
+</div>
+
+<div class="mermaid">
+    flowchart  TB
+      subgraph OCEAN9 ["fas:fa-ship <a https://tiketkapal.com/> OCEAN 9 </a>"]
+          direction LR
+           TP([Telaga Punggur])-->|ferry 11:00 web kapaltiket.com| A([BENAN]) --> |"00:45"| B([Tajuh Biru])  --> C(["Sei Tenam"])  --> D(["Senayang"]) <--->|"from 07:15 Pancur"| E(["Pancur"])
+      end
+      subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
+          direction LR
+          TP1(["Telaga punggur"]) --> CC(["Sungai Teinam"])-->JG(["Jagoh"])
+      end
+      subgraph Anambas ["fas:fa-ship Anambas"]
+          direction LR
+          TP2(["Telaga Punggur"]) --"Rp. 494k"--> Letung  --"Rp 495k"-->   Terempa(["Terempa"]) 
+       end
+      subgraph Bintan["Pulau Bintan/Tanjung Pinang"]
+          direction LR
+          BTP(["Tanjung Pinang"])
+      end
+    TP <--.--> TP1 <--.--> TP2
+    style A fill: black, color: white
+    style B fill:grey, color:#fff
+    style TP fill:blue, color: white
+    style TP1 fill:blue, color: white
+    style TP2 fill:blue, color: white
+    click BTP "https://www.welcometobintan.com/images/map.jpg" "Tanjung Pinang"
+    
+</div>
+
+
+
+<div class="mermaid">
+ flowchart LR
+    subgraph subgraph1["Benur Bening Lobster"]
+        direction TB
+        top1["🦞 ≤ 2 gr (≤ 2months) <br> SR 30%~40% <br>Nature <  0.01%"] --> bottom1["🦞 ≥  5gr (2 - 3 months) SR ≥ 70%~80%"]
+    end
+    subgraph subgraph2["Top floating or/and<br>Bottom floating cage(Krankeng)"]
+        direction TB
+        top2[top] --> bottom2[bottom]
+    end
+    subgraph subgraph3["Top floating or/and<br>Bottom floating cage(Krankeng)"]
+        direction TB
+        top3[topx] --> bottom3[bottomx]
+    end
+
+    outside:::asNode --> subgraph1:::asNode
+    outside ---> top2 -->top3
+
+    style subgraph2 fill:orange
+    classDef asNode fill:grey, color:orange
+
+</div>
+
+<div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
+<div id="consent_blackbar"></div>
+<md-block>
+
+
+
+## Jekyll
+
+* [jekyll github](https://notepad.onghu.com/2023/using-mermaid-in-a-textile-post-jekyll/)
+* [look at github](https://stuff-things.net/2025/01/19/mermaid-diagramming-in-jekyll-in-2025/)
+* [jekyll pwa](https://moldstud.com/articles/p-how-to-create-an-engaging-jekyll-based-pwa-a-step-by-step-guid
+* [Markdown Note](https://users.ssc.wisc.edu/~hemken/Stataworkshops/stmd/Markdown/tableandblocks1.html)
+* Webassembly mermaid
+* https://github.com/open-webui/open-webui
+* https://www.journal.unrika.ac.id/index.php/jurnaldms/article/view/543/0
+* https://www.corenet.gov.sg/ecatalog/Pages/corenet%20add.txt
+* [depth oceans vs o2](https://home.miracosta.edu/jturbeville/dana%20point%20floating%20lab/water%20chemistry.htm)
+* [Overlay image or text](https://imagekit.io/blog/css-image-overlay/)
+* [c++ plus rust](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
+* The waters around Lim Chu Kang are “more brackish” and suitable for rearing milk fish and grey mullet,
+ and he is currently the biggest producer of both types of fish in Singapore.
+
+* The waters off Changi, meanwhile, are saltier and suitable for fish that are more popular with Singapore consumers.
+ They include red snapper, barramundi (Asian sea bass), golden pomfret and sea perch.
+
+1. item 1
+1. | Column One | Column Two |
+| --- | --- |
+| <img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">| <img src="https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600" alt="Alt Text" width="500" height="600"> |
+
+
+- some text
+
+    | Column One | Column Two |
+    | --- | --- |
+    | data cell one | data cell two |
+
+③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
+
+⓪
+① ② ③ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
+⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ 
+
+🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉 
+Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ
+[Geo tagging](https://www.evenx.com/geo-tagging-using-qr-codes)
+
+⓿
+❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿
+⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴
+
+Think of Pieces as a technical Tinkerbell from Peter Pan[^2].
+
+[^2]: This is a fairytale about a forever young boy who takes a group of British children to his home island, Neverland.
+
+Depending on how much cookie dough you eat, you’ll have about ==20-22== cookies from this recipe!
+
+# [embedded html to pdf](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
+
+<div>
+<p markdown="1">
+b[^2]
+</p>
+</div>
+
+[^b]: Now I am a footnote too.
+
+![Nanochloropsus Japanese Chlorella](https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600)
+![rotifer](https://rlutah.com/cdn/shop/collections/64_ounce_bottle.png?v=1715880245&width=750)
+
+Contains the following phytoplanktons:
+
+* Green phytoplanktons: Nannochloropsis oculata,Tetraselmis chui, Chlorella, Dunaliella tertiolecta, Japanese Chlorella, Chlorella vulgaris. 
+* Golden phytoplanktons: Tisochrysis lutea, Pavlova, Isochrysis galbana.
+* Red phytoplankton: Rhodomonas salina, Rhodomonas lens, Porphyridium creuntum
+* Diatom strains include: Chaetocerors calcitrans, Pheaodactylum tricornutum, Thalassiosira weissfloggii. 
+
+For best shelf life, store in the back of the fridge away from the light, with temperatures ranging from 2.78°C - 5.55°C  degrees. We store phytoplankton at 2.78 degrees in a fridge with no light source.
+
+
+[Order form](https://www.seafdec.org.ph/wp-content/uploads/2020/12/Commodity-Order-Form_rev2020.pdf)
+-----------------
+|Culture Pond |🄰  indoor  or<br> 🄱 outdoor|Pakai HDPE| Symbol|
+|:-----------|:-----------------|:-------|:---------|
+|Floating cage| Outdoor         | ①      |
+|Keramba dasar<br> 0.5m from bottom|Outdoor          | ②      |
+|Keramba tanjab|                |③ |
+|tambak/pond   | Outdoor        |④ |
+|hapa di tambak| Outdoor        |⑤ |
+|              | Indoor         |
+----------------
+
+---------------
+|Fish/Crustean | FCR wet/dry/<br>pellet(sink/float)|Culture Ponds<br>days/weeks/months|Stage Description<br>Larvae,Juvinele,Adult/<br>Temperature|Need fish meal|
+|:-------------|:------------------------------|:-----------|:-----------|:----------|
+|Tilapia    |Easier and<br> no need much knowledge | |No need fish meal, soybeaan protein|
+|Tuna | 10:1|[swift memory safe](https://forums.swift.org/t/prospective-vision-optional-strict-memory-safety-for-swift/75090)|yes, due to fish oil|
+|Salmon|2:1|-|yes, due to fish oil|
+|**Red Grouper(bottom dweller)**| | |yes, due to fish oil, candidate for cages like lobster|
+|**Jack Red Snapper(Kakap merah bakau)<br>(Lutjanus argentimaculatus)**| ||Telur sifat apung seperti kakap putih<br>juvinelle bisa hidup di air tawar|
+|Black grouper (top dweller)| || |
+|ikan tirusan| | | |
+|Asian seabass male at birth vs black seabass female at birth|||
+--------------
+
+[Grow-out Culture](https://repository.seafdec.org.ph/bitstream/handle/10862/36/adsea91p003-012.pdf?sequence=1&isAllowed=y)
+---
+Polyculture of sea bass using tilapia as forage fish is often practiced.
+Growth and survival were higher among sea bass reared with tilapia in the same
+compartment than among those reared in ponds with net partition to separate
+the larger prey from predator (Triño, unpublished).
+
+[Tiger Prawn floating cage growout culture](https://eprints.cmfri.org.in/10937/2/46459-150550-1-PB%20%283%29.pdf)
+
+
+## Markdown Heading
+*   ~~strikthrough~~
+* Lake Como [84km north of Milan] and Lake Garda [137km from Milan]
+* [style in flowchart mermaid instead of graph](https://www.freecodecamp.org/news/use-mermaid-javascript-library-to-create-flowcharts/)
+* [SAP Ui5 architecture](https://www.tutorialspoint.com/sap_ui5/sap_ui5_architecture.htm)
+* [SAp U5 hana](https://sapui5.hana.ondemand.com/sdk/#/topic/28b59ca857044a7890a22aec8cf1fee9)
+* [sap ui5 example](https://openui5.org/)
+* [sap flori tutorial](https://ui5.sap.com//#/topic/3da5f4be63264db99f2e5b04c5e853db)
+* [Flori web design](https://experience.sap.com/fiori-design-web/action-placement/)
+* [shell flori tool bar](https://experience.sap.com/fiori-design-web/flexible-column-layout/)
+* [sap grid view html](https://experience.sap.com/fiori-design-web/flexible-grid/)
+* [Dioxus](https://codesandbox.io/p/github/mattdanielbrown/Dioxus-Example-Projects/master?file=%2Fecommerce-site%2Fsrc%2Fmain.rs%3A19%2C26)
+* [Bookmark](https://www.croftsoft.com/library/tutorials/rust-dioxus-project-setup/) 
+* [docsite dioxus tailwind components](https://github.com/42Angouleme/dioxus-tw-components)
+
+[Indonesia QRcode](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
+[Singapore QRCode](http://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg)
+
+<img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">
+<img src="https://o2tree.github.io/image/SengkangGeo.svg" alt="sengkang lokasi">
+
+## Sebass vs Snapper
+- diffferent
+- which one taste better
+
+# The Role of Rainy Seasons in Fish Breeding
+Simulating rainy seasons in an aquarium can be a useful method to trigger breeding, especially for fish that experience seasonal changes in the wild. Many species endure dry seasons with low water levels, followed by monsoons that refill their habitats. These rising water levels signal the start of the breeding season, providing better conditions for the survival of baby fish. This method is effective for wild-caught fish used to natural cycles. New breeders might struggle to get certain fish to spawn without this approach, but by mimicking nature, you can improve your chances of success.
+
+## Step 1: Gradually Reduce Water Levels
+To start simulating the dry season, lower the water level in your tank gradually. Doing this slowly is safer for your fish. As the water level drops, the pressure at the bottom of the tank decreases, and fish can feel these changes. The concentration of minerals will also rise as water evaporates, so reducing the water level slowly helps keep the environment stable. Aim to lower the water level to about 25%-30% of its normal height over a week or two. Make sure heaters and filter inlets stay submerged to prevent damage and maintain water quality.
+
+## Step 2: Creating the Dry Season Effect
+Once the water level is reduced, keep it low for a couple of weeks to mimic the dry season. This period helps the fish adjust and triggers a natural response that rainy season conditions are near. If you refill the tank too fast, the fish might think it’s just a regular water change, which won’t work. Be patient during this phase to prepare the fish for the next step.
+
+## Step 3: Simulating Rainfall
+To mimic the rainy season, slowly add water back to the tank. Use water that is a bit cooler than the tank water - this simulates the natural temperature drop during rain in the wild. The cooler water should only be a few degrees lower than the tank water to avoid shocking the fish. Raise the water level by a few inches (1 inch = 2.54cm) each day, which will mimic the rising water levels of the rainy season. Watch your fish closely; males may begin to display more active courtship behaviors, such as swimming around and showing off to the females. These are good signs that the simulation is working. Adjust the position of heaters and filter outlets as the water level rises, making sure that the outlets splash on the surface to replicate the effect of rainfall.
+
+Once the water level is back to normal, you should see signs of breeding, such as eggs being laid. If it doesn’t work right away, don’t worry. Sometimes, it takes a few tries, but patience will eventually lead to success. This method is especially helpful for fish that need specific environmental cues to breed, and with time, you’ll be rewarded with healthy young fish to care for and raise.
+
+
+|The table below provides a quick comparison of the availability and cost of snapper and grouper:|
+|------------------------------------------------------------------------------------------------|
+
+
+|Fish|	Availability|	Cost|
+|----|--------------|--------|
+|Snapper|	Common in Gulf of Mexico and Caribbean|	Higher price due to demand and difficulty of catching|
+|Grouper|	Common in Atlantic and Pacific oceans|	More affordable due to abundance and ease of catching|
+
+
+[cacing Nipah culture](https://www.tiktok.com/@19_azzam/video/7427275384938417414)
+
+## Snapper vs Grouper
+Both of these species are known for having firm yet moist meat while having the added health benefit of being low in fat. Snapper is slightly sweeter and the meat more delicate, especially when grilled, than Grouper. Most compare its flavor and texture to be similar to that of halibut or sea bass. Grouper on the other hand is milder or more subtle in flavor making it perfect for absorbing either dressings or marinades
+[Singapore Snapper Hatchery](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/science-poster_development-of-hatchery-technology-for-crs-v4-revised-29-june-2022-003.pdf)
+[Spawing](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/application-of-endocrine-techniques-in-fish-spawning.pdf)
+[Treatment](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/monogeneans-disease-card-v2-english.pdf)
+[Start](https://www.sfa.gov.sg/docs/default-source/food-farming/industry-guides/sfa-sea-farming-guide326598c6-3d7b-4fb5-8f80-9b3228fd595c.pdf/)
+
+[budidaya krapu](https://www.bsn.go.id/uploads/attachment/rsni3_9265.pdf)
+[xxx](https://repository.unibos.ac.id/xmlui/bitstream/handle/123456789/634/POTENSI%20PENGEMBANGAN%20BUDIDAYA%20IKAN%20KERAPU%20PERAIRAN%20TELUK%20YAPEN%20PROPINSI%20PAPUA.pdf?isAllowed=y&sequence=1)
+[kerapu wwf](http://awsassets.wwf.or.id/downloads/2_bmp_budidaya_ikan_kerapu_sistem_karamba_jaring_apung___tancap.pdf)
+
+## hardshell vs softshell result in high and low salinity shirmp culture
+Hard shell lobsters also have less water weight, while soft shell lobsters contain more water. This difference in yield is
+reflected in the lower pricing of soft shell lobsters. For comparison, the average yield for hard shells is roughly 20% to 28% meat, while soft shells contain around 15% to
+20% meat. 5 Jun 2018
+
+
+Low Salinity
+Less then 5ppt:
+1. Apply sea salt
+	* 100 kg/Acre weekly twice any time
+2. Add high salinity water New worldlife
+3. Feed supplement sea salt for low salinity
+	* 50g/kg feed
+5.Fluctuation Water Parameters
+
+6.Big Size PL Neworldlife
+
+7.Insufficient Minerals
+
+8.Use One or More then Mother Shrimps
+
+Batam
+---
+* Industry sampai jembatan 5.
+* fiber malaysia kapalnya lebih tebal daan berat jadi lebih stabil
+* Mesin kapal bisa jadi dua atau 1 (40 HP atau (2x 15HP)
+* Pulau Ketam malaysia ( hatchery and growth out sea pans) - outer island near Kuala Lumpur ( near Riau)
+
+
+## Kerapu
+### di keramba apung
+*  Pencegahaan penyakit dengan mencelupkan kerapu ke air tawar 15 minutes? Membunuh hama air laut
+* Ukuran 7 cm sampai 0.5 kg untuk macan 8 bulan dan bebek 12 bulan
+* Grouper culture has three phases:
+	1. the larval stage where fish is reared for 15-60 days, 
+	2. the nursery stage where fish is cultured for 1-2 months, and 
+	3. the growout stage where fish is reared for 6-8 months.
+   
+	Grouper need to be sorted and size-graded every week to prevent cannibalism. Other routine procedures 
+   include feeding, net maintenance, stock sampling, and monitoring water quality
+
+*  Hatchery phase
+	1. Stock 20-30 larvae/liter in 3-25 tons rearing tanks
+	2. Feed larvae Nannochlorum, rotifer, Artemia, and articial diet
+	3. Transfer larvae to marine cages when larvae reach the total length of 2-3 cm (15-60 days)
+* Nursery phase
+	1. Stock 2-3 cm fry in 1 x 2 x 1.5 m hapa nets at 75-100 fry/m3
+	set inside floating net cages. Uniform fry size should be strictly observed during stocking.
+	2. Install hover-type lamp to attract grouper prey such as copepods, mysids, young fishes, and crustacean larvae
+	3. Feed fry artificial diet or finely chopped frozen or fresh low value fish 4-6 times a day
+	4. Transfer fry to grow-out cages or ponds after 45-60 days or when total length is 6-10cm
+* Feed
+	1. **Feed can change color of some groupers such as shrimp feed**
+	2. head of the shrimp ( trash can be used to  feed the grouper): fresh or uncooked or cook
+* True krapu sanu (1000RMB), kerapu sanu yang bentuk lain (rmb 200)
+   - mata lingkaran warna biru
+   - ekor seperti dua gunung
+   - dot bulat berwarna biru 
+
+* [Grading monthly](https://youtu.be/s4OdtxaqMk8?si=3K-9BdPo4YIu0je4)
+  
+* [Grouper Hatchery](https://youtu.be/IkKztRINSkQ?si=8Un_Fzv7SzwtXoNy)
+  - Tiger : take 2 years
+  - Hybrid can growth to around 15 kg the second year
+  - Male tiger grouper as broodstock 15kg
+* Prefer dark and rest at the bottom
+* When mature adult feed the whole fish
+* Adult kerapu feeds: kepala prawn,trash fish, squid, pellet, dll
+
+* [Prevent disease in grouper](https://www.seafdec.org.ph/wp-content/uploads/2021/08/prevention-control-of-parasites-in-groupers.pdf)
+
+* small prawn eats the grouper lice but not too big which groupr will eat the praawn
+
+* A freshwater dip is a treatment for saltwater fish, like groupers, to help remove parasites.
+ It involves temporarily placing the fish in fresh water for a short period, typically 3-5 minutes, to kill or loosen parasites.
+ This is a pre-quarantine treatment and should not be relied upon as the sole treatment for a disease.
+
+Weak fish:
+Avoid freshwater dips on fish that are already weak or dying, as they can be fatal. 
+
+Potential side effects:
+Some fish may have difficulty returning to their normal salinity after a freshwater dip, and may need assistance to regain their balance. 
+
+Aeration:
+Ensure the freshwater dip container has adequate aeration to provide oxygen to the fish
+ * obat bius untuk ikan air tawar 
+   Obat Bius Ikan Ramah Lingkungan dari Daun Pepaya
+
+
+# Minyak cengkeh
+Efektivitas Pemberian Minyak Cengkeh sebagai Obat Bius pada Ikan Kerapu Cantang
+
+Penelitian penggunaan minyak cengkeh dengan konsentrasi 5, 10 dan 15 ppm sebagai bahan anastesi pada transportasi tertutup ikan Kerapu cantang memberikan hasil tingkat kelangsungan hidup sebesar 76,67%, 86,67%, dan 80%, sedangkan tanpa penambahan minyak cengkeh tingkat kelangsungan hidup ikan kerapu adalah 60% pada pada transportasi dengan pemberian MS 222 70 ppm tingkat kelangsungan hidup mencapai 90%.
+Minyak cengkeh merupakan salah satu obat bius alami yang telah dikembangkan dan digunakan sebagai pengganti obat bius kimia seperti MS 222.
+Minyak cengkeh diperoleh dari ekstrak daun, batang dan bunga tanaman cengkeh. Minyak cengkeh diketahui mengandung senyawa eugenol yang bersifat
+analgesik atau mengurangi rasa sakit, selain itu juga mengandung senyawa kartiofilin yang bersifat sebagai antiseptik. Minyak cengkeh digunakan sebagai anestesi lokal pada hewan dan manusia dan memiliki efek sedasi pada hewan air. Namun senyawa tersebut juga memiliki aktivitas insektisida sehingga jika digunakan secara berlebihan dapat menyebabkan kematian pada ikan.
+
+Pemberian anestesi minyak cengkeh juga mempengaruhi total leukosit pada ikan kerapu setelah transportasi selama 10 jam.
+ Pada penelitian ini jumlah leukosit mengalami perbedaan bermakna antara perlakuan negatif dan kontrol.
+ Leukosit merupakan salah satu bagian darah yang berfungsi sebagai antibodi non spesifik. Saat ikan mengalami kondisi stres, 
+jumlah leukosit dapat meningkat sebagai bentuk tindakan pertahanan akibat stresor.
+
+
+**[Tricaine methane sulfonate (MS‐222)](https://ehs.msu.edu/lab-clinic/animal/ms222.html)** is a commonly used fish/amphibian anesthetic. The compound is an isomer of benzocaine.
+It is a solid at room temperature. Tricaine methane sulfonate has an oral rat LD50 of 5200mg/kg,
+which does not meet the OSHA classification of a toxic chemical.
+
+Teknik Imotilisasi Ikan Kerapu Cantang (Epinephelus sp.) Menggunakan Ekstrak Biji Kecubung (Datura Metel L.)
+---
+
+This study is about fish anesthesia using natural anesthetic ingredients. Natural anesthetic ingredients
+aim to reduce metabolism in Epinephelus sp. grouper fish. The immobilization method can be used to
+minimize high metabolism in Epinephelus sp. grouper fish. The purpose of this study was to obtain the
+influence of Datura metel L. seed extract on the onset time, recovery time, and live graduation of grouper
+fish Epinephelus sp. The results of the study, using extracts of natural anesthetic ingredients Datura
+metel L.seed with concentrations of 25%, 30%, and 35% can be concluded that it has a different influence
+(P<0.05) on the onset and recovered grouper fish. The survival rate of cantang grouper is 100% at each
+concentration. Amethyst seed extract concentration of 35% w
+
+### di keramba tanjab yang punya pasir
+- tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
+- kerapu sanu mulutnya agak kecil di bandinggkan kerapu cangteng
+* Bisa beli telur sampai pendederan benur
+
+# [Pulau Petong](https://earth.google.com/web/@0.53118441,104.4134147,231.8783569a,778318.1988886d,35y,44.54282763h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA)
+- Bor 12 m air laut, 30 m air tawar (4" diameter pipe)
+  - 2 pipe air tawar, 1 pipe air laut
+- Pulau petong air tawar pemerintah (kaporit tinggi)
+
+- air laut dati pesisir karang sangat jauh dari bulan ke  bulang... sehingga  keramba ampung maupun dasar harus agak jauh dari panti pulau.
+- tergantung stucture karang
+- [wave et](https://tides4fishing.com/id/kepulauan-riau/tandjungpinang-bintan-island)
+
+# Ambergis (muntahan ikan paus)
+Why is it illegal
+In India, the sale and trade of ambergris are strictly prohibited under the Wildlife Protection Act, 1972. This is because the sperm whale, the source of ambergris, is an endangered species protected by law. The sperm whale was declared endangered in 1970 due to hunting and environmental threats, making its conservation a priority.
+Since ambergris originates from sperm whales, its trade indirectly promotes the exploitation of these marine mammals. The ban aims to discourage activities that harm or endanger the whale population, ensuring their survival in the wild
+
+# [Fisherman boat](https://explorer.com.my/product/e190-floorboard/)
+##  Perahu fiber lebih dangkal karena ringgang untuk pulau yang berkarang karena karang bisa membuat perahu itu pecah/rusak
+- fiber perahu ika dari malaysia (40HP=40PK- 54juta)-need 15PK (15PK=32 juta)
+- Bor air : 12 m air laut, 30m air tawar
+- di palemenbang 120m dapat air minum
+- kaporit terlalu tinggi di danau di atas petong
+- cumi yang di es berwarna merah keesokan harinya
+- 1 knot =1.852km/hours
+- [fisherman boats](https://jixingxincomposite.en.made-in-china.com/product/NJpUiKoPaQYS/China-New-Design-High-Quality-Motor-Boat-Boat-Fishing-Fiberglass-Boat.html)
+- inyak 40pk motor (oil consumption 20L/hours)
+- Water coloumn
+  - air laut bataam diambil dari kedalaman 12m, di Norwegia diambil dari kedalamaan 75m dari permukaan laut
+- fiber boat puny hendra pulau petong:
+  -17" dan 21" (5.5 m ~ 7 m) , boat: 27 juta
+  - mesin yamaha 15HP ( 2x)
+  - supaya temperature nya hampir sama dengan culture temperature
+  - ~Pulau Benan: Judit, Petong Hendra~
+  - pH nya konstant di kedalaman ?
+- [cuaca dan agin di pulau petong](https://www.windy.com/0.629/104.082?0.626,104.094,15)
+- 65% kapal nelayan adalah terbuat dari kayu (10~15 years)
+  - Mesin bukan dmeesia kapal akibatnya mudah terjadi korosi
+  - mesin yanmar, yamaasi, suzuki and honda
+
+-[serial port in rust](https://users.rust-lang.org/t/how-to-use-serial-port-in-dioxus-desktop-app/99845/3)
+
+# [ikan tirusan-(Otolithoides pama)](https://www.mongabay.co.id/2024/09/16/ikan-tirusan-harga-selangit-jadi-primadona-khawatir-penangkapan-berlebih/)
+- [(Otolithoides pama)](https://www.themimu.info/sites/themimu.info/files/assessment_file_attachments/GOM_Pama_Croaker_croaker.pdf)
+- [xxx](https://eprints.cmfri.org.in/16358/1/MFIS%20252_2022_Subal%20Kumar%20Roul.pdf)
+- gelambung laki jauh lebih mahaldari yang betina
+
+
+Para nelayan di Riau, seperti Indragiri Hilir,  belakangan ini ‘berburu’ mendapatkan ikan tirusan atau tirus karena harga yang selangit. Ikan dengan nama latin  Otolithoides pama, termasuk famili sciaenidae,  harga per ekor bisa mencapai puluhan juta rupiah.
+Yang bernilai tinggi dari ikan tirusan adalah gelembung (limpanya). Pembeli atau pengepul biasa mengupah orang yang ahli lagi untuk membelah perut ikan ini.
+
+Hasil pencatatan BPPMHKP Pekanbaru, pengiriman gelembung ikan sepanjang 2019-2023 mencapai 1.204 kali atau 36.895 kilogram. Sumbernya dari enam daerah penghasil ikan di
+1. Tembilahan,
+2. Bengkalis, 
+3. Dumai,
+4. Selat Panjang, 
+5. Pekanbaru dan 
+6. Panipahan.
+
+Setidaknya ada enam pengirim utama mendominasi dalam perdagangan gelembung ikan di Riau.
+
+Data ini tidak spesifik menyebut jenis ikan penghasil gelembung renang itu. Selain tirusan, gelembung yang biasa diperdagangkan juga produk turunan dari ikan malong (Muraenesox cinereus).
+
+# [Ikan Malong (Muraenesox cinereus)](https://indiabiodiversity.org/species/show/232787)
+Malong ( Muraenesox cinereus )adalah spesies ikan Sidat dalam keluarga pike conger, Muraenesocidae .
+ Mereka terutama hidup di dasar lunak di perairan laut dan air payau hingga kedalaman 800 m (2.600 ft), tapi bisa masuk ke air tawar.
+
+# [Gamat Hitam- Teripang hitam ](https://www.mitrausahatani.com/teripang-berhasil-dibudidayakan/)
+- [teripang](https://youtu.be/3O4dGg5DJc4?si=gpO6H6sVmOFNFKmP)
+
+## keramba tanjap 10m x 20m x 2,0m (depth)
+  - bebas dari ikan
+  - bebas dari kepiting
+  - bebas dari sampah dan lumpur
+  - Surut terendah 80cm -100 cm
+  - Net di atas harus tersisa paling kurang 100cm
+  - papan di pingir 30cm di bawah pasir
+  - di tanam rumput laut
+  - Tancap terbuat dari bambu atau kayu ulin (mungkin bisaa pakai stainless steel diameter 6.0c? cm
+
+## keramba apung untuk teripang
+  - Net mesh bawah 0.2cm
+  - subtract pasir
+  - rumput laut jenis ??
+  
+
+### Jenis teripang
+    1. teripang labi-labi? (teripang Gama?)
+         - [Teripang Gama (Stichopus Variegatus) -Other Names: Curryfish, golden sea cucumber.](https://www.poppe-images.com/index.php/product/stichopus-variegatus-16/)
+    2. Teripang emas (Stichopus hermanni)
+    3. teripang gamat batu  teripang batu (Actinopyga mauritiana), https://repository.ubt.ac.id/repository/UBT29-05-2022-015107.pdf,
+    4. teripang pasir
+### process teripang dari 0.8 basah sampai kering 0.1kg ( penyusutan yang hampir 90%)
+### Tranport benur teripang melalui boat dengan cara memaaki air laut langsun
+    - Teripang sama sekali tidak bergerak di daalam fiber 
+    - Survicve rate is very high not like fish
+    - Pulau kijang di tanjung pinang banyak ikan tuna
+    - Perusahan teripang ada di penujuan
+
+[PT Aruna Industri Bintan](https://mongabay.co.id/2024/09/16/teripang-timun-emas-yang-untungkan-nelayan-batam/)
+teripang masih banyak di perairan Pulau Rempang meski sudah terdapat industri besar penampung teripang di Lingga.
+
+- Jaringan ikan tangsi (pukat tanngsi ?) di karang
+
+Tiram Mutiara
+---
+## plantonic to tempel 0.1-1.0mm
+## Pendederan
+   growth rate +1 cm perbulan 
+
+
+Market trends
+---
+The dried air bladders called fish maws are exported mainly to
+*  China and Singapore for the manufacture of isinglass, which is used in beverage and cosmetic
+industry as well as Chinese traditional medicines (Dutta et al., 2014). The lesser and medium sciaenids are mostly
+sold in fresh condition at the local markets or iced and transported to distant interior markets of Odisha, West
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+# [Tilapia](https://youtu.be/7SOVLYYgyCE?si=Z3zplqT-GU7pJFfF)
+
+# [Catfish](https://www.youtube.com/watch?v=YoI2QocTmlQ)
+# Oyster
+# Frog (Freeshwater)
+- poor vision, could not see the pellet on the flour if not moving
+- need shade from corn or rice field but not high dense
+- catch night time
+
+# Scallop (kerang simping atau kerang kampak)
+[Scallop](https://downeastinstitute.org/hatchery/sea-scallops/)
+<img  src="https://www.wa.gov.au/system/files/2024-04/scallop_research.jpg">
+[Hatchery tank](https://enduramaxx.co.uk/enduramaxx/scallop-hatchery-tanks/)
+{scallop and lobster cage](https://www.alibaba.com/product-detail/scallop-hatchery-lantern-scallop-culture-lantern_11000005993291.html)
+
+# Siput Laut Gonggong (Laevistrombus turturella)
+ 
+
+# sweet patato plant for fish feed?
+</md-block>
+
+</div>
+  <script type="module">
+      import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
+    </script>
+    <script type="module">
+     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+      mermaid.registerIconPacks([
+        { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
+        { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
+      ]);
+     mermaid.initialize({ startOnLoad: true });
+</script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+<!-- Footer container, https://tailwindcss.com/docs/theme -->
+<!-- https://tw-elements.com/docs/standard/navigation/footer/ -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<footer
+  class="bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left">
+  <div
+    class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-white/10 lg:justify-between">
+    <div class="me-12 hidden lg:block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Social network icons container -->
+    <div class="flex justify-center">
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 320 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4 ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 512 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 488 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+        </svg>
+      </a>
+      <a href="#!" class="[&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 496 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
+  <div class="mx-6 py-10 text-center md:text-left">
+    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <!-- TW Elements section -->
+      <div class="">
+        <h6
+          class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+          <span class="me-3 [&>svg]:h-4 [&>svg]:w-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+            </svg>
+          </span>
+          TW Elements
+        </h6>
+        <p>
+          Here you can use rows and columns to organize your footer
+          content. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.
+        </p>
+      </div>
+      <!-- Products section -->
+      <div>
+        <h6
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Products
+        </h6>
+        <p class="mb-4">
+          <a href="#!">Angular</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">React</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Vue</a>
+        </p>
+        <p>
+          <a href="#!">Laravel</a>
+        </p>
+      </div>
+      <!-- Useful links section -->
+      <div>
+        <h6
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Useful links
+        </h6>
+        <p class="mb-4">
+          <a href="#!">Pricing</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Settings</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Orders</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+      </div>
+      <!-- Contact section -->
+      <div>
+        <h6
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Contact
+        </h6>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+              <path
+                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+            </svg>
+          </span>
+          New York, NY 10012, US
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+              <path
+                d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+            </svg>
+          </span>
+          info@example.com
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+          + 01 234 567 88
+        </p>
+        <p class="flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+          + 01 234 567 89
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Copyright section-->
+  <div class="bg-black/5 p-6 text-center">
+    <span>© 2023 Copyright:</span>
+    <a class="font-semibold" href="https://tw-elements.com/"
+      >TW Elements</a
+    >
+  </div>
+</footer>
+
+  </body>
+</html>

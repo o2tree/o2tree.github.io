@@ -506,36 +506,15 @@ Three-dimensional polyculture aquaculture involves raising multiple aquatic spec
 </md-block>
 
         <div class="mermaid">
-            graph LR
-            %% Kerapu and seabass
-
-            FC0["Floating cage<br>Grading"]
-            FC1["Keramba tanjab<br>Berpasir dibawah<br>Grading"]
-            FC2["Keramba dasar (0.5 m dari dasar)<br>Grading"]
-            LongLine["LongLiine untuk  Pearl Oysters<br>Pearls Oyster"]
-            Upwelling["Upwelling<br>Nursury for Pearls Oyster"]
-            Downwelling["Downwelling<br>Nursury for Pearls Oyster"]
-            P0["Pond - outdoor"]
-            P1(["Pond - indoor"])
-            R0{"Rotifer Large"}
-            R1{"Rotifer Small"}
-            MicroAlgae["Green phytoplanktons"] -->R0
-            MicroAlgae -->R1
-            Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
-            Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
-            Kerapu(["Grouper: female at birth: ♀<br>Larva Rearing"])  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
-            Kerapu -->|tidak perlu| FC1 --> FC22 --> Kerapu1
-            Seabass(["Asian Seabass: Male at birth: ♂<br> Larva Rearing"]) --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
-            Lobster["Lobster Rearing"] -->FC2
-            Grading["Monthly Grading"]
-            
-            click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
-            click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
-            style Kerapu1 fill:gold, color:black
-            style Seabass1 fill:gold, color:black
-            style R0 fill:blue, color:white
-            style R1 fill:green, color: black
-           
+	flowchart TD
+		A[Oyster Spawns] --> B[Larvae Float & Develop]
+		B --> C[Spat Settles on Cultch]
+		C --> D["Extended Land-Based Nursery<br>(~45+ Days)"]
+		D --> E["Transfer to Ocean<br>Nets/Cages"]
+		E --> F["Grow to Adult Size<br>(1-2 Years)"]
+		F --> G["Pearl Nucleation<br>Surgery"]
+		G --> H["Final Grow-Out Period<br>(2-3 Years)"]
+		H --> I[Harvest Pearl]
           </div>
 
 
