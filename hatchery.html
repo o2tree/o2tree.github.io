@@ -1071,7 +1071,7 @@ https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplement
 *Diatoms are single cell eukaryotic microalgae*
 
 
-LUGOL solutions:
+Alka-siltzer and **LUGOL solutions**:
 Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycerol is required for flagellates.
  Please look at European Committee for Standardization, 2015. According to the standard method (European Committee for Standardization 2006),
  phytoplankton enumerations were carried out under an inverted microscope (Olympus CKX41) at magnifications of 400 and 600X. For each sample,
@@ -1087,10 +1087,11 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
        direction  LR
        ocean_Temperature["Pacific surface T= approx 26~30C<br>ocean in the eastern part after wallece line is deeper and cooler vs in  the west side"]
     end
-    subgraph Teripand["Teripang"]
+    subgraph Teripang["Teripang"]
        direction  LR
        Hatchery["hatchery Teripang"]
-       Growout["grow out in fixed pen(Keramba Tancap)<br>Media subtract sand and seaweet(lumun)<br>+1m  permonth"]
+       Nursury_Teripang("floating cage or Sea Pen<br> up to junivile")
+       Nursury_Teripang --> Growout["grow out in fixed pen(Keramba Tancap-Sea Pen)<br>Media subtract sand and seaweet(lumun)<br>+1m  permonth"]
     end
 
 
@@ -1188,9 +1189,9 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
              culture_fresh_pytho["Culture freshwater microalgae Spirulina and Chlorella vulgaris"]
            end
            
-           subgraph MacroAlgae["culture seaweeds/MacroAlage"]
+           subgraph MacroAlgae["Culture seaweeds/MacroAlage"]
              direction LR
-             seaweed["life green/brown seaweed-Sargassum"] -->Powder_seaweed["Make dry powder seaweed"]
+             seaweed["Life green/brown seaweed-Sargassum"] -->Powder_seaweed["Make dry powder seaweed"] --> Fermented_seaweed["Fermented dry power seaweeed"]
              seaweed---> Process_1["harvest the seed for future propagation"]
             end 
             
@@ -1200,7 +1201,7 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
              culture_fresh_pytho -->Sandfish
             end 
 
-            subgraph plankton["zooplankton culture"]
+            subgraph plankton["Zooplankton culture"]
               R0{"Rotifer Brachionus plicatilis  Large size 20-25°C<br>Euryhaline<br>Quality depend on its feeds"}
               R1{"Rotifer B. rotundiformis Small size 28-35°C<br>Low salinity<br>Quality depends on its feeds"}
               Copepods{"Copepods Bigger than Rotifer"}
@@ -1710,8 +1711,6 @@ the larger prey from predator (Triño, unpublished).
 * [Bookmark](https://www.croftsoft.com/library/tutorials/rust-dioxus-project-setup/) 
 * [docsite dioxus tailwind components](https://github.com/42Angouleme/dioxus-tw-components)
 
-![Indonesia QRcode](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
-[Coral](https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg)
 <img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">
 
 ## Sebass vs Snapper
@@ -1963,7 +1962,9 @@ sold in fresh condition at the local markets or iced and transported to distant 
 # [Catfish](https://www.youtube.com/watch?v=YoI2QocTmlQ)
 # Oyster
 
-Sea cucumbers, prized for their commercial value, benefit from diets containing microalgae such as Chaetoceros and Isochrysis, which enhance growth and survival rates. Similarly, for sea urchins and seahorses, microalgae like Isochrysis and Chaetoceros are recommended for larvae, promoting survival, growth, and metamorphosis, especially the black-lip pearl oyster (Pinctada margaritifera) [165, 166].
+Sea cucumbers, prized for their commercial value, benefit from diets containing microalgae such as Chaetoceros and Isochrysis, 
+which enhance growth and survival rates. Similarly, for sea urchins and seahorses, microalgae like Isochrysis and Chaetoceros are 
+https://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpegrecommended for larvae, promoting survival, growth, and metamorphosis, especially the black-lip pearl oyster (Pinctada margaritifera) [165, 166].
 
 
  

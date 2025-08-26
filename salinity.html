@@ -7,7 +7,7 @@
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
     <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
-                <title>BBL-Benur Lobster</title>
+                <title>Salinity</title>
                 <script id="sap-ui-bootstrap"
                         src="https://ui5.sap.com/resources/sap-ui-core.js"
                         data-sap-ui-theme="sap_horizon"
@@ -142,7 +142,48 @@
 
 [Image Maker](https://imageresizer.com/)
 
+
+What is iron fertilization?
+
+All organisms require nutrients to live and grow, and those living in the open ocean are no exception.
+ Tiny phytoplankton drift on the water’s surface, converting sunlight, water, and carbon dioxide from the atmosphere into food and oxygen.
+ Like other photosynthetic organisms, such as land plants, these tiny algae and cyanobacteria require nutrients for photosynthesis to occur.
+ **On land, nitrogen and phosphorous are often the limiting nutrients, but in many parts of the open ocean, these nutrients are generally available.** 
+ It’s other, trace nutrients that are missing, and iron is one of the key players in this system. 
+Adding small amounts of iron to the ocean’s surface can trigger a bloom of phytoplankton big enough 
+to be seen from space. Such additions happen naturally, such as when winds blow dust from the Sahara 
+Desert or ash from a volcanic eruption. When the plume of dust or ash settles over the ocean’s surface, 
+it triggers massive blooms of phytoplankton that remove substantial amounts of carbon dioxide from the atmosphere. 
+Iron fertilization is a Carbon Dioxide Removal (CDR) technique that would mimic this natural system, 
+artificially adding iron to the ocean’s surface to stimulate growth of phytoplankton
+
+<img src="https://www.whoi.edu/wp-content/uploads/2022/04/Iron_fertilization-1024x744.jpg">
+
+<img src="https://www.oceannets.eu/wp-content/uploads/2021/04/fertilization_210225-2048x1094.jpg">
+
+<img srv="https://www.oceannets.eu/wp-content/uploads/2025/05/upwelling_250527rgb_maske-2048x1088.jpg">
+
+<img src="https://www.oceannets.eu/wp-content/uploads/2021/04/alkalinization_210325-2048x1094.jpg">
+
+<img src="https://www.oceannets.eu/wp-content/uploads/2021/04/bluecarbon_210330-2048x1094.jpg">
+
+<img src="https://bg.copernicus.org/articles/15/5847/2018/bg-15-5847-2018-f04.jpg">
+
+Limes soils are often iron deficit, even when sufficient amounts of iron are present. This is because of the generally high pH value, which leads to iron precipitation.
+
+[iron removal](https://www.lenntech.com/periodic/water/iron/iron-and-water.htm)
+
+
 [Calibrate pH](https://www.researchgate.net/publication/49599428_A_simple_protocol_for_the_routine_calibration_of_pH_meters)
+
+
+
+   <svg width="400" height="100">
+               <img src="https://www.whoi.edu/wp-content/uploads/2022/04/Iron_fertilization-1024x744.jpg">
+            </svg>
+         </div
+
+
 
 [pdfum binary](https://github.com/bblanchon/pdfium-binaries)
 
@@ -200,6 +241,8 @@ https://www.epa.gov/sites/default/files/2013-11/documents/nla2012_fieldoperation
 <img src="https://ae01.alicdn.com/kf/Se7f76dcf4a7b4de0871a60d21c8554c2f.jpg">
 
 <img src="https://ae01.alicdn.com/kf/S4ea5f43558c54f4aa064bc91edaa734fZ.jpg">
+
+<img src="https://pub.mdpi-res.com/foods/foods-14-01522/article_deploy/html/images/foods-14-01522-ag.png?1745808220">
 
 Product Parameters
 Product Description: Suitable for collecting phytoplankton and zooplankton in various water bodies.
@@ -273,11 +316,37 @@ Alga culture temperature : 21.5 to 26.5C)
 
 
 </md-block>
+      <div class="mermaid">
+            %% Design seawater intake with backwash
+	    flowchart TD
+		A[Seawater Intake<br>100-200m offshore<br>Depth: > 5m] --> B["8-inch HDPE Seabed Pipeline<br><font color="red">prevent biofouling clog  0.45~0.9m/s</font>"];
+		B --> C[Wet Well / Pump House];
+		C --> D[Supply Pump];
+		D --> E[Drum Filter<br>200-500 µm];
+		E -- Optional bypass --> F{Rapid Sand Filter};
+		F -- Clean Water --> G[UV Sterilizer];
+		G -- Sterilized Water --> H[Hatchery & Algae Lab];
+    
+		subgraph F[Sand Filter Process backwash when delta P=5~10psi]
+   			 direction TB
+    			 F1[Filter Mode<br>Inlet -> Top -> Bottom] --> F2[Backwash Mode<br>Backwash Pump -> Bottom -> Top -> Waste];
+		end
+
+		E -- Backwash Trigger<br>ΔP=5-10PSI --> F2;
+                
+		click E "https://www.valvesonline.com.au/references/mesh-sizing-chart/?srsltid=AfmBOoqCyfO31ZiZCVIYWMqY3XQMp5mz9yN-oFZl3br2Oz-IIsSmLiAF" "Mesh number to micron size";
+                
+      </div>
+
+
 
            <div class="mermaid">
             graph LR
             %% Pulau Rijai - kerang serimping
-	    scallop["Scallop(Kerang serimping) di pulau Rijai"]
+	    A[Yellow sand<br>SiO2 size:?<br>Biofilm]
+            B[White sand<br>CaCO3<br>Raise PH?]
+
+	    Scallop["Scallop(Kerang serimping) di pulau Rijai"]
             Potasium["6 most important element in sea water,higher pH"]
 
             
@@ -385,9 +454,6 @@ flowchart TD
 https://www.tomocon.eu/wp-content/uploads/2019/08/Precipitation-of-calcium-carbonate-IPIC2.pdf
 https://goldbio.com/articles/article/mangroves-the-buffering-superheroes-of-the-ocean?srsltid=AfmBOoqEGE-4L3FpaQoTz_Kme54TmC7jF8D_yCQBgXoxHUkzuhf0Lwvr
 
-<div class="mermaid">
- 
-</div>
 
 <div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
 <div id="consent_blackbar"></div>
@@ -417,7 +483,7 @@ Ikan tersebut juga dikenal dengan sebutan humphead maori wrasse dalam Bahasa Ing
 - Check blood to identified short of different mineral
 
 
-## Rotifer
+## Rotife
 Copepods and rotifers are both types of small aquatic organisms, particularly important in marine and freshwater ecosystems
  as they are a food source for many fish and other invertebrates. However, they belong to 
 different groups: copepods are crustaceans (Arthropoda), while rotifers are rotifers (Rotifera).
