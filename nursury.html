@@ -308,6 +308,8 @@ Microalgae types:
   - The Nannochloropsis genus includes several species, such as:
       - Nannochloropsis gaditana, Nannochloropsis granulata, Nannochloropsis oceanica, Nannochloropsis limnetica, Nannochloropsis salina, and Nannochloropsis oculata.
 - Chollera volgaris sp ( freshwater with seawater tolerance)
+- Spiriluna Plantensis (freshwater with brackish tolerance, high pH: 8-11,T:30-35C, EC 9.8-30ms/cm)
+
 - Tetraselmis is a green algal genus within the order Chlorodendrales (freshwater and seawater)
 - <font color="blue">Isochrysis is a flagellated marine algae genus</font> good for bivalve larvae
 - <font color="blue">Pavlova sp. and Chaetoceros sp. are marine algae genus</font> for abalone larvae
@@ -1102,9 +1104,14 @@ https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplement
 	     %% Algae media refers to the solution or culture in which algae grow. 
              %% Nutrient that contained in the tofu wastewater are very useful for the production of Chlorella sp.
              %% Chlorella sp. usually grows in seawater
-             culture_both["Chlorella vulgaris<br> is green freshwater microalgae <br>but  seawater tolerance<cbr>an reemove salt"]
+	     culture_both["Chlorella vulgaris<br> is green freshwater microalgae <br>but  seawater tolerance T: 26-30C <br>an remove salt"]
              culture_pytho["Culture Marine pythoplankton/MicroAlgae (chlorella sp)"]
-             culture_fresh_pytho["culture freshwater microalgae Spirulina and Chlorella vulgaris"]
+	     
+	     culture_spiriluna["Spirulina platensis microalgee Blue-green <br>brackish tolerance<br>pH sensitivity pH:8~11,T:30-35C"]
+	     %% Spiriluna need to adjust fertelizer with pH above seawater
+             %% EC: 98~30ms/cm
+             %% High temperature: 30-35C
+             culture_fresh_pytho["culture freshwater microalgae Spirulina Plantis and Chlorella vulgaris"]
            end
            
            subgraph MacroAlgae["culture seaweeds/MacroAlage"]
@@ -1113,7 +1120,7 @@ https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplement
              seaweed---> Process_1["harvest the seed for future propagation"]
             end 
 
-            subgraph plankton["zooplankton culture"]
+            subgraph plankton["Zooplankton Culture"]
               R0{"Rotifer Large size 20-25°C<br>Euryhaline"}
               R1{"Rotifer Small size 28-35°C<br>Low salinity"}
               Copepods{"Copepods Bigger than Rotifer"}
