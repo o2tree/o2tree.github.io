@@ -7,6 +7,7 @@
 
 - [Kelompok Tani Hutan Sumber Bahari](http://o2tree.github.io/KTHSumberBahari.html)
 - [Tanjung Kampeh Palemebang](http://o2tree.github.io/tanjungkampeh.html)
+- [KPRI Lingga](http://o2tree.github.io/kpri_lingga.html)
 - [Italy point of Interest-Testing Mermaid](http://o2tree.github.io/italy.html)
 - [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html)
 
