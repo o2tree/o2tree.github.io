@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_37588a10a7e97293a80f33c4d76eeacf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_37588a10a7e97293a80f33c4d76eeacf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_37588a10a7e97293a80f33c4d76eeacf = L.map(
+                "map_37588a10a7e97293a80f33c4d76eeacf",
+                {
+                    center: [-8.6435, 116.1557],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_68331def9d3ea66410e3b80da2bf2730 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_68331def9d3ea66410e3b80da2bf2730.addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+            var marker_4f365fc55b570aea2af0a1297e978cfb = L.marker(
+                [-8.4987, 116.0448],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+            var icon_da7efae2db8dfffb2c0e3957aa051e29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "umbrella-beach",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed282b449adb2b718cce1a73632495a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41944c5a0f18d7c30575aebf81454557 = $(`<div id="html_41944c5a0f18d7c30575aebf81454557" style="width: 100.0%; height: 100.0%;">     <b>Senggigi Beach</b><br>     <i>Status: Beach</i><br>     <a href="https://www.google.com/maps/?q=-8.4987,116.0448" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_ed282b449adb2b718cce1a73632495a2.setContent(html_41944c5a0f18d7c30575aebf81454557);
+            
+        
+
+        marker_4f365fc55b570aea2af0a1297e978cfb.bindPopup(popup_ed282b449adb2b718cce1a73632495a2)
+        ;
+
+        
+    
+    
+            marker_4f365fc55b570aea2af0a1297e978cfb.bindTooltip(
+                `<div>
+                     Senggigi Beach
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4f365fc55b570aea2af0a1297e978cfb.setIcon(icon_da7efae2db8dfffb2c0e3957aa051e29);
+            
+    
+            var marker_4e229efc3c04cda74e7e0224ceb297b5 = L.marker(
+                [-8.73, 116.0772],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+            var icon_06995f240becef3da2e9959da7316344 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8387dd6057af08325c3dcb89bbc85c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8f378285ac6c754a843ac60821f72d0 = $(`<div id="html_e8f378285ac6c754a843ac60821f72d0" style="width: 100.0%; height: 100.0%;">     <b>Dermaga Ferry Lembah</b><br>     <i>Status: Ship</i><br>     <a href="https://www.google.com/maps/?q=-8.73,116.0772" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_f8387dd6057af08325c3dcb89bbc85c3.setContent(html_e8f378285ac6c754a843ac60821f72d0);
+            
+        
+
+        marker_4e229efc3c04cda74e7e0224ceb297b5.bindPopup(popup_f8387dd6057af08325c3dcb89bbc85c3)
+        ;
+
+        
+    
+    
+            marker_4e229efc3c04cda74e7e0224ceb297b5.bindTooltip(
+                `<div>
+                     Dermaga Ferry Lembah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e229efc3c04cda74e7e0224ceb297b5.setIcon(icon_06995f240becef3da2e9959da7316344);
+            
+    
+            var marker_de40ae91266107a4881f9d329d64ae19 = L.marker(
+                [-8.8934, 116.2775],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+        var popup_088735f86f7cbd89fd4533ebf411e42a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27578b427a173a7da441cba96a67b02a = $(`<div id="html_27578b427a173a7da441cba96a67b02a" style="width: 100.0%; height: 100.0%;">     <b>Kuta Mandalika Port</b><br>     <i>Status: Ship</i><br>     <a href="https://www.google.com/maps/?q=-8.8934,116.2775" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_088735f86f7cbd89fd4533ebf411e42a.setContent(html_27578b427a173a7da441cba96a67b02a);
+            
+        
+
+        marker_de40ae91266107a4881f9d329d64ae19.bindPopup(popup_088735f86f7cbd89fd4533ebf411e42a)
+        ;
+
+        
+    
+    
+            marker_de40ae91266107a4881f9d329d64ae19.bindTooltip(
+                `<div>
+                     Kuta Mandalika Port
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de40ae91266107a4881f9d329d64ae19.setIcon(icon_06995f240becef3da2e9959da7316344);
+            
+    
+            var marker_c48813f9205310a15b790cf6639ce38e = L.marker(
+                [-8.73, 116.0772],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+        var popup_2108a6f15661d61636749fd79859ba4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_016ae801918c9cd193752f1f6a308b6a = $(`<div id="html_016ae801918c9cd193752f1f6a308b6a" style="width: 100.0%; height: 100.0%;">     <b>Dermaga Ferry Lembah</b><br>     <i>Status: Ship</i><br>     <a href="https://www.google.com/maps/?q=-8.73,116.0772" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_2108a6f15661d61636749fd79859ba4b.setContent(html_016ae801918c9cd193752f1f6a308b6a);
+            
+        
+
+        marker_c48813f9205310a15b790cf6639ce38e.bindPopup(popup_2108a6f15661d61636749fd79859ba4b)
+        ;
+
+        
+    
+    
+            marker_c48813f9205310a15b790cf6639ce38e.bindTooltip(
+                `<div>
+                     Dermaga Ferry Lembah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c48813f9205310a15b790cf6639ce38e.setIcon(icon_06995f240becef3da2e9959da7316344);
+            
+    
+            var marker_f54d15f1984c5be69c4e4c1f777f3699 = L.marker(
+                [-8.486, 116.6745],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+        var popup_9c70601cbcfbf26d6af92f62b83bf6db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25826ba31ae493ab047fe4d60b02b089 = $(`<div id="html_25826ba31ae493ab047fe4d60b02b089" style="width: 100.0%; height: 100.0%;">     <b>Pelabuhan Kayangan</b><br>     <i>Status: Ship</i><br>     <a href="https://www.google.com/maps/?q=-8.486,116.6745" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_9c70601cbcfbf26d6af92f62b83bf6db.setContent(html_25826ba31ae493ab047fe4d60b02b089);
+            
+        
+
+        marker_f54d15f1984c5be69c4e4c1f777f3699.bindPopup(popup_9c70601cbcfbf26d6af92f62b83bf6db)
+        ;
+
+        
+    
+    
+            marker_f54d15f1984c5be69c4e4c1f777f3699.bindTooltip(
+                `<div>
+                     Pelabuhan Kayangan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f54d15f1984c5be69c4e4c1f777f3699.setIcon(icon_06995f240becef3da2e9959da7316344);
+            
+    
+            var marker_1edb24bbbc67c5f8dbbbc6dc12763fe8 = L.marker(
+                [-8.7379, 115.2123],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+        var popup_2891f7d6b00f29b44792b5f78147310f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_daaef956e2a8df48d9ce6fca7d0501f7 = $(`<div id="html_daaef956e2a8df48d9ce6fca7d0501f7" style="width: 100.0%; height: 100.0%;">     <b>Pelabuhan benoa Bali</b><br>     <i>Status: Ship</i><br>     <a href="https://www.google.com/maps/?q=-8.7379,115.2123" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_2891f7d6b00f29b44792b5f78147310f.setContent(html_daaef956e2a8df48d9ce6fca7d0501f7);
+            
+        
+
+        marker_1edb24bbbc67c5f8dbbbc6dc12763fe8.bindPopup(popup_2891f7d6b00f29b44792b5f78147310f)
+        ;
+
+        
+    
+    
+            marker_1edb24bbbc67c5f8dbbbc6dc12763fe8.bindTooltip(
+                `<div>
+                     Pelabuhan benoa Bali
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1edb24bbbc67c5f8dbbbc6dc12763fe8.setIcon(icon_06995f240becef3da2e9959da7316344);
+            
+    
+            var marker_8cc7393bfd32725d8d127075873a5f00 = L.marker(
+                [-8.7644, 116.2717],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+            var icon_01248ce43da2bf25e8e40f4fb8df228d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconColor": "orange",
+}
+            );
+        
+    
+        var popup_9916454fd7a476e864080a44d77a78f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43d8b2ad83ae67cdf26b86ac8781570c = $(`<div id="html_43d8b2ad83ae67cdf26b86ac8781570c" style="width: 100.0%; height: 100.0%;">     <b>Lombok International Airport</b><br>     <i>Status: Airport</i><br>     <a href="https://www.google.com/maps/?q=-8.7644,116.2717" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_9916454fd7a476e864080a44d77a78f6.setContent(html_43d8b2ad83ae67cdf26b86ac8781570c);
+            
+        
+
+        marker_8cc7393bfd32725d8d127075873a5f00.bindPopup(popup_9916454fd7a476e864080a44d77a78f6)
+        ;
+
+        
+    
+    
+            marker_8cc7393bfd32725d8d127075873a5f00.bindTooltip(
+                `<div>
+                     Lombok International Airport
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8cc7393bfd32725d8d127075873a5f00.setIcon(icon_01248ce43da2bf25e8e40f4fb8df228d);
+            
+    
+            var marker_ba78ab04023f926d69c7e994c79ce732 = L.marker(
+                [-8.3642, 116.083],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+        var popup_dae648d5c85d502997dccc6ddb545378 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07f829bf86ac32c963e54c07e62780b4 = $(`<div id="html_07f829bf86ac32c963e54c07e62780b4" style="width: 100.0%; height: 100.0%;">     <b>Gili Air Ports</b><br>     <i>Status: Ship</i><br>     <a href="https://www.google.com/maps/?q=-8.3642,116.083" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_dae648d5c85d502997dccc6ddb545378.setContent(html_07f829bf86ac32c963e54c07e62780b4);
+            
+        
+
+        marker_ba78ab04023f926d69c7e994c79ce732.bindPopup(popup_dae648d5c85d502997dccc6ddb545378)
+        ;
+
+        
+    
+    
+            marker_ba78ab04023f926d69c7e994c79ce732.bindTooltip(
+                `<div>
+                     Gili Air Ports
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ba78ab04023f926d69c7e994c79ce732.setIcon(icon_06995f240becef3da2e9959da7316344);
+            
+    
+            var marker_e4259c17ea738a0ca13fc76bf049e4c7 = L.marker(
+                [-8.3526, 116.0618],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+        var popup_e88d4fb3f5b1e5f9392078cd8c9e662b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81dca5c4cdfc70f9ac3493692bee339b = $(`<div id="html_81dca5c4cdfc70f9ac3493692bee339b" style="width: 100.0%; height: 100.0%;">     <b>Gili Meno Port</b><br>     <i>Status: Ship</i><br>     <a href="https://www.google.com/maps/?q=-8.3526,116.0618" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_e88d4fb3f5b1e5f9392078cd8c9e662b.setContent(html_81dca5c4cdfc70f9ac3493692bee339b);
+            
+        
+
+        marker_e4259c17ea738a0ca13fc76bf049e4c7.bindPopup(popup_e88d4fb3f5b1e5f9392078cd8c9e662b)
+        ;
+
+        
+    
+    
+            marker_e4259c17ea738a0ca13fc76bf049e4c7.bindTooltip(
+                `<div>
+                     Gili Meno Port
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e4259c17ea738a0ca13fc76bf049e4c7.setIcon(icon_06995f240becef3da2e9959da7316344);
+            
+    
+            var marker_1df54ed17c5caaf336b078d0b8183a96 = L.marker(
+                [-8.3546, 116.0438],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+        var popup_50bf5ad81a3ca70bca9e6e0ba2b3af47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f67a16c9dc40b4c61b6ceec6dada38c = $(`<div id="html_3f67a16c9dc40b4c61b6ceec6dada38c" style="width: 100.0%; height: 100.0%;">     <b>Gili Traawangan</b><br>     <i>Status: Ship</i><br>     <a href="https://www.google.com/maps/?q=-8.3546,116.0438" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_50bf5ad81a3ca70bca9e6e0ba2b3af47.setContent(html_3f67a16c9dc40b4c61b6ceec6dada38c);
+            
+        
+
+        marker_1df54ed17c5caaf336b078d0b8183a96.bindPopup(popup_50bf5ad81a3ca70bca9e6e0ba2b3af47)
+        ;
+
+        
+    
+    
+            marker_1df54ed17c5caaf336b078d0b8183a96.bindTooltip(
+                `<div>
+                     Gili Traawangan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1df54ed17c5caaf336b078d0b8183a96.setIcon(icon_06995f240becef3da2e9959da7316344);
+            
+    
+            var marker_d89a349604d874f705b78509b77e50e9 = L.marker(
+                [-8.4113, 116.4574],
+                {
+}
+            ).addTo(map_37588a10a7e97293a80f33c4d76eeacf);
+        
+    
+            var icon_b253b22fd729cec676e1484db5b2a8fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "mountain",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_019dc04570b555b5da06736a1bae8cfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4da81c15f5af0ac595699986c947aec = $(`<div id="html_a4da81c15f5af0ac595699986c947aec" style="width: 100.0%; height: 100.0%;">     <b>Mount Rinjani</b><br>     <i>Status: Mountain</i><br>     <a href="https://www.google.com/maps/?q=-8.4113,116.4574" target="_blank">View on Google Maps</a>     </div>`)[0];
+                popup_019dc04570b555b5da06736a1bae8cfd.setContent(html_a4da81c15f5af0ac595699986c947aec);
+            
+        
+
+        marker_d89a349604d874f705b78509b77e50e9.bindPopup(popup_019dc04570b555b5da06736a1bae8cfd)
+        ;
+
+        
+    
+    
+            marker_d89a349604d874f705b78509b77e50e9.bindTooltip(
+                `<div>
+                     Mount Rinjani
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d89a349604d874f705b78509b77e50e9.setIcon(icon_b253b22fd729cec676e1484db5b2a8fe);
+            
+    
+                var lat_lng_popup_b0178a7f13a472a4518b9cbb9f83c5f6 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_b0178a7f13a472a4518b9cbb9f83c5f6
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_37588a10a7e97293a80f33c4d76eeacf);
+                    }
+                map_37588a10a7e97293a80f33c4d76eeacf.on('click', latLngPop);
+            
+    
+            var measure_control_7b0794619bba8d59f89fdb1902591812 = new L.Control.Measure(
+                {
+  "position": "topright",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "miles",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "acres",
+});
+            map_37588a10a7e97293a80f33c4d76eeacf.addControl(measure_control_7b0794619bba8d59f89fdb1902591812);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+</script>
+</html>
