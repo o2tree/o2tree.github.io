@@ -327,9 +327,12 @@ To establish a successful Pacific White Shrimp (*Litopenaeus vannamei*) hatchery
 ## 1. Hatchery Design & Infrastructure  
 ### 📍 Location  
 - Proximity to clean seawater (salinity **25–35 ppt**).
-- Minimizing the distance for seawater intake reduces pumping costs and potential issues with long pipe runs.
-- The seawater intake should be from depth seawater instead of shallow seawater (temperature, salinity, turbidity vaaariation greatly day and nighor daily)
-- Locating the hatchery close to sea level avoids the need for powerful pumps to lift water, reducing operational costs.
+	- Minimizing the distance for seawater intake reduces pumping costs and potential issues with long pipe runs.
+	- The seawater intake should be from depth seawater instead of shallow seawater (temperature, salinity, turbidity variation greatly day and night or  daily)
+	- Locating the hatchery close to sea level avoids the need for powerful pumps to lift water, reducing operational costs.
+	- The hatchery operations are expected to run year-round. However, there may be seasons when the seawater source may become turbid, caused by intense rainfall
+	or storms. The sand-filter system described in earlier sections (Section 2.2.2.) can help reduce this turbidity. Additionally, water stored in the reservoir can be held longer (1–2 days)
+	 to allow the remaining silt to settle, before the water is used in the tanks. Water exchange in broodstock tanks can also be delayed until the water source is clear of silt.
 - Raw seawater needs to be filtered to remove debris and potentially sterilized to eliminate harmful bacteria and pathogen 
 - Avoid polluted areas (industrial/agricultural runoff).  
 - Reliable electricity (backup generator required).  
@@ -342,7 +345,8 @@ To establish a successful Pacific White Shrimp (*Litopenaeus vannamei*) hatchery
     - Separate areas for broodstock, larvae, and juveniles minimize the risk of disease transmission.
     - Controlled access:
 	- Limiting access to the hatchery and implementing strict hygiene protocols are essential. 
-
+    - [New Arrival Acclimation Guide](https://www.liveaquaria.com/article/157/?aid=157)
+    - [Biota's acclimation guide for all fish, corals, clams, and inverts ](https://shop.thebiotagroup.com/pages/acclimation-guide)
 
 <img src="./image/1fddc437-786f-40ae-9960-be5b5f1329f2.jpeg" style="max-width: 100%;" />
 
@@ -404,8 +408,8 @@ Critical Parameters:
 | Salinity | 25–35 ppt |  
 | pH | 7.8–8.2 |  
 | DO (Dissolved Oxygen) | >5 ppm |  
-| Ammonia | <0.1 ppm |  
-| Nitrite | <0.05 ppm |  
+| Ammonia  NH4+| <0.1 ppm |  
+| Nitrite NO3- | <0.05 ppm |  
 
 ---
 
@@ -1174,26 +1178,26 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
  and mean biovolume of the taxon, which was taken approximating geometric shapes of the least 25 individuals (Sun and Liu 2003).
 
 </md-block>
+
 <div class="mermaid">
     graph LR;
     %% Ocean sea water
     %% x
     subgraph Pacific["Pacific-Indonesia"]
        direction  LR
-       ocean_Temperature["Pacific surface T= approx 26~30C<br>ocean in the eastern part after wallece line is deeper and cooler vs in  the west side"]
+       ocean_Temp["Pacific surface T= approx 26~30C<br>ocean in the eastern part after wallece line is deeper and cooler vs in  the west side"]
     end
+    
     subgraph Teripang["Teripang"]
-       direction  LR
-       Hatchery["hatchery Teripang"]
-       Nursury_Teripang("floating cage or Sea Pen<br> up to junivile")
-       Nursury_Teripang --> Growout["grow out in fixed pen(Keramba Tancap-Sea Pen)<br>Media subtract sand and seaweet(lumun)<br>+1m  permonth"]
+      direction  LR
+      Hatchery["Hatchery Teripang"]
+      Nursury_Teripang("floating cage or Sea Pen<br> up to junivile")
+      Nursury_Teripang --> Growout["grow out in fixed pen(Keramba Tancap-Sea Pen)<br>Media subtract sand and seagrass(lumun)<br>+1m  permonth"]
     end
 
-
-    click ocean_Temperature "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "Surface ocean temperature"
+    click ocean_Temp "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "Surface ocean temperature"
 </div>
 
----
 <div class="mermaid">
     graph LR;
     %% Collecting Rotifer eggs
@@ -1230,6 +1234,31 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
 </div>
 
 
+<div class="mermaid">
+flowchart TD
+    A[Start: New Fish Arrives] --> B[Float Sealed Bag<br>15-20 mins for Temperature Equalization]
+    B --> C{Check Salinity Difference}
+    C -- "Salinity Δ   ≤ .001 OR 1 ppt?" --> D[<b>Quick Transfer</b>:<br>Net fish directly into tank]
+    C -- "Salinity Δ   > .001 OR 1ppt?" --> E[<b>Short Drip</b>:<br>30 mins max, use ammonia neutralizer]
+    D --> F[Discard ALL bag water]
+    E --> F
+    F --> G[Keep tank lights off for 4+ hours]
+ </div>
+    
+<div class="mermaid">
+flowchart TD
+A[Start: New Scallop Arrives] --> B[Float Sealed Bag<br>15 mins for Temperature Equalization]
+    B --> C[Transfer to Bucket<br>Ensure fully submerged, no air exposure]
+    C --> D[Begin Slow Drip Acclimation<br>2-4 drips/second for 45-120 mins]
+    D --> E[Water volume doubled?]
+    E -- Yes --> F[Discard half the water]
+    F --> D
+    E -- No --> G[Continue Drip]
+    G --> H[After 1-2 cycles, transfer specimen<br>Submerge bag underwater to release]
+    H --> I[Discard ALL bucket water]
+    I --> J[Light Acclimation: Keep lights off,<br>then gradually increase over weeks]
+    
+</div>
            <div class="mermaid">
             graph LR
             %% Benur vannamei
