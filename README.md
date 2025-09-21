@@ -17,6 +17,7 @@
 - [PenyuBiru map](http://o2tree.github.io/penyubiru.html)
 - [Kelompok Tani Hutan O2tree](http://o2tree.github.io/o2tree_Lingga.html)
 - [Deep pen vs shallow pen ocean culture](http://o2tree.github.io/deep_sea_aquaculture.html)
+- [Feed](http://o2tree.github.io/feed.html)
 - [Fish](http://o2tree.github.io/fish.html)
 - [Hatchery](http://o2tree.github.io/hatchery.html)
 - [Nursury](http://o2tree.github.io/nursury.html)

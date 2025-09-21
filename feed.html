@@ -1,0 +1,1763 @@
+<html lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
+    <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
+
+                <title>Nursury - Pendederan</title>
+                <script id="sap-ui-bootstrap"
+                        src="https://ui5.sap.com/resources/sap-ui-core.js"
+                        data-sap-ui-theme="sap_horizon"
+                        data-sap-ui-libs='sap.ui.documentation, sap.ui.layout, sap.m, sap.uxap, sap.f, sap.tnt, sap.ui.codeeditor, sap.ui.unified'
+                        data-sap-ui-compat-version="edge"
+                        data-sap-ui-async="true"
+                        data-sap-ui-on-init="module:my/app/main"
+                        data-sap-ui-resource-roots='{"my.app": "./"}'>
+                </script>
+		 <script>
+                        sap.ui.getCore().attachInit(function () {
+                        sap.ui.require(["sap/ui/core/mvc/XMLView"], function (XMLView) {
+                        XMLView.create({ viewName: "Quickstart.App" }).then(function (oView) {
+                            oView.placeAt("content");
+                        });
+                       });
+                     });
+                  </script>
+                  <script>
+                  	var oMenu = new sap.m.Menu({
+			title: "random 2",
+			itemSelected: function (oEvent) {
+				var oItem = oEvent.getParameter("item"),
+					sItemPath = "";
+				while (oItem instanceof sap.m.MenuItem) {
+					sItemPath = oItem.getText() + " > " + sItemPath;
+					oItem = oItem.getParent();
+				}
+
+				sItemPath = sItemPath.substr(0, sItemPath.lastIndexOf(" > "));
+
+				sap.m.MessageToast.show("itemSelected: " + sItemPath);
+			},
+			items: [
+				new sap.m.MenuItem({
+					text: "fridge",
+					icon: "sap-icon://fridge",
+					items: [
+						new sap.m.MenuItem({
+							text: "accidental leave",
+							icon: "sap-icon://accidental-leave",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://factory",
+									text: "factory"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flag",
+									text: "flag"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flight",
+									text: "flight"
+								})
+							]
+						}),
+						new sap.m.MenuItem({
+							text: "iphone",
+							icon: "sap-icon://iphone",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://video",
+									text: "video"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://loan",
+									text: "loan"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://commission-check",
+									text: "commission check"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://doctor",
+									text: "doctor"
+								})
+							]
+						})
+					]
+				}),
+				new sap.m.MenuItem({
+					text: "globe",
+					icon: "sap-icon://globe",
+					items: [
+						new sap.m.MenuItem({
+							text: "e-care",
+							icon: "sap-icon://e-care"
+						})
+					]
+				})
+			]
+		});
+
+                  </script>
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+</style>
+  </head>
+  <!-- script src="https://unpkg.com/@tailwindcss/browser@4"></script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <body class="sapUiBody" id="content">
+    <h1>Test Page for Hatchery <code>sap.ui.unified.Calendar</code></h1>
+    <div>Single day Selection Calendar</div>
+    <br>
+      <!-- div class="relative w-[500px]">
+        <img src="https://www.khueapps.com/media/images/2025-02/cute-dog.webp" />
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
+            <h3 class="text-xl text-white font-bold">
+                Hey, I Am The Big Boss</h3>
+            <p class="mt-2 text-sm text-gray-300">Some description text. Some dummy text here. Welcome to KhueApps.com.
+            </p>
+        </div>
+    </div -->
+
+     <div>
+	<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div>
+<md-block>
+
+# Fermented soymail
+
+LiveSeafood, [9/22/25 6:51 AM]
+Soybean meal (SBM) is a widely used plant-based protein source in animal feed due to its high protein content and balanced amino acid profile. However, it contains several anti-nutritional factors (ANFs) that can impair nutrient absorption, reduce digestibility, and negatively affect animal health and growth if not properly managed. Below is a detailed list of the major ANFs in soybean meal and methods to eliminate or reduce them, supported by scientific insights and processing techniques.
+
+---
+
+🌱 1. Protease Inhibitors (Trypsin Inhibitors)
+
+· Description: Trypsin inhibitors (e.g., Kunitz and Bowman-Birk inhibitors) block the activity of proteolytic enzymes like trypsin and chymotrypsin, reducing protein digestibility. This can lead to pancreatic hypertrophy and impaired growth in animals.
+· Elimination Methods:
+  · Heat Treatment: Moist heat processing (e.g., autoclaving, steaming, or extrusion) at 110°C for 30 minutes effectively inactivates trypsin inhibitors. However, over-heating can reduce amino acid availability (e.g., lysine) due to Maillard reactions.
+  · Fermentation: Solid-state fermentation with bacteria (e.g., Bacillus subtilis) or fungi (e.g., Aspergillus oryzae) significantly reduces trypsin inhibitor activity by enzymatic degradation.
+  · Enzyme Treatment: Supplemental enzymes (e.g., proteases) can break down inhibitors during feed processing.
+
+---
+
+🌾 2. Oligosaccharides (Raffinose and Stachyose)
+
+· Description: These α-galactosides are indigestible by monogastric animals due to the lack of endogenous α-galactosidase. They cause osmotic diarrhea, flatulence, and reduced nutrient absorption by increasing gut transit time.
+· Elimination Methods:
+  · Fermentation: Microbial fermentation (e.g., with Bacillus siamensis) hydrolyzes oligosaccharides into digestible sugars.
+  · Enzyme Supplementation: Adding exogenous α-galactosidase to feed breaks down these compounds.
+  · Extraction and Processing: Ethanol or water extraction removes oligosaccharides in refined soy products (e.g., soy protein concentrate).
+
+---
+
+🧪 3. Antigenic Proteins (Glycinin and β-Conglycinin)
+
+· Description: These storage proteins trigger immune responses in young animals (e.g., piglets and chicks), causing intestinal inflammation, villi atrophy, and increased gut permeability.
+· Elimination Methods:
+  · Fermentation: Solid-state fermentation with Bacillus subtilis or Aspergillus oryzae degrades antigenic proteins into non-immunogenic peptides.
+  · Enzymatic Hydrolysis: Proteases specifically target and break down glycinin and β-conglycinin.
+  · Heat Treatment: Partial reduction is possible, but these proteins are heat-stable and require combined approaches (e.g., heat + fermentation).
+
+---
+
+⚖️ 4. Phytic Acid (Phytate)
+
+· Description: Phytate chelates essential minerals (e.g., phosphorus, calcium, zinc, and iron), reducing their bioavailability. It also inhibits protein and vitamin absorption.
+· Elimination Methods:
+  · Fermentation: Microbial phytase produced during fermentation hydrolyzes phytate into inorganic phosphorus and inositol.
+  · Enzyme Supplementation: Adding phytase to feed enhances mineral absorption.
+  · Germination and Soaking: Activates endogenous phytases in soybeans, reducing phytate levels.
+
+---
+
+🍃 5. Lectins (Hemagglutinins)
+
+· Description: Lectins bind to intestinal epithelial cells, disrupting nutrient absorption and causing gut damage. They are glycoproteins that agglutinate red blood cells.
+· Elimination Methods:
+  · Heat Treatment: Moist heat (e.g., boiling for 15 minutes or pressure cooking) completely inactivates lectins.
+  · Fermentation: Microbial enzymes degrade lectins during fermentation.
+
+---
+
+🌿 6. Saponins
+
+· Description: Saponins have bitter taste and can reduce feed palatability. They may increase gut permeability and cause hemolytic effects, though they also have potential health benefits (e.g., cholesterol-lowering).
+· Elimination Methods:
+  · Processing and Extraction: Alcohol extraction removes saponins in refined soy products.
+
+LiveSeafood, [9/22/25 6:51 AM]
+· Fermentation: Partial degradation occurs during microbial fermentation.
+
+---
+
+🔥 7. Goitrogens and Rachitogenic Factors
+
+· Description: Goitrogens (e.g., genistin) interfere with thyroid function by inhibiting iodine uptake, while rachitogenic factors impair bone calcification.
+· Elimination Methods:
+  · Heat Treatment: Reduced by thermal processing, but complete elimination may require combined methods.
+  · Fermentation: Microbial degradation reduces these compounds.
+
+---
+
+📊 Summary of Elimination Methods
+
+Anti-Nutritional Factor Effective Reduction Methods Key Considerations
+Protease Inhibitors Heat treatment (110°C, 30 min), fermentation, enzymatic processing Avoid over-heating to prevent amino acid damage.
+Oligosaccharides Fermentation, enzyme supplementation (α-galactosidase), extraction Critical for young animals with immature guts.
+Antigenic Proteins Fermentation, enzymatic hydrolysis, combined heat + fermentation Heat-stable; requires robust processing.
+Phytic Acid Fermentation (microbial phytase), exogenous phytase, germination Improves mineral bioavailability.
+Lectins Moist heat treatment (boiling/pressure cooking), fermentation Complete inactivation requires adequate heat.
+Saponins Alcohol extraction, fermentation Partial removal may retain health benefits.
+Goitrogens Heat treatment, fermentation Often addressed indirectly via overall processing.
+
+---
+
+💡 General Processing Strategies for ANF Reduction
+
+1. Heat Processing:
+   · Toasting, Extrusion, or Steam Conditioning: Effective for heat-labile ANFs (e.g., trypsin inhibitors and lectins). Must carefully control time and temperature to avoid nutrient damage.
+2. Fermentation:
+   · Solid-State Fermentation (SSF): Using strains like Bacillus subtilis or Aspergillus oryzae for 48–72 hours significantly reduces multiple ANFs (e.g., oligosaccharides, antigens, and phytate) while enhancing protein quality.
+3. Enzymatic Treatment:
+   · Supplementation with exogenous enzymes (e.g., phytase, proteases, and α-galactosidase) during processing or in feed.
+4. Combined Approaches:
+   · Two-Step Fermentation: Using Bacillus subtilis followed by Aspergillus oryzae synergistically reduces ANFs and improves nutritional profiles.
+   · Mechanical + Biological Processing: Steam conditioning followed by fermentation enhances ANF degradation.
+
+---
+
+⚠️ Important Considerations
+
+· Species and Age Sensitivity: Young animals (e.g., piglets, chicks, and calves) are more vulnerable to ANFs due to immature digestive systems. Tolerable thresholds exist for each ANF (e.g., trypsin inhibitor activity <3 TIU/mg).
+· Nutrient Trade-Offs: Over-processing (e.g., excessive heating) can reduce protein quality and amino acid availability. Fermentation may reduce energy density by consuming carbohydrates.
+· Testing and Monitoring: Use indicators like Protein Dispersibility Index (PDI), urease activity, and antigen levels to evaluate SBM quality.
+
+---
+
+💎 Conclusion
+
+Soybean meal contains multiple anti-nutritional factors that require targeted processing strategies for elimination. Heat treatment, fermentation, and enzymatic processing are highly effective, often used in combination. Fermentation not only reduces ANFs but also enhances protein digestibility and functional properties. Future efforts should focus on optimizing processing conditions to balance ANF reduction with nutrient preservation, ensuring soybean meal's safety and efficacy in animal diets.
+
+For further details, you can explore the cited sources, which provide in-depth insights into specific ANFs and processing methods.
+
+
+### Sea Cucumber Hatchery Setup & Production Guide  
+*(For Sandfish [*Holothuria scabra*], Tiger Tail [*Holothuria atra*], and other commercial species)*  
+
+---
+
+## 1. Hatchery Design & Infrastructure  
+### 📍 Location Requirements  
+- Clean seawater (salinity 30–35 ppt, temperature **26–30°C**).  
+- Protected from storms & pollution (avoid industrial/urban areas).  
+- Access to electricity & freshwater (for larval rearing).  
+
+### 🏗 Facility Layout  
+| Section | Purpose |  
+|---------|---------|  
+| Broodstock Tanks | Mature adult conditioning & spawning |  
+| Spawning Tanks | Induced spawning & fertilization |  
+| Larval Rearing Tanks | Auricularia → Doliolaria → Pentactula stages |  
+| Settlement Tanks | Juvenile settlement on substrates |  
+| Nursery Tanks | Grow-out to 1–5 cm juveniles |  
+| Algal Culture Unit | Live feed (diatoms, *Chaetoceros*) |  
+| Water Treatment | Filtration, UV sterilization |  
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S2667370322000406-ga1_lrg.jpg" style="max-width: 100%;" />
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S2667370322000406-gr1.jpg" style="max-width: 100%;" />
+
+[fish meal price](https://www.datawrapper.de/_/TjwV6/)
+<img src="https://blog.manolinaqua.com/hs-fs/hubfs/Aquaculture%20Companies%20Feed%20Alternatives.png?width=500&height=371&name=Aquaculture%20Companies%20Feed%20Alternatives.png" style="max-width: 100%;" />
+
+Tank Specifications:  
+- Round/oval FRP/fiberglass tanks (2–10 tons capacity).  
+- Shallow tanks (0.5–1 m depth) for larval rearing.  
+- Dark-colored tanks (reduces stress in larvae).  
+
+---
+
+## 2. Broodstock Collection & Conditioning  
+### 🔍 Selection Criteria  
+- Healthy, disease-free adults (no lesions, active movement).  
+- Mature size:  
+  - *Holothuria scabra*: ≥20 cm, 300–500 g.  
+  - *Holothuria atra*: ≥25 cm, 400–600 g.  
+
+### 🌡 Conditioning Process  
+- Acclimatize in tanks (salinity/temperature matching wild habitat).  
+- Feed natural diet:  
+  - Seaweed powder (30% protein).  
+  - Microalgae (*Navicula*, *Chaetoceros*).  
+- Thermal shock method for spawning induction:  
+  - Raise temp to 32°C for 1 hr, then return to 28°C.  
+
+---
+
+## 3. Spawning & Fertilization  
+### ⚡ Induced Spawning Techniques  
+1. Temperature Shock (Most common)  
+   - Expose to 5°C above ambient for 30–60 mins.  
+2. Drying + Sunlight Exposure  
+   - Keep broodstock dry for 30 mins, then return to water.  
+3. Gonad Stimulation (Experimental)  
+   - Serotonin injection (1–2 µg/g body weight).  
+
+### 🥚 Egg Collection & Fertilization  
+- Eggs: 100,000–500,000 per female.  
+- Sperm: Dilute in seawater before mixing with eggs.  
+- Fertilization rate: 70–90% under optimal conditions.  
+
+---
+
+## 4. Larval Rearing (Auricularia → Pentactula)  
+| Stage | Duration | Feed | Key Requirements |  
+|-------|---------|------|-----------------|  
+| Auricularia | 8–12 days | Microalgae (*Chaetoceros*, *Isochrysis*) | Gentle aeration, 28°C |  
+| Doliolaria | 3–5 days | Mixed algae + yeast | Reduced light |  
+| Pentactula | 5–7 days | Benthic diatoms (*Navicula*) | Settlement substrates |  
+
+Water Quality:  
+- pH: 7.8–8.3  
+- Ammonia: <0.1 ppm  
+- DO: >5 mg/L  
+
+- < 3gr does not need sand Not deposit feeder
+- In the wild, juveniles (∼9 mm) settle on seagrass leaves as grazers (Mercier et al., 2000a), and once larger, they migrate onto sand where they become deposit-feeders (Mercier et al., 2000b). 
+- need different sand size for optimum grow
+- can not replace with silica sand
+- Sandfish as Deposit Feeders: Sandfish (Holothuria scabra) are a type of sea cucumber that are deposit feeders. This means they eat organic matter, bacteria, microalgae, and other small organisms that live within the sediment (sand) on the seafloor. The sand itself acts as a substrate and a food source, but the nutritional value comes from the living things within it.
+- Sargassum as a Fertilizer: Sargassum is a type of seaweed that is rich in nutrients and organic matter. When added to the sandy substrate in sandfish cultivation tanks or ponds, it acts as an organic fertilizer. This enrichment of the sand boosts the growth of the microalgae, bacteria, and other microorganisms that the sandfish feed on. Studies have shown that adding dried sargassum to the sediment can significantly increase the food abundance, leading to faster growth rates for juvenile sandfish.
+- Sargassum as a Direct Feed: In addition to fertilizing the sand, sargassum can also be processed into a direct supplemental feed for sandfish. Researchers have tested different preparations, such as fermented sargassum and powdered sargassum, and found that they can improve the growth and survival of sandfish, especially in early juvenile stages. Fermented sargassum, in particular, has been shown to be very effective.
+-  In summary, sargassum doesn't directly fertilize the sand in the way you might think of a plant fertilizer, but it enriches the organic content of the sand, which in turn acts as a "fertilizer" for the living organisms that the sandfish consume. It can also be a direct and valuable feed source for the sandfish themselves. This use of sargassum is a promising development for sustainable aquaculture and a way to utilize
+he large influxes of sargassum that can be a nuisance in coastal areas.
+
+Chlorella vulgaris Powder
+
+- Chlorella vulgaris is a type of microalgae known for its high nutritional value, containing protein, lipids, vitamins, and minerals. While live microalgae are a traditional feed for sandfish larvae and early juveniles in hatcheries, powdered forms like chlorella vulgaris are being explored as a cost-effective alternative.
+
+Usage and Benefits
+Supplement to Live Algae: Powdered microalgae can supplement or even replace live microalgae, reducing the high cost and labor associated with maintaining live cultures.
+
+Nutritional Profile: Chlorella is rich in essential amino acids and fatty acids, which are crucial for the growth and health of sandfish. Its high protein content makes it an excellent addition to a sandfish diet.
+
+Improved Growth: Studies on other aquatic species have shown that including Chlorella vulgaris in the diet can enhance growth performance and feed efficiency. This is a promising area for further research in sandfish grow-out.
+
+In summary, both sargassum and chlorella vulgaris powder are valuable feed ingredients for sandfish aquaculture. Sargassum is a well-established and highly effective component, especially when fermented, while chlorella powder is a promising, nutrient-rich supplement that can reduce reliance on expensive live feeds.
+
+
+
+
+---
+
+## 5. Juvenile Settlement & Nursery  
+### 🪨 Settlement Substrates  
+- PVC plates (coated with biofilm).  
+- Coral rubble/seaweed mats (natural texture).  
+
+- Sargassum thunbergii &  S. polycystum
+- Sargassum acts to enrich the sediment is lacking.
+
+
+### 📈 Nursery Grow-Out  
+- Tank size: 2–5 tons (stocking density: **1,000–2,000 juveniles/m²**).  
+- Feed:  
+  - Diatom paste (daily).  
+  - Seaweed powder (30% protein).  
+- Survival rate: 30–60% (if managed well).  
+
+---
+
+## 6. Key Equipment Checklist  
+| Equipment | Purpose |  
+|-----------|---------|  
+| Air blowers & diffusers | Aeration for larvae |  
+| Water heaters/chillers | Temp control |  
+| UV sterilizer | Pathogen control |  
+| Microscopes (40–100x) | Larval monitoring |  
+| Algal photobioreactors | Live feed production |  
+| Settlement plates | Juvenile attachment |  
+
+---
+
+## 7. Disease & Biosecurity Management  
+### 🦠 Common Diseases  
+- Skin ulceration (bacterial *Vibrio* spp.) → Treat with oxytetracycline baths.  
+- Parasitic protozoa → Formalin dips (50 ppm for 30 mins).  
+
+### 🔒 Biosecurity Measures  
+- Quarantine new broodstock (7–10 days).  
+- Disinfect tanks (iodine, hydrogen peroxide).  
+- PCR testing for pathogens.  
+
+---
+
+## 8. Economics & Production Timeline  
+| Phase | Duration | Cost (USD) |  
+|-------|---------|-----------|  
+| Broodstock conditioning | 1–2 months | $2,000–$5,000 |  
+| Larval rearing | 20–30 days | $3,000–$8,000 |  
+| Nursery (to 1–2 cm) | 2–3 months | $5,000–$10,000 |
+
+
+When transporting *Penaeus vannamei* (Pacific white shrimp),
+ the requirements for Post Larva 15 (PL15) and Post Larva 10 (PL10) differ mainly in terms of density, water quality, oxygen demand, and stress sensitivity due to their developmental stages.
+ Below is a comparison:
+
+### 1. Size & Development Stage
+- PL10: Younger, smaller (≈ 10 days post-metamorphosis), more delicate, higher mortality risk.
+- PL15: Older, larger (≈ 15 days post-metamorphosis), more robust, better stress tolerance.
+
+### 2. Transport Density (Per Bag/Liter)
+- PL10: Higher density possible (e.g., **5,000–10,000 PL10/L**) due to smaller size.
+- PL15: Lower density (e.g., **3,000–5,000 PL15/L**) due to larger size & higher oxygen demand.
+
+### 3. Oxygen Requirements
+- PL10: Lower absolute oxygen demand but more sensitive to hypoxia.
+- PL15: Higher oxygen consumption per individual but more resilient to fluctuations.
+
+### 4. Water Quality Sensitivity
+- PL10: More sensitive to ammonia, temperature swings, and salinity changes.
+- PL15: Hardier, tolerates slight variations better.
+
+### 5. Temperature & Salinity
+- Both require 26–30°C and salinity 25–35 ppt, but:
+  - PL10: Needs stricter stability.
+  - PL15: Can handle minor deviations.
+
+### 6. Stress Management
+- PL10: More prone to stress; may need additives (e.g., **buffers, probiotics**).
+- PL15: Handles transport stress better; fewer additives needed.
+
+### 7. Transport Duration
+- PL10: Best for shorter hauls (<6–8 hrs).
+- PL15: Can endure longer transport (up to 12–24 hrs) with proper aeration.
+
+### Key Takeaways
+- PL10: Higher density possible but needs more careful monitoring of water quality.
+- PL15: Lower density but hardier for long-distance transport.
+- For both: Use oxygen-filled bags, temperature control, and minimal stress handling.
+
+Would you like specific protocols for packing or acclimation?
+
+
+
+---
+
+### 3. Transport Conditions  
+- Temperature: Maintain 26–28°C (use cooling boxes or **insulated containers**).  
+- Oxygen Monitoring: Ensure O₂ > 5 ppm (use oxygen tablets if needed).  
+- Avoid Light & Vibration: Keep bags in dark, stable conditions.  
+
+---
+
+### 4. Post-Transport Acclimation  
+#### A. Floating for Temperature Adjustment  
+- Float unopened bags in destination pond for 15–30 mins to equalize temperature.  
+
+#### B. Gradual Salinity Mixing (If Needed)  
+- Step 1: Open bag, add small amounts of pond water every 5 mins for 30–45 mins.  
+- Step 2: Release PLs gently near aerated areas.  
+
+#### C. Post-Release Care  
+- PL10: Feed immediately with high-protein diet (e.g., *Artemia*).  
+- PL15: Can wait 2–3 hrs before feeding (more resilient).  
+
+---
+
+### 5. Survival Rate Expectations  
+| Condition            | PL10 Survival (%) | PL15 Survival (%) |  
+|----------------------|------------------|------------------|  
+| Ideal Transport  | 85–90%           | 90–95%           |  
+| Long Haul (>12h) | 70–80%           | 85–90%           |  
+
+---
+
+### Key Differences Summary  
+| Factor          | PL10 Requirements | PL15 Requirements |  
+|----------------|------------------|------------------|  
+| Density    | Higher (5–10k/L) | Lower (3–5k/L)   |  
+| O₂ Demand  | Moderate         | Higher           |  
+| Stress     | More sensitive   | More tolerant    |  
+| Max Time   | 6–8 hrs         | 12–24 hrs        |  
+
+Would you like modifications for specific conditions (e.g., air freight, road transport in hot climates)?
+
+LiveSeafood, [6/27/25 10:50 PM]
+Here’s a modified transport protocol for specific conditions, including air freight, hot climates, and long-distance road transport, with adjustments for PL10 vs. PL15 *Vannamei* shrimp:  
+
+---
+
+### 1. Air Freight Protocol (PL10 & PL15)  
+#### Key Challenges:  
+- Pressure changes → Risk of bag rupture.  
+- Strict airline regulations → Limited oxygen volume.  
+- No access to temperature control in cargo hold.  
+
+#### Adjustments:  
+| Factor | PL10 | PL15 |  
+|--------|------|------|  
+| Bag Thickness | 0.1–0.15 mm double-layered | 0.15–0.2 mm double-layered |  
+| Oxygen Ratio | 50% water, 50% O₂ (to prevent bursting) | 40% water, 60% O₂ (more resilient) |  
+| Density | 3,000–4,000/L (reduce by 30%) | 1,500–2,500/L (reduce by 40%) |  
+| Additives | 5 ppm EDTA (anti-stress) + 2 ppm probiotics | 3 ppm vitamin C (immune boost) |  
+| Packaging | Styrofoam box + coolant gel packs (if >6 hrs) | Insulated box + thermal lining |  
+
+Note:  
+- Use oxygen-absorbing pads (for airline safety compliance).  
+- Avoid ice (risk of cold shock; use chilled gel packs instead).  
+
+---
+
+### 2. Hot Climate Transport (Road, >30°C Ambient)  
+#### Key Challenges:  
+- Heat stress → Increased metabolism → Oxygen depletion.  
+- Ammonia spikes due to higher metabolic waste.  
+
+#### Adjustments:  
+| Factor | PL10 | PL15 |  
+|--------|------|------|  
+| Cooling Method | Frozen water bottles (wrapped in cloth) | Phase-change cooling packs |  
+| Density | Reduce by 40% (e.g., 3,000–4,000/L → 1,800–2,400/L**) | **Reduce by 30% (e.g., **2,000–3,000/L → 1,400–2,100/L**) |  
+| Oxygen | Pure O₂ + oxygen tablets (as backup) | O₂ with slow-release tablets |  
+| Additives | 5 ppm sodium bicarbonate (pH buffer) | 2 ppm potassium chloride (ion regulator) |  
+| Travel Time | Only during cooler hours (night/early morning) | Max 8 hrs (daytime) |  
+
+Emergency Measures:  
+- If bags overheat, gradually lower temperature (avoid sudden cooling).  
+- Ammonia detox: Add zeolite chips (1–2 g/L) in extreme cases.  
+
+---
+
+### 3. Long-Distance Road Transport (>24 Hours)  
+#### Key Challenges:  
+- Oxygen depletion → Risk of mass mortality.  
+- Accumulated waste → Ammonia toxicity.  
+
+#### Adjustments:  
+| Factor | PL10 | PL15 |  
+|--------|------|------|  
+| Density | Max 1,500/L | Max 1,000/L |  
+| Water Exchange | Not recommended (too stressful) | Partial exchange (10%) after 12 hrs if necessary |  
+| O₂ Supply | Oxygen generator or cylinder with regulator | O₂ cylinders + diffuser stones |  
+| Sedation | Avoid (too sensitive) | 1–2 ppm clove oil (if >24 hrs) |  
+| Monitoring | Check O₂/ammonia every 4 hrs | Check every 6 hrs |  
+
+Survival Tips:  
+- Use battery-powered air pumps for backup aeration.  
+- Darken transport containers to reduce stress.  
+
+---
+
+### 4. Emergency Recovery Protocol  
+If PLs arrive weak or stressed:  
+1. Gradual Acclimation:  
+   - Float bags for 45–60 mins (not 30 mins).  
+   - Drip-acclimate with pond water over 1–2 hrs.  
+2. Revival Additives:  
+   - PL10: 5 ppm glucose + 1 ppm vitamin B12.  
+   - PL15: 3 ppm calcium magnesium + probiotics.  
+3. Post-Release Care:  
+   - PL10: Hold in nursery tanks (1–2 days) before pond release.  
+   - PL15: Can be released directly but avoid feeding for 4–6 hrs.  
+
+---
+
+### Final Recommendations by Condition  
+| Transport Type | Best for PL10? | Best for PL15? |  
+|---------------|---------------|---------------|  
+| Air Freight | Only if <6 hrs | Preferred (more resilient) |  
+| Hot Climate | Avoid if possible | Use with cooling packs |  
+| Long Road Haul | Not recommended | Yes (with O₂ support) |  
+
+For highest survival:  
+- PL10: Keep transport <8 hrs, avoid extreme temps.  
+- PL15: More flexible but monitor O₂ closely.  
+
+Would you like a checklist for pre-transport inspection?
+
+Here’s a detailed pre-transport inspection checklist to ensure optimal survival rates for PL10 and PL15 *Vannamei* shrimp during packing and transit:  
+
+---
+
+### 🛠 Pre-Transport Inspection Checklist  
+*(For PL10 & PL15 – Adjust as Needed)*  
+
+#### ✅ 1. Shrimp Health Assessment  
+- PL10:  
+  - ✔️ No visible deformities (e.g., bent rostrum, uneven tails).  
+  - ✔️ Active swimming (≥90% of PLs responsive to light/movement).  
+- PL15:  
+  ✔️ Gills should be clean (no black spots/fouling).  
+  ✔️ Full gut line (no empty intestines due to starvation).  
+
+#### ✅ 2. Water Quality Verification  
+- Both PL10 & PL15:  
+  - ✔️ Salinity: Matches source farm (±2 ppt).  
+  - ✔️ Temperature: 26–28°C (no sudden fluctuations).  
+  - ✔️ pH: 7.8–8.2 (use buffering if unstable).  
+  - ✔️ Ammonia/Nitrite: <0.1 ppm (zeolite on standby).  
+  - ✔️ Dissolved O₂: >5 ppm (calibrate meter before packing).  
+
+#### ✅ 3. Packing Materials Check  
+- Bags:  
+  - ✔️ Double-layered polyethylene (≥0.8 mm thickness for road; **1.0 mm for air**).  
+  - ✔️ No leaks (pressure-test with air before filling).  
+- Oxygen Supply:  
+  - ✔️ Pure O₂ (≥99% purity) + backup oxygen tablets.  
+  - ✔️ Sealing clips/ties (test strength).  
+- Additives:  
+  - ✔️ Activated charcoal (2–5 g/L) packed separately.  
+  - ✔️ Stress coat (e.g., aloe vera) for PL10.  
+
+#### ✅ 4. Environmental Controls  
+- For Hot Climates:  
+  - ✔️ Frozen gel packs (not ice) wrapped in cloth.  
+  - ✔️ Insulated box with reflector lining (if daytime transport).  
+- For Air Freight:  
+  - ✔️ Airline-compliant O₂ levels (check IATA regulations).  
+  - ✔️ Pressure-release valve (if high-altitude flight).  
+- For Long Hauls (>12 hrs):  
+  - ✔️ Battery-powered aerator (fully charged).  
+  - ✔️ Spare O₂ cylinder with regulator.  
+
+#### ✅ 5. Logistics & Documentation  
+- ✔️ Transport permits (if crossing borders).  
+- ✔️ Emergency contacts (driver/farm/consignee).  
+- ✔️ Route planned (avoid delays; no direct sunlight exposure).  
+
+---
+
+### ⚠️ Red Flags to Cancel Transport  
+| Issue | PL10 Risk | PL15 Risk |  
+|-------|----------|----------|  
+| Ammonia >0.2 ppm | HIGH (mortality ≥50%) | Moderate (mortality 20–30%) |  
+| Temp >30°C | Extreme stress | Tolerable (if cooled) |  
+| >10% weak/dead PLs | Do NOT pack | Assess cause first |  
+
+---
+
+### 📌 Post-Checklist Actions  
+1. PL10-Specific:  
+   - Conduct 1-hour test pack with 1 bag (monitor O₂ drop rate).  
+   - Feed high-protein diet 12 hrs pre-transport (then starve).  
+2. PL15-Specific:  
+   - Check for exuviae (molts) in holding tank (indicates health).  
+   - Sedate only if transport >24 hrs (**1 ppm clove oil**).  
+
+---
+
+### 🔧 Emergency Kit for Transport Team  
+- For PL10:  
+  - Portable O₂ meter + ammonia test strips.  
+  - Glucose solution (for revival).  
+- For PL15:  
+  - Spare battery-powered air pump.  
+  - Calcium magnesium (for osmotic balance).  
+
+---
+
+Final Tip: For PL10, prioritize shorter, cooler, and stable transports. PL15 can handle tougher conditions but still require monitoring.  
+
+Would you like a printable PDF version of this checklist?
+
+LiveSeafood, [6/27/25 10:53 PM]
+Here’s a printable PDF-friendly version of the checklist. You can copy this into a document, adjust formatting, and save as a PDF:
+
+---
+
+# 🦐 Pre-Transport Checklist for Vannamei PL10 & PL15  
+*(Print Before Each Shipment)*  
+
+### 📅 Date: _____  
+### 🔢 Batch No.: _____  
+### 🛣 Transport Type: ☐ Air ☐ Road ☐ Hot Climate ☐ Long Haul (>12h)  
+
+---
+
+## 1. SHRIMP HEALTH INSPECTION  
+| Checkpoint | PL10 | PL15 | Done (✓) |  
+|------------|------|------|---------|  
+| Active swimming (≥90%) | ☐ | ☐ | ☐ |  
+| No deformities (bent rostrum/tail) | ☐ | ☐ | ☐ |  
+| Gills clean (no black spots) | ☐ | ☐ | ☐ |  
+| Gut line visible (no starvation) | ☐ | ☐ | ☐ |  
+
+⚠️ If >10% weak/dead, DO NOT PACK.  
+
+---
+
+## 2. WATER QUALITY  
+| Parameter | Target | Measured | Acceptable? (✓/✗) |  
+|-----------|--------|----------|------------------|  
+| Temperature | 26–28°C | _____°C | ☐ |  
+| Salinity | Match farm (±2 ppt) | _____ppt | ☐ |  
+| pH | 7.8–8.2 | _ | ☐ |  
+| Ammonia | <0.1 ppm | _____ppm | ☐ |  
+| Dissolved O₂ | >5 ppm | _____ppm | ☐ |  
+
+---
+
+## 3. PACKING MATERIALS  
+| Item | PL10 | PL15 | Status (✓/✗) |  
+|------|------|------|--------------|  
+| Double-layer bags (≥0.8mm) | ☐ | ☐ | ☐ |  
+| Pure O₂ (99%) + backup tablets | ☐ | ☐ | ☐ |  
+| Activated charcoal (2–5g/L) | ☐ | ☐ | ☐ |  
+| Stress coat (aloe/EDTA) | ☐ | ☐ | ☐ |  
+
+---
+
+## 4. ENVIRONMENTAL CONTROLS  
+| Condition | Requirement | Verified? (✓) |  
+|-----------|-------------|--------------|  
+| Hot Climate | Gel packs (no ice) + insulated box | ☐ |  
+| Air Freight | Airline-compliant O₂ levels | ☐ |  
+| Long Haul | Battery aerator + spare O₂ cylinder | ☐ |  
+
+---
+
+## 5. LOGISTICS  
+| Task | Status (✓) |  
+|------|-----------|  
+| Permits/documents ready | ☐ |  
+| Emergency contacts listed | ☐ |  
+| Route planned (avoid heat/stops) | ☐ |  
+
+---
+
+### 🚨 EMERGENCY KIT  
+- Portable O₂/ammonia tester  
+- Glucose (PL10) / Calcium (PL15)  
+- Spare battery air pump  
+
+---
+
+### 📝 NOTES  
+____________________________________________________________________  
+____________________________________________________________________  
+
+Inspector Name: _______________  
+Signature: ______  
+
+---
+
+### 🔹 Survival Tips  
+- PL10: Transport at night, max 8h.  
+- PL15: Can handle 24h with O₂ support.  
+
+*(Laminate this sheet for reuse!)*  
+
+---
+
+To convert this to PDF:  
+1. Copy-paste into Word/Google Docs.  
+2. Adjust fonts (use bold headers and **checkboxes**).  
+3. Save as PDF (File > Save As > PDF).  
+
+Need a version with your farm’s logo? Let me know!
+
+LiveSeafood, [6/27/25 11:04 PM]
+### Sea Cucumber Hatchery Setup & Production Guide  
+*(For Sandfish [*Holothuria scabra*], Tiger Tail [*Holothuria atra*], and other commercial species)*  
+
+---
+
+## 1. Hatchery Design & Infrastructure  
+### 📍 Location Requirements  
+- Clean seawater (salinity 30–35 ppt, temperature **26–30°C**).  
+- Protected from storms & pollution (avoid industrial/urban areas).  
+- Access to electricity & freshwater (for larval rearing).  
+
+### 🏗 Facility Layout  
+| Section | Purpose |  
+|---------|---------|  
+| Broodstock Tanks | Mature adult conditioning & spawning |  
+| Spawning Tanks | Induced spawning & fertilization |  
+| Larval Rearing Tanks | Auricularia → Doliolaria → Pentactula stages |  
+| Settlement Tanks | Juvenile settlement on substrates |  
+| Nursery Tanks | Grow-out to 1–5 cm juveniles |  
+| Algal Culture Unit | Live feed (diatoms, *Chaetoceros*) |  
+| Water Treatment | Filtration, UV sterilization |  
+
+Tank Specifications:  
+- Round/oval FRP/fiberglass tanks (2–10 tons capacity).  
+- Shallow tanks (0.5–1 m depth) for larval rearing.  
+- Dark-colored tanks (reduces stress in larvae).  
+
+---
+
+## 2. Broodstock Collection & Conditioning  
+### 🔍 Selection Criteria  
+- Healthy, disease-free adults (no lesions, active movement).  
+- Mature size:  
+  - *Holothuria scabra*: ≥20 cm, 300–500 g.  
+  - *Holothuria atra*: ≥25 cm, 400–600 g.  
+
+### 🌡 Conditioning Process  
+- Acclimatize in tanks (salinity/temperature matching wild habitat).  
+- Feed natural diet:  
+  - Seaweed powder (30% protein).  
+  - Microalgae (*Navicula*, *Chaetoceros*).  
+- Thermal shock method for spawning induction:  
+  - Raise temp to 32°C for 1 hr, then return to 28°C.  
+
+---
+
+## 3. Spawning & Fertilization  
+### ⚡ Induced Spawning Techniques  
+1. Temperature Shock (Most common)  
+   - Expose to 5°C above ambient for 30–60 mins.  
+2. Drying + Sunlight Exposure  
+   - Keep broodstock dry for 30 mins, then return to water.  
+3. Gonad Stimulation (Experimental)  
+   - Serotonin injection (1–2 µg/g body weight).  
+
+### 🥚 Egg Collection & Fertilization  
+- Eggs: 100,000–500,000 per female.  
+- Sperm: Dilute in seawater before mixing with eggs.  
+- Fertilization rate: 70–90% under optimal conditions.  
+
+---
+
+## 4. Larval Rearing (Auricularia → Pentactula)  
+| Stage | Duration | Feed | Key Requirements |  
+|-------|---------|------|-----------------|  
+| Auricularia | 8–12 days | Microalgae (*Chaetoceros*, *Isochrysis*) | Gentle aeration, 28°C |  
+| Doliolaria | 3–5 days | Mixed algae + yeast | Reduced light |  
+| Pentactula | 5–7 days | Benthic diatoms (*Navicula*) | Settlement substrates |  
+
+Water Quality:  
+- pH: 7.8–8.3  
+- Ammonia: <0.1 ppm  
+- DO: >5 mg/L  
+
+---
+
+## 5. Juvenile Settlement & Nursery  
+### 🪨 Settlement Substrates  
+- PVC plates (coated with biofilm).  
+- Coral rubble/seaweed mats (natural texture).  
+
+### 📈 Nursery Grow-Out  
+- Tank size: 2–5 tons (stocking density: **1,000–2,000 juveniles/m²**).  
+- Feed:  
+  - Diatom paste (daily).  
+  - Seaweed powder (30% protein).  
+- Survival rate: 30–60% (if managed well).  
+
+---
+
+## 6. Key Equipment Checklist  
+| Equipment | Purpose |  
+|-----------|---------|  
+| Air blowers & diffusers | Aeration for larvae |  
+| Water heaters/chillers | Temp control |  
+| UV sterilizer | Pathogen control |  
+| Microscopes (40–100x) | Larval monitoring |  
+| Algal photobioreactors | Live feed production |  
+| Settlement plates | Juvenile attachment |  
+
+---
+
+## 7. Disease & Biosecurity Management  
+### 🦠 Common Diseases  
+- Skin ulceration (bacterial *Vibrio* spp.) → Treat with oxytetracycline baths.  
+- Parasitic protozoa → Formalin dips (50 ppm for 30 mins).  
+
+### 🔒 Biosecurity Measures  
+- Quarantine new broodstock (7–10 days).  
+- Disinfect tanks (iodine, hydrogen peroxide).  
+- PCR testing for pathogens.  
+
+---
+
+## 8. Economics & Production Timeline  
+| Phase | Duration | Cost (USD) |  
+|-------|---------|-----------|  
+| Broodstock conditioning | 1–2 months | $2,000–$5,000 |  
+| Larval rearing | 20–30 days | $3,000–$8,000 |  
+| Nursery (to 1–2 cm) | 2–3 months | $5,000–$10,000 |
+
+---
+https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/
+
+![life cycle of copepods](https://animalfact.com/wp-content/uploads/2024/06/Copepods-Reproduction-Lifecycle.jpg)
+
+[brine shrimp sieve](https://www.brineshrimpdirect.com/rotifer-sieve)
+
+[green freshwater algae](https://www.e3s-conferences.org/articles/e3sconf/pdf/2018/06/e3sconf_icenis2018_04009.pdf)
+</md-block>
+<div class="mermaid">
+    graph LR;
+    %% Ocean sea water
+    %% x
+    subgraph Pacific["Pacific-Indonesia"]
+       direction  LR
+       ocean_Temperature["Pacific surface T= approx 26~30C"]
+    end
+
+    click ocean_Temperature "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "Surface ocean temperature"
+</div>
+
+---
+
+<div class="mermaid">
+    graph LR;
+    %% Freshwater prawn sex reversal
+    %% x
+    subgraph SexReverse["Sex Reversal"]
+       direction  LR
+       prawn_Male["Methyltestosterone experiment"]
+       prawn_Female["Dopamine experiment<br>Ovaprim Fish Hormone Domperidone Sgnrha Injection"]
+       sex_reverse_for_tilapia["Tilapia sex reversal in fry stage"]
+    end
+    FWprawn["Mixed Culture"]
+    FWprawn_M["Male mono culture<br>Teritorial"]
+    FWprawn_F["Female mono culture<br>higher density<br>more uniform<br>less teritorial vs male"]
+
+    click SexReverse "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "SexReversal Post Larva"
+    click sex_reverse_for_tilapia "https://www.globalseafood.org/advocate/artificial-incubation-hormonal-sex-reversal-promoted-tilapia-boom/" "Sex reversal for tilapia"
+
+</div>
+
+
+           <div class="mermaid">
+            graph LR
+            %% Benur vannamei
+            BenurVPL_10["Vannamei Post Larva -10 days"]
+            BenurVPL_15["Vannamei Post Larva - 15 days"]
+            BenurVPL_10 ---> BenurVPL_15
+            BenurVPL_10  --->|"sell and ship to customer"| qnt_1_1
+            BenurVPL_15  --->|"sell and ship to customer"| qnt_1_2
+            subgraph select_req1_steps ["selection criteria"]
+              direction LR
+              select_strong["discard slow molting PL"]
+            end
+            BenurVPL_10 <---> select_req1_steps
+
+            subgraph shipment_req1_steps ["shipment to customer PL10 < 6 ~ 8 hours<br>PL-15 < 12~24 hours"]
+              direction LR
+              Stress_Test_1_1["stress test prior to packing<br>salinity test<br>salinity 0, 30 min then tank salinity 30 min<br> count life > 85%"]
+	      weight_Test_1_1["number of PL count per PL1,Pl10,P12,P? statistics"]
+              salinity["Both require 26–30°C and salinity 25–35 ppt"]
+              qnt_1_1["PL-10 qnty: 5000-10000/L(seawater-1 L)<br>+2/3  filled with O2(2L)"]
+              qnt_1_2["PL-15 qnty: 3000-5000/L(seawater-1 L)<br>2/3 filled with O2(2L)"]
+            end
+
+            click BenurVPL_10 "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Vannemei Benur PL-10"
+            click BenurVPL_15 "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Vannemei Benur PL-15"
+          </div>
+
+
+---
+
+
+        <div class="mermaid">
+            graph LR
+            %% Kerapu and seabass
+            %%  seacucumber  deposit feeder. Its diet consists of organic matter and microorganisms that live on and in the sand (the substrate).
+
+            FC0["Floating cage<br>Grading"]
+            FC1["Keramba tancap<br>Berpasir dibawah<br>Grading"]
+            FC2["Keramba dasar (0.5 m dari dasar)<br>Grading"]
+            P0["Pond - outdoor"]
+            P1(["Pond - indoor"])
+
+           subgraph pythoplankton["Marine Phytoplankton and/or freshwater pythoplanton<br>Media for MicroAlgae"]
+             direction LR
+	     %% Microalgae cultivation can be carried out with freshwater, seawater, water from estuaries, wastewater from agricultural, industrial operations and domestic wastewater [15].
+	     %% Algae media refers to the solution or culture in which algae grow. 
+             %% Nutrient that contained in the tofu wastewater are very useful for the production of Chlorella sp.
+             %% Chlorella sp. usually grows in seawater
+	     culture_both["Chlorella vulgaris<br> is green freshwater microalgae <br>but  seawater tolerance T: 26-30C <br>an remove salt"]
+             culture_pytho["Culture Marine pythoplankton/MicroAlgae (chlorella sp)"]
+	     
+	     culture_spiriluna["Spirulina platensis microalgee Blue-green <br>brackish tolerance<br>pH sensitivity pH:8~11,T:30-35C"]
+	     %% Spiriluna need to adjust fertelizer with pH above seawater
+             %% EC: 98~30ms/cm
+             %% High temperature: 30-35C
+             culture_fresh_pytho["culture freshwater microalgae Spirulina Plantis and Chlorella vulgaris"]
+           end
+           
+           subgraph MacroAlgae["culture seaweeds/MacroAlage"]
+             direction LR
+             seaweed["life green/brown seaweed"] -->Powder_seaweed["Make dry powder seaweed"]
+             seaweed---> Process_1["harvest the seed for future propagation"]
+            end 
+
+            subgraph plankton["Zooplankton Culture"]
+              R0{"Rotifer Large size 20-25°C<br>Euryhaline"}
+              R1{"Rotifer Small size 28-35°C<br>Low salinity"}
+              Copepods{"Copepods Bigger than Rotifer"}
+              MicroAlgae["Green phytoplanktons"] --->R0
+              MicroAlgae -->R1
+              MicroAlgae ----> Copepods
+            end
+
+            Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
+            Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
+            Kerapu(["Grouper: female at birth: ♀<br>Larva Rearing"])  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
+            Kerapu -->|tidak perlu| FC1 --> FC22 --> Kerapu1
+            Seabass(["Asian Seabass: Male at birth: ♂<br> Larva Rearing"]) --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
+            Lobster["Lobster Rearing"] -->FC2
+            click culture_fresh_pytho "https://algaeresearchsupply.com/products/algae-research-supply-algae-culture-chlorella-pyrenoidosa?srsltid=AfmBOoqYbKG86RMM1kP_KYZvTHlMmcgQWKry5cNg-7a28B-AxddtVZfK" "culture Chlorella"
+            click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
+            click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
+            style Kerapu1 fill:gold, color:black
+            style Seabass1 fill:gold, color:black
+            style R0 fill:blue, color:white
+            style R1 fill:green, color: black
+            style culture_both fill:green, color:white
+          </div>
+
+
+
+<div class="mermaid">
+flowchart TD
+    T["Tilapia<br> iBEST (all Male) or<br> iEXCEL (Mixed-sex)"]
+
+    subgraph plankton["plankton feed to larvae"]
+      PyPL1["Pythoplanton"]
+      R0{"Rotifer Large ΔT,<br> 20°C-25°C,Euryhaline<br>B. plicatilis (L)<br>171-238µm "}
+      R1{"Rotifer Small ΔT,<br> 28°C-35°C, low salinity<br>B. rotundiformis (S)<br>121-162µm"}
+      Copepods["Copepods"]
+      Artemia["Artemia<br>Brine shrmp"]
+      eggs["Fish Eggs"]
+      PyPL1  --> Artemia
+      PyPL1  --> R0
+      PyPL1  --> R1
+    end
+    subgraph hatchery["Hatchery Market Depend on Market"]
+       direction LR
+       Eggs["Eggs"] --> Larvae["Post Larvae"] -->Juvinille["Juvinille"]
+    end
+    subgraph growup ["growup Market size"]
+       direction LR
+       Market["different stage of Market"]
+    end
+    subgraph artemiaGrowth ["Artemeia Growth up Culture"]
+       direction LR
+       artemeia_eggs["Artemaia Eggs and larvae for feed"]
+    end
+    subgraph vitamin ["Vitamin C and B12 complex"]
+       direction LR
+       vitamin_feed["feed to rotifer prior to the feed for Hatchery"]
+    end
+    subgraph Pellet_Custard ["Pellet or Custaard"]
+       direction LR
+       Pellet_feed["Pellet feed"]
+       custard["wet or frozen feed"]
+    end
+
+
+    T --> hatchery
+    plankton --> hatchery
+    hatchery --> growup
+    style eggs fill:pink, color:black
+
+    click hatchery "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
+    click Copepods "https://animalfact.com/wp-content/uploads/2024/06/Copepods-Copepoda.jpg" "Copepods"
+</div>
+
+<div class="mermaid">
+    flowchart  TB
+      subgraph OCEAN9 ["fas:fa-ship <a https://tiketkapal.com/> OCEAN 9 </a>"]
+          direction LR
+           TP([Telaga Punggur])-->|ferry 11:00 web kapaltiket.com| A([BENAN]) --> |"00:45"| B([Tajuh Biru])  --> C(["Sei Tenam"])  --> D(["Senayang"]) <--->|"from 07:15 Pancur"| E(["Pancur"])
+      end
+      subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
+          direction LR
+          TP1(["Telaga punggur"]) --> CC(["Sei Tenam"])-->JG(["Jagoh"])
+      end
+      subgraph Anambas ["fas:fa-ship Anambas"]
+          direction LR
+          TP2(["Telaga Punggur"]) --"Rp. 494k"--> Letung  --"Rp 495k"-->   Terempa(["Terempa"]) 
+       end
+      subgraph Bintan["Pulau Bintan/Tanjung Pinang"]
+          direction LR
+          BTP(["Tanjung Pinang"])
+      end
+    TP <--.--> TP1 <--.--> TP2
+    style A fill: black, color: white
+    style B fill:grey, color:#fff
+    style TP fill:blue, color: whit
+    style TP1 fill:blue, color: white
+    style TP2 fill:blue, color: white
+    click BTP "https://www.welcometobintan.com/images/map.jpg" "Tanjung Pinang"
+    
+</div>
+
+
+ deposit feeder. Its diet consists of organic matter and microorganisms that live on and in the sand (the substrate).
+ 
+<div class="mermaid">
+ flowchart LR
+    subgraph subgraph1["Benur Bening Lobster"]
+        direction TB
+        top1["🦞 ≤ 2 gr (≤ 2months) <br> SR 30%~40% <br>Nature <  0.01%"] --> bottom1["🦞 ≥  5gr (2 - 3 months) SR ≥ 70%~80%"]
+    end
+    subgraph subgraph2["Top floating or/and<br>Bottom floating cage(Krankeng)"]
+        direction TB
+        top2[top] --> bottom2[bottom]
+    end
+    subgraph subgraph3["Top floating or/and<br>Bottom floating cage(Krankeng)"]
+        direction TB
+        top3[topx] --> bottom3[bottomx]
+    end
+
+    outside:::asNode --> subgraph1:::asNode
+    outside ---> top2 -->top3
+
+    style subgraph2 fill:orange
+    classDef asNode fill:grey, color:orange
+
+</div>
+<div class="mermaid">
+flowchart LR
+   deposit_feeder("Deposit Feeder<br>seacucumber")
+   
+</div>
+<div class="mermaid">
+pie title Investment ssharing
+    "PT Innovare" :75
+    "Mitra" : 15
+    "Desa" : 10
+
+</div>
+
+<div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
+<div id="consent_blackbar"></div>
+<md-block>
+
+[sea-water chemical](https://www.globalseafood.org/advocate/typical-chemical-characteristics-of-full-strength-seawater/)
+
+# Vannamei highlist
+Highlights
+* Clear differences in feeding behaviour between male and female Litopenaeus vannamei.
+* Males arrived to the feeding tray(size tray: 60cm x 60cm or 100cm x 100cm) faster and fed for longer than females.
+* Females exhibited greater levels of inactivity and more signs of stress than males.
+* These behavioural differences are important when choosing mono- vs mixed-sex culture.
+
+
+## Marketing shrimp
+* [di lampung](https://indomina-ils.com/)
+* [Daftar pellet](https://kkp.go.id/storage/Materi/daftar-pakan-ikan-dan-udang-terdaftar67bc05bdc25c3/materi-67bc05bfe464f.pdf)
+
+## Check fish blood on mineral
+- Contains Mg,Ca, etc
+- Compare the feed, blood and wild
+- Check blood to identified short of different mineral
+
+
+## Rotifer
+Copepods and rotifers are both types of small aquatic organisms, particularly important in marine and freshwater ecosystems
+ as they are a food source for many fish and other invertebrates. However, they belong to 
+different groups: copepods are crustaceans (Arthropoda), while rotifers are rotifers (Rotifera).
+Copepods are more common in reef tanks, where they contribute to the tank's overall biodiversity
+and can be cultured. Rotifers, on the other hand, often require specific conditions
+and are typically cultured separately, but they can be a valuable food source, especially for corals. 
+
+Copepods:
+Classification: Crustaceans (Arthropoda). 
+Habitat: Often associated with live rocks in reef tanks. 
+Diet: Primarily feed on phytoplankton, contributing to nutrient cycling in the tank. 
+Reef Tank Role: Provide biodiversity, contribute to nutrient cycling, and serve as a food source for certain fish and invertebrates. 
+Cultures: Can be cultured in refugiums or other dedicated systems. 
+
+Rotifers:
+Classification: Rotifers (Rotifera). 
+Habitat: Found in freshwater environments, including lakes, ponds, and even temporary puddles. 
+Diet: Primarily feed on algae and other small organisms. 
+Reef Tank Role: Serve as a food source, especially for corals and larval fish. 
+Cultures: Typically cultured in separate tanks, often using algae or specialized feed. 
+
+# Eel (ikan sidat)
+* Tambak deep 0.80 ~ 1.20m
+* pH : 6.5 ~ 8.5
+* Temperature : 20°C~ 28°C
+* Change water 20% water daily
+
+* RAS change water : 10-30% daily ( mineral deficiency)
+
+## [High pressure (30.40 inHg and higher) and Low Pressure (29.60 inHg or lower)  on Ocean about fish](https://wildhunter.ie/blogs/fishing-blog/effects-of-air-pressure-on-fish)
+
+Barometric pressure is the weight of the atmosphere in a specific area, usually measured in millibars (mb) and inches of Mercury (inHg).
+ A number of factors can influence the barometric pressure in a given area, including altitude, wind patterns, and temperature.
+
+* **A normal barometric pressure reading is typically between 29.70 inHg and 30.40 inHg**
+
+*  when there’s low barometric pressure and less pressure on a fish’s body, the bladder expands.
+   Fish may swim deeper where the water pressure is higher as a way to adjust, becoming less interested in feeding until conditions normalize.
+
+* As we mentioned above, most agree that fishing is slow on both high-pressure and low-pressure days.** If the barometric pressure is above 30.50 inHg or below 29.60 inHg**, you might be better off waiting until the pressure normalizes.
+
+* High Pressure (Good Weather): During periods of high atmospheric pressure, the air pressing down on the water is greater,
+  slightly compressing the water. Fish with swim bladders experience a slight reduction in the organ’s volume,
+  making them naturally sink a bit. To counteract this, they expend energy adjusting their position in the water column,
+  which can make them less active or cautious, influencing their feeding and movement.
+
+* Low Pressure (Bad Weather): When low-pressure systems approach, such as before a storm, the pressure exerted on the water decreases.
+  This reduction causes the swim bladder to expand, making fish feel more buoyant. Fish typically respond by moving to deeper waters
+  to alleviate the over-buoyancy and find stability, often decreasing their feeding activity in these moments.
+  This is why anglers sometimes find it harder to catch fish before a storm.
+
+- impact by the moon daily
+- impact by the sun yearly
+
+## Jekyll
+
+* [jekyll github](https://notepad.onghu.com/2023/using-mermaid-in-a-textile-post-jekyll/)
+* [look at github](https://stuff-things.net/2025/01/19/mermaid-diagramming-in-jekyll-in-2025/)
+* [jekyll pwa](https://moldstud.com/articles/p-how-to-create-an-engaging-jekyll-based-pwa-a-step-by-step-guid
+* [Markdown Note](https://users.ssc.wisc.edu/~hemken/Stataworkshops/stmd/Markdown/tableandblocks1.html)
+* Webassembly mermaid
+* https://github.com/open-webui/open-webui
+* https://www.journal.unrika.ac.id/index.php/jurnaldms/article/view/543/0
+* https://www.corenet.gov.sg/ecatalog/Pages/corenet%20add.txt
+* [depth oceans vs o2](https://home.miracosta.edu/jturbeville/dana%20point%20floating%20lab/water%20chemistry.htm)
+* [Overlay image or text](https://imagekit.io/blog/css-image-overlay/)
+* [c++ plus rust](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
+* The waters around Lim Chu Kang are “more brackish” and suitable for rearing milk fish and grey mullet,
+ and he is currently the biggest producer of both types of fish in Singapore.
+
+* The waters off Changi, meanwhile, are saltier and suitable for fish that are more popular with Singapore consumers.
+ They include red snapper, barramundi (Asian sea bass), golden pomfret and sea perch.
+
+1. item 1
+1. | Column One | Column Two |
+| --- | --- |
+| <img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">| <img src="https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600" alt="Alt Text" width="500" height="600"> |
+
+
+- some text
+
+    | Column One | Column Two |
+    | --- | --- |
+    | data cell one | data cell two |
+
+③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
+
+⓪
+① ② ③ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
+⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ 
+
+🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉 
+Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ
+
+
+⓿
+❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿
+⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴
+
+Think of Pieces as a technical Tinkerbell from Peter Pan[^2].
+
+[^2]: This is a fairytale about a forever young boy who takes a group of British children to his home island, Neverland.
+
+Depending on how much cookie dough you eat, you’ll have about ==20-22== cookies from this recipe!
+
+# [embedded html to pdf](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
+
+<div>
+<p markdown="1">
+b[^2]
+</p>
+</div>
+
+[^b]: Now I am a footnote too.
+
+![Nanochloropsus Japanese Chlorella](https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600)
+![rotifer](https://rlutah.com/cdn/shop/collections/64_ounce_bottle.png?v=1715880245&width=750)
+
+Contains the following phytoplanktons:
+
+* Green phytoplanktons: Nannochloropsis oculata,Tetraselmis chui, Chlorella, Dunaliella tertiolecta, Japanese Chlorella, Chlorella vulgaris. 
+* Golden phytoplanktons: Tisochrysis lutea, Pavlova, Isochrysis galbana.
+* Red phytoplankton: Rhodomonas salina, Rhodomonas lens, Porphyridium creuntum
+* Diatom strains include: Chaetocerors calcitrans, Pheaodactylum tricornutum, Thalassiosira weissfloggii. 
+
+For best shelf life, store in the back of the fridge away from the light, with temperatures ranging from 2.78°C - 5.55°C  degrees. We store phytoplankton at 2.78 degrees in a fridge with no light source.
+
+
+[Order form](https://www.seafdec.org.ph/wp-content/uploads/2020/12/Commodity-Order-Form_rev2020.pdf)
+-----------------
+|Culture Pond |🄰  indoor  or<br> 🄱 outdoor|Pakai HDPE| Symbol|
+|:-----------|:-----------------|:-------|:---------|
+|Floating cage| Outdoor         | ①      |
+|Keramba dasar<br> 0.5m from bottom|Outdoor          | ②      |
+|Keramba tanjab|                |③ |
+|tambak/pond   | Outdoor        |④ |
+|hapa di tambak| Outdoor        |⑤ |
+|              | Indoor         |
+----------------
+
+---------------
+|Fish/Crustean | FCR wet/dry/<br>pellet(sink/float)|Culture Ponds<br>days/weeks/months|Stage Description<br>Larvae,Juvinele,Adult/<br>Temperature|Need fish meal|
+|:-------------|:------------------------------|:-----------|:-----------|:----------|
+|Tilapia    |Easier and<br> no need much knowledge | |No need fish meal, soybeaan protein|
+|Tuna | 10:1|[swift memory safe](https://forums.swift.org/t/prospective-vision-optional-strict-memory-safety-for-swift/75090)|yes, due to fish oil|
+|Salmon|2:1|-|yes, due to fish oil|
+|**Red Grouper(bottom dweller)**| | |yes, due to fish oil, candidate for cages like lobster|
+|**Jack Red Snapper(Kakap merah bakau)<br>(Lutjanus argentimaculatus)**| ||Telur sifat apung seperti kakap putih<br>juvinelle bisa hidup di air tawar|
+|Black grouper (top dweller)| || |
+|ikan tirusan| | | |
+|Asian seabass male at birth vs black seabass female at birth|||
+--------------
+
+[Grow-out Culture](https://repository.seafdec.org.ph/bitstream/handle/10862/36/adsea91p003-012.pdf?sequence=1&isAllowed=y)
+---
+Polyculture of sea bass using tilapia as forage fish is often practiced.
+Growth and survival were higher among sea bass reared with tilapia in the same
+compartment than among those reared in ponds with net partition to separate
+the larger prey from predator (Triño, unpublished).
+
+[Tiger Prawn floating cage growout culture](https://eprints.cmfri.org.in/10937/2/46459-150550-1-PB%20%283%29.pdf)
+
+
+## Markdown Heading
+*   ~~strikthrough~~
+* Lake Como [84km north of Milan] and Lake Garda [137km from Milan]
+* [style in flowchart mermaid instead of graph](https://www.freecodecamp.org/news/use-mermaid-javascript-library-to-create-flowcharts/)
+* [SAP Ui5 architecture](https://www.tutorialspoint.com/sap_ui5/sap_ui5_architecture.htm)
+* [SAp U5 hana](https://sapui5.hana.ondemand.com/sdk/#/topic/28b59ca857044a7890a22aec8cf1fee9)
+* [sap ui5 example](https://openui5.org/)
+* [sap flori tutorial](https://ui5.sap.com//#/topic/3da5f4be63264db99f2e5b04c5e853db)
+* [Flori web design](https://experience.sap.com/fiori-design-web/action-placement/)
+* [shell flori tool bar](https://experience.sap.com/fiori-design-web/flexible-column-layout/)
+* [sap grid view html](https://experience.sap.com/fiori-design-web/flexible-grid/)
+* [Dioxus](https://codesandbox.io/p/github/mattdanielbrown/Dioxus-Example-Projects/master?file=%2Fecommerce-site%2Fsrc%2Fmain.rs%3A19%2C26)
+* [Bookmark](https://www.croftsoft.com/library/tutorials/rust-dioxus-project-setup/) 
+* [docsite dioxus tailwind components](https://github.com/42Angouleme/dioxus-tw-components)
+
+<img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">
+
+## Sebass vs Snapper
+- diffferent
+- which one taste better
+
+|The table below provides a quick comparison of the availability and cost of snapper and grouper:|
+|------------------------------------------------------------------------------------------------|
+
+
+|Fish|	Availability|	Cost|
+|----|--------------|--------|
+|Snapper|	Common in Gulf of Mexico and Caribbean|	Higher price due to demand and difficulty of catching|
+|Grouper|	Common in Atlantic and Pacific oceans|	More affordable due to abundance and ease of catching|
+
+## Snapper vs Grouper
+Both of these species are known for having firm yet moist meat while having the added health benefit of being low in fat. Snapper is slightly sweeter and the meat more delicate, especially when grilled, than Grouper. Most compare its flavor and texture to be similar to that of halibut or sea bass. Grouper on the other hand is milder or more subtle in flavor making it perfect for absorbing either dressings or marinades
+[Singapore Snapper Hatchery](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/science-poster_development-of-hatchery-technology-for-crs-v4-revised-29-june-2022-003.pdf)
+[Spawing](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/application-of-endocrine-techniques-in-fish-spawning.pdf)
+[Treatment](https://www.sfa.gov.sg/docs/default-source/food-science-and-technology/monogeneans-disease-card-v2-english.pdf)
+[Start](https://www.sfa.gov.sg/docs/default-source/food-farming/industry-guides/sfa-sea-farming-guide326598c6-3d7b-4fb5-8f80-9b3228fd595c.pdf/)
+
+##  Safe C++
+
+1. A new "safe" context where only a rigorously safe
+	   subset of C++ is allowed
+2. Borrow checking to prevent use-after-free bugs
+3. Initialization analysis for type safety
+4. Pattern matching, choice types, and borrowing
+5. Thread-safety features similar to Rust's
+		send and sync type traits
+6. Explicit mutation for references
+7. A model for object relocation
+
+## hardshell vs softshell  (or just molting shrimp) result in high and low salinity shirmp culture
+Hard shell lobsters also have less water weight, while soft
+shell lobsters contain more water. This difference in yield is
+reflected in the lower pricing of soft shell lobsters. For comparison, the average
+yield for hard shells is roughly 20% to 28% meat, while soft shells contain around 15% to
+20% meat. 5 Jun 2018
+
+
+Low Salinity
+Less then 5ppt:
+1. Apply sea salt
+	* 100 kg/Acre weekly twice any time
+2. Add high salinity water New worldlife
+3. Feed supplement sea salt for low salinity
+	* 50g/kg feed
+5.Fluctuation Water Parameters
+
+6.Big Size PL Neworldlife
+
+7.Insufficient Minerals
+
+8.Use One or More then Mother Shrimps
+
+Batam
+---
+* Industry sampai jembatan 5.
+* fiber malaysia kapalnya lebih tebal daan berat jadi lebih stabil
+* Mesin kapal bisa jadi dua atau 1 (40 HP atau (2x 15HP)
+* Pulau Ketam malaysia ( hatchery and growth out sea pans) - outer island near Kuala Lumpur ( near Riau)
+
+
+
+
+## Kerapu
+### di keramba apung
+*  Pencegahaan penyakit dengan mencelupkan kerapu ke air tawar 15 minutes? Membunuh hama air laut
+* Ukuran 7 cm sampai 0.5 kg untuk macan 8 bulan dan bebek 12 bulan
+* Grouper culture has three phases:
+	1. the larval stage where fish is reared for 15-60 days, 
+	2.  the nursery stage where fish is cultured for 1-2 months, and 
+	3. the growout stage where fish is reared for 6-8 months.
+   
+	Grouper need to be sorted and size-graded every week to prevent cannibalism. Other routine procedures 
+   include feeding, net maintenance, stock sampling, and monitoring water quality
+
+*  Hatchery phase
+	1. Stock 20-30 larvae/liter in 3-25 tons rearing tanks
+	2. Feed larvae Nannochlorum, rotifer, Artemia, and articial diet
+	3. Transfer larvae to marine cages when larvae reach the total length of 2-3 cm (15-60 days)
+* Nursery phase
+	1. Stock 2-3 cm fry in 1 x 2 x 1.5 m hapa nets at 75-100 fry/m3
+	set inside floating net cages. Uniform fry size should be strictly observed during stocking.
+	2. Install hover-type lamp to attract grouper prey such as copepods, mysids, young fishes, and crustacean larvae
+	3. Feed fry artificial diet or finely chopped frozen or fresh low value fish 4-6 times a day
+	4. Transfer fry to grow-out cages or ponds after 45-60 days or when total length is 6-10cm
+* Feed
+	1. Feed can change color ofsome groupers such as shrimp feed
+	2. head of the shrimp ( trash can be used to  feed the grouper): fresh or uncooked or cook
+
+* [Grouper Hatchery](https://youtu.be/IkKztRINSkQ?si=8Un_Fzv7SzwtXoNy)
+  - Tiger : take 2 years
+  - hybrid can growth to around 15 kg the second year
+  - Male tiger grouper as broodstock 15kg
+* Prefer dark and rest at the bottom
+* When mature adult feed the whole fish
+* adult kerapu feeds: kepala prawn,trash fish, squid, pellet, dll
+
+* [Prevent disease in grouper](https://www.seafdec.org.ph/wp-content/uploads/2021/08/prevention-control-of-parasites-in-groupers.pdf)
+
+* small prawn eats the grouper lice but not too big which groupr will eat the praawn
+
+* A freshwater dip is a treatment for saltwater fish, like groupers, to help remove parasites.
+ It involves temporarily placing the fish in fresh water for a short period, typically 3-5 minutes, to kill or loosen parasites.
+ This is a pre-quarantine treatment and should not be relied upon as the sole treatment for a disease.
+
+Weak fish:
+Avoid freshwater dips on fish that are already weak or dying, as they can be fatal. 
+
+Potential side effects:
+Some fish may have difficulty returning to their normal salinity after a freshwater dip, and may need assistance to regain their balance. 
+
+Aeration:
+Ensure the freshwater dip container has adequate aeration to provide oxygen to the fish
+  
+ * obat bius untuk ikan air tawar 
+   Obat Bius Ikan Ramah Lingkungan dari Daun Pepaya
+
+
+# Minyak cengkeh
+Efektivitas Pemberian Minyak Cengkeh sebagai Obat Bius pada Ikan Kerapu Cantang
+
+Penelitian penggunaan minyak cengkeh dengan konsentrasi 5, 10 dan 15 ppm sebagai bahan anastesi pada transportasi tertutup ikan Kerapu cantang memberikan hasil tingkat kelangsungan hidup sebesar 76,67%, 86,67%, dan 80%, sedangkan tanpa penambahan minyak cengkeh tingkat kelangsungan hidup ikan kerapu adalah 60% pada pada transportasi dengan pemberian MS 222 70 ppm tingkat kelangsungan hidup mencapai 90%.
+Minyak cengkeh merupakan salah satu obat bius alami yang telah dikembangkan dan digunakan sebagai pengganti obat bius kimia seperti MS 222.
+Minyak cengkeh diperoleh dari ekstrak daun, batang dan bunga tanaman cengkeh. Minyak cengkeh diketahui mengandung senyawa eugenol yang bersifat
+analgesik atau mengurangi rasa sakit, selain itu juga mengandung senyawa kartiofilin yang bersifat sebagai antiseptik. Minyak cengkeh digunakan sebagai anestesi lokal pada hewan dan manusia dan memiliki efek sedasi pada hewan air. Namun senyawa tersebut juga memiliki aktivitas insektisida sehingga jika digunakan secara berlebihan dapat menyebabkan kematian pada ikan.
+
+Pemberian anestesi minyak cengkeh juga mempengaruhi total leukosit pada ikan kerapu setelah transportasi selama 10 jam.
+ Pada penelitian ini jumlah leukosit mengalami perbedaan bermakna antara perlakuan negatif dan kontrol.
+ Leukosit merupakan salah satu bagian darah yang berfungsi sebagai antibodi non spesifik. Saat ikan mengalami kondisi stres, 
+jumlah leukosit dapat meningkat sebagai bentuk tindakan pertahanan akibat stresor.
+
+
+**[Tricaine methane sulfonate (MS‐222)](https://ehs.msu.edu/lab-clinic/animal/ms222.html)** is a commonly used fish/amphibian anesthetic. The compound is an isomer of benzocaine.
+It is a solid at room temperature. Tricaine methane sulfonate has an oral rat LD50 of 5200mg/kg,
+which does not meet the OSHA classification of a toxic chemical.
+
+Teknik Imotilisasi Ikan Kerapu Cantang (Epinephelus sp.) Menggunakan Ekstrak Biji Kecubung (Datura Metel L.)
+---
+
+This study is about fish anesthesia using natural anesthetic ingredients. Natural anesthetic ingredients
+aim to reduce metabolism in Epinephelus sp. grouper fish. The immobilization method can be used to
+minimize high metabolism in Epinephelus sp. grouper fish. The purpose of this study was to obtain the
+influence of Datura metel L. seed extract on the onset time, recovery time, and live graduation of grouper
+fish Epinephelus sp. The results of the study, using extracts of natural anesthetic ingredients Datura
+metel L.seed with concentrations of 25%, 30%, and 35% can be concluded that it has a different influence
+(P<0.05) on the onset and recovered grouper fish. The survival rate of cantang grouper is 100% at each
+concentration. Amethyst seed extract concentration of 35% w
+
+
+### di keramba tanjab yang punya pasir
+-tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
+- kerapu sanu mulutnya agak kecil di bandinggkan kerapu cangteng
+* Bisa beli telur sampai pendederan benur
+
+# [Pulau Petong](https://earth.google.com/web/@0.53118441,104.4134147,231.8783569a,778318.1988886d,35y,44.54282763h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA)
+- Bor 12 m ait laut, 30 m air tawar (4" diameter pipe)
+  - 2 pipe air tawar, 1 pipe air laut
+- Pulau petong air tawar pemerintah (kaporit tinggi)
+
+- air laut dati pesisir karang sangat jauh dari bulan ke  bulang... sehingga  keramba ampung maupun dasar harus agak jauh dari panti pulau.
+- tergantung stucture karang
+-[wave et](https://tides4fishing.com/id/kepulauan-riau/tandjungpinang-bintan-island)
+
+
+# [Fisherman boat](https://explorer.com.my/product/e190-floorboard/)
+##  Perahu fiber lebih dangkal karena ringgang untuk pulau yang berkarang karena karang bisa membuat perahu itu pecah/rusak
+- fiber perahu ika dari malaysia (40HP=40PK- 54juta)-need 15PK (15PK=32 juta)
+- Bor air : 12 m air laut, 30m air tawar
+- di palemenbang 120m dapat air minum
+- kaporit terlalu tinggi di danau di atas petong
+- cumi yang di es berwarna merah keesokan harinya
+- 1 knot =1.852km/hours
+- [fisherman boats](https://jixingxincomposite.en.made-in-china.com/product/NJpUiKoPaQYS/China-New-Design-High-Quality-Motor-Boat-Boat-Fishing-Fiberglass-Boat.html)
+- Minyak 40pk motor (oil consumption 20L/hours)
+- Water coloumn
+  - air laut bataam diambil dari kedalaman 12m, di Norwegia diambil dari kedalamaan 75m dari permukaan laut
+- fiber boat puny hendra pulaupetong:
+  -17" dan 21" (5.5 m ~ 7 m) , boat: 27 juta
+  - mesin yamaha 15HP ( 2x)
+  - supaya temperature nya hampir sama dengan culture temperature
+  - Pulau Benan: Judit, Petong Hendra
+  - pH nya konstant di kedalaman ?
+- [cuaca dan agin di pulau petong](https://www.windy.com/0.629/104.082?0.626,104.094,15)
+- 65% kapal nelayan adalaah terbuat dari kayu (10`15 year)
+  - Mesin bukan dmeesia kapal akibatnya mudah terjadi korosi
+  
+
+
+
+-[serial port in rust](https://users.rust-lang.org/t/how-to-use-serial-port-in-dioxus-desktop-app/99845/3)
+
+# [ikan tirusan-(Otolithoides pama)](https://www.mongabay.co.id/2024/09/16/ikan-tirusan-harga-selangit-jadi-primadona-khawatir-penangkapan-berlebih/)
+
+- [(Otolithoides pama)](https://www.themimu.info/sites/themimu.info/files/assessment_file_attachments/GOM_Pama_Croaker_croaker.pdf)
+
+- [xxx](https://eprints.cmfri.org.in/16358/1/MFIS%20252_2022_Subal%20Kumar%20Roul.pdf)
+
+- gelambung laki jauh lebih mahaldari yang betina
+
+
+Para nelayan di Riau, seperti Indragiri Hilir,  belakangan ini ‘berburu’ mendapatkan ikan tirusan atau tirus karena harga yang selangit. Ikan dengan nama latin  Otolithoides pama, termasuk famili sciaenidae,  harga per ekor bisa mencapai puluhan juta rupiah.
+Yang bernilai tinggi dari ikan tirusan adalah gelembung (limpanya). Pembeli atau pengepul biasa mengupah orang yang ahli lagi untuk membelah perut ikan ini.
+
+Hasil pencatatan BPPMHKP Pekanbaru, pengiriman gelembung ikan sepanjang 2019-2023 mencapai 1.204 kali atau 36.895 kilogram. Sumbernya dari enam daerah penghasil ikan di
+1. Tembilahan,
+2. Bengkalis, 
+3. Dumai,
+4. Selat Panjang, 
+5. Pekanbaru dan 
+6. Panipahan.
+
+Setidaknya ada enam pengirim utama mendominasi dalam perdagangan gelembung ikan di Riau.
+
+Data ini tidak spesifik menyebut jenis ikan penghasil gelembung renang itu. Selain tirusan, gelembung yang biasa diperdagangkan juga produk turunan dari ikan malong (Muraenesox cinereus).
+
+# [Ikan Malong (Muraenesox cinereus)](https://indiabiodiversity.org/species/show/232787)
+Malong ( Muraenesox cinereus )adalah spesies ikan Sidat dalam keluarga pike conger, Muraenesocidae .
+ Mereka terutama hidup di dasar lunak di perairan laut dan air payau hingga kedalaman 800 m (2.600 ft), tapi bisa masuk ke air tawar.
+
+# [Gamat Hitam- Teripang hitam ](https://www.mitrausahatani.com/teripang-berhasil-dibudidayakan/)
+
+- [teripang](https://youtu.be/3O4dGg5DJc4?si=gpO6H6sVmOFNFKmP)q
+
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-023-28733-7/MediaObjects/41598_2023_28733_Fig2_HTML.png?as=webp" width="1200">
+
+
+- [Teripang Hatchery video](https://www.youtube.com/watch?feature=shared&v=iG1IX73R1D4)
+
+- [Seacuucumber Processing](https://youtu.be/hkuZCiMJy1s?si=U7Xo-IzJ5vAngoRn)
+
+- [Seacucumber investment](https://www.youtube.com/watch?v=u5MmzsAoXOk)
+
+[seacucumber](https://www.ctsa.org/files/publications/SeaCucumberHatcheryManual.pdf) 
+
+- [start business seacucumber](https://youtu.be/_Qa1R2EEBCg?si=hB4PWzQhXBMunqJA)
+
+- [Brackish shrimp culture](http://www.agritech.tnau.ac.in/fishery/fish_cul_brackish_shrimps_stock.html)
+
+Market trends
+---
+The dried air bladders called fish maws are exported mainly to
+*  China and Singapore for the manufacture of isinglass, which is used in beverage and cosmetic
+industry as well as Chinese traditional medicines (Dutta et al., 2014). The lesser and medium sciaenids are mostly
+sold in fresh condition at the local markets or iced and transported to distant interior markets of Odisha, West
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+# [Tilapia](https://youtu.be/7SOVLYYgyCE?si=Z3zplqT-GU7pJFfF)
+
+# [Catfish](https://www.youtube.com/watch?v=YoI2QocTmlQ)
+# [sandfish](https://www.sciencedirect.com/science/article/pii/S2352513424000334)
+
+Grow-out operations in central Vietnam are capable of producing market-size sandfish (350–400 g), from 2–5 g juveniles, after approximately 12 months in earthen pond-based culture.
+ However, the onset of the wet season in Vietnam (typically from May to early November) and resulting reduction in the salinity of culture water,
+ may impact productivity through reduced growth rates and survival (Mills et al., 2012).
+ Vietnamese farmers have consequently developed an ‘advanced nursery’ phase, where 2–5 g juveniles are cultured at high density in ponds with organic matter-rich sediment (>50,000 ind./ha compared
+ to ∼10,000 ind./ha which is the standard grow-out density), until they reach a size of ca. 50 g.
+ This permits ‘short-cropping’ during the grow-out phase, because when larger juveniles are grown out, they can reach the target harvest weight of 350–400 g within 7–9 months
+ and experience higher rates of survival (Mills et al., 2012).
+
+The goal of this study was therefore to undertake a preliminary assessment of the feasibility of supplemental feeding to support short-cropping culture of sandfish in Vietnam by:
+
+1. evaluating the growth and survival performance of sandfish juveniles offered two different types of locally-sourced seaweed-based supplemental feeds (Sargassum sp. and Gracilaria verrucosa) 
+processed by both fermentation and pulverisation;
+
+2.  determining an optimal stocking density for juveniles offered supplemental feeding; and 
+
+3. applying the best-performing supplemental feed, determined from (1) during large-scale earthen-pond culture to assess the feasibility of commercial-scale short cropping.
+
+Supplemental feed preparation
+===
+Supplemental feeds were prepared from commercially available wild-sourced seaweed collected from coastal regions in Khánh Hòa Province, Vietnam, which is readily available in dried form (Hong and Ha, 2022). Fresh seaweed is first cleaned at the collection site using seawater to remove sand, debris, epiphytic growths and other extraneous matter attached to thalli and, prior to sun-drying, was rinsed with freshwater to remove salt residue. Both species of dried seaweed were powdered to a particle size of 350–450 µm using a high-speed dry grinding machine (2 kg capacity; 4000 W; model RRH2000A; Riri Hong Ltd) to produce the pulverised supplemental feeds. The fermented diets were prepared in batches as required. To prepare a single batch of fermented feed, 10 kg of dried seaweed powder was mixed with 2.5 g of a commercially-available livestock feed probiotic mixture (BIO-MEN animal feed brewing yeast/Men ủ thức ăn chăn nuôi BIO-MEN manufactured by Vườn Sinh Thái/Eco Garden, Vietnam), and 10 L of freshwater. The probiotic mixture comprised Saccharomyces boulardii (at a concentration of 1010-1014 Colony Forming Units; CFU), Lactobacillus acidophilus (1010 CFU) and Bacillus subtilis (1010 CFU) per g, respectively. This product had a maximum moisture content of 10%, sand/grit content of 2% and used corn flour and rice bran as the probiotic carrier agents (https://vuonsinhthai.com.vn/men-u-vi-sinh-thao-duoc-u-chin-thuc-an-chan-nuoi.html
+).
+
+
+# Pearl Oyster
+
+# [Scallop](https://www.e-fas.org/archive/view_article?pid=fas-27-11-709)
+1. Chlamys farreri,
+2. Argopecten irradians,
+3. Pactinopecten yessoensis
+4. and Chlamys nobilis 
+ 
+ # use of oyster shell 
+ The easiest way to avoid this problem is to only use aged shell in your setting tanks. Every shell used in the system should be aged
+at least a full year out in the open where it will be is exposed to weather and other factors that will remove the organic material from the shells. Once this ageing process
+is completed, it is best if the shells are washed or cleaned to remove as much dirt and small shell fragments from the cultch as possible. When you have clean cultch material
+ it is ready to be containerized for use in your setting system.
+ 
+ ## Amorphous calcium carbonate (ACC) 
+ is a non-crystalline form of calcium carbonate, and it is composed of aggregated nano-size primary particles. 
+ Here, we evaluated its anti-cancer effect postulated relative to its buffering capabilities in lung cancer.
+ 
+ # Aeration 
+ The most common approach is to use aeration. Most setting tanks are fairly shallow (6 feet deep or less) and this lends itself to aeration by rotary blower. Rotary blowers are used 
+ because they provide high volumes of air at low pressure. They are more efficient than compressors and do not introduce oil into the system. 
+Blowers should be sized to provide a gentle rolling movement throughout the entire setting tank. When installing aeration, make sure that water from the setting tanks is 
+not allowed by gravity to flow backwards into the blower when the blower is off.
+The easiest ways to do this are either to install the blower above the highest water level of the setting tanks or to add a section of pipe that extends above the high water mark.
+Getting air from the blower to the tanks is usually done through PVC pipes. Pipes
+should be sized according to the volume of the setting tanks but, with smaller tanks
+capable of holding 200-300 shell bags, 1.5 to 2 inch inside diameter pipes are
+sufficient. Larger tanks will require larger diameter aeration lines. Blowers used in
+remote setting do not create much pressure and therefore the use of larger pipe is
+required. Pipes should be drilled with 3/8” holes about every 8 to 12 inches along
+the length of the pipe to provide adequate aeration. Aeration pipes should be spaced
+apart to allow a gentle flow to be created when the air is on. For example, a 12 foot
+diameter tank with 3 or 4 pipes spaced at the bottom of the tank provides sufficient
+aeration for good settlement to occur.
+
+It is important that aeration pipes used inside the tanks NOT be glued together. These pipes will fill with sediment, have oyster larvae settle on them, and other things that
+require them to be cleaned inside and out. In fact, each time a setting tank is broken down and reloaded with cultch, the air pipes should
+be taken apart and thoroughly cleaned inside and out. This can be done with a brush on a
+rope and fresh water, another good reason to use larger diameter piping. Care should be  taken to remove ALL newly settled oyster spat
+from the pipes and any other surface in the setting tank. If the tanks are re-used these spat will continue to grow. These spat
+are voracious feeders and will compete with the next batch of larval oysters for the food in the tank and as they get bigger will provide substrate for oysters to settle on 
+
+# Instant algae
+Instant algae is your easy solution for replacing or supplementing live microalgae in commercial fish, shrimp, shellfish and ornamental hatcheries, universities and research centers. It is real marine microalgae, grown under laboratory conditions and concentrated for easy storage and long life. Instant algae is not alive and cannot be used as starter cultures – it is an inexpensive bulk feed.
+
+Nannochloropsis
+
+These are small green algaes that are extensively used in the aquaculture industry for growing small zooplankton such as rotifers and for greenwater. They are also used in reef tanks for feeding corals and other filter feeders. It is 3600 times as dense as cultured algae, so 1 liter replaces almost 4 metric tons of live algae! Available in 1-quart & 1-pint bottles, and 1-liter bags. Nannochloropsis is the single best food for growing rotifers. It has a very high EPA level and can be frozen for long term storage. It also works well for greenwater.
+
+Shellfish hatcheries: works very well with mussels. It has not been traditionally used with oysters and clams, however a study currently being done at a university in Los Angeles indicates that it can work as well or better than Isochrysis and Pavlova with larvae and post set. Storage: instant algae nannochloropsis can be stored in a refrigerator for 3 months (best if stored at -1° to 3°C) or it can be frozen for longer shelf life (2+ years). When frozen, the algae will “hard-freeze” like ice.
+
+Pavlova
+
+Pavlova is a small golden/brown flagellate that is very similar to Isochrysis. It has a very high DHA profile and is excellent for enriching rotifers and other zooplankton. It is very difficult to develop the Pavlova, that is the reason why it is not produced by many incubation facilities. Pavlova is similar in nutritional profile to Isochrysis, however it has a more sophisticated sterol composition so it is very popular with cold water fish hatcheries (such as cod) for enriching rotifers.
+
+Pavlova has both a high DHA and EPA profile so its good for enriching zooplankton. We have received very good reports on larval survival from hatcheries that use it to enrich brine shrimp. Pavlova works very well for oysters, clams, mussels and scallops. It is also used to increase the DHA/EPA levels in broodstock.
+
+Isochrysis
+
+Isochrysis is a small golden/brown flagellate that is very commonly used in the aquaculture industry. It is high in DHA and often used to enrich zooplankton such as rotifers or Artemia. Used for DHA enrichment of rotifers.
+
+It is also a good size for feeding brine shrimp and copepods. Isochrysis is the most commonly used algae for oysters, clams, mussels and scallops.
+
+Tetraselmis
+
+Tetraselmis is a large green flagellate with a very high lipid level. It also contains natural amino acids that stimulate feeding in marine animals. It is an excellent feed for larval shrimp. Used in conjunction with Nannochloropsis for producing rotifers.
+
+It is also a good size for feeding brine shrimp. A standard feed for oysters, clams, mussels and scallops.
+
+Rotifer Diet HD
+
+Rotifer Diet™ HD is a marine microalgae feed product for producing high quality, high density, low cost rotifers. Rotifer Diet HD is a combination of the microalgae species Nannochloropsis & Tetraselmis and results in a 20% increase in rotifer volume over pure Nannochloropsis.
+
+It is a 100% complete feeding solution, needing no other feed additives to produce dense cultures. Rotifer Diet HD was specifically designed for high density rotifer systems, but also works exceptionally well in low density and batch cultures.
+
+Thalassiosira weissflogii
+
+Thalassiosira weissflogii is a large diatom (6-20μm x 8-15μm) that is used in the shrimp and shellfish larviculture industry. This algae is considered by several hatcheries to be the single best algae for larval shrimp. The large cell size (16 times the biomass of Chaetoceros and 3 times the biomass of Tetraselmis) extends the algae feeding period until the end of the PL stage. During the winter, this algae is about 15 microns, but shrinks to about 5 microns during the summer.
+
+The color of TW varies from brown to green to yellow, depending on the amount of chlorophyll in the culture. This color change does not in any way affect the quality of the algae. Good for feeding copepods and brine shrimp. Due to its large size, TW is a very good feed for post-set (200 microns and larger) oysters, clams, mussels, scallops, and for broodstock conditioning.
+
+Shellfish Diet
+
+Shellfish diet is a mix of five marine microalgae that all have demonstrated success with a variety of shellfish including oysters, clams, mussels and scallops. A mixed diet provides a much better nutritional profile for all types of shellfish, increasing both growth rates and survival. Shellfish diet can be used with preset larvae all the way up through broodstock and will typically perform as well as algae so it can be used as a complete live algae replacement. 1/4 of Shellfish diet will replace the equivalent to 1800 liters of dense algae culture. This product is available in plastic bottles of 1/4, 1-pint and 1-gallon. The quantity of cells changes depending on the time of the year, but is approximately 2 billions of cells per ml.
+
+ 
+ 
+# Sargassum Powder
+
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-024-72563-0/MediaObjects/41598_2024_72563_Fig1_HTML.png?as=webp" width="1200">
+
+# Spirulina 
+<img src="https://www.sciencelearn.org.nz/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F117510%2F1722400451-rd16_art_04_spirulina_cyanobacteria.png%3Fw%3D1840%26h%3D1342.7027027027027&w=1080&q=85&dpl=dpl_3YP78pZRnY9CGfKJxe4qZAoXodaE"  width="1200">
+Spirulina powder, a type of blue-green algae, is often cultivated in both freshwater and seawater environments. Seawater can be a viable and even advantageous medium for growing spirulina, particularly for reducing the need for additional nutrients. However, spirulina grown in seawater may have a higher iodine content and require careful drying processes to maintain qualit.
+
+Seawater can be a cost-effective and potentially more sustainable medium for spirulina cultivation, especially when supplemented with nutrients. Studies have shown that spirulina can thrive in seawater, and in some cases, even exhibit increased carbohydrate production and biomass concentration compared to freshwater cultures. 
+
+The quality of spirulina, regardless of the cultivation medium, depends on factors like the source of the water, the cultivation methods, and the drying process. Spirulina harvested from clean sources and properly dried is essential for ensuring a high-quality product. 
+
+
+A  large-scale  cultivation  experiment  demonstrated  that  Spirulina  platensis,  strain  SCS,  can  be  adapted  togrow  in  seawater  enriched  with  a  commercial  compound  fertilizer  (N: Ρ: Κ  =  12:12:12),  NaHCO3 andFeSO4.  To  avoid  excess  precipitation,  a  compound  fertilizer, which  contained  phosphate,  was  supplied  bydiffusion  through  a tubular  dialysis membrane  and  a small amount  of NaHCO3 was added. The average yieldof  biomass  in  84 days  of consecutive  production  was  10.3 g (dry  weight) m~2 day"1. The  protein and  aminoacids  contents  in  the  product  were  66.6%  and  62.2%  respectively.  We have shown  that  outdoor cultivationof  Spirulina  in seawater has potential for industrial production  without involving valuable farm land, employingless  expensive culture  medium which  can  be  recycled  and  giving higher  yield  and  higher quality products
+
+
+
+Biochemical Changes
+One of the most interesting side effects of culturing spirulina in seawater is that the carbohydrate content of it skyrockets while the protein content drops significantly.
+
+
+Spirulina harvesting 
+---
+involves separating the algae from its liquid growth medium. This is typically done through filtration or centrifugation, followed by drying to produce a powder or flakes. The harvested spirulina can then be used as a food supplement or in other application
+
+[Harvest](https://spirulinasociety.org/how-to-harvest)
+
+<img src="https://cdn.myportfolio.com/fdbcc412-5db2-4962-bb73-8809d3dadc12/16511c57-60ce-46ae-890f-49cbec8a3eb5_rw_1920.jpg?h=9412c3082031758ee8dca6a29ace1e7b"  width="1200" >
+
+</md-block>
+
+</div>
+  <script type="module">
+      import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
+    </script>
+    <script type="module">
+     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+      mermaid.registerIconPacks([
+        { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
+        { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
+      ]);
+     mermaid.initialize({ startOnLoad: true });
+</script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  </body>
+</html>
