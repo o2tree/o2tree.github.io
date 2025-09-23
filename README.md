@@ -4,7 +4,7 @@
 - http://tr.ee/UG_IGJ3t3a
 - [O2tree main access](http://o2tree.carrd.co)
 - [Organic Product from Lombok-O2Tree Lombok](http://o2tree.github.io/lombok_tours.html)
-- [Gemini AI](https://gemini.google.com/app)
+- [AI](https://hix.ai/)
 
 - [Kelompok Tani Hutan Sumber Bahari](http://o2tree.github.io/KTHSumberBahari.html)
 - [Tanjung Kampeh Palemebang](http://o2tree.github.io/tanjungkampeh.html)
