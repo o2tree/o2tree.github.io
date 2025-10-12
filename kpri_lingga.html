@@ -18,7 +18,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_4210a098d61ed3a432ae50e5eca0d4f7 {
+                #map_3a981d59669b67e03b6f6bf695190480 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
     
                 <style>
-                    #float_image_d4cad38232366930fa06a7ca01f3d7ed {
+                    #float_image_1abb0a168f2033d9be349fcbf2862515 {
                         position: absolute;
                         bottom: 10%;
                         left: 0.4%;
@@ -122,10 +122,10 @@ table {
              <p align="center">Partnership with local people to build sustainable Aquaculture</p>
              
     
-            <div class="folium-map" id="map_4210a098d61ed3a432ae50e5eca0d4f7" ></div>
+            <div class="folium-map" id="map_3a981d59669b67e03b6f6bf695190480" ></div>
         
     
-            <img id="float_image_d4cad38232366930fa06a7ca01f3d7ed" alt="float_image"
+            <img id="float_image_1abb0a168f2033d9be349fcbf2862515" alt="float_image"
                  src="https://o2tree.carrd.co/assets/images/image01.png"
                  style="z-index: 999999">
             </img>
@@ -147,8 +147,8 @@ async function copyContent() {
 }
 
     
-            var map_4210a098d61ed3a432ae50e5eca0d4f7 = L.map(
-                "map_4210a098d61ed3a432ae50e5eca0d4f7",
+            var map_3a981d59669b67e03b6f6bf695190480 = L.map(
+                "map_3a981d59669b67e03b6f6bf695190480",
                 {
                     center: [-0.2087, 104.6269],
                     crs: L.CRS.EPSG3857,
@@ -160,13 +160,13 @@ async function copyContent() {
 
                 }
             );
-            L.control.scale().addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            L.control.scale().addTo(map_3a981d59669b67e03b6f6bf695190480);
 
             
 
         
     
-            var tile_layer_d77da417211a3af2d402002cdd9ca9cd = L.tileLayer(
+            var tile_layer_45fbb31d383a501002fa1e61c52417e5 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 7,
@@ -183,10 +183,10 @@ async function copyContent() {
             );
         
     
-            tile_layer_d77da417211a3af2d402002cdd9ca9cd.addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            tile_layer_45fbb31d383a501002fa1e61c52417e5.addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
-            var tile_layer_2942b1d02168c3c3688419661335bb31 = L.tileLayer(
+            var tile_layer_6f1f2d892ca71f509ac6a312782dcae5 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=m\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -203,10 +203,10 @@ async function copyContent() {
             );
         
     
-            tile_layer_2942b1d02168c3c3688419661335bb31.addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            tile_layer_6f1f2d892ca71f509ac6a312782dcae5.addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
-            var tile_layer_76491688d9e15eca9b07ae1bf9252f3c = L.tileLayer(
+            var tile_layer_bec17c1aff4f7e6ca4dd5536551e8ae3 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 0,
@@ -223,10 +223,10 @@ async function copyContent() {
             );
         
     
-            tile_layer_76491688d9e15eca9b07ae1bf9252f3c.addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            tile_layer_bec17c1aff4f7e6ca4dd5536551e8ae3.addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
-            var tile_layer_71f9a55a0d89d405dc5e57c259114d66 = L.tileLayer(
+            var tile_layer_df50201b9abe2c734faee2da63176bd2 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -243,7 +243,7 @@ async function copyContent() {
             );
         
     
-            tile_layer_71f9a55a0d89d405dc5e57c259114d66.addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            tile_layer_df50201b9abe2c734faee2da63176bd2.addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
             L.control.fullscreen(
@@ -253,31 +253,31 @@ async function copyContent() {
   "titleCancel": "Exit Full Screen",
   "forceSeparateButton": false,
 }
-            ).addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            ).addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
     var new_mark = L.marker();
     function newMarker(e){
-    new_mark.setLatLng(e.latlng).addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+    new_mark.setLatLng(e.latlng).addTo(map_3a981d59669b67e03b6f6bf695190480);
     new_mark.dragging.enable();
-    new_mark.on('dblclick', function(e){ map_4210a098d61ed3a432ae50e5eca0d4f7.removeLayer(e.target)})
+    new_mark.on('dblclick', function(e){ map_3a981d59669b67e03b6f6bf695190480.removeLayer(e.target)})
     var lat = e.latlng.lat.toFixed(4),
     lng = e.latlng.lng.toFixed(4);
     new_mark.bindPopup("<a href=https://www.google.com/maps?layer=c&cbll=" + lat + "," + lng + " target=blank >Google Street View</a>");
     parent.document.getElementById("latitude").value = lat;
     parent.document.getElementById("longitude").value =lng;
     };
-    map_4210a098d61ed3a432ae50e5eca0d4f7.on('click', newMarker);
+    map_3a981d59669b67e03b6f6bf695190480.on('click', newMarker);
     
     
-            var marker_1e57e8c3f3bd294e5ab3dca0b54ce7c0 = L.marker(
+            var marker_4ab13fc04fffb51d846011320a383b85 = L.marker(
                 [15.4109414, 119.9109768],
                 {
 }
-            ).addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            ).addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
-            var icon_38e90d05a6ddf00c0779df7b8b1fa7c1 = L.AwesomeMarkers.icon(
+            var icon_a6cad2a22829abfc0896041cd3f3743d = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -289,24 +289,24 @@ async function copyContent() {
             );
         
     
-        var popup_133a2257680643dbbb4dfae0f5822bc9 = L.popup({
+        var popup_50730ea2c35c79f1305cfab772a562dc = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_3851c1a6e5bf564e4cdfa5e907834bf3 = $(`<div id="html_3851c1a6e5bf564e4cdfa5e907834bf3" style="width: 100.0%; height: 100.0%;"><b>Palma Shrimp farm</b></div>`)[0];
-                popup_133a2257680643dbbb4dfae0f5822bc9.setContent(html_3851c1a6e5bf564e4cdfa5e907834bf3);
+                var html_dace4e15cdbb7cf5eea0e89fbb994502 = $(`<div id="html_dace4e15cdbb7cf5eea0e89fbb994502" style="width: 100.0%; height: 100.0%;"><b>Palma Shrimp farm</b></div>`)[0];
+                popup_50730ea2c35c79f1305cfab772a562dc.setContent(html_dace4e15cdbb7cf5eea0e89fbb994502);
             
         
 
-        marker_1e57e8c3f3bd294e5ab3dca0b54ce7c0.bindPopup(popup_133a2257680643dbbb4dfae0f5822bc9)
+        marker_4ab13fc04fffb51d846011320a383b85.bindPopup(popup_50730ea2c35c79f1305cfab772a562dc)
         ;
 
         
     
     
-            marker_1e57e8c3f3bd294e5ab3dca0b54ce7c0.bindTooltip(
+            marker_4ab13fc04fffb51d846011320a383b85.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -316,17 +316,17 @@ async function copyContent() {
             );
         
     
-                marker_1e57e8c3f3bd294e5ab3dca0b54ce7c0.setIcon(icon_38e90d05a6ddf00c0779df7b8b1fa7c1);
+                marker_4ab13fc04fffb51d846011320a383b85.setIcon(icon_a6cad2a22829abfc0896041cd3f3743d);
             
     
-            var marker_319e045c2794fa30bdbf20b1bc1f40d6 = L.marker(
+            var marker_1604b94a734bb19043a7ee9da2f103c9 = L.marker(
                 [-7.774779, 109.5977324],
                 {
 }
-            ).addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            ).addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
-            var icon_a755cc80a17d22248b2549230677ca51 = L.AwesomeMarkers.icon(
+            var icon_fa2017a133ea38d59120256d82be331e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -338,24 +338,24 @@ async function copyContent() {
             );
         
     
-        var popup_8c9ab888f1a34b974448be52b9189e1d = L.popup({
+        var popup_bd3a67b9855eb7b6e25065e3b472112b = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_7d51b052d42793db7f47ce85af765efe = $(`<div id="html_7d51b052d42793db7f47ce85af765efe" style="width: 100.0%; height: 100.0%;"><b>Budidaya Udang Berbasis Kawasan (BUBK) Kebumen</b></div>`)[0];
-                popup_8c9ab888f1a34b974448be52b9189e1d.setContent(html_7d51b052d42793db7f47ce85af765efe);
+                var html_626bc86e4def2e739183ebac572a3c0f = $(`<div id="html_626bc86e4def2e739183ebac572a3c0f" style="width: 100.0%; height: 100.0%;"><b>Budidaya Udang Berbasis Kawasan (BUBK) Kebumen</b></div>`)[0];
+                popup_bd3a67b9855eb7b6e25065e3b472112b.setContent(html_626bc86e4def2e739183ebac572a3c0f);
             
         
 
-        marker_319e045c2794fa30bdbf20b1bc1f40d6.bindPopup(popup_8c9ab888f1a34b974448be52b9189e1d)
+        marker_1604b94a734bb19043a7ee9da2f103c9.bindPopup(popup_bd3a67b9855eb7b6e25065e3b472112b)
         ;
 
         
     
     
-            marker_319e045c2794fa30bdbf20b1bc1f40d6.bindTooltip(
+            marker_1604b94a734bb19043a7ee9da2f103c9.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -365,17 +365,17 @@ async function copyContent() {
             );
         
     
-                marker_319e045c2794fa30bdbf20b1bc1f40d6.setIcon(icon_a755cc80a17d22248b2549230677ca51);
+                marker_1604b94a734bb19043a7ee9da2f103c9.setIcon(icon_fa2017a133ea38d59120256d82be331e);
             
     
-            var marker_088e033f63c628ba7b70040fc1d9b87f = L.marker(
+            var marker_539c7731e66652cf134c878eff534af0 = L.marker(
                 [-6.5868, 110.644],
                 {
 }
-            ).addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            ).addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
-            var icon_692fa3f0609ee822009609bdc095d307 = L.AwesomeMarkers.icon(
+            var icon_f536cd1a56742e64d10528f4c011801c = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -387,24 +387,24 @@ async function copyContent() {
             );
         
     
-        var popup_3feed1544060ddf1c223933a990ea2be = L.popup({
+        var popup_fd126e3a48dfc4301a533c8606d9c575 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_cb8309904fb5d7d9fbbd4f576221f358 = $(`<div id="html_cb8309904fb5d7d9fbbd4f576221f358" style="width: 100.0%; height: 100.0%;"><b>Balai Besar Perikanan Budidaya Air Payau (BBPBAP) Jepara</b></div>`)[0];
-                popup_3feed1544060ddf1c223933a990ea2be.setContent(html_cb8309904fb5d7d9fbbd4f576221f358);
+                var html_f2e5baf51b162494f7244f3715668e57 = $(`<div id="html_f2e5baf51b162494f7244f3715668e57" style="width: 100.0%; height: 100.0%;"><b>Balai Besar Perikanan Budidaya Air Payau (BBPBAP) Jepara</b></div>`)[0];
+                popup_fd126e3a48dfc4301a533c8606d9c575.setContent(html_f2e5baf51b162494f7244f3715668e57);
             
         
 
-        marker_088e033f63c628ba7b70040fc1d9b87f.bindPopup(popup_3feed1544060ddf1c223933a990ea2be)
+        marker_539c7731e66652cf134c878eff534af0.bindPopup(popup_fd126e3a48dfc4301a533c8606d9c575)
         ;
 
         
     
     
-            marker_088e033f63c628ba7b70040fc1d9b87f.bindTooltip(
+            marker_539c7731e66652cf134c878eff534af0.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -414,10 +414,10 @@ async function copyContent() {
             );
         
     
-                marker_088e033f63c628ba7b70040fc1d9b87f.setIcon(icon_692fa3f0609ee822009609bdc095d307);
+                marker_539c7731e66652cf134c878eff534af0.setIcon(icon_f536cd1a56742e64d10528f4c011801c);
             
     
-            var mouse_position_57e407b35a8e259fe6b16dbc95f90d49 = new L.Control.MousePosition(
+            var mouse_position_b0a85111f83e335b10d77592034828a7 = new L.Control.MousePosition(
                 {
   "position": "topright",
   "separator": " | ",
@@ -427,14 +427,14 @@ async function copyContent() {
   "prefix": "Mouse:",
 }
             );
-            mouse_position_57e407b35a8e259fe6b16dbc95f90d49.options["latFormatter"] =
+            mouse_position_b0a85111f83e335b10d77592034828a7.options["latFormatter"] =
                 function(num) {return L.Util.formatNum(num, 4) + ' º ';};;
-            mouse_position_57e407b35a8e259fe6b16dbc95f90d49.options["lngFormatter"] =
+            mouse_position_b0a85111f83e335b10d77592034828a7.options["lngFormatter"] =
                 function(num) {return L.Util.formatNum(num, 4) + ' º ';};;
-            map_4210a098d61ed3a432ae50e5eca0d4f7.addControl(mouse_position_57e407b35a8e259fe6b16dbc95f90d49);
+            map_3a981d59669b67e03b6f6bf695190480.addControl(mouse_position_b0a85111f83e335b10d77592034828a7);
         
     
-            var measure_control_02ebcd86c6545e0a3b4a20249fff7127 = new L.Control.Measure(
+            var measure_control_143dc1700f297396fbb7a165cbb6deb0 = new L.Control.Measure(
                 {
   "position": "topright",
   "primaryLengthUnit": "meters",
@@ -442,7 +442,7 @@ async function copyContent() {
   "primaryAreaUnit": "sqmeters",
   "secondaryAreaUnit": "acres",
 });
-            map_4210a098d61ed3a432ae50e5eca0d4f7.addControl(measure_control_02ebcd86c6545e0a3b4a20249fff7127);
+            map_3a981d59669b67e03b6f6bf695190480.addControl(measure_control_143dc1700f297396fbb7a165cbb6deb0);
 
             // Workaround for using this plugin with Leaflet>=1.8.0
             // https://github.com/ljagis/leaflet-measure/issues/171
@@ -461,20 +461,20 @@ async function copyContent() {
 
         
     
-            var feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2 = L.featureGroup(
+            var feature_group_188f24a9b89046ad7b8a366485a98efe = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_f09bb75d3e46618cce132aebb8611546 = L.marker(
+            var marker_0cd3ceed0f85abd4d9649e0a557c0553 = L.marker(
                 [-0.4779, 104.5773],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_500c32e2688129351ac8fe9f5c48e4a4 = L.AwesomeMarkers.icon(
+            var icon_60fb171abcbf24f29011bdd621636752 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -486,24 +486,24 @@ async function copyContent() {
             );
         
     
-        var popup_cbb5b5de1751505a720c87163f50dc08 = L.popup({
+        var popup_e5fc4de6b131f58dd2c84db0940fa6d9 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_dc71a8a1e5d93794dc8d7495b2367c1c = $(`<div id="html_dc71a8a1e5d93794dc8d7495b2367c1c" style="width: 100.0%; height: 100.0%;">     <h3>Dabo Airport</h3>     <p>Dabo Lama, Singkep, Lingga Regency, Riau Islands 29871 Indonesia</p>     <a href="https://www.google.com/maps/place/Dabo+Airport/@-0.4750782,104.5679691,14.08z/">Dabo Singkep map</a>     <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Sumatra-Enggano.jpg/800px-Sumatra-Enggano.jpg" target=_blank>Elevation</a>        <a href="https://maps.lib.utexas.edu/maps/ams/indonesia/txu-oclc-21752461-sa48-2.jpg">Lingga detail map</a>     <a href="https://maps.lib.utexas.edu/maps/ams/indonesia/txu-oclc-21752461-na48-14.jpg">Pulau Benan</a>     <a href="http://ctatlas.coraltriangleinitiative.org/Map?layers=1,3,2&lon=137.80402760&lat=-7.96639380&zoom=12">Indonesia Coral</a>     </div>`)[0];
-                popup_cbb5b5de1751505a720c87163f50dc08.setContent(html_dc71a8a1e5d93794dc8d7495b2367c1c);
+                var html_1ba60118eca396eba8431a1e98fd8f35 = $(`<div id="html_1ba60118eca396eba8431a1e98fd8f35" style="width: 100.0%; height: 100.0%;">     <h3>Dabo Airport</h3>     <p>Dabo Lama, Singkep, Lingga Regency, Riau Islands 29871 Indonesia</p><br>     <a href="https://www.google.com/maps/place/Dabo+Airport/@-0.4750782,104.5679691,14.08z/">Dabo Singkep map</a><br>     <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Sumatra-Enggano.jpg/800px-Sumatra-Enggano.jpg" target=_blank>Elevation</a> <br>       <a href="https://maps.lib.utexas.edu/maps/ams/indonesia/txu-oclc-21752461-sa48-2.jpg">Lingga detail map</a><br>     <a href="https://maps.lib.utexas.edu/maps/ams/indonesia/txu-oclc-21752461-na48-14.jpg">Pulau Benan</a><br>     <a href="http://ctatlas.coraltriangleinitiative.org/Map?layers=1,3,2&lon=137.80402760&lat=-7.96639380&zoom=12">Indonesia Coral</a><br>     <a href="https://kataomed.com/jadwal-kapal/jadwal-kapal-dari-penarik-lingga>roro Dabo ke Daik</a>     </div>`)[0];
+                popup_e5fc4de6b131f58dd2c84db0940fa6d9.setContent(html_1ba60118eca396eba8431a1e98fd8f35);
             
         
 
-        marker_f09bb75d3e46618cce132aebb8611546.bindPopup(popup_cbb5b5de1751505a720c87163f50dc08)
+        marker_0cd3ceed0f85abd4d9649e0a557c0553.bindPopup(popup_e5fc4de6b131f58dd2c84db0940fa6d9)
         ;
 
         
     
     
-            marker_f09bb75d3e46618cce132aebb8611546.bindTooltip(
+            marker_0cd3ceed0f85abd4d9649e0a557c0553.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -513,17 +513,17 @@ async function copyContent() {
             );
         
     
-                marker_f09bb75d3e46618cce132aebb8611546.setIcon(icon_500c32e2688129351ac8fe9f5c48e4a4);
+                marker_0cd3ceed0f85abd4d9649e0a557c0553.setIcon(icon_60fb171abcbf24f29011bdd621636752);
             
     
-            var marker_4ae1cbff2409177fd7c090dbb6e5c7a7 = L.marker(
+            var marker_2614e112ab65c235903780a74a5e1faf = L.marker(
                 [0.1529, 104.4687],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_529cacebd48ef0ed39b7cc7d497bbb74 = L.AwesomeMarkers.icon(
+            var icon_5abc76416238fe200b8197414322d4b0 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -534,24 +534,24 @@ async function copyContent() {
             );
         
     
-        var popup_e69727144304f8bb8a33f36891573ba8 = L.popup({
+        var popup_66fcdf06deb483de430c04a1bec882eb = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_c7942ae4b92feb6283cb64b50d1cadaf = $(`<div id="html_c7942ae4b92feb6283cb64b50d1cadaf" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Rejai</b></b><br>             <a href="https://www.google.com/maps/?q=0.1529,104.4687" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_e69727144304f8bb8a33f36891573ba8.setContent(html_c7942ae4b92feb6283cb64b50d1cadaf);
+                var html_dbb1e1cc22e237105cbef0e7d018ffe5 = $(`<div id="html_dbb1e1cc22e237105cbef0e7d018ffe5" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Rejai</b></b><br>             <a href="https://www.google.com/maps/?q=0.1529,104.4687" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_66fcdf06deb483de430c04a1bec882eb.setContent(html_dbb1e1cc22e237105cbef0e7d018ffe5);
             
         
 
-        marker_4ae1cbff2409177fd7c090dbb6e5c7a7.bindPopup(popup_e69727144304f8bb8a33f36891573ba8)
+        marker_2614e112ab65c235903780a74a5e1faf.bindPopup(popup_66fcdf06deb483de430c04a1bec882eb)
         ;
 
         
     
     
-            marker_4ae1cbff2409177fd7c090dbb6e5c7a7.bindTooltip(
+            marker_2614e112ab65c235903780a74a5e1faf.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -561,17 +561,17 @@ async function copyContent() {
             );
         
     
-                marker_4ae1cbff2409177fd7c090dbb6e5c7a7.setIcon(icon_529cacebd48ef0ed39b7cc7d497bbb74);
+                marker_2614e112ab65c235903780a74a5e1faf.setIcon(icon_5abc76416238fe200b8197414322d4b0);
             
     
-            var marker_dce2b9b8c19d7793a6d4ff0fa8b34ac9 = L.marker(
+            var marker_a992fe7f7f3a746944edd17e9cc8013b = L.marker(
                 [0.0465, 104.648],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_5d3fe74a4e140747bccbe64c1d09346a = L.AwesomeMarkers.icon(
+            var icon_b79fa2c1b4f974a9c2600a63e40ae827 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -582,24 +582,24 @@ async function copyContent() {
             );
         
     
-        var popup_40e148afe7a0930363ed113b1647d13b = L.popup({
+        var popup_24b50c5238f3631a25f8fdf51eb70835 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_db68a454ef7f1a538429cc648db4d999 = $(`<div id="html_db68a454ef7f1a538429cc648db4d999" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan  Senayan</b></b><br>             <a href="https://www.google.com/maps/?q=0.0465,104.648" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_40e148afe7a0930363ed113b1647d13b.setContent(html_db68a454ef7f1a538429cc648db4d999);
+                var html_c36e28c341d005198f9edbb4cb020c25 = $(`<div id="html_c36e28c341d005198f9edbb4cb020c25" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan  Senayang</b></b><br>             <a href="https://www.google.com/maps/?q=0.0465,104.648" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_24b50c5238f3631a25f8fdf51eb70835.setContent(html_c36e28c341d005198f9edbb4cb020c25);
             
         
 
-        marker_dce2b9b8c19d7793a6d4ff0fa8b34ac9.bindPopup(popup_40e148afe7a0930363ed113b1647d13b)
+        marker_a992fe7f7f3a746944edd17e9cc8013b.bindPopup(popup_24b50c5238f3631a25f8fdf51eb70835)
         ;
 
         
     
     
-            marker_dce2b9b8c19d7793a6d4ff0fa8b34ac9.bindTooltip(
+            marker_a992fe7f7f3a746944edd17e9cc8013b.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -609,17 +609,17 @@ async function copyContent() {
             );
         
     
-                marker_dce2b9b8c19d7793a6d4ff0fa8b34ac9.setIcon(icon_5d3fe74a4e140747bccbe64c1d09346a);
+                marker_a992fe7f7f3a746944edd17e9cc8013b.setIcon(icon_b79fa2c1b4f974a9c2600a63e40ae827);
             
     
-            var marker_c286c3225bc60b0643b89804b44c4c19 = L.marker(
+            var marker_95a7cb45e467d47ab5e3da3f5d063ac6 = L.marker(
                 [0.4672, 104.4498],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_b864c36457830d23448b5d16486fcefa = L.AwesomeMarkers.icon(
+            var icon_a1353c07d90aaab0e7118de960ad9956 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -630,24 +630,24 @@ async function copyContent() {
             );
         
     
-        var popup_07bdd9522eaffa88b2592b643eca3a2a = L.popup({
+        var popup_3b67d0616fb75636bf6f046b8a50ee31 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_37bc6e87378f347f5e805c50f12497cd = $(`<div id="html_37bc6e87378f347f5e805c50f12497cd" style="width: 100.0%; height: 100.0%;">             <b><b>Pulau Benan Ferry Terminal</b></b><br>             <a href="https://www.google.com/maps/?q=0.4672,104.4498" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_07bdd9522eaffa88b2592b643eca3a2a.setContent(html_37bc6e87378f347f5e805c50f12497cd);
+                var html_50fcff98ee0f2268f007d1d554319c5f = $(`<div id="html_50fcff98ee0f2268f007d1d554319c5f" style="width: 100.0%; height: 100.0%;">             <b><b>Pulau Benan Ferry Terminal</b></b><br>             <a href="https://www.google.com/maps/?q=0.4672,104.4498" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_3b67d0616fb75636bf6f046b8a50ee31.setContent(html_50fcff98ee0f2268f007d1d554319c5f);
             
         
 
-        marker_c286c3225bc60b0643b89804b44c4c19.bindPopup(popup_07bdd9522eaffa88b2592b643eca3a2a)
+        marker_95a7cb45e467d47ab5e3da3f5d063ac6.bindPopup(popup_3b67d0616fb75636bf6f046b8a50ee31)
         ;
 
         
     
     
-            marker_c286c3225bc60b0643b89804b44c4c19.bindTooltip(
+            marker_95a7cb45e467d47ab5e3da3f5d063ac6.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -657,17 +657,17 @@ async function copyContent() {
             );
         
     
-                marker_c286c3225bc60b0643b89804b44c4c19.setIcon(icon_b864c36457830d23448b5d16486fcefa);
+                marker_95a7cb45e467d47ab5e3da3f5d063ac6.setIcon(icon_a1353c07d90aaab0e7118de960ad9956);
             
     
-            var marker_57d763ca989421eb209914698a9f7a3c = L.marker(
+            var marker_1c4c4806aeeb153dd3c0f2fbe1afc455 = L.marker(
                 [0.3883, 104.5247],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_420c80b6469269e145c05f3ab4d9e867 = L.AwesomeMarkers.icon(
+            var icon_2ed84dcb59a7dab31e40ece4ce7500e7 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -678,24 +678,24 @@ async function copyContent() {
             );
         
     
-        var popup_ab970c3ec27bf6c0dc5f204fa8470ff1 = L.popup({
+        var popup_03d68f463a5edc001c4a8c5de6a374ab = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_a281d02b5c10d93cdf41fea8d46135fe = $(`<div id="html_a281d02b5c10d93cdf41fea8d46135fe" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Mesanak</b></b><br>             <a href="https://www.google.com/maps/?q=0.3883,104.5247" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_ab970c3ec27bf6c0dc5f204fa8470ff1.setContent(html_a281d02b5c10d93cdf41fea8d46135fe);
+                var html_bfbb71da26dbc375dfe29972f41af2b0 = $(`<div id="html_bfbb71da26dbc375dfe29972f41af2b0" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Mesanak</b></b><br>             <a href="https://www.google.com/maps/?q=0.3883,104.5247" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_03d68f463a5edc001c4a8c5de6a374ab.setContent(html_bfbb71da26dbc375dfe29972f41af2b0);
             
         
 
-        marker_57d763ca989421eb209914698a9f7a3c.bindPopup(popup_ab970c3ec27bf6c0dc5f204fa8470ff1)
+        marker_1c4c4806aeeb153dd3c0f2fbe1afc455.bindPopup(popup_03d68f463a5edc001c4a8c5de6a374ab)
         ;
 
         
     
     
-            marker_57d763ca989421eb209914698a9f7a3c.bindTooltip(
+            marker_1c4c4806aeeb153dd3c0f2fbe1afc455.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -705,17 +705,17 @@ async function copyContent() {
             );
         
     
-                marker_57d763ca989421eb209914698a9f7a3c.setIcon(icon_420c80b6469269e145c05f3ab4d9e867);
+                marker_1c4c4806aeeb153dd3c0f2fbe1afc455.setIcon(icon_2ed84dcb59a7dab31e40ece4ce7500e7);
             
     
-            var marker_59cdd955979e4f610db16f7710910e1b = L.marker(
+            var marker_c217ee417a0458ad0c06c46a82ed7c5b = L.marker(
                 [0.3684, 104.5272],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_d84b51ceeb7cf8c301514a25668dfb7f = L.AwesomeMarkers.icon(
+            var icon_9465cbcd1665dbad43c74664d6947d1e = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -726,24 +726,24 @@ async function copyContent() {
             );
         
     
-        var popup_c19de3a679e8e3278937140362d04634 = L.popup({
+        var popup_c0e388763d22f791fec33afceb4d9455 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_e3bd1d7b16e958c1238a6a7ad9cb51f4 = $(`<div id="html_e3bd1d7b16e958c1238a6a7ad9cb51f4" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Desa Mesanak</b></b><br>             <a href="https://www.google.com/maps/?q=0.3684,104.5272" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_c19de3a679e8e3278937140362d04634.setContent(html_e3bd1d7b16e958c1238a6a7ad9cb51f4);
+                var html_a5491b68025096ebc1542eea9571d3cb = $(`<div id="html_a5491b68025096ebc1542eea9571d3cb" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Desa Mesanak</b></b><br>             <a href="https://www.google.com/maps/?q=0.3684,104.5272" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_c0e388763d22f791fec33afceb4d9455.setContent(html_a5491b68025096ebc1542eea9571d3cb);
             
         
 
-        marker_59cdd955979e4f610db16f7710910e1b.bindPopup(popup_c19de3a679e8e3278937140362d04634)
+        marker_c217ee417a0458ad0c06c46a82ed7c5b.bindPopup(popup_c0e388763d22f791fec33afceb4d9455)
         ;
 
         
     
     
-            marker_59cdd955979e4f610db16f7710910e1b.bindTooltip(
+            marker_c217ee417a0458ad0c06c46a82ed7c5b.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -753,17 +753,17 @@ async function copyContent() {
             );
         
     
-                marker_59cdd955979e4f610db16f7710910e1b.setIcon(icon_d84b51ceeb7cf8c301514a25668dfb7f);
+                marker_c217ee417a0458ad0c06c46a82ed7c5b.setIcon(icon_9465cbcd1665dbad43c74664d6947d1e);
             
     
-            var marker_82a14ed3f7e77a76d16b4d6a158e6a6d = L.marker(
+            var marker_c3cc3750079fbf10c9933131b3189843 = L.marker(
                 [0.286, 104.4192],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_dd473aa9f39a507909c66a4ebd69ee03 = L.AwesomeMarkers.icon(
+            var icon_42e5e246f6cc682b1d535e41025bb5ac = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -774,24 +774,24 @@ async function copyContent() {
             );
         
     
-        var popup_9f31514c070fde9ff067da2b4501a8b3 = L.popup({
+        var popup_8014bc5eea18af968367eb7a24caf319 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_831332577a23f25312b3e8f17f6791d9 = $(`<div id="html_831332577a23f25312b3e8f17f6791d9" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Tajur Biru</b></b><br>             <a href="https://www.google.com/maps/?q=0.286,104.4192" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_9f31514c070fde9ff067da2b4501a8b3.setContent(html_831332577a23f25312b3e8f17f6791d9);
+                var html_2589c876e568ffab7774a0f9d1797330 = $(`<div id="html_2589c876e568ffab7774a0f9d1797330" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Tajur Biru</b></b><br>             <a href="https://www.google.com/maps/?q=0.286,104.4192" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_8014bc5eea18af968367eb7a24caf319.setContent(html_2589c876e568ffab7774a0f9d1797330);
             
         
 
-        marker_82a14ed3f7e77a76d16b4d6a158e6a6d.bindPopup(popup_9f31514c070fde9ff067da2b4501a8b3)
+        marker_c3cc3750079fbf10c9933131b3189843.bindPopup(popup_8014bc5eea18af968367eb7a24caf319)
         ;
 
         
     
     
-            marker_82a14ed3f7e77a76d16b4d6a158e6a6d.bindTooltip(
+            marker_c3cc3750079fbf10c9933131b3189843.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -801,17 +801,17 @@ async function copyContent() {
             );
         
     
-                marker_82a14ed3f7e77a76d16b4d6a158e6a6d.setIcon(icon_dd473aa9f39a507909c66a4ebd69ee03);
+                marker_c3cc3750079fbf10c9933131b3189843.setIcon(icon_42e5e246f6cc682b1d535e41025bb5ac);
             
     
-            var marker_895930ebb0695136738812b6234d8d78 = L.marker(
+            var marker_303e97d1467fa1453fa2055023abca77 = L.marker(
                 [-0.0065, 104.5062],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_32885f582bd260c33cc73ee7474259f3 = L.AwesomeMarkers.icon(
+            var icon_5c3b7ffb3944c258c5c89b2d7c1219bd = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -822,24 +822,24 @@ async function copyContent() {
             );
         
     
-        var popup_81105b80f9267af958620177fca45e84 = L.popup({
+        var popup_56802d485c10138783732a2b94aa0aaa = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_2f25fff237d2929cf47f29fee32222f4 = $(`<div id="html_2f25fff237d2929cf47f29fee32222f4" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Sungai Tenam</b></b><br>             <a href="https://www.google.com/maps/?q=-0.0065,104.5062" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_81105b80f9267af958620177fca45e84.setContent(html_2f25fff237d2929cf47f29fee32222f4);
+                var html_2500acb66da27c3df2e3d91ea5f1d6d2 = $(`<div id="html_2500acb66da27c3df2e3d91ea5f1d6d2" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Sungai Tenam</b></b><br>             <a href="https://www.google.com/maps/?q=-0.0065,104.5062" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_56802d485c10138783732a2b94aa0aaa.setContent(html_2500acb66da27c3df2e3d91ea5f1d6d2);
             
         
 
-        marker_895930ebb0695136738812b6234d8d78.bindPopup(popup_81105b80f9267af958620177fca45e84)
+        marker_303e97d1467fa1453fa2055023abca77.bindPopup(popup_56802d485c10138783732a2b94aa0aaa)
         ;
 
         
     
     
-            marker_895930ebb0695136738812b6234d8d78.bindTooltip(
+            marker_303e97d1467fa1453fa2055023abca77.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -849,17 +849,17 @@ async function copyContent() {
             );
         
     
-                marker_895930ebb0695136738812b6234d8d78.setIcon(icon_32885f582bd260c33cc73ee7474259f3);
+                marker_303e97d1467fa1453fa2055023abca77.setIcon(icon_5c3b7ffb3944c258c5c89b2d7c1219bd);
             
     
-            var marker_84ee6ceba46b7bfe1b00cfc0c4e17817 = L.marker(
+            var marker_f128f266895f68283b3061913b759e16 = L.marker(
                 [-0.0001, 104.4958],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_25f8a3e439f9ab6fb0306b8856130839 = L.AwesomeMarkers.icon(
+            var icon_8c2abe2561a0fc210c1073c78f05b8e9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -870,24 +870,24 @@ async function copyContent() {
             );
         
     
-        var popup_f9d86a7d76a6dda030ad5fb70cab27a6 = L.popup({
+        var popup_b461f094720dbfa1c6dbfdfa49e4abcb = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_3725ef81c0c6f6e66cf128b52262dd64 = $(`<div id="html_3725ef81c0c6f6e66cf128b52262dd64" style="width: 100.0%; height: 100.0%;">             <b><b>Tugu Khatulistiwa</b></b><br>             <a href="https://www.google.com/maps/?q=-0.0001,104.4958" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_f9d86a7d76a6dda030ad5fb70cab27a6.setContent(html_3725ef81c0c6f6e66cf128b52262dd64);
+                var html_151ac21c09bde64635d3b962b6fa106c = $(`<div id="html_151ac21c09bde64635d3b962b6fa106c" style="width: 100.0%; height: 100.0%;">             <b><b>Tugu Khatulistiwa</b></b><br>             <a href="https://www.google.com/maps/?q=-0.0001,104.4958" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_b461f094720dbfa1c6dbfdfa49e4abcb.setContent(html_151ac21c09bde64635d3b962b6fa106c);
             
         
 
-        marker_84ee6ceba46b7bfe1b00cfc0c4e17817.bindPopup(popup_f9d86a7d76a6dda030ad5fb70cab27a6)
+        marker_f128f266895f68283b3061913b759e16.bindPopup(popup_b461f094720dbfa1c6dbfdfa49e4abcb)
         ;
 
         
     
     
-            marker_84ee6ceba46b7bfe1b00cfc0c4e17817.bindTooltip(
+            marker_f128f266895f68283b3061913b759e16.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -897,17 +897,17 @@ async function copyContent() {
             );
         
     
-                marker_84ee6ceba46b7bfe1b00cfc0c4e17817.setIcon(icon_25f8a3e439f9ab6fb0306b8856130839);
+                marker_f128f266895f68283b3061913b759e16.setIcon(icon_8c2abe2561a0fc210c1073c78f05b8e9);
             
     
-            var marker_6f06e165bdcdba1c0a0c1b8083f506b2 = L.marker(
+            var marker_cbc6c49b71af44f3506958a3b19ad9de = L.marker(
                 [-0.0829, 104.6385],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_dd48e3ac9a2ba7c3df2025545cacd99a = L.AwesomeMarkers.icon(
+            var icon_abe577d77d9cebc4c98e1be29120cb9c = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -918,24 +918,24 @@ async function copyContent() {
             );
         
     
-        var popup_93e22e57002533cdcdab821bed8e62ab = L.popup({
+        var popup_7124def2c0c5922fbb245e0f2d88309b = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_3584d3faa9b3cd6e89e134e8b94cbdcd = $(`<div id="html_3584d3faa9b3cd6e89e134e8b94cbdcd" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Pancur</b></b><br>             <a href="https://www.google.com/maps/?q=-0.0829,104.6385" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_93e22e57002533cdcdab821bed8e62ab.setContent(html_3584d3faa9b3cd6e89e134e8b94cbdcd);
+                var html_9f0e9ae8933a4099506a3379e5eee556 = $(`<div id="html_9f0e9ae8933a4099506a3379e5eee556" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Pancur</b></b><br>             <a href="https://www.google.com/maps/?q=-0.0829,104.6385" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_7124def2c0c5922fbb245e0f2d88309b.setContent(html_9f0e9ae8933a4099506a3379e5eee556);
             
         
 
-        marker_6f06e165bdcdba1c0a0c1b8083f506b2.bindPopup(popup_93e22e57002533cdcdab821bed8e62ab)
+        marker_cbc6c49b71af44f3506958a3b19ad9de.bindPopup(popup_7124def2c0c5922fbb245e0f2d88309b)
         ;
 
         
     
     
-            marker_6f06e165bdcdba1c0a0c1b8083f506b2.bindTooltip(
+            marker_cbc6c49b71af44f3506958a3b19ad9de.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -945,17 +945,17 @@ async function copyContent() {
             );
         
     
-                marker_6f06e165bdcdba1c0a0c1b8083f506b2.setIcon(icon_dd48e3ac9a2ba7c3df2025545cacd99a);
+                marker_cbc6c49b71af44f3506958a3b19ad9de.setIcon(icon_abe577d77d9cebc4c98e1be29120cb9c);
             
     
-            var marker_c33f40e6d81fc2edebbbc32d8d1cdc9a = L.marker(
+            var marker_8bb103bb84dbd0db8d0c0a71179488dc = L.marker(
                 [-0.2759, 104.5205],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_73017887f4b80e6e45ce80481082d761 = L.AwesomeMarkers.icon(
+            var icon_385556a2c3af03e94c52cc73dfc4d28b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -966,24 +966,24 @@ async function copyContent() {
             );
         
     
-        var popup_5853cd24b8c42d4b5ceeedfb3c72f15b = L.popup({
+        var popup_6dfe2c839e6633094402c402d004bf36 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_5c9c0fa70bd355d007f97626129aa103 = $(`<div id="html_5c9c0fa70bd355d007f97626129aa103" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Roro Penarik</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2759,104.5205" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_5853cd24b8c42d4b5ceeedfb3c72f15b.setContent(html_5c9c0fa70bd355d007f97626129aa103);
+                var html_dba27c3333fe4a521c7d8bea449004c3 = $(`<div id="html_dba27c3333fe4a521c7d8bea449004c3" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Roro Penarik</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2759,104.5205" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_6dfe2c839e6633094402c402d004bf36.setContent(html_dba27c3333fe4a521c7d8bea449004c3);
             
         
 
-        marker_c33f40e6d81fc2edebbbc32d8d1cdc9a.bindPopup(popup_5853cd24b8c42d4b5ceeedfb3c72f15b)
+        marker_8bb103bb84dbd0db8d0c0a71179488dc.bindPopup(popup_6dfe2c839e6633094402c402d004bf36)
         ;
 
         
     
     
-            marker_c33f40e6d81fc2edebbbc32d8d1cdc9a.bindTooltip(
+            marker_8bb103bb84dbd0db8d0c0a71179488dc.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -993,17 +993,17 @@ async function copyContent() {
             );
         
     
-                marker_c33f40e6d81fc2edebbbc32d8d1cdc9a.setIcon(icon_73017887f4b80e6e45ce80481082d761);
+                marker_8bb103bb84dbd0db8d0c0a71179488dc.setIcon(icon_385556a2c3af03e94c52cc73dfc4d28b);
             
     
-            var marker_584016655b657ba8a1274fd762b4c7a5 = L.marker(
+            var marker_23d93019efb5fc234cff56ceb0b901bb = L.marker(
                 [-0.2528, 104.5951],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_200c62919463516622ea62bfa4a23794 = L.AwesomeMarkers.icon(
+            var icon_29ffa0597474f3049c92861b09df89cd = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1014,24 +1014,24 @@ async function copyContent() {
             );
         
     
-        var popup_ceabf9ee6839441693555c40aa735af3 = L.popup({
+        var popup_062a1d4e99992b1d1e61cce5b504e805 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_386355a284370b830964ca9357a1ed15 = $(`<div id="html_386355a284370b830964ca9357a1ed15" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Tanjung Buton</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2528,104.5951" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_ceabf9ee6839441693555c40aa735af3.setContent(html_386355a284370b830964ca9357a1ed15);
+                var html_6930285293ed9a09844f1cd9ccd3c6c4 = $(`<div id="html_6930285293ed9a09844f1cd9ccd3c6c4" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Tanjung Buton</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2528,104.5951" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_062a1d4e99992b1d1e61cce5b504e805.setContent(html_6930285293ed9a09844f1cd9ccd3c6c4);
             
         
 
-        marker_584016655b657ba8a1274fd762b4c7a5.bindPopup(popup_ceabf9ee6839441693555c40aa735af3)
+        marker_23d93019efb5fc234cff56ceb0b901bb.bindPopup(popup_062a1d4e99992b1d1e61cce5b504e805)
         ;
 
         
     
     
-            marker_584016655b657ba8a1274fd762b4c7a5.bindTooltip(
+            marker_23d93019efb5fc234cff56ceb0b901bb.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1041,17 +1041,17 @@ async function copyContent() {
             );
         
     
-                marker_584016655b657ba8a1274fd762b4c7a5.setIcon(icon_200c62919463516622ea62bfa4a23794);
+                marker_23d93019efb5fc234cff56ceb0b901bb.setIcon(icon_29ffa0597474f3049c92861b09df89cd);
             
     
-            var marker_7ff31ec412cd0529d2d95eb1cc79347e = L.marker(
+            var marker_3171e8adb03d00cc9a1d99d54749a564 = L.marker(
                 [-0.341, 104.4674],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_af982c320c5943a8fc61cb38704b5f1e = L.AwesomeMarkers.icon(
+            var icon_35b4523126b073a99e68314896327bee = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1062,24 +1062,24 @@ async function copyContent() {
             );
         
     
-        var popup_c7b877a543281114cfc3e2e9244d835d = L.popup({
+        var popup_91c28901fb9ea50f5bfc3ebc0ed1cd48 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_09cdb04d7cdddff6d8dcc530742052c2 = $(`<div id="html_09cdb04d7cdddff6d8dcc530742052c2" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Jagoh<br>Dabo Singkep</b></b><br>             <a href="https://www.google.com/maps/?q=-0.341,104.4674" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_c7b877a543281114cfc3e2e9244d835d.setContent(html_09cdb04d7cdddff6d8dcc530742052c2);
+                var html_73af9e8f16b75dbac60f489402c4ce94 = $(`<div id="html_73af9e8f16b75dbac60f489402c4ce94" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Jagoh<br>Dabo Singkep</b></b><br>             <a href="https://www.google.com/maps/?q=-0.341,104.4674" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_91c28901fb9ea50f5bfc3ebc0ed1cd48.setContent(html_73af9e8f16b75dbac60f489402c4ce94);
             
         
 
-        marker_7ff31ec412cd0529d2d95eb1cc79347e.bindPopup(popup_c7b877a543281114cfc3e2e9244d835d)
+        marker_3171e8adb03d00cc9a1d99d54749a564.bindPopup(popup_91c28901fb9ea50f5bfc3ebc0ed1cd48)
         ;
 
         
     
     
-            marker_7ff31ec412cd0529d2d95eb1cc79347e.bindTooltip(
+            marker_3171e8adb03d00cc9a1d99d54749a564.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1089,17 +1089,17 @@ async function copyContent() {
             );
         
     
-                marker_7ff31ec412cd0529d2d95eb1cc79347e.setIcon(icon_af982c320c5943a8fc61cb38704b5f1e);
+                marker_3171e8adb03d00cc9a1d99d54749a564.setIcon(icon_35b4523126b073a99e68314896327bee);
             
     
-            var marker_594fe4546e843b20010946d98c9d80f3 = L.marker(
+            var marker_6477b9cd524bfb1b05d24d112d7577ea = L.marker(
                 [-0.268, 104.9459],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_013e8e85a9b4142d21bd96f9d428b77c = L.AwesomeMarkers.icon(
+            var icon_55aee0b8798ba3da5f5015297d3860f5 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1110,24 +1110,24 @@ async function copyContent() {
             );
         
     
-        var popup_b8c5854dfd28a42ecb1be2e052774271 = L.popup({
+        var popup_ccb279f841e0f66d39a201aaea88ab02 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_a489d0816431e34ae60db7f7ea0d700a = $(`<div id="html_a489d0816431e34ae60db7f7ea0d700a" style="width: 100.0%; height: 100.0%;">             <b><b>Pantai Dungung</b></b><br>             <a href="https://www.google.com/maps/?q=-0.268,104.9459" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_b8c5854dfd28a42ecb1be2e052774271.setContent(html_a489d0816431e34ae60db7f7ea0d700a);
+                var html_40f051861ab1a818941ab1c1caaf77ad = $(`<div id="html_40f051861ab1a818941ab1c1caaf77ad" style="width: 100.0%; height: 100.0%;">             <b><b>Pantai Dungung</b></b><br>             <a href="https://www.google.com/maps/?q=-0.268,104.9459" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_ccb279f841e0f66d39a201aaea88ab02.setContent(html_40f051861ab1a818941ab1c1caaf77ad);
             
         
 
-        marker_594fe4546e843b20010946d98c9d80f3.bindPopup(popup_b8c5854dfd28a42ecb1be2e052774271)
+        marker_6477b9cd524bfb1b05d24d112d7577ea.bindPopup(popup_ccb279f841e0f66d39a201aaea88ab02)
         ;
 
         
     
     
-            marker_594fe4546e843b20010946d98c9d80f3.bindTooltip(
+            marker_6477b9cd524bfb1b05d24d112d7577ea.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1137,17 +1137,17 @@ async function copyContent() {
             );
         
     
-                marker_594fe4546e843b20010946d98c9d80f3.setIcon(icon_013e8e85a9b4142d21bd96f9d428b77c);
+                marker_6477b9cd524bfb1b05d24d112d7577ea.setIcon(icon_55aee0b8798ba3da5f5015297d3860f5);
             
     
-            var marker_104da05837047d95b9fa359d68d034f0 = L.marker(
+            var marker_174569503e6144d286acedc76de90a08 = L.marker(
                 [-0.2712, 104.912],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_1fba8c86e88e87bbd9c954ef793e858d = L.AwesomeMarkers.icon(
+            var icon_408fe1e8f62b8c467b633ad221890f19 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1158,24 +1158,24 @@ async function copyContent() {
             );
         
     
-        var popup_a2f900770417b1a81273ea4619e55b91 = L.popup({
+        var popup_18f82e67de5f34776697304d80404c5e = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_fc92c1d3ce3aaec1a92abcb313ff7fa1 = $(`<div id="html_fc92c1d3ce3aaec1a92abcb313ff7fa1" style="width: 100.0%; height: 100.0%;">             <b><b>Kantor Desa Teluk</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2712,104.912" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_a2f900770417b1a81273ea4619e55b91.setContent(html_fc92c1d3ce3aaec1a92abcb313ff7fa1);
+                var html_b7612d786aac3dcae2145c0fb8dd871b = $(`<div id="html_b7612d786aac3dcae2145c0fb8dd871b" style="width: 100.0%; height: 100.0%;">             <b><b>Kantor Desa Teluk</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2712,104.912" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_18f82e67de5f34776697304d80404c5e.setContent(html_b7612d786aac3dcae2145c0fb8dd871b);
             
         
 
-        marker_104da05837047d95b9fa359d68d034f0.bindPopup(popup_a2f900770417b1a81273ea4619e55b91)
+        marker_174569503e6144d286acedc76de90a08.bindPopup(popup_18f82e67de5f34776697304d80404c5e)
         ;
 
         
     
     
-            marker_104da05837047d95b9fa359d68d034f0.bindTooltip(
+            marker_174569503e6144d286acedc76de90a08.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1185,17 +1185,17 @@ async function copyContent() {
             );
         
     
-                marker_104da05837047d95b9fa359d68d034f0.setIcon(icon_1fba8c86e88e87bbd9c954ef793e858d);
+                marker_174569503e6144d286acedc76de90a08.setIcon(icon_408fe1e8f62b8c467b633ad221890f19);
             
     
-            var marker_4e5f6189d74c269e3217f96505df29bb = L.marker(
+            var marker_aa6b63b140fd0b8dfb8950c9320c194f = L.marker(
                 [-0.2326, 104.5031],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_dac9e7727aaa12e9a84ade1d87c066c4 = L.AwesomeMarkers.icon(
+            var icon_ca6eff44ced9a99638c076364b0aa1d7 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1206,24 +1206,24 @@ async function copyContent() {
             );
         
     
-        var popup_40685c4ec53b95231e1d57f8c6e2aec5 = L.popup({
+        var popup_0f0018023f7f7d3eb7fb1537ba589991 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_29b40ee2860ca39b96785cf012abfdcb = $(`<div id="html_29b40ee2860ca39b96785cf012abfdcb" style="width: 100.0%; height: 100.0%;">             <b><b>Wisata Mangrove</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2326,104.5031" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_40685c4ec53b95231e1d57f8c6e2aec5.setContent(html_29b40ee2860ca39b96785cf012abfdcb);
+                var html_506220ca8778453dc632304a7eca1000 = $(`<div id="html_506220ca8778453dc632304a7eca1000" style="width: 100.0%; height: 100.0%;">             <b><b>Wisata Mangrove</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2326,104.5031" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_0f0018023f7f7d3eb7fb1537ba589991.setContent(html_506220ca8778453dc632304a7eca1000);
             
         
 
-        marker_4e5f6189d74c269e3217f96505df29bb.bindPopup(popup_40685c4ec53b95231e1d57f8c6e2aec5)
+        marker_aa6b63b140fd0b8dfb8950c9320c194f.bindPopup(popup_0f0018023f7f7d3eb7fb1537ba589991)
         ;
 
         
     
     
-            marker_4e5f6189d74c269e3217f96505df29bb.bindTooltip(
+            marker_aa6b63b140fd0b8dfb8950c9320c194f.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1233,17 +1233,17 @@ async function copyContent() {
             );
         
     
-                marker_4e5f6189d74c269e3217f96505df29bb.setIcon(icon_dac9e7727aaa12e9a84ade1d87c066c4);
+                marker_aa6b63b140fd0b8dfb8950c9320c194f.setIcon(icon_ca6eff44ced9a99638c076364b0aa1d7);
             
     
-            var marker_c1ea6d5fdcc2241ed4cbcd05c82d4ec4 = L.marker(
+            var marker_e2d292f714465f23373c42c23dd23fc1 = L.marker(
                 [-0.2685, 104.5294],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_fc684a0d4780591a05526337560d1add = L.AwesomeMarkers.icon(
+            var icon_47044288e8a343409e4236ef24575085 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1254,24 +1254,24 @@ async function copyContent() {
             );
         
     
-        var popup_8f44619ec72ceb06e3114cc31f678a7d = L.popup({
+        var popup_73c83af5deb8222f484e37dcb13f5ab6 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_515b61b7416632159d24f1e2ede7ed77 = $(`<div id="html_515b61b7416632159d24f1e2ede7ed77" style="width: 100.0%; height: 100.0%;">             <b><b>Pantai Moyang</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2685,104.5294" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_8f44619ec72ceb06e3114cc31f678a7d.setContent(html_515b61b7416632159d24f1e2ede7ed77);
+                var html_0481146f9abb4ddb93e60dd7f4fd58cf = $(`<div id="html_0481146f9abb4ddb93e60dd7f4fd58cf" style="width: 100.0%; height: 100.0%;">             <b><b>Pantai Moyang</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2685,104.5294" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_73c83af5deb8222f484e37dcb13f5ab6.setContent(html_0481146f9abb4ddb93e60dd7f4fd58cf);
             
         
 
-        marker_c1ea6d5fdcc2241ed4cbcd05c82d4ec4.bindPopup(popup_8f44619ec72ceb06e3114cc31f678a7d)
+        marker_e2d292f714465f23373c42c23dd23fc1.bindPopup(popup_73c83af5deb8222f484e37dcb13f5ab6)
         ;
 
         
     
     
-            marker_c1ea6d5fdcc2241ed4cbcd05c82d4ec4.bindTooltip(
+            marker_e2d292f714465f23373c42c23dd23fc1.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1281,17 +1281,17 @@ async function copyContent() {
             );
         
     
-                marker_c1ea6d5fdcc2241ed4cbcd05c82d4ec4.setIcon(icon_fc684a0d4780591a05526337560d1add);
+                marker_e2d292f714465f23373c42c23dd23fc1.setIcon(icon_47044288e8a343409e4236ef24575085);
             
     
-            var marker_08717d7649f37228e17afb14f4cfd499 = L.marker(
+            var marker_fb0b51eca798bd47b82d5dad9cb217a1 = L.marker(
                 [-0.2623, 104.5369],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_9d432613f2433fc0ceba477fa6ecd18f = L.AwesomeMarkers.icon(
+            var icon_eda4bd95a19065f22b40c784e91a290d = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1302,24 +1302,24 @@ async function copyContent() {
             );
         
     
-        var popup_5956c13f73a147d1f697f49434676040 = L.popup({
+        var popup_26050d318142fc74b170975a903970fb = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_96197edfda108cc701d5d3197b5f17ea = $(`<div id="html_96197edfda108cc701d5d3197b5f17ea" style="width: 100.0%; height: 100.0%;">             <b><b>Pantai Pasir Panjang</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2623,104.5369" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_5956c13f73a147d1f697f49434676040.setContent(html_96197edfda108cc701d5d3197b5f17ea);
+                var html_d3c78dbe5ba1a6bb9f1ac88e22844a5b = $(`<div id="html_d3c78dbe5ba1a6bb9f1ac88e22844a5b" style="width: 100.0%; height: 100.0%;">             <b><b>Pantai Pasir Panjang</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2623,104.5369" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_26050d318142fc74b170975a903970fb.setContent(html_d3c78dbe5ba1a6bb9f1ac88e22844a5b);
             
         
 
-        marker_08717d7649f37228e17afb14f4cfd499.bindPopup(popup_5956c13f73a147d1f697f49434676040)
+        marker_fb0b51eca798bd47b82d5dad9cb217a1.bindPopup(popup_26050d318142fc74b170975a903970fb)
         ;
 
         
     
     
-            marker_08717d7649f37228e17afb14f4cfd499.bindTooltip(
+            marker_fb0b51eca798bd47b82d5dad9cb217a1.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1329,17 +1329,17 @@ async function copyContent() {
             );
         
     
-                marker_08717d7649f37228e17afb14f4cfd499.setIcon(icon_9d432613f2433fc0ceba477fa6ecd18f);
+                marker_fb0b51eca798bd47b82d5dad9cb217a1.setIcon(icon_eda4bd95a19065f22b40c784e91a290d);
             
     
-            var marker_d1a66a5aa163fc3ea603be7c677673fc = L.marker(
+            var marker_489cff842fb78f5296d9881395d6a61a = L.marker(
                 [-0.3132, 104.8583],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_d8a629dffcc5973114ce6e0dfc9ff1c1 = L.AwesomeMarkers.icon(
+            var icon_9f1093074e66e8b4271a7654cb6bda9b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1350,24 +1350,24 @@ async function copyContent() {
             );
         
     
-        var popup_01146cffdfe526bc9f44288b337f4e7a = L.popup({
+        var popup_088ae2257217bd1b19d1c5d627d0c894 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_471d77a817fb6ce60c1c810f22abe098 = $(`<div id="html_471d77a817fb6ce60c1c810f22abe098" style="width: 100.0%; height: 100.0%;">             <b><b>Pantai Mempanak</b></b><br>             <a href="https://www.google.com/maps/?q=-0.3132,104.8583" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_01146cffdfe526bc9f44288b337f4e7a.setContent(html_471d77a817fb6ce60c1c810f22abe098);
+                var html_ad4460ea2daf312bcbc88906d3192ad5 = $(`<div id="html_ad4460ea2daf312bcbc88906d3192ad5" style="width: 100.0%; height: 100.0%;">             <b><b>Pantai Mempanak</b></b><br>             <a href="https://www.google.com/maps/?q=-0.3132,104.8583" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_088ae2257217bd1b19d1c5d627d0c894.setContent(html_ad4460ea2daf312bcbc88906d3192ad5);
             
         
 
-        marker_d1a66a5aa163fc3ea603be7c677673fc.bindPopup(popup_01146cffdfe526bc9f44288b337f4e7a)
+        marker_489cff842fb78f5296d9881395d6a61a.bindPopup(popup_088ae2257217bd1b19d1c5d627d0c894)
         ;
 
         
     
     
-            marker_d1a66a5aa163fc3ea603be7c677673fc.bindTooltip(
+            marker_489cff842fb78f5296d9881395d6a61a.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1377,17 +1377,17 @@ async function copyContent() {
             );
         
     
-                marker_d1a66a5aa163fc3ea603be7c677673fc.setIcon(icon_d8a629dffcc5973114ce6e0dfc9ff1c1);
+                marker_489cff842fb78f5296d9881395d6a61a.setIcon(icon_9f1093074e66e8b4271a7654cb6bda9b);
             
     
-            var marker_c0b1b858f724ce380978926f1e0a2e89 = L.marker(
+            var marker_d5aaf9d8ca4c9710337fc8acbb94baa3 = L.marker(
                 [0.4633, 104.4542],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_ac681a0c481107a4a95743f684710639 = L.AwesomeMarkers.icon(
+            var icon_ce4a2502ad7b9a0ea505c2164acc2e07 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -1398,24 +1398,24 @@ async function copyContent() {
             );
         
     
-        var popup_b7ee4ff75e1a823706eb59f87945bd43 = L.popup({
+        var popup_e10db2f0c801a481262ecef7ec73df15 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_79156f3b493c88dc63bfa954fa000714 = $(`<div id="html_79156f3b493c88dc63bfa954fa000714" style="width: 100.0%; height: 100.0%;">             <b><b>PT Innovare</b></b><br>             <a href="https://www.google.com/maps/?q=0.4633,104.4542" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_b7ee4ff75e1a823706eb59f87945bd43.setContent(html_79156f3b493c88dc63bfa954fa000714);
+                var html_2371223530d7e7ac4b6ed32e99cb7297 = $(`<div id="html_2371223530d7e7ac4b6ed32e99cb7297" style="width: 100.0%; height: 100.0%;">             <b><b>PT Innovare</b></b><br>             <a href="https://www.google.com/maps/?q=0.4633,104.4542" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_e10db2f0c801a481262ecef7ec73df15.setContent(html_2371223530d7e7ac4b6ed32e99cb7297);
             
         
 
-        marker_c0b1b858f724ce380978926f1e0a2e89.bindPopup(popup_b7ee4ff75e1a823706eb59f87945bd43)
+        marker_d5aaf9d8ca4c9710337fc8acbb94baa3.bindPopup(popup_e10db2f0c801a481262ecef7ec73df15)
         ;
 
         
     
     
-            marker_c0b1b858f724ce380978926f1e0a2e89.bindTooltip(
+            marker_d5aaf9d8ca4c9710337fc8acbb94baa3.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1425,17 +1425,305 @@ async function copyContent() {
             );
         
     
-                marker_c0b1b858f724ce380978926f1e0a2e89.setIcon(icon_ac681a0c481107a4a95743f684710639);
+                marker_d5aaf9d8ca4c9710337fc8acbb94baa3.setIcon(icon_ce4a2502ad7b9a0ea505c2164acc2e07);
             
     
-            var marker_48377326d9dbcfbb12be43a313c43fcb = L.marker(
+            var marker_9570f476eae710e900af27ddf8d8c473 = L.marker(
+                [-0.1402, 104.6138],
+                {
+}
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
+        
+    
+            var icon_a396454f919e7682be374a89b484e1c2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_117fd00f982dc34c283f2059b7fcce77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99f7db0135575f65f2a23ba8968b5140 = $(`<div id="html_99f7db0135575f65f2a23ba8968b5140" style="width: 100.0%; height: 100.0%;">             <b><b>Kantor Desa Resun</b></b><br>             <a href="https://www.google.com/maps/?q=-0.1402,104.6138" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_117fd00f982dc34c283f2059b7fcce77.setContent(html_99f7db0135575f65f2a23ba8968b5140);
+            
+        
+
+        marker_9570f476eae710e900af27ddf8d8c473.bindPopup(popup_117fd00f982dc34c283f2059b7fcce77)
+        ;
+
+        
+    
+    
+            marker_9570f476eae710e900af27ddf8d8c473.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9570f476eae710e900af27ddf8d8c473.setIcon(icon_a396454f919e7682be374a89b484e1c2);
+            
+    
+            var marker_d878c31cc1650b4ee5c01d0deca8bf69 = L.marker(
+                [-0.1282, 104.6175],
+                {
+}
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
+        
+    
+            var icon_91d400579d074856ccdc43f8488bdfdc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbc7d9f156ab1a0927da7dea82ca6e37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a2cfd3087b439c40ba6b048a5a27a81 = $(`<div id="html_9a2cfd3087b439c40ba6b048a5a27a81" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Resun</b></b><br>             <a href="https://www.google.com/maps/?q=-0.1282,104.6175" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_fbc7d9f156ab1a0927da7dea82ca6e37.setContent(html_9a2cfd3087b439c40ba6b048a5a27a81);
+            
+        
+
+        marker_d878c31cc1650b4ee5c01d0deca8bf69.bindPopup(popup_fbc7d9f156ab1a0927da7dea82ca6e37)
+        ;
+
+        
+    
+    
+            marker_d878c31cc1650b4ee5c01d0deca8bf69.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d878c31cc1650b4ee5c01d0deca8bf69.setIcon(icon_91d400579d074856ccdc43f8488bdfdc);
+            
+    
+            var marker_4c255529bbadb8971398431bdfc856d7 = L.marker(
+                [-0.1709, 104.6115],
+                {
+}
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
+        
+    
+            var icon_972453b1bd1c923e08551ef1cd97f927 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98a0f5228f33553217717bca52f4b1ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e4d886c7aeb19001d5e88674dad2ad2 = $(`<div id="html_3e4d886c7aeb19001d5e88674dad2ad2" style="width: 100.0%; height: 100.0%;">             <b><b>Panggak Darat</b></b><br>             <a href="https://www.google.com/maps/?q=-0.1709,104.6115" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_98a0f5228f33553217717bca52f4b1ec.setContent(html_3e4d886c7aeb19001d5e88674dad2ad2);
+            
+        
+
+        marker_4c255529bbadb8971398431bdfc856d7.bindPopup(popup_98a0f5228f33553217717bca52f4b1ec)
+        ;
+
+        
+    
+    
+            marker_4c255529bbadb8971398431bdfc856d7.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c255529bbadb8971398431bdfc856d7.setIcon(icon_972453b1bd1c923e08551ef1cd97f927);
+            
+    
+            var marker_04a8070799f5b2cfe753f800d85b08d5 = L.marker(
+                [-0.2537, 104.5407],
+                {
+}
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
+        
+    
+            var icon_406b37e1c2b8bfac08916795c1a5cd33 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f3047d0967badcf96fea76fd359f021b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0a67012c9f9056c3096626ae5b1ca18 = $(`<div id="html_c0a67012c9f9056c3096626ae5b1ca18" style="width: 100.0%; height: 100.0%;">             <b><b>SMPN 3 Lingga</b></b><br>             <a href="https://www.google.com/maps/?q=-0.2537,104.5407" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_f3047d0967badcf96fea76fd359f021b.setContent(html_c0a67012c9f9056c3096626ae5b1ca18);
+            
+        
+
+        marker_04a8070799f5b2cfe753f800d85b08d5.bindPopup(popup_f3047d0967badcf96fea76fd359f021b)
+        ;
+
+        
+    
+    
+            marker_04a8070799f5b2cfe753f800d85b08d5.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_04a8070799f5b2cfe753f800d85b08d5.setIcon(icon_406b37e1c2b8bfac08916795c1a5cd33);
+            
+    
+            var marker_a125e617a4e2c1aae02137c594625e40 = L.marker(
+                [-0.325, 104.4611],
+                {
+}
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
+        
+    
+            var icon_46c40a56e68264fb59afea93348ee239 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b11a1d4488dd5fea4c8d7d180aeb320 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_043865e64190cd84097f4a16a7f5f375 = $(`<div id="html_043865e64190cd84097f4a16a7f5f375" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhaan Penuba</b></b><br>             <a href="https://www.google.com/maps/?q=-0.325,104.4611" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_1b11a1d4488dd5fea4c8d7d180aeb320.setContent(html_043865e64190cd84097f4a16a7f5f375);
+            
+        
+
+        marker_a125e617a4e2c1aae02137c594625e40.bindPopup(popup_1b11a1d4488dd5fea4c8d7d180aeb320)
+        ;
+
+        
+    
+    
+            marker_a125e617a4e2c1aae02137c594625e40.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a125e617a4e2c1aae02137c594625e40.setIcon(icon_46c40a56e68264fb59afea93348ee239);
+            
+    
+            var marker_7bcab133e02591827aefdb57005e2c76 = L.marker(
+                [0.0172, 104.4955],
+                {
+}
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
+        
+    
+            var icon_63b019b30b9ce294f4d5eb3253469989 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13f234fdd7f8c9a814b9b893705b33a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c7fb534f11fb8e8b44a17f6d9604146 = $(`<div id="html_4c7fb534f11fb8e8b44a17f6d9604146" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan T. Kelit</b></b><br>             <a href="https://www.google.com/maps/?q=0.0172,104.4955" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_13f234fdd7f8c9a814b9b893705b33a5.setContent(html_4c7fb534f11fb8e8b44a17f6d9604146);
+            
+        
+
+        marker_7bcab133e02591827aefdb57005e2c76.bindPopup(popup_13f234fdd7f8c9a814b9b893705b33a5)
+        ;
+
+        
+    
+    
+            marker_7bcab133e02591827aefdb57005e2c76.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7bcab133e02591827aefdb57005e2c76.setIcon(icon_63b019b30b9ce294f4d5eb3253469989);
+            
+    
+            var marker_5c7d3c6a6a838f0862f5e3f4890de1d3 = L.marker(
                 [0.6382, 104.2607],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_e9c4b0b287504f4a157644bc1fb2d9da = L.AwesomeMarkers.icon(
+            var icon_255cf949cb31bdf99ce785069c6a045b = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1446,24 +1734,24 @@ async function copyContent() {
             );
         
     
-        var popup_f0b1bde8177e4f9589dbc77d3b8a6f2d = L.popup({
+        var popup_352607d89798d264636bf9972246a6cb = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_7fdc1411e8b36098b26b60d55baf62bd = $(`<div id="html_7fdc1411e8b36098b26b60d55baf62bd" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Hasim Balerang</b></b><br>             <a href="https://www.google.com/maps/?q=0.6382,104.2607" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_f0b1bde8177e4f9589dbc77d3b8a6f2d.setContent(html_7fdc1411e8b36098b26b60d55baf62bd);
+                var html_f532affd6680f1a2cd8054c9802e5aa8 = $(`<div id="html_f532affd6680f1a2cd8054c9802e5aa8" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Hasim Balerang</b></b><br>             <a href="https://www.google.com/maps/?q=0.6382,104.2607" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_352607d89798d264636bf9972246a6cb.setContent(html_f532affd6680f1a2cd8054c9802e5aa8);
             
         
 
-        marker_48377326d9dbcfbb12be43a313c43fcb.bindPopup(popup_f0b1bde8177e4f9589dbc77d3b8a6f2d)
+        marker_5c7d3c6a6a838f0862f5e3f4890de1d3.bindPopup(popup_352607d89798d264636bf9972246a6cb)
         ;
 
         
     
     
-            marker_48377326d9dbcfbb12be43a313c43fcb.bindTooltip(
+            marker_5c7d3c6a6a838f0862f5e3f4890de1d3.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1473,17 +1761,17 @@ async function copyContent() {
             );
         
     
-                marker_48377326d9dbcfbb12be43a313c43fcb.setIcon(icon_e9c4b0b287504f4a157644bc1fb2d9da);
+                marker_5c7d3c6a6a838f0862f5e3f4890de1d3.setIcon(icon_255cf949cb31bdf99ce785069c6a045b);
             
     
-            var marker_57037669122fcb2aa7e3742d8b0d736d = L.marker(
+            var marker_0f6927913767ade691aa4fa284b6cbc8 = L.marker(
                 [0.9321, 104.4382],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_241775ed61b873bfdee6e4a489237c2b = L.AwesomeMarkers.icon(
+            var icon_85ea5106b1b4baf23d1529c3ae703264 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1494,24 +1782,24 @@ async function copyContent() {
             );
         
     
-        var popup_a3131f862b25d60e44ff154fc36f3313 = L.popup({
+        var popup_4f413f06878ce9b67649ab12a07a2d93 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_62cff4082ef9c94e65ebbc8e9e2addb7 = $(`<div id="html_62cff4082ef9c94e65ebbc8e9e2addb7" style="width: 100.0%; height: 100.0%;">     <h3>Pelabuhan Kijang</h3>     <a href="">Ferry to Lingga and Annamas</a>     <a href="">Ferry to Singapore</a>     <a href="">Pulau Benan</a>     </div>`)[0];
-                popup_a3131f862b25d60e44ff154fc36f3313.setContent(html_62cff4082ef9c94e65ebbc8e9e2addb7);
+                var html_8a3711b762e227e043656a834f7fb6b4 = $(`<div id="html_8a3711b762e227e043656a834f7fb6b4" style="width: 100.0%; height: 100.0%;">     <h3>Pelabuhan Kijang</h3>     <a href="">Ferry to Lingga and Annamas</a>     <a href="">Ferry to Singapore</a>     <a href="">Pulau Benan</a>     </div>`)[0];
+                popup_4f413f06878ce9b67649ab12a07a2d93.setContent(html_8a3711b762e227e043656a834f7fb6b4);
             
         
 
-        marker_57037669122fcb2aa7e3742d8b0d736d.bindPopup(popup_a3131f862b25d60e44ff154fc36f3313)
+        marker_0f6927913767ade691aa4fa284b6cbc8.bindPopup(popup_4f413f06878ce9b67649ab12a07a2d93)
         ;
 
         
     
     
-            marker_57037669122fcb2aa7e3742d8b0d736d.bindTooltip(
+            marker_0f6927913767ade691aa4fa284b6cbc8.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1521,17 +1809,17 @@ async function copyContent() {
             );
         
     
-                marker_57037669122fcb2aa7e3742d8b0d736d.setIcon(icon_241775ed61b873bfdee6e4a489237c2b);
+                marker_0f6927913767ade691aa4fa284b6cbc8.setIcon(icon_85ea5106b1b4baf23d1529c3ae703264);
             
     
-            var marker_83d009bff86d09b01bd449fd527d5a0b = L.marker(
+            var marker_d6d96be4ac9d0e937f1be2932f48ed5e = L.marker(
                 [1.0353, 104.1332],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_c845c6c9aa2f8b156f9259738776c43c = L.AwesomeMarkers.icon(
+            var icon_c167f589e98c6b79cef348db543a3eb5 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1542,24 +1830,24 @@ async function copyContent() {
             );
         
     
-        var popup_d039a8f2bdcb302ffacc7790242b3570 = L.popup({
+        var popup_a2545b8912ba3576175f3e4e1845c7c7 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_7bbe19d055d144db9ce1d491afc660c8 = $(`<div id="html_7bbe19d055d144db9ce1d491afc660c8" style="width: 100.0%; height: 100.0%;">     <h3>Pelabuhan Telaga Punggur</h3>     <a href="">Ferry to Lingga and Annamas</a>     <a href="">Pulau Benan</a>     </div>`)[0];
-                popup_d039a8f2bdcb302ffacc7790242b3570.setContent(html_7bbe19d055d144db9ce1d491afc660c8);
+                var html_0172b2f0f05985cf060a8b9b1768c67a = $(`<div id="html_0172b2f0f05985cf060a8b9b1768c67a" style="width: 100.0%; height: 100.0%;">     <h3>Pelabuhan Telaga Punggur</h3>     <a href="">Ferry to Lingga and Annamas</a>     <a href="">Pulau Benan</a>     </div>`)[0];
+                popup_a2545b8912ba3576175f3e4e1845c7c7.setContent(html_0172b2f0f05985cf060a8b9b1768c67a);
             
         
 
-        marker_83d009bff86d09b01bd449fd527d5a0b.bindPopup(popup_d039a8f2bdcb302ffacc7790242b3570)
+        marker_d6d96be4ac9d0e937f1be2932f48ed5e.bindPopup(popup_a2545b8912ba3576175f3e4e1845c7c7)
         ;
 
         
     
     
-            marker_83d009bff86d09b01bd449fd527d5a0b.bindTooltip(
+            marker_d6d96be4ac9d0e937f1be2932f48ed5e.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1569,17 +1857,17 @@ async function copyContent() {
             );
         
     
-                marker_83d009bff86d09b01bd449fd527d5a0b.setIcon(icon_c845c6c9aa2f8b156f9259738776c43c);
+                marker_d6d96be4ac9d0e937f1be2932f48ed5e.setIcon(icon_c167f589e98c6b79cef348db543a3eb5);
             
     
-            var marker_e0e6c2103e4fd2b71a0199c7434b6832 = L.marker(
+            var marker_652e68c70f6a502aa5e99444ff6f1980 = L.marker(
                 [0.6115, 104.2885],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_c8c5006c81869b0a5e19aa3174ac2c5b = L.AwesomeMarkers.icon(
+            var icon_3f9a9ebaea2184406216b897c27d58b8 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1590,24 +1878,24 @@ async function copyContent() {
             );
         
     
-        var popup_d67e7afe855a03e23fea7ab1eed5dd44 = L.popup({
+        var popup_3da236c842580084fd1ac86e0858b627 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_8fcdd57a12916c84e379cc1de428295e = $(`<div id="html_8fcdd57a12916c84e379cc1de428295e" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Cakang</b></b><br>             <a href="https://www.google.com/maps/?q=0.6115,104.2885" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_d67e7afe855a03e23fea7ab1eed5dd44.setContent(html_8fcdd57a12916c84e379cc1de428295e);
+                var html_c68092c2d1170fbfc907d6c6dadcf5da = $(`<div id="html_c68092c2d1170fbfc907d6c6dadcf5da" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Cakang</b></b><br>             <a href="https://www.google.com/maps/?q=0.6115,104.2885" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_3da236c842580084fd1ac86e0858b627.setContent(html_c68092c2d1170fbfc907d6c6dadcf5da);
             
         
 
-        marker_e0e6c2103e4fd2b71a0199c7434b6832.bindPopup(popup_d67e7afe855a03e23fea7ab1eed5dd44)
+        marker_652e68c70f6a502aa5e99444ff6f1980.bindPopup(popup_3da236c842580084fd1ac86e0858b627)
         ;
 
         
     
     
-            marker_e0e6c2103e4fd2b71a0199c7434b6832.bindTooltip(
+            marker_652e68c70f6a502aa5e99444ff6f1980.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1617,17 +1905,17 @@ async function copyContent() {
             );
         
     
-                marker_e0e6c2103e4fd2b71a0199c7434b6832.setIcon(icon_c8c5006c81869b0a5e19aa3174ac2c5b);
+                marker_652e68c70f6a502aa5e99444ff6f1980.setIcon(icon_3f9a9ebaea2184406216b897c27d58b8);
             
     
-            var marker_a7c3a68006616d0242ddfe6a53437f68 = L.marker(
+            var marker_dd7fa319983ab3196ee1312e6bbb8ec1 = L.marker(
                 [1.0232, 104.3779],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_01d92b887669e5e28a6e231b5f04d490 = L.AwesomeMarkers.icon(
+            var icon_6e41030a57f9905bfef7963feee6e827 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1638,24 +1926,24 @@ async function copyContent() {
             );
         
     
-        var popup_b5b299bae7e61222323f88eaf7764b22 = L.popup({
+        var popup_8d085f993e4d84cc2de60175d0fc72ff = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_ab60015c80a832c1d6f0df450f193604 = $(`<div id="html_ab60015c80a832c1d6f0df450f193604" style="width: 100.0%; height: 100.0%;">             <b>Tambak udang di Bintan 1</b><br>             <a href="https://www.google.com/maps/?q=1.0232,104.3779" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_b5b299bae7e61222323f88eaf7764b22.setContent(html_ab60015c80a832c1d6f0df450f193604);
+                var html_90331887525774dbd54f2182baf83643 = $(`<div id="html_90331887525774dbd54f2182baf83643" style="width: 100.0%; height: 100.0%;">             <b>Tambak udang di Bintan 1</b><br>             <a href="https://www.google.com/maps/?q=1.0232,104.3779" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_8d085f993e4d84cc2de60175d0fc72ff.setContent(html_90331887525774dbd54f2182baf83643);
             
         
 
-        marker_a7c3a68006616d0242ddfe6a53437f68.bindPopup(popup_b5b299bae7e61222323f88eaf7764b22)
+        marker_dd7fa319983ab3196ee1312e6bbb8ec1.bindPopup(popup_8d085f993e4d84cc2de60175d0fc72ff)
         ;
 
         
     
     
-            marker_a7c3a68006616d0242ddfe6a53437f68.bindTooltip(
+            marker_dd7fa319983ab3196ee1312e6bbb8ec1.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1665,17 +1953,17 @@ async function copyContent() {
             );
         
     
-                marker_a7c3a68006616d0242ddfe6a53437f68.setIcon(icon_01d92b887669e5e28a6e231b5f04d490);
+                marker_dd7fa319983ab3196ee1312e6bbb8ec1.setIcon(icon_6e41030a57f9905bfef7963feee6e827);
             
     
-            var marker_570066743f23b5238383ee0d68c9e467 = L.marker(
+            var marker_9b6865783c12629629865b66eb151f9a = L.marker(
                 [1.0276, 104.3824],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_59ca0c97f072191d72e8c2ecfba0e093 = L.AwesomeMarkers.icon(
+            var icon_2560b60cb1fcc8ce9903dc073dc5bd83 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1686,24 +1974,24 @@ async function copyContent() {
             );
         
     
-        var popup_97c205fdabfbcf7ba0432f871f24863d = L.popup({
+        var popup_49e5c1fc068dee0f224079c2af92e552 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_241a9e2047cab04c27d970cfc6df5f9a = $(`<div id="html_241a9e2047cab04c27d970cfc6df5f9a" style="width: 100.0%; height: 100.0%;">             <b>Tambak udang di Bintan 2</b><br>             <a href="https://www.google.com/maps/?q=1.0276,104.3824" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_97c205fdabfbcf7ba0432f871f24863d.setContent(html_241a9e2047cab04c27d970cfc6df5f9a);
+                var html_fd1a4d8f75c4e48cc7d4b4108356b162 = $(`<div id="html_fd1a4d8f75c4e48cc7d4b4108356b162" style="width: 100.0%; height: 100.0%;">             <b>Tambak udang di Bintan 2</b><br>             <a href="https://www.google.com/maps/?q=1.0276,104.3824" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_49e5c1fc068dee0f224079c2af92e552.setContent(html_fd1a4d8f75c4e48cc7d4b4108356b162);
             
         
 
-        marker_570066743f23b5238383ee0d68c9e467.bindPopup(popup_97c205fdabfbcf7ba0432f871f24863d)
+        marker_9b6865783c12629629865b66eb151f9a.bindPopup(popup_49e5c1fc068dee0f224079c2af92e552)
         ;
 
         
     
     
-            marker_570066743f23b5238383ee0d68c9e467.bindTooltip(
+            marker_9b6865783c12629629865b66eb151f9a.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1713,17 +2001,17 @@ async function copyContent() {
             );
         
     
-                marker_570066743f23b5238383ee0d68c9e467.setIcon(icon_59ca0c97f072191d72e8c2ecfba0e093);
+                marker_9b6865783c12629629865b66eb151f9a.setIcon(icon_2560b60cb1fcc8ce9903dc073dc5bd83);
             
     
-            var marker_d51cb7fdf5b67e5a80250e03b1f15196 = L.marker(
+            var marker_520005f8eff3b2bb045a4336fdac0950 = L.marker(
                 [1.0202, 104.3761],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_3120c016628e8b816b6a6be747e4a5e1 = L.AwesomeMarkers.icon(
+            var icon_aa53c2d5481749e1117f955d7598509f = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1734,24 +2022,24 @@ async function copyContent() {
             );
         
     
-        var popup_4ecb11ee760a950b02119da455189746 = L.popup({
+        var popup_c107459a4c6ba5e39b83dcee1df81b97 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_8ea98f069c529808e386a221a0dd4aa0 = $(`<div id="html_8ea98f069c529808e386a221a0dd4aa0" style="width: 100.0%; height: 100.0%;">             <b>Tambak udang di Bintan 3</b><br>             <a href="https://www.google.com/maps/?q=1.0202,104.3761" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_4ecb11ee760a950b02119da455189746.setContent(html_8ea98f069c529808e386a221a0dd4aa0);
+                var html_dd2f7d8331f7c04bea9a23a59114354a = $(`<div id="html_dd2f7d8331f7c04bea9a23a59114354a" style="width: 100.0%; height: 100.0%;">             <b>Tambak udang di Bintan 3</b><br>             <a href="https://www.google.com/maps/?q=1.0202,104.3761" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_c107459a4c6ba5e39b83dcee1df81b97.setContent(html_dd2f7d8331f7c04bea9a23a59114354a);
             
         
 
-        marker_d51cb7fdf5b67e5a80250e03b1f15196.bindPopup(popup_4ecb11ee760a950b02119da455189746)
+        marker_520005f8eff3b2bb045a4336fdac0950.bindPopup(popup_c107459a4c6ba5e39b83dcee1df81b97)
         ;
 
         
     
     
-            marker_d51cb7fdf5b67e5a80250e03b1f15196.bindTooltip(
+            marker_520005f8eff3b2bb045a4336fdac0950.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1761,17 +2049,17 @@ async function copyContent() {
             );
         
     
-                marker_d51cb7fdf5b67e5a80250e03b1f15196.setIcon(icon_3120c016628e8b816b6a6be747e4a5e1);
+                marker_520005f8eff3b2bb045a4336fdac0950.setIcon(icon_aa53c2d5481749e1117f955d7598509f);
             
     
-            var marker_6edb28205e91432dc03378d47df75db5 = L.marker(
+            var marker_66dd659f85120db7a343c61ca99437c5 = L.marker(
                 [1.0147, 104.3807],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_f8e2a2c26769140dd61e9f4f86542512 = L.AwesomeMarkers.icon(
+            var icon_0c2dd40eda2b80519e74b4128912a7d9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1782,24 +2070,24 @@ async function copyContent() {
             );
         
     
-        var popup_40d366409935e0c2624f05247451640e = L.popup({
+        var popup_6dc0afbedea0b13f0de13ddc22a75487 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_d2e7db5d0a87b63efd06c47ef9a284b4 = $(`<div id="html_d2e7db5d0a87b63efd06c47ef9a284b4" style="width: 100.0%; height: 100.0%;">             <b>Balai Benih ikan Pengujan</b><br>             <a href="https://www.google.com/maps/?q=1.0147,104.3807" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_40d366409935e0c2624f05247451640e.setContent(html_d2e7db5d0a87b63efd06c47ef9a284b4);
+                var html_c9b61950ee86ad961047d8637652bce9 = $(`<div id="html_c9b61950ee86ad961047d8637652bce9" style="width: 100.0%; height: 100.0%;">             <b>Balai Benih ikan Pengujan</b><br>             <a href="https://www.google.com/maps/?q=1.0147,104.3807" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_6dc0afbedea0b13f0de13ddc22a75487.setContent(html_c9b61950ee86ad961047d8637652bce9);
             
         
 
-        marker_6edb28205e91432dc03378d47df75db5.bindPopup(popup_40d366409935e0c2624f05247451640e)
+        marker_66dd659f85120db7a343c61ca99437c5.bindPopup(popup_6dc0afbedea0b13f0de13ddc22a75487)
         ;
 
         
     
     
-            marker_6edb28205e91432dc03378d47df75db5.bindTooltip(
+            marker_66dd659f85120db7a343c61ca99437c5.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1809,17 +2097,17 @@ async function copyContent() {
             );
         
     
-                marker_6edb28205e91432dc03378d47df75db5.setIcon(icon_f8e2a2c26769140dd61e9f4f86542512);
+                marker_66dd659f85120db7a343c61ca99437c5.setIcon(icon_0c2dd40eda2b80519e74b4128912a7d9);
             
     
-            var marker_3d4d9e3377d32bb029d4a74139fa2ebe = L.marker(
+            var marker_03d4bee9ddad2db103f80f3261f01040 = L.marker(
                 [1.0164, 104.4475],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_576ac84b8001ada7bcc3117909c16a90 = L.AwesomeMarkers.icon(
+            var icon_8389f6337dbda4f5abe3adce2014333a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1830,24 +2118,24 @@ async function copyContent() {
             );
         
     
-        var popup_aad947cc9462e0548e05f9f606963e00 = L.popup({
+        var popup_938bab8f8610a160c6374e01a833c8db = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_570365c2673d3fc32b707b0830f1f907 = $(`<div id="html_570365c2673d3fc32b707b0830f1f907" style="width: 100.0%; height: 100.0%;">             <b>AGMARIN PEMBIBITAN IKAN</b><br>             <a href="https://www.google.com/maps/?q=1.0164,104.4475" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_aad947cc9462e0548e05f9f606963e00.setContent(html_570365c2673d3fc32b707b0830f1f907);
+                var html_4329882646e4896f9fc860eb8855811d = $(`<div id="html_4329882646e4896f9fc860eb8855811d" style="width: 100.0%; height: 100.0%;">             <b>AGMARIN PEMBIBITAN IKAN</b><br>             <a href="https://www.google.com/maps/?q=1.0164,104.4475" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_938bab8f8610a160c6374e01a833c8db.setContent(html_4329882646e4896f9fc860eb8855811d);
             
         
 
-        marker_3d4d9e3377d32bb029d4a74139fa2ebe.bindPopup(popup_aad947cc9462e0548e05f9f606963e00)
+        marker_03d4bee9ddad2db103f80f3261f01040.bindPopup(popup_938bab8f8610a160c6374e01a833c8db)
         ;
 
         
     
     
-            marker_3d4d9e3377d32bb029d4a74139fa2ebe.bindTooltip(
+            marker_03d4bee9ddad2db103f80f3261f01040.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1857,17 +2145,17 @@ async function copyContent() {
             );
         
     
-                marker_3d4d9e3377d32bb029d4a74139fa2ebe.setIcon(icon_576ac84b8001ada7bcc3117909c16a90);
+                marker_03d4bee9ddad2db103f80f3261f01040.setIcon(icon_8389f6337dbda4f5abe3adce2014333a);
             
     
-            var marker_ed1822f5807237a10df637711f8db9d8 = L.marker(
+            var marker_d3d73c74d69ab7956df1e9266669994f = L.marker(
                 [0.629, 104.0819],
                 {
 }
-            ).addTo(feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2);
+            ).addTo(feature_group_188f24a9b89046ad7b8a366485a98efe);
         
     
-            var icon_02214c4d3b14f8e68717aa7d5c3f0708 = L.AwesomeMarkers.icon(
+            var icon_f9ea296eb44276dc49406eac06ab6d50 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "orange",
   "iconColor": "white",
@@ -1878,24 +2166,24 @@ async function copyContent() {
             );
         
     
-        var popup_a94f5dcd0dee09b7a4e4d1578ecf34f2 = L.popup({
+        var popup_10a8494c1181c9eae0ab8947b81f03c6 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_e383fbc3beb1355efa0bb9414693638d = $(`<div id="html_e383fbc3beb1355efa0bb9414693638d" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Petong</b></b><br>             <a href="https://www.google.com/maps/?q=0.629,104.0819" target="_blank">View on Google Maps</a>             </div>`)[0];
-                popup_a94f5dcd0dee09b7a4e4d1578ecf34f2.setContent(html_e383fbc3beb1355efa0bb9414693638d);
+                var html_5a69119d83cd9ca0b331dfb8df0c780d = $(`<div id="html_5a69119d83cd9ca0b331dfb8df0c780d" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Petong</b></b><br>             <a href="https://www.google.com/maps/?q=0.629,104.0819" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_10a8494c1181c9eae0ab8947b81f03c6.setContent(html_5a69119d83cd9ca0b331dfb8df0c780d);
             
         
 
-        marker_ed1822f5807237a10df637711f8db9d8.bindPopup(popup_a94f5dcd0dee09b7a4e4d1578ecf34f2)
+        marker_d3d73c74d69ab7956df1e9266669994f.bindPopup(popup_10a8494c1181c9eae0ab8947b81f03c6)
         ;
 
         
     
     
-            marker_ed1822f5807237a10df637711f8db9d8.bindTooltip(
+            marker_d3d73c74d69ab7956df1e9266669994f.bindTooltip(
                 `<div>
                      Click me!
                  </div>`,
@@ -1905,24 +2193,130 @@ async function copyContent() {
             );
         
     
-                marker_ed1822f5807237a10df637711f8db9d8.setIcon(icon_02214c4d3b14f8e68717aa7d5c3f0708);
+                marker_d3d73c74d69ab7956df1e9266669994f.setIcon(icon_f9ea296eb44276dc49406eac06ab6d50);
             
     
-            feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2.addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            feature_group_188f24a9b89046ad7b8a366485a98efe.addTo(map_3a981d59669b67e03b6f6bf695190480);
         
     
-            var locate_control_3fe07bf44856978a2efd810bd255e736 = L.control.locate(
+            var feature_group_cb9268fb5e46048a4c4d4d17065fe358 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d0816f110ac35e30273439da013adb27 = L.marker(
+                [2.9629, 105.75511],
+                {
+}
+            ).addTo(feature_group_cb9268fb5e46048a4c4d4d17065fe358);
+        
+    
+            var icon_135f233b9ac0fc2e1e1ca780983ed1aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plane",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "spin": "true",
+}
+            );
+        
+    
+        var popup_aa361f1313fe5c428b77eaab554a4f17 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91a0468dadac70f5ca2f17e4a81eb67b = $(`<div id="html_91a0468dadac70f5ca2f17e4a81eb67b" style="width: 100.0%; height: 100.0%;">     <h3>Letung Airport</h3>     <a href="https://kepriestates.com/anambas-islands/anambas-islands-geography/maps/transport-map/">Annambas map</a>     </div>`)[0];
+                popup_aa361f1313fe5c428b77eaab554a4f17.setContent(html_91a0468dadac70f5ca2f17e4a81eb67b);
+            
+        
+
+        marker_d0816f110ac35e30273439da013adb27.bindPopup(popup_aa361f1313fe5c428b77eaab554a4f17)
+        ;
+
+        
+    
+    
+            marker_d0816f110ac35e30273439da013adb27.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0816f110ac35e30273439da013adb27.setIcon(icon_135f233b9ac0fc2e1e1ca780983ed1aa);
+            
+    
+            var marker_1e8af7a73987caff89af6a135a34e757 = L.marker(
+                [2.9877, 105.7045],
+                {
+}
+            ).addTo(feature_group_cb9268fb5e46048a4c4d4d17065fe358);
+        
+    
+            var icon_b8753550bdba1c3df18c3dc284168158 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_12ab06bf688ef0f5ade4ff124dd0aa2c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5058db7da06130858b20c0df88a23a89 = $(`<div id="html_5058db7da06130858b20c0df88a23a89" style="width: 100.0%; height: 100.0%;">             <b><b>Pelabuhan Letung, Annambas</b></b><br>             <a href="https://www.google.com/maps/?q=2.9877,105.7045" target="_blank">View on Google Maps</a>             </div>`)[0];
+                popup_12ab06bf688ef0f5ade4ff124dd0aa2c.setContent(html_5058db7da06130858b20c0df88a23a89);
+            
+        
+
+        marker_1e8af7a73987caff89af6a135a34e757.bindPopup(popup_12ab06bf688ef0f5ade4ff124dd0aa2c)
+        ;
+
+        
+    
+    
+            marker_1e8af7a73987caff89af6a135a34e757.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1e8af7a73987caff89af6a135a34e757.setIcon(icon_b8753550bdba1c3df18c3dc284168158);
+            
+    
+            feature_group_cb9268fb5e46048a4c4d4d17065fe358.addTo(map_3a981d59669b67e03b6f6bf695190480);
+        
+    
+            var locate_control_9ef66b3bf95bb02d501a655e747302a5 = L.control.locate(
                 {}
-            ).addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            ).addTo(map_3a981d59669b67e03b6f6bf695190480);
             
         
     
-            var tile_layer_93de84f52df9a8ac60d97045d912f5ae = L.tileLayer(
+            var tile_layer_2afee4764759b875a79a96a1d421b61d = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
-            var mini_map_7110127d1c9ffeb0ab534adf9e67dca4 = new L.Control.MiniMap(
-                tile_layer_93de84f52df9a8ac60d97045d912f5ae,
+            var mini_map_2b26918d52788427d7cf552d88ec3186 = new L.Control.MiniMap(
+                tile_layer_2afee4764759b875a79a96a1d421b61d,
                 {
   "position": "bottomright",
   "width": 150,
@@ -1937,29 +2331,30 @@ async function copyContent() {
   "minimized": false,
 }
             );
-            map_4210a098d61ed3a432ae50e5eca0d4f7.addControl(mini_map_7110127d1c9ffeb0ab534adf9e67dca4);
+            map_3a981d59669b67e03b6f6bf695190480.addControl(mini_map_2b26918d52788427d7cf552d88ec3186);
         
     
-            var layer_control_a2d095a679e10fb4002b86b4ff992afc_layers = {
+            var layer_control_5a3b5815ce2398474ede75a0cf84b646_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_d77da417211a3af2d402002cdd9ca9cd,
-                    "Google Maps" : tile_layer_2942b1d02168c3c3688419661335bb31,
-                    "Google Satellite" : tile_layer_76491688d9e15eca9b07ae1bf9252f3c,
-                    "Esri Satellite" : tile_layer_71f9a55a0d89d405dc5e57c259114d66,
+                    "openstreetmap" : tile_layer_45fbb31d383a501002fa1e61c52417e5,
+                    "Google Maps" : tile_layer_6f1f2d892ca71f509ac6a312782dcae5,
+                    "Google Satellite" : tile_layer_bec17c1aff4f7e6ca4dd5536551e8ae3,
+                    "Esri Satellite" : tile_layer_df50201b9abe2c734faee2da63176bd2,
                 },
                 overlays :  {
-                    "KPRI-Lingga" : feature_group_56447718e14fbe2b5f5c5e6c4e88d7b2,
+                    "KPRI-Lingga" : feature_group_188f24a9b89046ad7b8a366485a98efe,
+                    "KPRI-Annambas" : feature_group_cb9268fb5e46048a4c4d4d17065fe358,
                 },
             };
-            let layer_control_a2d095a679e10fb4002b86b4ff992afc = L.control.layers(
-                layer_control_a2d095a679e10fb4002b86b4ff992afc_layers.base_layers,
-                layer_control_a2d095a679e10fb4002b86b4ff992afc_layers.overlays,
+            let layer_control_5a3b5815ce2398474ede75a0cf84b646 = L.control.layers(
+                layer_control_5a3b5815ce2398474ede75a0cf84b646_layers.base_layers,
+                layer_control_5a3b5815ce2398474ede75a0cf84b646_layers.overlays,
                 {
   "position": "topright",
   "collapsed": true,
   "autoZIndex": true,
 }
-            ).addTo(map_4210a098d61ed3a432ae50e5eca0d4f7);
+            ).addTo(map_3a981d59669b67e03b6f6bf695190480);
 
         
 </script>
