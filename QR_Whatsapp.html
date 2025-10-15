@@ -1,0 +1,97 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O2tREE  QR Code  Gallery</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                padding: 40px 20px;
+            }
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            .header {
+                text-align: center;
+                color: white;
+                margin-bottom: 40px;
+            }
+            .header h1 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            .masonry-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                grid-auto-rows: 10px;
+                gap: 15px;
+            }
+            .masonry-item {
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+                transition: all 0.3s ease;
+                background: white;
+            }
+            .masonry-item:hover {
+                transform: scale(1.03);
+                box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+            }
+            .masonry-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.3s ease;
+            }
+            .masonry-item:hover img {
+                transform: scale(1.05);
+            }
+            .caption {
+                padding: 12px;
+                background: white;
+                text-align: center;
+                font-weight: bold;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>O2Tree QR Code Image Gallery</h1>
+                <p>Direct scan from Camera</p>
+            </div>
+            
+            <div class="masonry-grid">
+               
+                 <div class="masonry-item" style="grid-row-end: span 39">
+                    <img src="http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg" 
+                         alt="1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg" 
+                         loading="lazy">
+                    <div class="caption">Indonesia QR Whatsapp</div>
+                </div>
+                
+                <div class="masonry-item" style="grid-row-end: span 30">
+                    <img src="http://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg" 
+                         alt="d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg" 
+                         loading="lazy">
+                    <div class="caption">Singapore QR Whatsapp</div>
+                </div>
+       
+                </div>     
+            </div>
+        </div>
+    </body>
+    </html>
+    

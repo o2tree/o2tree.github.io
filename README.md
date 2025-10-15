@@ -33,8 +33,7 @@
 - [Salinity of Ocean ma](https://www.pmfias.com/ocean-salinity-vertical-horizontal-distribution/)
 - [Chat GPT](https://chat.chatbot.app/gpt5?utm_source=GoogleAds&utm_medium=cpc&utm_campaign={campaign}&utm_id=22665487438&utm_term=182338911722&utm_content=757447283652&gad_source=1&gad_campaignid=22665487438&gclid=EAIaIQobChMIrK38ncCOjwMV9qhmAh3xgS2iEAAYASADEgLAJ_D_BwE)
 - [Peta ombak KPRI bintan](https://maritim.bmkg.go.id/cuaca/perairan/perairan-kep-bintan)
-- [Indonesia QR contact](http://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg)
-- [Singapore QR contact](http://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg)
+- [Whatsapp QR contact](http://o2tree.github.io/QR_Whatsapp.html)
 
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
