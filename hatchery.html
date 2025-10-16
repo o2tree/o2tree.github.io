@@ -147,6 +147,11 @@
 - the larger exporter coral and ornament marine fish
 
 
+[Reverse Osmosis (RO) Hatchery system](http://qingqingquan.com/products-details?id=691)
+
+[research polycette in house](https://www.was.org/Magazine/2025/03/47/)
+
+
 [sulmet](https://www.huvepharma.us/product/sulmet/)
 
 [Ikan Tirusan](#ikan-tirusan-otolithoides-pama)
@@ -225,6 +230,8 @@ Your recipe uses two key components:
 ---
 # general techniques and methods in hatchery
 
+<img src="./image/2bc72310-df61-40a7-8c7e-afb80d00ac47.jpg" style="max-width: 100%;" />
+ 
 All metals are suspect and should be avoided if possible. Titanium and stainless steel 316 may be
 used in small amounts if absolutely necessary. If metal pump parts cannot be avoided, use stainless steel 316 or cast iron.
 Metal should be coated with a tested epoxy paint wherever possible.
@@ -341,7 +348,10 @@ To establish a successful Pacific White Shrimp (*Litopenaeus vannamei*) hatchery
 - If the salinity seawater is low (Brackish 15-20 ppt), theeere is a need to have evaporation tank to make sea saalt or ihger saline water to minimie marine seawater
 	- normal evaporation 0.5 m depth daily
 	- diffusion with static salt water is neglible
-- Raw seawater needs to be filtered to remove debris and potentially sterilized to eliminate harmful bacteria and pathogen 
+- Raw seawater needs to be filtered to remove debris and potentially sterilized to eliminate harmful bacteria and pathogen
+- Custom Ionic Profiles Broodstock:
+	- Ca²⁺: 400-450ppm (shellfish)
+	- K⁺: 300-350ppm (finfish)
 - Avoid polluted areas (industrial/agricultural runoff).  
 - Reliable electricity (backup generator required).  
 - Algal Culture:
@@ -352,7 +362,7 @@ To establish a successful Pacific White Shrimp (*Litopenaeus vannamei*) hatchery
     - Segregation of different life stages:
     - Separate areas for broodstock, larvae, and juveniles minimize the risk of disease transmission.
     - Controlled access:
-	- Limiting access to the hatchery and implementing strict hygiene protocols are essential. 
+	- Limiting access to the hatchery and implementing strict hygiene protocols arxe essential. 
     - [New Arrival Acclimation Guide](https://www.liveaquaria.com/article/157/?aid=157)
     - [Biota's acclimation guide for all fish, corals, clams, and inverts ](https://shop.thebiotagroup.com/pages/acclimation-guide)
 
@@ -1186,8 +1196,61 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
  phytoplankton enumerations were carried out under an inverted microscope (Olympus CKX41) at magnifications of 400 and 600X. For each sample,
  at least 350 settling units of the dominant species were counted. Phytoplankton biovolume was calculated by multiplying the cell density
  and mean biovolume of the taxon, which was taken approximating geometric shapes of the least 25 individuals (Sun and Liu 2003).
-
 </md-block>
+
+
+<div class="mermaid">
+
+timeline
+    title Hybrid Grouper Development Timeline
+    section Embryonic Phase
+      Day 0 : Spawning & Fertilization<br>Fertilization rate: 51% - 97.6%
+      Hours 17-20 : Hatching<br>Hatching rate: 50.3% - 98.3%<br>Larval TL: 1.52mm - 1.74mm
+    section Larval Phase
+      Day 3 : First Feeding<br>Mouth opens, eyes pigmented.<br>Fed rotifers & algae.
+      Day 6-10 : Spine Formation<br>Dorsal and pelvic spines elongate.
+    section Juvenile Phase
+      Day 25-40 : Habitat Shift<br>Larvae shift from pelagic<br>to benthic habitat.
+      Day 35+ : Juvenile Stage<br>Attains skin coloration.
+
+
+</div>
+
+---
+<div class="mermaid">
+%% Grouper eggs collection
+%%
+flowchart TD
+    A[Gamete Collection] --> B{Processing Method}
+    
+    B --> C[Sperm/Milt]
+    B --> D[Eggs]
+    
+    subgraph C [Sperm Cryopreservation]
+        direction TB
+        C1[Dilute with Extender<br>+ Cryoprotectant DMSO/Glycerol<br>+ Antioxidant Melatonin]
+        C1 --> C2[Package in Straws]
+        C2 --> C3[Freeze in Liquid Nitrogen]
+    end
+    
+    subgraph D [Fresh Egg Transport]
+        direction TB
+        D1[Select resilient stage<br>Avoid morula/blastula]
+        D1 --> D2[Pack in oxygenated bags<br>or on moist substrate]
+    end
+    
+    C3 --> E[Transport in<br>Liquid Nitrogen Dry Shipper]
+    D2 --> F[Transport at<br>Controlled Temperature]
+    
+    E --> G[Thaw & Use at Destination Hatchery]
+    F --> H[Incubate & Hatch at Destination Hatchery]
+    
+    C1 -.-> |Protects against<br>oxidative cryodamage| C3
+    D1 -.-> |Critical for<br>maintaining viability| D2
+
+</div>
+
+---
 
 <div class="mermaid">
     graph LR;
@@ -1206,6 +1269,45 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
     end
 
     click ocean_Temp "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "Surface ocean temperature"
+</div>
+
+<div class=mermaid>
+%% Teripang
+flowchart TD
+    A[Broodstock Conditioning<br>Rich Diet, Stable Conditions] --> B{Induced Spawning};
+    
+    B -- Thermal Shock /<br>Algal Stimulation --> C[Spawning & Fertilization];
+    
+    C --> D[Fertilized Egg];
+    D --> E[Early Embryonic Development];
+    
+    E -- “Salinity: 30-33‰<br>Stable, Full-Strength Seawater” --> F[Auricularia Larva<br>**Primary Feeding Stage**];
+    
+    F --> G{Provide Microalgae Diet<br>e.g., Chaetoceros, Isochrysis};
+    G --> H[Late Auricularia];
+    
+    H --> I[Doliolaria Larva<br>**Non-Feeding, Transitional**];
+    
+    I --> J{Pentactula Larva<br>**Settlement Stage**};
+    
+    J -- “**CRITICAL:** Provide Biofilmed<br>Substrate e.g., Plates, Rubble” --> K[Juvenile Settlement];
+    
+    K --> L[Juvenile Growth<br>Benthic, Detritus Feeder];
+    L --> M[Harvest];
+
+    %% Styling for critical points
+    linkStyle 6 stroke:#ff5500,stroke-width:2px,color:red;
+    linkStyle 9 stroke:#ff5500,stroke-width:2px,color:red;
+    
+    subgraph Z [Key Water Quality Parameters]
+        Z1[“Salinity: 28-33‰”]
+        Z2[“Temperature: Species-Specific<br>~20-28°C for A. japonicus”]
+        Z3[“High Dissolved Oxygen”]
+    end
+
+    Z -.->|Influences All Stages| F
+    Z -.->|Influences All Stages| K
+
 </div>
 
 <div class="mermaid">
@@ -1243,7 +1345,44 @@ Phytoplankton are fixed with a Lugol-glycerol solution (2-3 % glycerol). Glycero
 
 </div>
 
+<div class="mermaid">
+%% Vanamei
+flowchart TD
+    A[Broodstock Conditioning<br>Maturation Diet, Controlled Environment] --> B{Spawning Induction<br>Eyestalk Ablation/Environmental};
+    
+    B --> C[Spawning & Hatching];
+    
+    C --> D[Nauplius Stage<br>**Non-Feeding, Yolk Reserve**];
+    
+    D -- “Salinity: 30-35‰” --> E[Zoea Stage<br>**First Feeding Stage**];
+    
+    E --> F{“Provide Microalgae Diet<br>e.g., Chaetoceros, Tetraselmis”};
+    F --> G[Mysis Stage<br>**Transition to Animal Prey**];
+    
+    G --> H{“Feed Artemia Nauplii<br>+ Microalgae”};
+    H --> I[Early Postlarva PL1-5<br>**Benthic, Active Predator**];
+    
+    I --> J{“Weaning to<br>Formulated Feed”};
+    J --> K[“Postlarva PL10+<br>Ready for Transfer to Farm”];
+    
+    K --> L[“Harvest & Transport<br>to Grow-Out Pond/Tank”];
 
+    %% Styling for critical points
+    linkStyle 4 stroke:#ff5500,stroke-width:2px;
+    linkStyle 6 stroke:#ff5500,stroke-width:2px;
+    linkStyle 8 stroke:#ff5500,stroke-width:2px;
+    
+    subgraph Z [Key Water & Health Parameters]
+        Z1[“Salinity: Spawning/Hatching 30-35‰<br>Nursery can be 15-30‰”]
+        Z2[“Temperature: 28-31°C”]
+        Z3[“pH: 7.8-8.2”]
+        Z4[“High Biosecurity &<br>Water Quality”]
+    end
+
+    Z -.->|Influences All Stages| E
+    Z -.->|Influences All Stages| I
+
+</div>
 <div class="mermaid">
 flowchart TD
     A[Start: New Fish Arrives] --> B[Float Sealed Bag<br>15-20 mins for Temperature Equalization]
@@ -1298,8 +1437,7 @@ A[Start: New Scallop Arrives] --> B[Float Sealed Bag<br>15 mins for Temperature 
           </div>
 
 
----
-
+--
 
         <div class="mermaid">
             graph LR
@@ -1417,36 +1555,6 @@ flowchart TD
 </div>
 
 <div class="mermaid">
-    flowchart  TB
-      subgraph OCEAN9 ["fas:fa-ship <a https://tiketkapal.com/> OCEAN 9 </a>"]
-          direction LR
-           TP([Telaga Punggur])-->|ferry 11:00 web kapaltiket.com| A([BENAN]) --> |"00:45"| B([Tajuh Biru])  --> C(["Sei Tenam"])  --> D(["Senayang"]) <--->|"from 07:15 Pancur"| E(["Pancur"])
-      end
-      subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
-          direction LR
-          TP1(["Telaga punggur"]) --> CC(["Sei Tenam"])-->JG(["Jagoh"])
-      end
-      subgraph Anambas ["fas:fa-ship Anambas"]
-          direction LR
-          TP2(["Telaga Punggur"]) --"Rp. 494k"--> Letung  --"Rp 495k"-->   Terempa(["Terempa"]) 
-       end
-      subgraph Bintan["Pulau Bintan/Tanjung Pinang"]
-          direction LR
-          BTP(["Tanjung Pinang"])
-      end
-    TP <--.--> TP1 <--.--> TP2
-    style A fill: black, color: white
-    style B fill:grey, color:#fff
-    style TP fill:blue, color: whit
-    style TP1 fill:blue, color: white
-    style TP2 fill:blue, color: white
-    click BTP "https://www.welcometobintan.com/images/map.jpg" "Tanjung Pinang"
-    
-</div>
-
-
-
-<div class="mermaid">
  flowchart LR
     subgraph subgraph1["Benur Bening Lobster"]
         direction TB
@@ -1468,21 +1576,46 @@ flowchart TD
     classDef asNode fill:grey, color:orange
 
 </div>
+---
+
+
 <div class="mermaid">
-pie title Investment weighting factor 
-    "Money" :60
-    "Labour" : 35
-    "Technology-Consultant" : 5
+    graph LR;
+    %% Freshwater prawn sex reversal
+    %% x
+    subgraph SexReverse["Sex reversal"]
+       direction  LR
+       prawn_Male["Methyltestosterone experiment"]
+       prawn_Female["Dopamine experiment<br>Ovaprim Fish Hormone Domperidone Sgnrha Injection"]
+       sex_reverse_for_tilapia["Tilapia sex reversal in fry stage"]
+    end
+    FWprawn["Mixed Culture"]
+    FWprawn_M["Male mono culture<br>Teritorial"]
+    FWprawn_F["Female mono culture<br>higher density<br>more uniform<br>less teritorial vs male"]
+
+    click SexReverse "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "SexReversal Post Larva"
+    click sex_reverse_for_tilapia "https://www.globalseafood.org/advocate/artificial-incubation-hormonal-sex-reversal-promoted-tilapia-boom/" "Sex reversal for tilapia"
 
 </div>
 
----
 
 <div class="mermaid">
-pie title Investment Sharing with Masanak Island
-    "PT_Innovare" :75
-    "Mitra" : 15
-    "Desa" : 10
+flowchart TD
+    A[Spawning & Fertilization<br>In Freshwater] --> B[Egg Incubation<br>Carried by Berried Female]
+    
+    B -- “Egg Color Change:<br>Orange → Grey/Brown” --> C[Hatching in Brackishwater<br>Larvae released as Zoeae]
+    
+    C --> D[Larval Rearing Phase<br>**Requires Brackishwater**]
+    
+    subgraph D [Larval Rearing Parameters]
+        D1[“**Optimal Salinity Range**<br>6 - 12 ppt”]
+        D2[“**Optimal Temperature**<br>28 - 31 °C”]
+        D3[“**Feeding Regime**<br>Brine shrimp, egg custard”]
+    end
+    
+    D -- “Metamorphosis after<br>28-35 days” --> E[Postlarva]
+    
+    E -- “Gradual Acclimation” --> F[Juvenile & Adult Phase<br>**In Freshwater**]
 
 </div>
 
@@ -1733,27 +1866,6 @@ dilengkapi bantalan sehingga mampu menjaga kelenturan terhadap gelombang laut se
 | <img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">| <img src="https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600" alt="Alt Text" width="500" height="600"> |
 
 
-- some text
-
-    | Column One | Column Two |
-    | --- | --- |
-    | data cell one | data cell two |
-
-③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
-
-⓪
-① ② ③ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
-⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ 
-
-🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉 
-Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ
-
-
-⓿
-❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿
-⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴
-
-
 
 The Pacific oyster can tolerate a wide temperature range from -2° to 35°C, but for optimal reproduction temperatures over 20°C are required. This may explain why there appear to be no self-sustaining populations of Pacific oysters on the West Coast and why oyster farming in this region requires continuous seeding in order to be sustainable.
 
@@ -1783,14 +1895,6 @@ Chlorine test LD_50
 
 
 # [embedded html to pdf](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
-
-<div>
-<p markdown="1">
-b[^2]
-</p>
-</div>
-
-[^b]: Now I am a footnote too.
 
 ![Nanochloropsus Japanese Chlorella](https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600)
 ![rotifer](https://rlutah.com/cdn/shop/collections/64_ounce_bottle.png?v=1715880245&width=750)
@@ -1860,9 +1964,6 @@ the larger prey from predator (Triño, unpublished).
 ## Sebass vs Snapper
 - diffferent
 - which one taste better
-
-
-
 
 |The table below provides a quick comparison of the availability and cost of snapper and grouper:|
 |------------------------------------------------------------------------------------------------|
@@ -2065,7 +2166,7 @@ concentration. Amethyst seed extract concentration of 35% w
 
 
 
-### di keramba tanjab yang punya pasir
+### di keramba tanjap yang punya pasir
 -tidak perlu di cuci air tawar karena kerapu bisa mengesek dengan pasir untuk menghilankan hama seperti kutu putih
 - kerapu sanu mulutnya agak kecil di bandinggkan kerapu cangteng
 * Bisa beli telur sampai pendederan benur
