@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Folium Map</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+          body {
+            padding-top: 56px; /* Offset for fixed navbar */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        #sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #343a40;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 56px;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        #sidebar.collapsed {
+            transform: translateX(-250px);
+        }
+        #map-container {
+            margin-left: 250px;
+            margin-top: 56px;
+            transition: all 0.3s;
+            height: calc(100vh - 56px);
+            width: calc(100% - 250px);
+        }
+        #map-container.expanded {
+            margin-left: 0;
+            width: 100%;
+        }
+        /* Mobile-first adjustments */
+        @media (max-width: 768px) {
+            #sidebar {
+                transform: translateX(-250px);
+            }
+            #sidebar.show {
+                transform: translateX(0);
+            }
+            #map-container {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+        /* add on by Edy */
+       .control-group {
+	   margin-bottom: 20px;
+	   border-bottom: 1px solid #eee;
+	   padding-bottom: 15px;
+        }
+
+        .layer-option {
+           margin: 8px 0;
+           display: flex;
+           align-items: center;
+        }
+	
+	.layer-option input {
+           margin-right: 8px;
+        }
+
+	.form-group {
+           margin: 10px 0;
+        }
+
+	.form-group label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+
+	.form-group input, .form-group select {
+          width: 100%;
+          padding: 5px;
+        }
+ 
+
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar (Bootstrap) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand ms-2" href="#">Folium Map</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="p-3 bg-dark">
+        <h4><i class="fas fa-map-marked-alt me-2"></i>Menu</h4>
+        <hr>
+        <ul class="nav nav-pills flex-column">
+            {% for item in menu_items %}
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" onclick="alert('{{ item }}')">
+                    <i class="fas fa-{{ 'layer-group' if 'Layer' in item else 'cog' if 'Settings' in item else 'home' }} me-2"></i>
+                    {{ item }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Folium Map Container -->
+    <div id="map-container">
+        {{ map_html }}
+    </div>
+    
+    <!-- Side panel container -->
+   <div id="side-panel" class="side-panel">
+      <div class="panel-header">
+           <h3>Layer Control</h3>
+         <button class="close-btn" onclick="togglePanel()">×</button>
+      </div>
+  
+   <div class="panel-content">
+       <!-- Base Layers -->
+         <div class="control-group">
+           <h4>Base Maps</h4>
+           <div class="layer-option">
+              <input type="radio" name="basemap" id="osm" checked 
+                      onclick="setBaseLayer('OpenStreetMap')">
+                      <label for="osm">OpenStreetMap</label>
+             </div>
+           <div class="layer-option">
+               <input type="radio" name="basemap" id="terrain" 
+                    onclick="setBaseLayer('Stamen Terrain')">
+                    <label for="terrain">Terrain</label>
+             </div>
+       </div>
+    </div>
+
+    <!-- Bootstrap 5 JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Sidebar Toggle Script -->
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mapContainer = document.getElementById('map-container');
+            sidebar.classList.toggle('collapsed');
+            sidebar.classList.toggle('show'); // For mobile
+            mapContainer.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
+
