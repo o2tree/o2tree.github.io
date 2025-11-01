@@ -151,8 +151,13 @@
   - MV Areena 2 : Tanjungpinang  - Mensanak Pulau Duyung, Tajuh Biru, Senayang -Pancur
   - Nawin HP: +628281364064034
   
+# [esp32](https://rust-dd.com/post/introduction-to-embedded-systems-with-rust-a-beginner-s-guide-using-esp32)
 
-# Vn Dorn Bottle ( collect water sample with depth
+- cargo install espup
+
+
+# Vn Dorn Bottle ( collect water sample with depth)
+
 
 # salinity refractometer
 a salinity refractometer is generally more accurate than a conductivity-based salinity probe for measuring salinity in aqueous solutions, particularly in marine and aquarium applications. Here’s why:
@@ -195,6 +200,50 @@ Avoid direct sunlight (can warp the prism).
 
 Use storage solution (like KCl) to prolong lifespan.
 Replace every 1–2 years for consistent accuracy.
+
+# Prevent Fouling for conductivity probe
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S2590048X19300093-fx1.jpg">
+
+<img src="https://www.ncbi.nlm.nih.gov/core/lw/2.0/html/tileshop_pmc/tileshop_pmc_inline.html?title=Click%20on%20image%20to%20zoom&p=PMC3&id=10096355_materials-16-02709-g001.jpg">
+
+<img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs11705-021-2102-6/MediaObjects/11705_2021_2102_Fig1_HTML.jpg?as=webp">
+
+<img src="https://salinometry.com/wp-content/uploads/2013/09/Weibel_Thuras_1918_Salinometer.jpg">
+
+a salinometer based on the electrical conductivity of seawater, together with temperature, provides salinity (S) readings. 
+To be more specific, S is calculated from the ratio of the conductivity of seawater to that of a KCl solution (32.4356 g/kg),
+ with both measurements made at 15 °C and under one-atmosphere pressure [7,35,36,37].
+ It can then be converted to chlorinity using the Knudsen equation (Equation (1)) [6].
+S (g Kg−1)=1.80665 Cl (g Kg−1)
+
+[seawater calculation on TEOS-10](https://monrecifamoi.saulme.fr/salinite/sea_water_calculator_teos10.php)
+
+[salinity on PS-788 formula](https://salinometry.com/pss-78/)
+
+# [Temperature T90](https://www.fluke.com/en-us/learn/blog/calibration/its-90?srsltid=AfmBOoohzT0IVs5LWmdxRaTlXLjq-iJ-acMKxxWhLNSr8dyFQ98EE7rf)
+
+
+
+8. Case Study: OpenCTD Anti-Fouling
+The open-source OpenCTD uses:
+
+Teflon-coated electrodes.
+Pulsed AC measurement (no DC bias).
+Manual cleaning during calibration.
+. Effectiveness Comparison
+|Method|	Biofilm Prevention|	Mineral Fouling	|Cost|	Complexity|
+|------|-------------------------|----------------------|----|------------|
+|Silicone Coatings|	Medium	|Low	|$|	Low|
+|Mechanical Wipers|	High|	High|	$$$	High|
+|Pulsed Polarization|	Medium|	Medium|	$$|	Medium|
+|UV-C LEDs|	High|	Low|	$$	|Medium|
+
+[Howland current pump using voltage opamp](https://neurophysics.ucsd.edu/courses/physics_171/The%20Howland%20Current%20Pump.pdf)
+
+[show constant current](https://circuitcellar.com/resources/quickbits/howland-current-source/)
+
+[Design guide](https://www.how2power.com/search/index.php)
 
 
 [Image Maker](https://imageresizer.com/)
@@ -250,10 +299,10 @@ Replace every 1–2 years for consistent accuracy.
 
 [Hull calculator](https://www.omnicalculator.com/sports/hull-speed)
 |Water ​line length <br>in feet |Hull speed <br>in knots| Hull speed <br>in mph |Hull speed <br>in km/h|
-|--------------------------|-------------------|--------------------|------------------|
-|8 ft  (2.438m)                     |3.8 kn             |4.4 mph             |7.0 km/h          |
-|9     (2.74m)                    |4.0                |4.7                 |7.4              |
-|10    (3.048m)                     |4.3                |4.9                 |8.0              |
+|--------------------------|-------------------|--------------------|-----------------|
+|8 ft  (2.438m)            |3.8 kn             |4.4 mph             |7.0 km/h         |
+|9     (2.74m)             |4.0                |4.7                 |7.4              |
+|10    (3.048m)            |4.3                |4.9                 |8.0              |
 |11|4.5|5.2|8.3|       
 |12|4.7|5.4|8.7|
 |13|4.9|5.6|9.1|
@@ -453,9 +502,6 @@ pie title International Reserves Of Central Banks Worldwide
     "Other Currencies": 3.5
 
 </div>
-
-
-
 
 <div class="mermaid">
 pie title Investment weighting factor 

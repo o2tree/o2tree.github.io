@@ -359,7 +359,7 @@ Alka-Seltzer is used to anesthetize zooplankton, not phytoplankton, making them 
 
 <img src="https://oceanvisions.org/wp-content/uploads/2023/08/Ocean-Based-Carbon-Dioxide-Removal.png" style="max-width: 100%;">
 
-[pythoplankton](https://www.tceq.texas.gov/downloads/publications/rg/chapter-8-rg-416.pdf)
+[Pythoplankton](https://www.tceq.texas.gov/downloads/publications/rg/chapter-8-rg-416.pdf)
 
 the common I2C speeds:
 * Standard-mode (Sm): 100 kbit/s 
@@ -446,7 +446,7 @@ For critical measurements, consider using fresh solution for each calibration.
 By following these guidelines, you can safely reuse conductivity calibration solution while maintaining accuracy. Let me know if you need further clarification!
 
 
-# Boiing the seacucumber (pasca panen)
+# Boiling the seacucumber (pasca panen)
 Excellent question. Boiling sea cucumbers is a critical step in processing, and using a consistent, controlled saltwater solution is far better than relying on variable natural seawater.
 
 For boiling sea cucumbers, you should replace natural seawater with an artificial saltwater solution at a salinity of 30 to 35 ppt (parts per thousand).
@@ -602,7 +602,8 @@ flowchart TD
 
 
 </div>
-      <div class="mermaid">
+
+<div class="mermaid">
             %% Design seawater intake with backwash
 	    flowchart TD
 		A[Seawater Intake<br>100-200m offshore<br>Depth: > 5m] --> B["8-inch HDPE Seabed Pipeline<br><font color="red">prevent biofouling clog  0.45~0.9m/s</font>"];
@@ -622,11 +623,9 @@ flowchart TD
                 
 		click E "https://www.valvesonline.com.au/references/mesh-sizing-chart/?srsltid=AfmBOoqCyfO31ZiZCVIYWMqY3XQMp5mz9yN-oFZl3br2Oz-IIsSmLiAF" "Mesh number to micron size";
                 
-      </div>
+ </div>
 
-
-
-       <div class="mermaid">
+<div class="mermaid">
             graph LR
             %% Pulau Rijai - kerang serimping
 	    A[Yellow sand (Pasir Silica)<br>SiO2 size:?<br>Biofilm]
@@ -636,12 +635,9 @@ flowchart TD
             
 	    Scallop["Scallop(Kerang serimping) di pulau Rijai"]
             Potasium["6 most important element in sea water,higher pH"]
+</div>
 
-            
-       </div>
-    <!-- /div -->
-
-    <div class="mermaid">
+<div class="mermaid">
             graph LR
             %% Kerapu and seabass
 
@@ -668,8 +664,8 @@ flowchart TD
             style Seabass1 fill:gold, color:black
             style R0 fill:blue, color:white
             style R1 fill:green, color: black
-           
-          </div>
+
+</div>
 
 
 
@@ -764,40 +760,52 @@ flowchart TD
 <div class="mermaid">
 
 flowchart TD
-    A[Southeast Monsoon<br/>Angin Timur & Selatan<br/>May - September] --> B(&#10052; Lower Rainfall<br>&#9728; More Sunshine<br>&#128168; Drier Air)
+    A["Physical Sensor<br>Conductivity Cell<br>+<br>Temperature Sensor"] --> B["Primary Measurement<br>Electrical Conductivity EC"];
+    B --> C{Calculation};
+    C -- "Apply Empirical Formula" --> D["Final Output: Salinity<br>(e.g., in PSU or ppt)"];
+    C -- "Multiply by Factor 0.5 salt water<br>brine: 0.7<br> waste water: 0.6" --> E["Final Output: TDS<br>TDS (ppm) = k * EC (μS/cm<br>(e.g., in ppm)"];
 
-    B --> C(Major Oceanographic Effects)
-    
-    C --> C1[Surface Currents<br/>Push water Northwest]
-    C --> C2[Reduced Wave Action<br/>Calmer Seas]
-    C --> C3[Enhanced Evaporation<br/>Higher Salinity]
-    C --> C4[Stable Water Column<br/>Thermocline Formation]
-    C --> C5[Less Sediment Disturbance<br/>Clear Water]
 
-    C1 & C2 & C3 & C4 & C5 --> D(Resulting Seawater Conditions)
+</div>
 
-    subgraph D [Characteristics of the Benan Sea]
-        D1[High Water Clarity<br/>Excellent Light Penetration]
-        D2[Higher Salinity<br/>~32-34 ppt]
-        D3[Stratified Water Column<br/>Warm surface, cooler deep water]
-        D4[Lower Nutrient Availability<br/>Limited vertical mixing]
-    end
-
-    D --> E(Overall Outcome: Period of Stability & Growth)
-
-    D1 --> F[Coral Reefs] --> F1[Peak Health & Growth<br/>Potential Coral Bleaching Risk]
-    D1 --> G[Seagrass Beds] --> G1[Peak Photosynthesis<br/>Expanded Growth]
-    D2 --> H[Fish & Invertebrates] --> H1[Stable Osmotic Conditions<br/>Active Spawning]
-    D4 --> I[Plankton] --> I1[Lower Plankton Blooms<br/>Clearer Water]
-<div>
 
 <div class="mermaid">
 
 flowchart TD
-    A[Southeast Monsoon<br/>Angin Timur & Selatan<br/>May - September] --> B(&#10052; Lower Rainfall<br>&#9728; More Sunshine<br>&#128168; Drier Air)
+    A[Southeast Monsoon<br>Angin Timur & Selatan<br>May - September] --> B("&#10052; Lower Rainfall<br>&#9728; More Sunshine<br>&#128168; Drier Air")
 
     B --> C(Major Oceanographic Effects)
     
+    C --> C1[Surface Currents<br>Push water Northwest]
+    C --> C2[Reduced Wave Action<br>Calmer Seas]
+    C --> C3[Enhanced Evaporation<br>Higher Salinity]
+    C --> C4[Stable Water Column<br>Thermocline Formation]
+    C --> C5[Less Sediment Disturbance<br>Clear Water]
+
+    C1 & C2 & C3 & C4 & C5 --> D(Resulting Seawater Conditions)
+
+    subgraph D [Characteristics of the Benan Sea]
+        D1[High Water Clarity<br>Excellent Light Penetration]
+        D2[Higher Salinity<br>~32-34 ppt]
+        D3[Stratified Water Column<br>Warm surface, cooler deep water]
+        D4[Lower Nutrient Availability<br>Limited vertical mixing]
+    end
+
+    D --> E(Overall Outcome: Period of Stability & Growth)
+
+    D1 --> F[Coral Reefs] --> F1[Peak Health & Growth<br>Potential Coral Bleaching Risk]
+    D1 --> G[Seagrass Beds] --> G1[Peak Photosynthesis<br>Expanded Growth]
+    D2 --> H[Fish & Invertebrates] --> H1[Stable Osmotic Conditions<br>Active Spawning]
+    D4 --> I[Plankton] --> I1[Lower Plankton Blooms<br>Clearer Water]
+</div>    
+
+
+<div class="mermaid">
+flowchart TD
+    A[Southeast Monsoon<br/>Angin Timur & Selatan<br>May - September] --> B(&#10052; Lower Rainfall<br>&#9728; More Sunshine<br>&#128168; Drier Air)
+
+    B --> C(Major Oceanographic Effects)
+
     C --> C1[Surface Currents<br/>Push water Northwest]
     C --> C2[Reduced Wave Action<br/>Calmer Seas]
     C --> C3[Enhanced Evaporation<br/>Higher Salinity]
@@ -819,7 +827,9 @@ flowchart TD
     D1 --> G[Seagrass Beds] --> G1[Peak Photosynthesis<br/>Expanded Growth]
     D2 --> H[Fish & Invertebrates] --> H1[Stable Osmotic Conditions<br/>Active Spawning]
     D4 --> I[Plankton] --> I1[Lower Plankton Blooms<br/>Clearer Water]
-<idiv>
+
+
+</div>
 
 <div class="mermaid">
 flowchart TD
