@@ -161,6 +161,35 @@
   - <img src="https://controllerstech.com/wp-content/uploads/2025/10/esp32rtos1_2.webp">
   - <img src="https://controllerstech.com/wp-content/uploads/2025/10/esp32rtos1_3.webp">
   - <img src="https://controllerstech.com/wp-content/uploads/2025/10/esp32rtos_2_1.webp">
+  - <img src="https://ece353.engr.wisc.edu/wp-content/uploads/sites/607/2025/07/Task_State_Machine.png">
+  - <img src="https://ece353.engr.wisc.edu/wp-content/uploads/sites/607/2025/07/Task_State_Machine.png">
+  - [freeRTOS univertisty wisconsin](https://ece353.engr.wisc.edu/freertos/queues/)
+  - Double buffer instead of circular Buffer
+  - <img src="https://ece353.engr.wisc.edu/wp-content/uploads/sites/607/2025/08/DoubleBuffer1.png">
+  - <img src="https://ece353.engr.wisc.edu/wp-content/uploads/sites/607/2025/08/DoubleBuffer2.png">
+  - <img src="https://www.digikey.com/maker-media/60c3b8b7-f4af-4a07-b139-0acae5a846fb">
+  - <img src="https://www.digikey.com/maker-media/b9d52446-ebca-4ae5-9e8d-9a4a035d1e4d">
+  -[task notification](https://www.highintegritysystems.com/rtos/what-is-an-rtos/rtos-tutorials/how-to-use-task-notifications-for-rtos/)
+- Memory allocation in freertos
+When FreeRTOS requires RAM it calls pvPortMalloc() instead of malloc(). Likewise, when FreeRTOS frees previously allocated RAM it calls vPortFree() instead of free(). 
+pvPortMalloc() has the same prototype as the standard C library malloc() function, and vPortFree() has the same prototype as the standard C library free() function.
+pvPortMalloc() and vPortFree() are public functions, so can also be called from application code.
+FreeRTOS comes with five example implementations of pvPortMalloc() and vPortFree(), which 
+
+# [Step 4: Build and Flash the Project](https://www.oceanlabz.in/dynamic-memory-allocation-in-freertos/?srsltid=AfmBOortTOiF-1ePjg2wiFSQ2I-NKGJgnLPjlcBVZCTqRGQMaCMCrjhi)
+- . :/media/edy/LocakDsk/Arduino/esp-idf/export.sh
+- idf.py build
+- idf.py -p /dev/ttyACM0 flash
+- idf.py monitor
+
+# waiting for interrupt
+void vApplicationIdleHook( void )
+{
+asm volatile (" WFI \n" );
+}
+
+# [Micropythn esp32c6](https://micropython.org/download/ESP32_GENERIC_C6/)
+
 
 - cargo install espup
 
