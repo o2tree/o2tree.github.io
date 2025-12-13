@@ -4,7 +4,7 @@
 - http://tr.ee/UG_IGJ3t3a
 - [O2tree main access](http://o2tree.carrd.co)
 - [Organic Product from Lombok-O2Tree Lombok](http://o2tree.github.io/lombok_tours.html)
-- [AI](https://hix.ai/)
+- [AI](https://hix.ai/), [QR Code Scanner](https://scanqr.org/)
 
 - [Kelompok Tani Hutan Sumber Bahari](http://o2tree.github.io/KTHSumberBahari.html)
 - [Gallery image KTH](http://o2tree.github.io/kth_gallery.html)
@@ -34,6 +34,7 @@
 - [Salinity of Ocean ma](https://www.pmfias.com/ocean-salinity-vertical-horizontal-distribution/)
 - [Chat GPT](https://chat.chatbot.app/gpt5?utm_source=GoogleAds&utm_medium=cpc&utm_campaign={campaign}&utm_id=22665487438&utm_term=182338911722&utm_content=757447283652&gad_source=1&gad_campaignid=22665487438&gclid=EAIaIQobChMIrK38ncCOjwMV9qhmAh3xgS2iEAAYASADEgLAJ_D_BwE)
 - [Peta ombak KPRI bintan](https://maritim.bmkg.go.id/cuaca/perairan/perairan-kep-bintan)
+- [Lahan Hijau (produksi, hutan lindung dan ahan putih)](https://gfw.global/PrU1JS)
 - [Whatsapp QR contact](http://o2tree.github.io/QR_Whatsapp.html)
 
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
