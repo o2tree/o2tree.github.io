@@ -36,6 +36,7 @@
 - [Peta ombak KPRI bintan](https://maritim.bmkg.go.id/cuaca/perairan/perairan-kep-bintan)
 - [Lahan Hijau (produksi, hutan lindung dan ahan putih)](https://gfw.global/PrU1JS)
 - [Whatsapp QR contact](http://o2tree.github.io/QR_Whatsapp.html)
+- [whatsapp QR Contact - Julina Lie](http://o2tree.github.io/QR_Whatsapp_Julina.html)
 
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en

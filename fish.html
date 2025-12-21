@@ -315,21 +315,28 @@ flowchart TD
     flowchart  TB
       subgraph OCEAN9 ["fas:fa-ship <a https://tiketkapal.com/> OCEAN 9 </a>"]
           direction LR
-           TP([Telaga Punggur])-->|ferry 11:00 web kapaltiket.com| A([BENAN]) --> |"00:45"| B([Tajuh Biru])  --> C(["Sei Tenam"])  --> D(["Senayang"]) <--->|"from 07:15 Pancur"| E(["Pancur"])
+           TP([Telaga Punggur])-->|ferry 11:00 web kapaltiket.com <br>Tanggal Genap| A([BENAN]) --> |"00:45"| B([Tajuh Biru])  --> C(["Sei Tenam"])  --> D(["Senayang"]) <--->|"from 07:15 Pancur"| E(["Pancur"])
       end
       subgraph DRAGON5 ["fas:fa-ship DRAGON 5"]
           direction LR
-          TP1(["Telaga punggur"]) --> CC(["Sungai Teinam"])-->JG(["Jagoh"])
+          TP1(["Telaga punggur"]) -->|Tanggal Ganjil| CC(["Sungai Teinam"])-->JG(["Jagoh"])
       end
       subgraph Anambas ["fas:fa-ship Anambas"]
           direction LR
-          TP2(["Telaga Punggur"]) --"Rp. 494k"--> Letung  --"Rp 495k"-->   Terempa(["Terempa"]) 
+          TP2(["Telaga Punggur"]) --"Rp. 494k, Monday and Friday"--> Letung  --"Rp 495k"-->   Terempa(["Terempa"]) 
        end
       subgraph Bintan["Pulau Bintan/Tanjung Pinang"]
           direction LR
           BTP(["Tanjung Pinang"])
+          TB["Tajuh Biru"]
+          MS["Mesanak"]
+          Rejai
+          PP["Pasir Panjang:: Pompong"] --> PC["Pulau Cempa"]
+
+
       end
     TP <--.--> TP1 <--.--> TP2
+    
     style A fill: black, color: white
     style B fill:grey, color:#fff
     style TP fill:blue, color: white
@@ -343,6 +350,8 @@ flowchart TD
 
 <div class="mermaid">
  flowchart LR
+    %% ada di pulau Petong, Sungai pinang Lingga
+
     subgraph subgraph1["Benur Bening Lobster"]
         direction TB
         top1["🦞 ≤ 2 gr (≤ 2months) <br> SR 30%~40% <br>Nature <  0.01%"] --> bottom1["🦞 ≥  5gr (2 - 3 months) SR ≥ 70%~80%"]
@@ -619,7 +628,7 @@ Both of these species are known for having firm yet moist meat while having the 
 [xxx](https://repository.unibos.ac.id/xmlui/bitstream/handle/123456789/634/POTENSI%20PENGEMBANGAN%20BUDIDAYA%20IKAN%20KERAPU%20PERAIRAN%20TELUK%20YAPEN%20PROPINSI%20PAPUA.pdf?isAllowed=y&sequence=1)
 [kerapu wwf](http://awsassets.wwf.or.id/downloads/2_bmp_budidaya_ikan_kerapu_sistem_karamba_jaring_apung___tancap.pdf)
 
-## hardshell vs softshell result in high and low salinity shirmp culture
+## Hardshell vs softshell result in high and low salinity shirmp culture
 Hard shell lobsters also have less water weight, while soft shell lobsters contain more water. This difference in yield is
 reflected in the lower pricing of soft shell lobsters. For comparison, the average yield for hard shells is roughly 20% to 28% meat, while soft shells contain around 15% to
 20% meat. 5 Jun 2018
@@ -649,6 +658,9 @@ Batam
 
 
 ## Kerapu
+
+- Kerapu cantang Hitam (lebih enak) vs Kerapu cantang Kuning
+
 ### di keramba apung
 *  Pencegahaan penyakit dengan mencelupkan kerapu ke air tawar 15 minutes? Membunuh hama air laut
 * Ukuran 7 cm sampai 0.5 kg untuk macan 8 bulan dan bebek 12 bulan
@@ -690,7 +702,7 @@ Batam
 
 * [Prevent disease in grouper](https://www.seafdec.org.ph/wp-content/uploads/2021/08/prevention-control-of-parasites-in-groupers.pdf)
 
-* small prawn eats the grouper lice but not too big which groupr will eat the praawn
+* Small prawn eats the grouper lice but not too big which groupr will eat the prawn
 
 * A freshwater dip is a treatment for saltwater fish, like groupers, to help remove parasites.
  It involves temporarily placing the fish in fresh water for a short period, typically 3-5 minutes, to kill or loosen parasites.
@@ -878,8 +890,13 @@ sold in fresh condition at the local markets or iced and transported to distant 
 [Hatchery tank](https://enduramaxx.co.uk/enduramaxx/scallop-hatchery-tanks/)
 {scallop and lobster cage](https://www.alibaba.com/product-detail/scallop-hatchery-lantern-scallop-culture-lantern_11000005993291.html)
 
+
+# Lobster (Udang Kara)
+
 # Siput Laut Gonggong (Laevistrombus turturella)
- 
+- banyak di pancur atau daik,
+- tanpa air bisa hidup sampai 3 hari asal tidak kena sinar matahari
+
 
 # sweet patato plant for fish feed?
 </md-block>

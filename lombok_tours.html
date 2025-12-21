@@ -55,9 +55,117 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
 </head>
 <body>
-    
-    
-            <div class="folium-map" id="map_46e6bfc9908aff2d51ef4f9551d9ed3c" ></div>
+         <h3 align="center" style="font-size:20px"><b>Lombok Island Tour Agency</b></h3>
+             <p align="center">Discover the best of Lombok's attractions and tour packages</p>
+     <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-map-marked-alt me-2"></i>Folium Map
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Documentation</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search location..." id="search-input">
+                    <button class="btn btn-outline-light" type="button" id="search-button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+		<div class="col-md-3 col-lg-2 sidebar d-none d-md-block">
+                <h5 class="px-3">Map Layers</h5>
+                <ul class="nav flex-column mb-3" id="layer-control">
+                    <li class="layer-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="osm-layer" checked>
+                            <label class="form-check-label" for="osm-layer">OpenStreetMap</label>
+                        </div>
+                    </li>
+                    <li class="layer-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="terrain-layer">
+                            <label class="form-check-label" for="terrain-layer">Stamen Terrain</label>
+                        </div>
+                    </li>
+                    <li class="layer-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="dark-layer">
+                            <label class="form-check-label" for="dark-layer">Dark Matter</label>
+                        </div>
+                    </li>
+                </ul>
+                
+                <h5 class="px-3">Map Features</h5>
+                <ul class="nav flex-column mb-3" id="feature-control">
+                    <li class="layer-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="markers-layer" checked>
+                            <label class="form-check-label" for="markers-layer">City Markers</label>
+                        </div>
+                    </li>
+                    <li class="layer-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="polygons-layer" checked>
+                            <label class="form-check-label" for="polygons-layer">Polygons</label>
+                        </div>
+                    </li>
+                </ul>
+                
+                <h5 class="px-3">Tools</h5>
+                <div class="d-grid gap-2 px-3">
+                    <button class="btn btn-outline-primary btn-sm mb-2" id="draw-toggle">
+                        <i class="fas fa-draw-polygon me-1"></i> Draw Shape
+                    </button>
+                    <button class="btn btn-outline-primary btn-sm mb-2" id="measure-toggle">
+                        <i class="fas fa-ruler me-1"></i> Measure Distance
+                    </button>
+                    <button class="btn btn-outline-primary btn-sm mb-2" id="location-find">
+                        <i class="fas fa-search-location me-1"></i> Find My Location
+                    </button>
+                </div>
+                
+                <div class="legend mt-4 px-3">
+                    <h6>Map Legend</h6>
+                    <div><i style="background: #2ecc71;"></i> City Marker</div>
+                    <div><i style="background: #3498db;"></i> Polygon Area</div>
+                    <div><i style="background: #e74c3c;"></i> Capital City</div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="col-md-9 col-lg-10 map-container ">
+                <div id="map_46e6bfc9908aff2d51ef4f9551d9ed3c"></div>
+                
+                <div class="info-panel">
+                    <h6>Map Information</h6>
+                    <p>This interactive map demonstrates Folium with a custom menu and layer control.</p>
+                    <p>Use the layer control on the map or in the sidebar to toggle different layers.</p>
+                    <p class="mb-0"><small>Zoom in/out to explore.</small></p>
+                </div>
+            </div>
+        </div>
+    </div>    
+            <!-- div class="folium-map" id="map_46e6bfc9908aff2d51ef4f9551d9ed3c" ></div -->
         
 </body>
 <script>
