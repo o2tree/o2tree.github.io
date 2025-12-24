@@ -37,6 +37,8 @@
 - [Lahan Hijau (produksi, hutan lindung dan ahan putih)](https://gfw.global/PrU1JS)
 - [Whatsapp QR contact](http://o2tree.github.io/QR_Whatsapp.html)
 - [whatsapp QR Contact - Julina Lie](http://o2tree.github.io/QR_Whatsapp_Julina.html)
+- [Turnon vPN wireguard or openVPN then access router](http://192.168.27.1)
+- [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) and [ftp 192.168.27.1](ftp://192.168.27.1)
 
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
