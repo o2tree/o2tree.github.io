@@ -4,7 +4,7 @@
 - http://tr.ee/UG_IGJ3t3a
 - [O2tree main access](http://o2tree.carrd.co)
 - [Organic Product from Lombok-O2Tree Lombok](http://o2tree.github.io/lombok_tours.html)
-- [AI](https://hix.ai/), [QR Code Scanner](https://scanqr.org/)
+- [AI](https://hix.ai/), [QR Code Scanner](https://scanqr.org/),[Excalidraw](https://excalidraw.com/)
 
 - [Kelompok Tani Hutan Sumber Bahari](http://o2tree.github.io/KTHSumberBahari.html)
 - [Gallery image KTH](http://o2tree.github.io/kth_gallery.html)
@@ -28,7 +28,7 @@
 - [Culture Pearls Oyster Documents](http://o2tree.github.io/data/pearl_osyter.pdf)
 - [Lombok, Sumbawa and Australia](https://www.google.com/maps/d/edit?mid=1jMQpPbBhL5H2xGFchY7RaRPEZ9oamd4&usp=sharing)
 - [Lingga  KPRI](https://www.google.com/maps/d/edit?mid=1tXQBlut4Pmem8AUXbMKZfsg53UBtCIA&usp=drive_link)
-- [Boat and Investment](http://o2tree.github.io/boat.html)
+- [Boat and Investment](http://o2tree.github.io/boat.html),[feed1](http://o2tree.github.io/feed1.html),[feed2](http://o2tree.github.io/feed2.html)
 - [Rust and cpp](http://o2tree.github.io/rustcpp.html)
 - [Indian Ocean and Pacific ocean current](https://www.researchgate.net/profile/R-Susanto/publication/251863342/figure/fig1/AS:646486350102540@1531145765920/Map-of-Indonesian-throughflow-pathways-from-the-Pacific-Ocean-to-the-Indian-Ocean-The.png)
 - [Salinity of Ocean ma](https://www.pmfias.com/ocean-salinity-vertical-horizontal-distribution/)
