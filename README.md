@@ -11,7 +11,8 @@
 - [Tanjung Kampeh Palemebang](http://o2tree.github.io/tanjungkampeh.html)
 - [KPRI Lingga](http://o2tree.github.io/kpri_lingga.html)
 - [Italy point of Interest-Testing Mermaid](http://o2tree.github.io/italy.html)
-- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html), [Malaysia Arraival card](https://imigresen-online.imi.gov.my/mdac/main)
+- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html), [Malaysia Arraival card](https://imigresen-online.imi.gov.my/mdac/main),
+  [all Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/)
 
 - [Peta Usulan Sumber bahari](http://o2tree.github.io/kth/data/peta_usulan_sumber_bahari.pdf)
 - http://o2tree.github.io/lahanrumah3.html
