@@ -154,8 +154,40 @@
   
 
   cargo add adui-dioxus
+  KSL Hotel
+  33, Jalan Seladang, 
+  Taman Abad, Johor Bahru, 
+  Johor 80250, Malaysia
 
-  
+  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*pUbg1uZh82xcrG1E0-fo8g.gif"  style="max-width: 100%;" />
+  [vector_search](https://iniakunhuda.medium.com/postgresql-full-text-search-a-powerful-alternative-to-elasticsearch-for-small-to-medium-d9524e001fe0)
+ <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_VcIqsAjhr6j07qxM1osDw.png"  style="max-width: 100%;" />
+  ```
+-- Simple tsvector example
+SELECT to_tsvector('english', 'The quick brown foxes are jumping over lazy dogs');
+
+-- Output:
+-- 'brown':3 'dog':9 'fox':4 'jump':6 'lazi':8 'quick':2
+
+-- Example with multiple occurrences and positions
+SELECT to_tsvector('english', 'Running and running and running through the forest');
+
+-- Output:
+-- 'forest':7 'run':1,3,5
+
+-- Combining fields with different weights
+SELECT setweight(to_tsvector('english', title), 'A') ||
+       setweight(to_tsvector('english', content), 'B') AS weighted_document
+FROM (
+    SELECT 'PostgreSQL Search Guide' as title,
+           'Learn how to search in PostgreSQL effectively' as content
+) t;
+
+-- Output:
+-- 'guid':3A 'postgresql':1A 'search':2A 'effect':6B 'learn':4B 'postgresql':7B 'search':8B
+
+  ```
+
 # [UV on windows](https://flocode.substack.com/p/044-python-environments-again-uv)
 - uv python install
 - uv init
@@ -295,7 +327,7 @@ Cannabis & Related Products
 
 mangrove soils
 
-<img src="https://docsdrive.com/images/ansinet/jest/2016/fig3-2k16-198-207.jpg" style="max-width: 100%;" />o
+<img src="https://docsdrive.com/images/ansinet/jest/2016/fig3-2k16-198-207.jpg" style="max-width: 100%;" />
 https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2017/03/DHT22_RaspberryPi_ESP8266.jpg?quality=100&strip=all&ssl=1
 
 # [Nanopb](https://jpa.kapsi.fi/nanopb/)
