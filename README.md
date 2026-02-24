@@ -36,11 +36,13 @@
 - [Chat GPT](https://chat.chatbot.app/gpt5?utm_source=GoogleAds&utm_medium=cpc&utm_campaign={campaign}&utm_id=22665487438&utm_term=182338911722&utm_content=757447283652&gad_source=1&gad_campaignid=22665487438&gclid=EAIaIQobChMIrK38ncCOjwMV9qhmAh3xgS2iEAAYASADEgLAJ_D_BwE)
 - [Peta ombak KPRI bintan](https://maritim.bmkg.go.id/cuaca/perairan/perairan-kep-bintan)
 - [Lahan Hijau (produksi, hutan lindung dan ahan putih)](https://gfw.global/PrU1JS)
-- [Whatsapp QR contact](http://o2tree.github.io/QR_Whatsapp.html)
+- [Whatsapp QR contact- Edy](http://o2tree.github.io/QR_Whatsapp.html)
 - [whatsapp QR Contact - Julina Lie](http://o2tree.github.io/QR_Whatsapp_Julina.html)
 - [Turnon vPN wireguard or openVPN then access router](http://192.168.27.1)
-- [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) and [ftp 192.168.27.1](ftp://192.168.27.1)
+- [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) and [ftp 192.168.0.1](ftp://192.168.0.1)
 
+- [Indonesia Coretax](http://www.coreaxdjp.pajak.go.id)
+- [Feed 2](http://o2tree.github.io/feed2.html)
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=en
