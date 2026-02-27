@@ -11,8 +11,8 @@
 - [Tanjung Kampeh Palemebang](http://o2tree.github.io/tanjungkampeh.html)
 - [KPRI Lingga](http://o2tree.github.io/kpri_lingga.html)
 - [Italy point of Interest-Testing Mermaid](http://o2tree.github.io/italy.html)
-- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html), [Malaysia Arraival card](https://imigresen-online.imi.gov.my/mdac/main),
-  [all Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/)
+- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html), [Malaysia Arraival card](https://imigresen-online.imi.gov.my/mdac/main),<br>
+  [all Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/),[Singapore SG Arraival](https://eservices.ica.gov.sg/sgarrivalcard/)
 
 - [Peta Usulan Sumber bahari](http://o2tree.github.io/kth/data/peta_usulan_sumber_bahari.pdf)
 - http://o2tree.github.io/lahanrumah3.html
@@ -52,6 +52,8 @@
 
 ## Release History
 
-
 See [CHANGELOG.md](CHANGELOG.md).
 A consolidated changelog (including changes from the other xx Tooling modules) is available on the [Releases tab](https://github.com/o2tree/releases).
+
+## Others
+[rabbit fish hatchery - Ikan Dengkis]()
