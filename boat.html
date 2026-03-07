@@ -33,8 +33,8 @@
                   	var oMenu = new sap.m.Menu({
 			title: "random 2",
 			itemSelected: function (oEvent) {
+        sItemPath = "";
 				var oItem = oEvent.getParameter("item"),
-					sItemPath = "";
 				while (oItem instanceof sap.m.MenuItem) {
 					sItemPath = oItem.getText() + " > " + sItemPath;
 					oItem = oItem.getParent();
@@ -54,7 +54,9 @@
 							icon: "sap-icon://accidental-leave",
 							items: [
 								new sap.m.MenuItem({
+                  icon: "sap-icon://factory",
 									icon: "sap-icon://factory",
+									text: "factory"
 									text: "factory"
 								}),
 								new sap.m.MenuItem({
@@ -143,6 +145,44 @@
 	<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div>
 <md-block>
 
+[Technitium DNS Server self hosting open source embedded pi Hole]
+- [docker compose](https://github.com/TechnitiumSoftware/DnsServer/blob/master/docker-compose.yml)
+
+
+
+https://sg.indeed.com/viewjob?jk=01a9b79366c6d05d&tk=1jig4uc0rjudb801&from=jobi2a_jobmatch-reactivation-en-SG_email&rjptk=1jig4ub5g2qdq000&xpse=SoBr67I3mRkpXWTI8B0LbzkdCdPP&xfps=f0759927-33e4-4b50-a1fe-b1d9be1182f3&xkcb=SoCO67M3mQB2XagLyL0IbzkdCdPP
+
+[libre workspace cloud](https://www.libre-workspace.org/en/libre-workspace-cloud/)
+
+<img src="https://docs.libre-workspace.org/_images/general_architecture_overview.drawio.png"  style="max-width: 100%;" />
+
+[libre workspace portal](https://docs.libre-workspace.org/modules/libre-workspace-portal.html)
+
+```
+uv add gunicorn
+uv run gunicorn your_project.wsgi
+
+uv run gunicorn --bind 0.0.0.0:8000 --workers 4 your_project.wsgi
+
+gunicorn app.main:app \
+  -k uvicorn.workers.UvicornWorker \
+  -w 4 -b 0.0.0.0:8000
+
+
+https://uvicorn.dev/
+
+```
+# https://github.com/astral-sh/setup-uv
+uv add -r requirements/base.txt
+uv add -r requirements/dev.txt --group dev
+uv add -r requirements/deploy.txt --group deploy
+git rm requirements/*.txt
+This adds the base requirements to
+
+
+```
+
+
 # [Integrated Power Module (IPM)](https://americas.fujielectric.com/wp-content/uploads/2020/10/Small-IPM-MTET0-3288a_EN.pdf)
 
 What is Dual MPPT Hybrid Inverter?
@@ -169,6 +209,33 @@ used for larger and more complicated solar systems, while single MPPT is more su
 
 [mppt 1](https://www.hinen.com/blogs/energy-storage/what-is-an-mppt-inverter)
 <img src="https://www.hinen.com/cdn/shop/articles/MPPT_Inverter_-_operating_principle_a6da6337-1c4a-409c-ba48-39258e7a610b.jpg?v=1753241766&width=1500"  style="max-width: 100%;" />
+
+# [pi-Hole as DNS](https://pi-hole.net/)
+[Alternative to pihole](https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole)
+
+[reverse proxy](https://www.xda-developers.com/a-reverse-proxy-tied-my-entire-home-lab-together/)
+
+[rexda](https://www.cnx-software.com/2023/10/04/inkplate-4-tempera-epaper-display-supports-esphome-arduino-and-micropython/)
+
+Expansion- easyC (Qwicc/STEMMA Qt) connectors connected via  PCAL6416 GPIO expander
+
+[open os?](https://oniroproject.org/)
+
+[OpenHarrmony](https://gitee.com/openharmony/kernel_liteos_m)
+
+[gitee vs gihub](https://gitee.com/)
+
+[paper ngx](https://www.ojambo.com/how-to-get-started-with-paperless-ngx-using-podman-a-beginner-friendly-guide)
+
+[install paperngx ai](https://wz-it.com/en/blog/paperless-ai-installation-ubuntu-docker/)
+
+```
+git clone https://github.com/clusterzx/paperless-ai.git
+cd paperless-ai
+docker-compose up -d
+
+```
+
 
 # Hotel contact:
 - Daik
@@ -834,6 +901,42 @@ Manual cleaning during calibration.
 - 65% kapal nelayan adalaah terbuat dari kayu (10`15 year)
   - Mesin bukan dmeesia kapal akibatnya mudah terjadi korosi
 
+-[converting carebouretor with fuel injection](https://jlmmarine.com/blogs/outboard-101/converting-your-outboard-from-carburetor-to-efi-is-it-worth-it?srsltid=AfmBOoq6V8xbNVkF61U0qFeOkS_v15pkyRu-QDQ-liBLQYTKIk9GGrd7)
+  - mixture air and fuel (caarburetor with fuel injection)
+
+- [two stroke petrol engine 2-Stroke Mixture](https://penriteoil.com.au/assets/tech_pdfs/1202%20-%20Technical%20Bulletin%20Two%20Stroke%20Engine%20Oils.pdf):
+<img src="https://www.quicksilver-products.com/content/quicksilver-products/na/us/en/blog/how-to-pre-mix-two-stroke-oil/_jcr_content/root/container/pagesection/columnrow/item_1643995394042/contentcontainer/image.coreimg.100.976.jpeg/1675952136157/hero---mer-4039-quicksilver-tips-for-pre-mix-two-stroke-oil-teaser--2-.jpeg">"
+
+|Fuel / Oil Ratio | mls per 1 Litreof fuel|mls per 5 Litres of fuel|mls per 10 Litres of fuel| mls per 20 Litres of fuel|
+|-----------------|-----------------------|------------------------|--------------------------|-------------------------|
+|5:1 |200 |1000| 2000 |4000|
+|10:1 |100 |500 |1000 |2000|
+|15:1 |67 |333 |667| 1333|
+16:1 63 313 625 1250
+20:1 50 250 500 1000
+25:1 40 200 400 800
+30:1 33 167 333 667
+33:1 30 152 303 606
+35:1 29 143 286 571
+40:1 25 125 250 500
+45:1 22 111 222 444
+|50:1| 20| 100 |200 |400|
+55:1 18 91 182 364
+60:1 17 83 167 333
+65:1 15 77 154 308
+70:1 14 72 143 286
+75:1 13 67 133 267
+80:1 13 63 125 250
+85:1 12 60 120 240
+90:1 11 55 110 220
+95:1 11 53 105 210
+|100:1 |10| 50 |100 |200|
+
+
+Common Ratios:
+50:1 (Most Modern Equipment): 1 gallon of gas to 2.6 ounces of oil, or 5 liters of gas to 100ml of oil.
+40:1 (General/Older Equipment): 1 gallon of gas to 3.2 ounces of oil, or 5 liters of gas to 125ml of oil.
+32:1 (Older/High-Performance): 1 gallon of gas to 4.6 ounces of oil.
 
 *  [Clasification River class boat](https://itayachtscanada.com/understand-the-class-a-b-c-d-in-yachting/)
 * [First aid in the boat](https://www.ecfr.gov/current/title-46/chapter-I/subchapter-W/part-199/subpart-B/section-199.175)
@@ -936,6 +1039,23 @@ The movements of flight controls are converted to electronic signals transmitted
 at each control  surface to provide the ordered response. 
 The fly-by-wire system also allows automatic signals sent by the aircraft's computers to perform functions
 without the pilot's input, as in systems that automatically help stabilize the aircraft.
+
+# Low frequency vs High frequency Power Inverter
+
+# PV to DC load 
+solar direct to DC without power inverters
+52- 55 VDC  96 VDC or 110 VDC 
+
+
+```
+menuentry "Kubuntu 24.04.2 Noble ISO" {
+	set isofile="/ISO/kubuntu-24.04.2-desktop-amd64.iso"
+	loopback loop (hd1,5)$isofile
+	    linux (loop)/casper/vmlinuz boot=casper iso-scan/filename=$isofile toram noeject
+	    initrd (loop)/casper/initrd
+}
+
+```
 
 
 # perlu kapal 40HP untuk perairan dengan laut lepas (tanjung pinang)
@@ -1160,6 +1280,7 @@ The acetic acid in ACV is thought to be at least partly responsible for any heal
 - High strenght and salt water resistance
 - UV coated
 - size: 22mm diameter
+
 
 
 # Promox
