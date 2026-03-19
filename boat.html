@@ -149,7 +149,6 @@
 - [docker compose](https://github.com/TechnitiumSoftware/DnsServer/blob/master/docker-compose.yml)
 
 
-
 https://sg.indeed.com/viewjob?jk=01a9b79366c6d05d&tk=1jig4uc0rjudb801&from=jobi2a_jobmatch-reactivation-en-SG_email&rjptk=1jig4ub5g2qdq000&xpse=SoBr67I3mRkpXWTI8B0LbzkdCdPP&xfps=f0759927-33e4-4b50-a1fe-b1d9be1182f3&xkcb=SoCO67M3mQB2XagLyL0IbzkdCdPP
 
 [libre workspace cloud](https://www.libre-workspace.org/en/libre-workspace-cloud/)
@@ -171,6 +170,7 @@ gunicorn app.main:app \
 
 https://uvicorn.dev/
 
+```
 ```
 # https://github.com/astral-sh/setup-uv
 uv add -r requirements/base.txt
@@ -211,6 +211,7 @@ used for larger and more complicated solar systems, while single MPPT is more su
 <img src="https://www.hinen.com/cdn/shop/articles/MPPT_Inverter_-_operating_principle_a6da6337-1c4a-409c-ba48-39258e7a610b.jpg?v=1753241766&width=1500"  style="max-width: 100%;" />
 
 # [pi-Hole as DNS](https://pi-hole.net/)
+
 [Alternative to pihole](https://amanvir.com/blog/turning-my-esp32-into-a-dns-sinkhole)
 
 [reverse proxy](https://www.xda-developers.com/a-reverse-proxy-tied-my-entire-home-lab-together/)
@@ -236,6 +237,23 @@ docker-compose up -d
 
 ```
 
+[simple a-reverse-proxy-tied-my-entire-home-lab-together](https://jonathanklimt.de/programming/socat-proxy/)
+
+https://github.com/jnqpblc/Randomness/blob/master/3.mapping/ipv6-socat-proxy-for-ipv4-tools.sh
+
+
+####sudo apt install socat curl -y
+# ###/etc/systemd/system/puppet-proxy.service 
+# [Unit]
+# Description=Puppet Proxy Application
+# 
+# [Service]
+# User=puppet
+# ExecStart=/usr/bin/socat TCP6-LISTEN:8140,reuseaddr,fork TCP4:127.0.0.1:8140
+# 
+# [Install]
+# WantedBy=multi-user.target
+
 
 # Hotel contact:
 - Daik
@@ -252,16 +270,18 @@ docker-compose up -d
   KSL Hotel
   33, Jalan Seladang, 
   Taman Abad, Johor Bahru, 
-  Johor 80250, Malaysia
+  Johor 8025
+  0, Malaysia
 
-  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*pUbg1uZh82xcrG1E0-fo8g.gif"  style="max-width: 100%;" />
-  [vector_search](https://iniakunhuda.medium.com/postgresql-full-text-search-a-powerful-alternative-to-elasticsearch-for-small-to-medium-d9524e001fe0)
+<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*pUbg1uZh82xcrG1E0-fo8g.gif"  style="max-width: 100%;" />
+
+[vector_search](https://iniakunhuda.medium.com/postgresql-full-text-search-a-powerful-alternative-to-elasticsearch-for-small-to-medium-d9524e001fe0)
  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_VcIqsAjhr6j07qxM1osDw.png"  style="max-width: 100%;" />
   ```
 -- Simple tsvector example
 SELECT to_tsvector('english', 'The quick brown foxes are jumping over lazy dogs');
 
--- Output:
+-- Output
 -- 'brown':3 'dog':9 'fox':4 'jump':6 'lazi':8 'quick':2
 
 -- Example with multiple occurrences and positions
@@ -299,6 +319,68 @@ const doc = new JsPDF({
   unit: "pt",
   format: "A4",
 });
+
+# htop ( monitor for linux)
+
+[Natural Gas Engine](https://www.yanmar.com/global/engine/products/gas/v_watercooled/gas/)
+
+<img src="https://www.powrmatic.co.uk/wp-content/uploads/2020/04/a811ae5121e0bb213c7e212c077bcd33a2bf7f86.png.webp">
+
+[kerosne vs diesel](https://www.bellperformance.com/blog/kerosene-in-diesel-engine)
+
+[What is the difference between MGO and MDO?](https://turbion.co.id/en/product/)
+Marine Gas Oil (MGO)
+Atau bisa disebut juga dengan minyak solar, digunakan pada industri maritim, terutama untuk mesin diesel di kapal. 
+Memiliki kualitas yang lebih ringan dan bersih, dengan kandungan sulfur yang lebih rendah.
+
+Marine Fuel Oil (MFO)
+A type of fuel specifically used in ship internal combustion engines. such as cargo ships, passenger ships 
+and military ships in the form of:
+- Low Sulfur Fuel Oil (LSFO) : 380cst &180cst
+- High Sufur Fuel Oil (HSFO)
+
+
+What is the viscosity of marine diesel?
+Diesel oil, often referred to as Marine Diesel Oil (MDO) or Marine Diesel Fuel (MDF), has a specific density of about 0.9 g/cm3; 
+the flash point is above 60C. The calorific value is about 44000 kJ/kg; the kinematic viscosity is about 8 to 11 cSt at 40C, and 
+the sulphur content is about 2%. The colour is brownish.
+
+Are you a boat owner looking to update/upgrade your existing vessel or one you may acquire. It is no secret that diesel internal combustion engines are 
+the most efficient and cost-effective choice when it comes to powering a vessel at this point in time. If so, understanding the difference between commercial 
+marine diesel, recreational marine diesel, and industrial diesel is essential. Marine and commercial marine diesel has been specifically developed for use in watercraft while 
+Industrial Diesel serves many purposes on land. In this blog post, we will explain the key differences between these three types and focus on which would be better suited for 
+keeping your boat running at its best. Keep reading to gain a comprehensive understanding of how each type of diesel works — and why one may be more beneficial than the other 
+for ensuring long-term performance on the open seas!
+
+[Exploring the Basics of Diesel Engines](https://mackboring.com/blogs/marine-diesel-vs-industrial-diesel-whats-the-difference/)
+diesel
+Diesel engines are an essential part of the transportation industry, powering everything from semi-trucks to cargo ships. Unlike gasoline engines, diesel engines 
+rely on compression rather than spark ignition to combust fuel. This key difference allows diesel engines to achieve higher fuel efficiency and torque, making them a 
+popular choice for heavy-duty vehicles. Diesel engines can range in size from small generators to massive industrial machines, but they all have a few basic components in common, 
+including a fuel pump, fuel filter, and fuel injectors. Exploring the basics of diesel engines can provide a deeper understanding of how these powerful machines work and their 
+vital role in transportation and industry.
+
+Basic Diesel Engine Principal
+No matter what it is used for, all diesel engines are based on the principal of compressing fuel to the point of explosion. Obviously, this happens inside the cylinder and drives 
+the piston down, turning the crank shaft creating torque (rotational power). That then is dispersed to the drive train via transmission and what ever the propulsion need is, i.e. 
+Propellor, jet drive, pump, generator, or whatever.
+
+Identifying the Different Factors that Separate Marine and Industrial Diesel Engines
+Marine and industrial diesel engines may seem similar at first glance, and they are at the core, but there are several factors that set them apart. One major difference between 
+the two is their cooling and exhaust designs. Marine engines are enclosed deep inside the vessel and do not have access to cooling air, so cooling is achieved by pumping seawater 
+through the heat exchanger (liquid to liquid) so the coolant liquid which runs through the engine block gets cooled appropriately. Then the exhaust must be routed out of the engine 
+compartment usually with that heated seawater. This process develops some caustic processes that if they were not correctly designed for, it would allow the heated seawater to dissolve 
+components of the engine. 
+
+The industrial engines use a Radiator with an Air-to-Liquid heat exchanger. Same as in 90% of all automobiles out there. The exhaust gases then escape the combustion chamber into the 
+atmosphere. There are requirements on land-based engines to comply with EPA Tier IV standards. This adds “treatment” to the system that Marine engines do not yet use.
+
+Another big difference in the industrial vs. marine is the operating RPM. The marine propulsion diesel requires multiple speeds or varying RPM. The majority of industrial diesel are 
+fixed speed applications. Once your rock crusher is turned on and operational, it will usually stay at 1200 or 1800 RPM to do its job. Therefore, they tend to get more running hours 
+out of similar HP ranges. Marine engines, however, are directly connected to the drive like your car, and must work at variable speeds. This adds to wear and tear.
+
+So when comparing diesel engines for use, it is not practical to think of these engines as the same. Just like all humans have the same basic design (Musculature, skeletal, circulatory, 
+digestive, nervous system) there are different types for different jobs. A sprinter is different from an offensive football tackle. Same machine, different application.
 
 # Fermentation lacto
 - salt= (2-2.5%)* (ingredients + waters)
@@ -350,6 +432,7 @@ Talas and Banggkuang untuk diabetes
 #  [Airlift pump vs pump](https://aquaculturemag.com/2023/12/25/engineered-airlift-pumps-can-help-aquaculture-systems-to-perform-better/)
 
 <img src="https://aquaculturemag.com/wp-content/uploads/2023/12/img523.jpg"  style="max-width: 100%;" />
+
 [airlift 300x](https://www.reddit.com/r/Aquaculture/comments/1qd63bx/100x_cheaper_simpler_and_more_reliable_than_pumps/)
 
 <img src="https://static.wixstatic.com/media/9e60ee_46edbf2d468947e7b3a03b42cd626e56~mv2_d_1685_1248_s_2.png/v1/crop/x_0,y_2,w_1685,h_1241/fill/w_705,h_521,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/9e60ee_46edbf2d468947e7b3a03b42cd626e56~mv2_d_1685_1248_s_2.png" style="max-width: 100%;" />
