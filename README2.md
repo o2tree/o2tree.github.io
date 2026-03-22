@@ -20,7 +20,71 @@
 https://umaine.edu/cooperative-aquaculture/wp-content/uploads/sites/75/2015/11/Waste-to-worms.jpg
 
 
-    Jln Orang Kayu Pingai No. 49 
-    RT026/RW08
-    Jambi, Jambi Timur 36142
-    0 822 8912 8535
+Jln Orang Kayu Pingai No. 49 
+
+RT026/RW08
+
+Jambi, Jambi Timur 36142
+
+0 822 8912 8535
+
+
+
+mkdir .github/actions/ansible
+
+--- Dockerfile: ----
+
+FROM  <DockerHub-UserName>/ansible-in-containers
+
+COPY ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["bash","/entrypoint.sh"]
+
+
+
+
+Create a new Dockerfile.
+
+
+
+FROM  <DockerHub-UserName>/ansible-in-containers
+
+COPY ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["bash","/entrypoint.sh"]
+
+
+Copy the entrypoint.sh script to the Ansible Action directory.
+
+
+--- entrypoint.sh---
+#BASH
+Copy entrypoint.sh .github/actions/ansible
+
+#POWERSHELL
+Copy-Item entrypoint.sh .github/actions/ansible
+
+--- action.yml---------------
+
+name: 'Ansible'
+description: 'Runs an Ansible playbook'
+inputs:
+  playbook:
+    description: 'Ansible playbook to run'
+    required: true
+    default: playbook.yml
+  inventory:
+    description: 'Ansible inventory to use'
+    required: true
+    default: localhost
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.playbook }}
+    - ${{ inputs.inventory }}
+
+
+
+
+</p>

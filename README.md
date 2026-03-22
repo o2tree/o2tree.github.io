@@ -42,7 +42,8 @@
 - [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) and [ftp 192.168.0.1](ftp://192.168.0.1)
 
 - [Indonesia Coretax](http://www.coretaxdjp.pajak.go.id)
-- [Feed 2](http://o2tree.github.io/feed2.html)
+- [Feed 2-moo](http://o2tree.github.io/feed2.html)
+- [ansible and github workflow](https://github.com/artis3n/ansible-collection-tailscale/blob/main/pyproject.toml)
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=en
