@@ -4,7 +4,7 @@
 - http://tr.ee/UG_IGJ3t3a
 - [O2tree main access](http://o2tree.carrd.co)
 - [Organic Product from Lombok-O2Tree Lombok](http://o2tree.github.io/lombok_tours.html)
-- [AI](https://hix.ai/), [QR Code Scanner](https://scanqr.org/),[Excalidraw](https://excalidraw.com/)
+- [AI](https://hix.ai/), [QR Code Scanner](https://scanqr.org/),[Excalidraw](https://excalidraw.com/),[OmniCalculator](https://www.omnicalculator.com/)
 
 - [Kelompok Tani Hutan Sumber Bahari](http://o2tree.github.io/KTHSumberBahari.html)
 - [Gallery image KTH](http://o2tree.github.io/kth_gallery.html)
