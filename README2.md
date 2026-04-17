@@ -20,7 +20,21 @@
 https://umaine.edu/cooperative-aquaculture/wp-content/uploads/sites/75/2015/11/Waste-to-worms.jpg
 
 
+Talip Likin
+
 Jln Orang Kayu Pingai No. 49 
+
+RT026/RW08
+
+Jambi, Jambi Timur 36142
+
+0 822 8912 8535
+
+---
+
+Alyna Likin
+
+Jln Orang Kayu Pingai No. 107
 
 RT026/RW08
 
