@@ -11,8 +11,8 @@
 - [Tanjung Kampeh Palemebang](http://o2tree.github.io/tanjungkampeh.html)
 - [KPRI Lingga](http://o2tree.github.io/kpri_lingga.html)
 - [Italy point of Interest-Testing Mermaid](http://o2tree.github.io/italy.html)
-- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html), [Malaysia Arraival card](https://imigresen-online.imi.gov.my/mdac/main),<br>
-  [all Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/),[Singapore SG Arraival](https://eservices.ica.gov.sg/sgarrivalcard/)
+- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html), [Malaysia Arrival card](https://imigresen-online.imi.gov.my/mdac/main),<br>
+  [All Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/),[Singapore SG Arrival](https://eservices.ica.gov.sg/sgarrivalcard/)
 
 - [Peta Usulan Sumber bahari](http://o2tree.github.io/kth/data/peta_usulan_sumber_bahari.pdf)
 - http://o2tree.github.io/lahanrumah3.html
@@ -41,9 +41,10 @@
 - [Turnon vPN wireguard or openVPN then access router](http://192.168.27.1)
 - [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) and [ftp 192.168.0.1](ftp://192.168.0.1)
 
+- [PCBWay order prototype](https://www.pcbway.com/), [Singapore xometry](https://xometry.sg/)
 - [Indonesia Coretax](http://www.coretaxdjp.pajak.go.id)
-- [Feed 2-moo](http://o2tree.github.io/feed2.html)
-- [ansible and github workflow](https://github.com/artis3n/ansible-collection-tailscale/blob/main/pyproject.toml)
+
+- [Ansible and github workflow](https://github.com/artis3n/ansible-collection-tailscale/blob/main/pyproject.toml)
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=en
@@ -58,3 +59,4 @@ A consolidated changelog (including changes from the other xx Tooling modules) i
 
 ## Others
 [rabbit fish hatchery - Ikan Dengkis]()
+[CO2 level healthy](https://www.co2meter.com/en-sg/blogs/news/carbon-dioxide-indoor-levels-chart?srsltid=AfmBOooDROE6-sbWMXlnGXAkkQMJ27keVhxGisJR418jgfouc6m1b9RD)
