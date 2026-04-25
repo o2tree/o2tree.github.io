@@ -4,19 +4,19 @@
 - http://tr.ee/UG_IGJ3t3a
 - [O2tree main access](http://o2tree.carrd.co)
 - [Organic Product from Lombok-O2Tree Lombok](http://o2tree.github.io/lombok_tours.html)
-- [AI](https://hix.ai/), [QR Code Scanner](https://scanqr.org/),[Excalidraw](https://excalidraw.com/),[OmniCalculator](https://www.omnicalculator.com/)
+- [AI](https://hix.ai/)|[QR Code Scanner](https://scanqr.org/)|[Excalidraw](https://excalidraw.com/)|[OmniCalculator](https://www.omnicalculator.com/)
 
 - [Kelompok Tani Hutan Sumber Bahari](http://o2tree.github.io/KTHSumberBahari.html)
 - [Gallery image KTH](http://o2tree.github.io/kth_gallery.html)
 - [Tanjung Kampeh Palemebang](http://o2tree.github.io/tanjungkampeh.html)
 - [KPRI Lingga](http://o2tree.github.io/kpri_lingga.html)
 - [Italy point of Interest-Testing Mermaid](http://o2tree.github.io/italy.html)
-- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html), [Malaysia Arrival card](https://imigresen-online.imi.gov.my/mdac/main),<br>
+- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html)| [Malaysia Arrival card](https://imigresen-online.imi.gov.my/mdac/main),<br>
   [All Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/),[Singapore SG Arrival](https://eservices.ica.gov.sg/sgarrivalcard/)
 
 - [Peta Usulan Sumber bahari](http://o2tree.github.io/kth/data/peta_usulan_sumber_bahari.pdf)
 - http://o2tree.github.io/lahanrumah3.html
-- [PenyuBiru map](http://o2tree.github.io/penyubiru.html)
+- [PenyuBiru map](http://o2tree.github.io/penyubiru.html)|[lobster Cages in Vietnam](https://www.youtube.com/watch?v=YgScYfo3fK8&t=43s)
 - [Kelompok Tani Hutan O2tree](http://o2tree.github.io/o2tree_Lingga.html)
 - [Deep pen vs shallow pen ocean culture](http://o2tree.github.io/deep_sea_aquaculture.html)
 - [Feed](http://o2tree.github.io/feed.html)
@@ -29,7 +29,7 @@
 - [Culture Pearls Oyster Documents](http://o2tree.github.io/data/pearl_osyter.pdf)
 - [Lombok, Sumbawa and Australia](https://www.google.com/maps/d/edit?mid=1jMQpPbBhL5H2xGFchY7RaRPEZ9oamd4&usp=sharing)
 - [Lingga  KPRI](https://www.google.com/maps/d/edit?mid=1tXQBlut4Pmem8AUXbMKZfsg53UBtCIA&usp=drive_link)
-- [Boat and Investment](http://o2tree.github.io/boat.html),[feed1](http://o2tree.github.io/feed1.html),[feed2](http://o2tree.github.io/feed2.html)
+- [Boat and Investment](http://o2tree.github.io/boat.html)|[feed1](http://o2tree.github.io/feed1.html)|[feed2](http://o2tree.github.io/feed2.html)
 - [Rust and cpp](http://o2tree.github.io/rustcpp.html)
 - [Indian Ocean and Pacific ocean current](https://www.researchgate.net/profile/R-Susanto/publication/251863342/figure/fig1/AS:646486350102540@1531145765920/Map-of-Indonesian-throughflow-pathways-from-the-Pacific-Ocean-to-the-Indian-Ocean-The.png)
 - [Salinity of Ocean ma](https://www.pmfias.com/ocean-salinity-vertical-horizontal-distribution/)
@@ -59,4 +59,8 @@ A consolidated changelog (including changes from the other xx Tooling modules) i
 
 ## Others
 [rabbit fish hatchery - Ikan Dengkis]()
+[Anchovy to prevent histamine C5H9N3](https://patents.google.com/patent/KR101302202B1/en)
+[Cages farming](https://repository.seafdec.org.ph/bitstream/handle/10862/2884/BuendiaR1998-checklist-of-species.pdf?sequence=1&isAllowed=y)
+[Preparing salt water](https://patents.google.com/patent/KR101418824B1/en)
+[process seaweed](https://patents.google.com/patent/KR100645899B1/en)
 [CO2 level healthy](https://www.co2meter.com/en-sg/blogs/news/carbon-dioxide-indoor-levels-chart?srsltid=AfmBOooDROE6-sbWMXlnGXAkkQMJ27keVhxGisJR418jgfouc6m1b9RD)
