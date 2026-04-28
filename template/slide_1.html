@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Image X Gallery</title>
+    <title>Gallaery Photos</title>
     <style>
         * {
             margin: 0;
@@ -276,7 +276,7 @@
 <body>
     <div class="gallery-container">
         <div class="gallery-header">
-            <h1>Advanced Gallery</h1>
+            <h1>{{title}}</h1>
             <p>Click on any image to explore</p>
         </div>
         <div class="gallery-grid" id="galleryGrid">
@@ -315,18 +315,12 @@
     </div>
 
     <script>
-        // Sample image data with titles
+
+       // Sample image data with titles
         const galleryImages = [
-            { url: 'https://picsum.photos/800/600?random=1', title: 'Mountain Landscape' },
-            { url: 'https://picsum.photos/800/600?random=2', title: 'Ocean View' },
-            { url: 'https://picsum.photos/800/600?random=3', title: 'Forest Path' },
-            { url: 'https://picsum.photos/800/600?random=4', title: 'City Skyline' },
-            { url: 'https://picsum.photos/800/600?random=5', title: 'Desert Sunset' },
-            { url: 'https://picsum.photos/800/600?random=6', title: 'Winter Wonderland' },
-            { url: 'https://picsum.photos/800/600?random=7', title: 'Tropical Beach' },
-            { url: 'https://picsum.photos/800/600?random=8', title: 'Northern Lights' },
-	    { url: 'http://o2tree.github.io/image/d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg',title:'d10a7626-5c73-47a6-be4c-fa54791b3d0d.jpeg}
-	   // { url: 'http://o2tree.github.io/image/o2treemangove.jpeg',title:'o2treemangove.jpeg}
+           {% for item in items %}
+                { 'url' : '{{item.url}}', 'title': '{{item.title}}' },
+            {% endfor %}
         ];
 
         class AdvancedGallery {
