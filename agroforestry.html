@@ -139,6 +139,97 @@
      <div>
 	<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div>
 <md-block>
+
+
+#  Heat storage
+1. Basalt rock 
+2. paraffin wax 
+3. silica sand 
+4. river sand 
+
+
+#  motor type
+1. Induction motor 
+2. permanent mangnet  
+3. PCB motor 
+
+
+
+
+#  Sodium silicate, often called "water glass" (formula roughly ), is a highly alkaline, versatile, and inexpensive chemical compound available as a white powder 
+or viscous liquid. It is primarily used as an adhesive, sealant, binder (e.g., in detergents, ceramics, refractory, and concrete), and for fireproofing. It is known 
+to cause severe skin and eye irritation/burns and should be handled with protective gear.
+
+Grades: Commonly supplied as a liquid solution (water glass) with varying ratios of silica to sodium oxide  to suit specific industrial applications, 
+often classified by their viscosity and concentration.
+
+Preservation: Historically used for preserving eggs and protecting wood.
+
+pH: Highly alkaline (commonly pH 11–13, depending on the ratio of sodium oxide to silica)
+
+Food and Beverages 
+Bathing fresh eggs with a water glass solution seals the open pores of the outer egg shell, preventing bacteria from entering. With this coating, 
+eggs can remain fresh and unrefrigerated for months. 
+
+
+# [Dehumidityfier design](https://coolprop.org/fluid_properties/HumidAir.html)
+According to a scientific review of the health effects of humidity published in 1986 by Arundel et al, high levels of indoor humidity can encourage a 
+flourishing of bacteria, viruses, mites and fungi, and more respiratory infections and sicknesses: "The majority of adverse health effects caused by relative humidity 
+would be minimized by maintaining indoor levels between 40 and 60%."
+
+The moisture drips through into a collection tank that you have to empty, from time to time. How is the moisture removed? That's where a dehumidifier is more like an air conditioning 
+unit (sometimes called an air-con or HVAC, which stands for heating ventilating air conditioning unit), 
+which, itself, works a bit like a refrigerator! Confused by all these appliances? Let's look inside a dehumidifier and find out what all the bits do.
+
+[30% RH at 21°C = 4.6 g/kg, while 30% RH at 10°C = only 2.3 g/kg.](https://mycond.eu/blog/designing-air-dehumidification-systems-five-stage-methodology-engineers)
+Rule: always define humidity in absolute units or specify RH together with a temperature range.
+
+
+# Dryer design
+
+RH/T Sensor — Relative Humidity & Temperature
+RH = Relative Humidity, expressed as a percentage (%) of how much moisture the air holds relative to its maximum capacity at that temperature.
+
+How it works in the dryer enclosure
+ReadingMeaningController actionRH > 60%Air still too humidKeep dehumidifier + heater runningRH 20–40%Optimal drying zoneMaintain current stateRH < 20%Very dry — risk of over-dryingReduce heater power or cycle offTemp > set pointOverheatingFan speed up / heater off
+
+Common RH/T sensor chips used in enclosures
+SensorRH accuracyTemp accuracyInterfaceDHT22±2% RH±0.5°C1-Wire digitalSHT31±2% RH±0.3°CI²CBME280±3% RH±1°CI²C / SPI (also has pressure)HTU21D±2% RH±0.3°CI²C
+SHT31 or BME280 are the most popular choices for enclosure dryers — compact, accurate, and easy to wire to a microcontroller (Arduino/ESP32).
+
+Placement tips in the enclosure
+
+Mount the sensor in the return air path (where humid air comes back from the drying shelf) — this gives the most representative reading
+Keep it away from the heating element to avoid artificially low RH readings
+Add a small mesh guard to protect it from condensation droplets
+Use 2 sensors (inlet + outlet) if you want to calculate actual moisture removal rate
+
+
+RH formula for reference
+
+RH (%) = (actual vapour pressure ÷ saturation vapour pressure) × 100
+
+At higher temperatures, air can hold more moisture — so the same absolute humidity gives a lower RH reading as temperature rises. 
+This is why the heater and RH sensor must work together: heating the air lowers RH, which drives evaporation from the material.
+
+[humidity control](https://www.aliexpress.com/s/wiki-ssr/article/desiccant-wheel)
+
+# [Electroculture farming](https://www.weforum.org/stories/2018/10/china-has-made-a-shocking-food-production-discovery-electro-culture/) 
+is an agricultural technique using atmospheric electricity and magnetic earth energy to increase crop yields, enhance growth, 
+and improve plant resilience without chemicals. By inserting copper-wrapped antennae into the soil, proponents claim to enhance nutrient uptake, 
+accelerate plant growth, and boost resistance to pests and frost. While gaining popularity among home gardeners, scientific evidence for these benefits 
+is largely lacking, with many claims based on anecdotal accounts.
+
+[electro culture research](https://www.researchgate.net/publication/394557700_Harnessing_Electro_-_culture_farming_E_-_soil_system_for_promoting_hydroponic_system_of_plant_growth)
+
+[mode of operation](https://destech.eu/operation-principle/)
+
+[spm](https://www.alibaba.com/product-detail/Cheap-Price-Anchovy-Dried-Machine-mango_1601386703976.html)
+
+<img src="https://sc01.alicdn.com/kf/HTB1zQAKg29TBuNjy0Fcq6zeiFXaS/229608967/HTB1zQAKg29TBuNjy0Fcq6zeiFXaS.jpg">
+
+Water management
+---
 [water management for chicken](https://novocenter.novogen-layers.com/experts-articles/water-management-in-a-poultry-house/)
 Yes, you can give molasses water to new arrival chicks, and it is a common practice to help them recover from the stress of shipping. However, it is crucial to use it only for a short period (1-3 days) and at the correct dilution, as excessive use can be harmful .
 
@@ -250,7 +341,7 @@ Reduces weight and energy cost for downstream drying
 
 3. Drying
 The most critical step — moisture must be reduced to <15–20% for safe storage.
-MethodBest ForNotesSun dryingSmall-scale, low-costWeather-dependent, risk of contaminationRack/tunnel dryingMedium scaleBetter control, 
+MethodBest For Notes Sun drying Small-scale, low-costWeather-dependent, risk of contaminationRack/tunnel dryingMedium scaleBetter control, 
 fasterHot air dryingCommercial scale~40–70°C to preserve pigments & nutrientsFreeze dryingHigh-value products Best quality retention, 
 expensive Drum drying Carrageenan/agar extracts Produces flakes/powder
 
@@ -456,6 +547,10 @@ Important notes:
 Would you like instructions for making sea salt at home from regular seawater, or details about deep-sea water’s unique mineral composition?
 
 <img src="https://sc04.alicdn.com/kf/Hcb8ba2d92da948d88e150c6979c816857/252291477/Hcb8ba2d92da948d88e150c6979c816857.jpg">
+
+
+
+
 
 </md-block>
 

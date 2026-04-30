@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Photo Gallery</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Zoom library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.0.1/zoom.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --sidebar-width: 300px;
+            --gallery-bg: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+        
+        body {
+            background-color: var(--gallery-bg);
+            overflow-x: hidden;
+        }
+        
+        /* Gallery header */
+        .gallery-header {
+            background: linear-gradient(135deg, #343a40, #495057);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        /* Main content area */
+        .main-content {
+            display: flex;
+            min-height: calc(100vh - 180px);
+        }
+        
+        /* Gallery grid */
+        .gallery-container {
+            flex: 1;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        /* Sidebar styling */
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--card-bg);
+            padding: 20px;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            height: 100%;
+            position: sticky;
+            top: 0;
+            overflow-y: auto;
+        }
+        
+        /* Gallery card styling */
+        .gallery-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            height: 100%;
+        }
+        
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-img-container {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            cursor: zoom-in;
+        }
+        
+        .gallery-img.zoomed {
+            transform: scale(1.5);
+            cursor: zoom-out;
+        }
+        
+        .img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 10px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-card:hover .img-overlay {
+            opacity: 1;
+        }
+        
+        .year-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Filter section styling */
+        .filter-section {
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 5px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                position: static;
+                margin-bottom: 20px;
+            }
+            
+            .gallery-container {
+                padding: 10px;
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Gallery Header -->
+    <header class="gallery-header">
+        <div class="container text-center">
+            <h1 class="display-4">Premium Photo Gallery</h1>
+            <p class="lead">High-quality images with zoom and filtering capabilities</p>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="main-content">
+            <!-- Gallery Grid -->
+            <div class="gallery-container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    
+                    <div class="col" data-category="Nature" data-year="2023" data-tags="mountains,sunrise,landscape">
+                        <div class="gallery-card">
+                            <div class="gallery-img-container">
+                                <img src="mountain.jpg" class="gallery-img" alt="Mountain Sunrise" 
+                                     data-zoom-image="mountain.jpg">
+                                <div class="img-overlay">
+                                    <h5 class="card-title mb-0">Mountain Sunrise</h5>
+                                </div>
+                                <span class="badge bg-secondary year-badge">2023</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mountain Sunrise</h5>
+                                <p class="card-text text-muted">Beautiful sunrise over the Alps</p>
+                                <div class="d-flex flex-wrap gap-1">
+                                    
+                                    <span class="badge bg-light text-dark">mountains</span>
+                                    
+                                    <span class="badge bg-light text-dark">sunrise</span>
+                                    
+                                    <span class="badge bg-light text-dark">landscape</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col" data-category="Urban" data-year="2022" data-tags="city,night,architecture">
+                        <div class="gallery-card">
+                            <div class="gallery-img-container">
+                                <img src="city.jpg" class="gallery-img" alt="Urban Life" 
+                                     data-zoom-image="city.jpg">
+                                <div class="img-overlay">
+                                    <h5 class="card-title mb-0">Urban Life</h5>
+                                </div>
+                                <span class="badge bg-secondary year-badge">2022</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Urban Life</h5>
+                                <p class="card-text text-muted">City streets at night</p>
+                                <div class="d-flex flex-wrap gap-1">
+                                    
+                                    <span class="badge bg-light text-dark">city</span>
+                                    
+                                    <span class="badge bg-light text-dark">night</span>
+                                    
+                                    <span class="badge bg-light text-dark">architecture</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col" data-category="Nature" data-year="2023" data-tags="ocean,water,rocks">
+                        <div class="gallery-card">
+                            <div class="gallery-img-container">
+                                <img src="ocean.jpg" class="gallery-img" alt="Ocean Waves" 
+                                     data-zoom-image="ocean.jpg">
+                                <div class="img-overlay">
+                                    <h5 class="card-title mb-0">Ocean Waves</h5>
+                                </div>
+                                <span class="badge bg-secondary year-badge">2023</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ocean Waves</h5>
+                                <p class="card-text text-muted">Powerful waves crashing on rocks</p>
+                                <div class="d-flex flex-wrap gap-1">
+                                    
+                                    <span class="badge bg-light text-dark">ocean</span>
+                                    
+                                    <span class="badge bg-light text-dark">water</span>
+                                    
+                                    <span class="badge bg-light text-dark">rocks</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col" data-category="People" data-year="2021" data-tags="portrait,face,professional">
+                        <div class="gallery-card">
+                            <div class="gallery-img-container">
+                                <img src="portrait.jpg" class="gallery-img" alt="Portrait" 
+                                     data-zoom-image="portrait.jpg">
+                                <div class="img-overlay">
+                                    <h5 class="card-title mb-0">Portrait</h5>
+                                </div>
+                                <span class="badge bg-secondary year-badge">2021</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Portrait</h5>
+                                <p class="card-text text-muted">Professional portrait photography</p>
+                                <div class="d-flex flex-wrap gap-1">
+                                    
+                                    <span class="badge bg-light text-dark">portrait</span>
+                                    
+                                    <span class="badge bg-light text-dark">face</span>
+                                    
+                                    <span class="badge bg-light text-dark">professional</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h4 class="mb-4"><i class="fas fa-sliders-h me-2"></i>Filters</h4>
+                
+                <!-- Search Filter -->
+                <div class="filter-section">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        <input type="text" class="form-control" id="search-filter" placeholder="Search images...">
+                    </div>
+                </div>
+                
+                <!-- Category Filter -->
+                <div class="filter-section">
+                    <h6 class="filter-title"><i class="fas fa-tags me-2"></i>Categories</h6>
+                    <div class="list-group">
+                        <button class="list-group-item list-group-item-action filter-category active" data-category="all">
+                            All Categories
+                        </button>
+                        
+                        <button class="list-group-item list-group-item-action filter-category" data-category="Nature">
+                            Nature
+                        </button>
+                        
+                        <button class="list-group-item list-group-item-action filter-category" data-category="Urban">
+                            Urban
+                        </button>
+                        
+                        <button class="list-group-item list-group-item-action filter-category" data-category="People">
+                            People
+                        </button>
+                        
+                    </div>
+                </div>
+                
+                <!-- Year Filter -->
+                <div class="filter-section">
+                    <h6 class="filter-title"><i class="fas fa-calendar-alt me-2"></i>Year</h6>
+                    <div class="btn-group-vertical w-100" role="group">
+                        <button type="button" class="btn btn-outline-secondary filter-year active" data-year="all">All Years</button>
+                        
+                        <button type="button" class="btn btn-outline-secondary filter-year" data-year="2021">2021</button>
+                        
+                        <button type="button" class="btn btn-outline-secondary filter-year" data-year="2022">2022</button>
+                        
+                        <button type="button" class="btn btn-outline-secondary filter-year" data-year="2023">2023</button>
+                        
+                    </div>
+                </div>
+                
+                <!-- Tags Filter -->
+                <div class="filter-section">
+                    <h6 class="filter-title"><i class="fas fa-hashtag me-2"></i>Popular Tags</h6>
+                    <div class="d-flex flex-wrap gap-2" id="tag-filters">
+                        
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="mountains">mountains</button>
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="sunrise">sunrise</button>
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="landscape">landscape</button>
+                            
+                        
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="city">city</button>
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="night">night</button>
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="architecture">architecture</button>
+                            
+                        
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="ocean">ocean</button>
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="water">water</button>
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="rocks">rocks</button>
+                            
+                        
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="portrait">portrait</button>
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="face">face</button>
+                            
+                            <button class="btn btn-sm btn-outline-dark filter-tag" data-tag="professional">professional</button>
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 Premium Photo Gallery. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.0.1/zoom.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Image zoom functionality
+        $(document).ready(function() {
+            $('.gallery-img').click(function() {
+                $(this).toggleClass('zoomed');
+                if ($(this).hasClass('zoomed')) {
+                    $(this).css('cursor', 'zoom-out');
+                } else {
+                    $(this).css('cursor', 'zoom-in');
+                }
+            });
+            
+            // Filter functionality
+            $('#search-filter').on('input', function() {
+                const searchTerm = $(this).val().toLowerCase();
+                filterImages();
+            });
+            
+            $('.filter-category').click(function() {
+                $('.filter-category').removeClass('active');
+                $(this).addClass('active');
+                filterImages();
+            });
+            
+            $('.filter-year').click(function() {
+                $('.filter-year').removeClass('active');
+                $(this).addClass('active');
+                filterImages();
+            });
+            
+            $('.filter-tag').click(function() {
+                $(this).toggleClass('active');
+                filterImages();
+            });
+            
+            function filterImages() {
+                const searchTerm = $('#search-filter').val().toLowerCase();
+                const category = $('.filter-category.active').data('category');
+                const year = $('.filter-year.active').data('year');
+                const activeTags = [];
+                
+                $('.filter-tag.active').each(function() {
+                    activeTags.push($(this).data('tag'));
+                });
+                
+                $('.gallery-container .col').each(function() {
+                    const $card = $(this);
+                    const cardTitle = $card.find('.card-title').text().toLowerCase();
+                    const cardDesc = $card.find('.card-text').text().toLowerCase();
+                    const cardCategory = $card.data('category');
+                    const cardYear = $card.data('year');
+                    const cardTags = $card.data('tags').split(',');
+                    
+                    // Search filter
+                    const matchesSearch = searchTerm === '' || 
+                                          cardTitle.includes(searchTerm) || 
+                                          cardDesc.includes(searchTerm);
+                    
+                    // Category filter
+                    const matchesCategory = category === 'all' || cardCategory === category;
+                    
+                    // Year filter
+                    const matchesYear = year === 'all' || cardYear === year;
+                    
+                    // Tags filter
+                    let matchesTags = true;
+                    if (activeTags.length > 0) {
+                        matchesTags = activeTags.some(tag => cardTags.includes(tag));
+                    }
+                    
+                    // Show/hide based on all filters
+                    if (matchesSearch && matchesCategory && matchesYear && matchesTags) {
+                        $card.show();
+                    } else {
+                        $card.hide();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
