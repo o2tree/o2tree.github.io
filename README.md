@@ -39,9 +39,9 @@
 - [Whatsapp QR contact- Edy](http://o2tree.github.io/QR_Whatsapp.html)
 - [whatsapp QR Contact - Julina Lie](http://o2tree.github.io/QR_Whatsapp_Julina.html)
 - [Turnon vPN wireguard or openVPN then access router](http://192.168.27.1)
-- [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) and [ftp 192.168.0.1](ftp://192.168.0.1)
+- [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) | [ftp 192.168.0.1](ftp://192.168.0.1)
 
-- [PCBWay order prototype](https://www.pcbway.com/), [Singapore xometry](https://xometry.sg/)
+- [PCBWay order prototype](https://www.pcbway.com/)| [Singapore xometry](https://xometry.sg/)
 - [Indonesia Coretax](http://www.coretaxdjp.pajak.go.id)
 
 - [Ansible and github workflow](https://github.com/artis3n/ansible-collection-tailscale/blob/main/pyproject.toml)
@@ -58,9 +58,10 @@ See [CHANGELOG.md](CHANGELOG.md).
 A consolidated changelog (including changes from the other xx Tooling modules) is available on the [Releases tab](https://github.com/o2tree/releases).
 
 ## Others
-[rabbit fish hatchery - Ikan Dengkis]()
-[Anchovy to prevent histamine C5H9N3](https://patents.google.com/patent/KR101302202B1/en)
-[Cages farming](https://repository.seafdec.org.ph/bitstream/handle/10862/2884/BuendiaR1998-checklist-of-species.pdf?sequence=1&isAllowed=y)
-[Preparing salt water](https://patents.google.com/patent/KR101418824B1/en)
-[process seaweed](https://patents.google.com/patent/KR100645899B1/en)
-[CO2 level healthy](https://www.co2meter.com/en-sg/blogs/news/carbon-dioxide-indoor-levels-chart?srsltid=AfmBOooDROE6-sbWMXlnGXAkkQMJ27keVhxGisJR418jgfouc6m1b9RD)
+- [Thermal conductivityy](http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/thrcn.html)
+- [rabbit fish hatchery - Ikan Dengkis]()
+- [Anchovy to prevent histamine C5H9N3](https://patents.google.com/patent/KR101302202B1/en)
+- [Cages farming](https://repository.seafdec.org.ph/bitstream/handle/10862/2884/BuendiaR1998-checklist-of-species.pdf?sequence=1&isAllowed=y)
+- [Preparing salt water](https://patents.google.com/patent/KR101418824B1/en)
+- [process seaweed](https://patents.google.com/patent/KR100645899B1/en)
+- [CO2 level healthy](https://www.co2meter.com/en-sg/blogs/news/carbon-dioxide-indoor-levels-chart?srsltid=AfmBOooDROE6-sbWMXlnGXAkkQMJ27keVhxGisJR418jgfouc6m1b9RD)
