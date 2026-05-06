@@ -1327,11 +1327,6 @@ Saat ini, pakan lobster ini merupakan kerang kupang. Selain itu bisa juga menggu
 “Kita juga sedang kembangkan budi daya kerang kupang di Tanjung Uma. Selain itu untuk mengatasi kelangkaan nanti akan kita lakukan panen kerang kupang untuk stok yang 
 akan disimpan dalam lemari es,” katanya.
 
-“Kita juga sedang kembangkan budi daya kerang kupang di Tanjung Uma. Selain itu untuk mengatasi kelangkaan nanti akan kita lakukan 
-panen kerang kupang untuk stok yang akan disimpan dalam lemari es,” katanya.
-
-“Kita juga sedang kembangkan budi daya kerang kupang di Tanjung Uma. Selain itu untuk mengatasi kelangkaan nanti akan kita lakukan panen kerang kupang 
-untuk stok yang akan disimpan dalam lemari es,” katanya.
 
 Kerang hitam dengan nama latin Mytilus Galloprovincialis ini mirip dengan kerang hijau tetapi dia agak lebih kecil.
 
@@ -1438,13 +1433,15 @@ https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplement
 	        %% Microalgae cultivation can be carried out with freshwater, seawater, water from estuaries, wastewater from agricultural, industrial operations and domestic wastewater [15].
 	        %% Algae media refers to the solution or culture in which algae grow. 
           %% Nutrient that contained in the tofu wastewater are very useful for the production of Chlorella sp.
-          %% Chlorella sp. usually grows in seawater\
+          %% Chlorella sp. usually grows in seawater
           %% The two main classes of phytoplankton are dinoflagellates and diatoms. 
           %% Dinoflagellates use a whip-like tail, or flagella, to move through the water and their bodies are covered with complex shells. 
           %% Diatoms do not rely on flagella to move through the water and instead rely on ocean currents to travel through the water.
 
-          culture_fresh_pytho["culture freshwater microalgae Chlorella vulgaris and brackish(20ppt)  Spirulina Plantis<br>spirulina protein	55.00–70.00%"]
-          culture_other_pytho[" Dinoflagellates,Baby Sea Creatures,Siphonophores,Comb Jellies,Diatoms"]
+          culture_fresh_pytho["culture freshwater microalgae Chlorella vulgaris, Chlorella luteoviridis and Chlorella sorokiniana "]
+          culture_seawater_pytho["Spirulina Plantis<br>brackish(20ppt)<br>spirulina protein	55.00–70.00%"]
+          culture_other_pytho["Dinoflagellates,Baby Sea Creatures,Siphonophores,Comb Jellies,Diatoms"]
+          culture_Tetraselmis["Green microalgae Tetraselmis"]
 
           %% (spirulina protein	55.00–70.00%)
           %% https://pmc.ncbi.nlm.nih.gov/articles/PMC11596570/table/molecules-29-05387-t001/
@@ -1453,8 +1450,10 @@ https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplement
       subgraph Adjust_Temperature_Salinity_pH["Adjust culture Temp, Salinity, pH"]
              direction LR
              medium_0["clean freshwater pH > 7.0"]
-             medium_1a["seawater filter < 30 ppt"]
-             medium_2a["seawater unfilter => 30 ppt, pH: 8.2"] --"chemical treatment to kill pathogen"-->  medium_2["seawater filter => 30 ppt,pH:8.2"]
+             medium_1aa["Artificial seawater"]
+             medium_1ab["Calcium free- saline"]
+             medium_1a["seawater filter-50μ < 30 ppt"]
+             medium_2a["seawater unfilter => 30 ppt, pH: 8.2"] --"chemical treatment to kill pathogen"-->medium_2["UV-treatment"]-->medium_2["seawater filter 5μ => 30 ppt,pH:8.2"]
       end 
 
       subgraph MacroAlgae["Culture Seaweeds/MacroAlage"]
@@ -1500,13 +1499,17 @@ https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplement
 <div class="mermaid">
 flowchart TD
     T["Tilapia<br> iBEST (all Male) or<br> iEXCEL (Mixed-sex)"]
+    
+    subgraph Artemia["Artemia/Brine shrmp"]
+       direction LR
+       Artemia_hatching["less <12 hours hatching<br>shell is soft and no mobility<br>feed mudcrub larvae"]
+    end
 
     subgraph plankton["plankton feed to larvae"]
       PyPL1["Pythoplankton"]
       R0{"Rotifer Large ΔT,<br> 20°C-25°C,Euryhaline<br>B. plicatilis (L)<br>171-238µm "}
       R1{"Rotifer Small ΔT,<br> 28°C-35°C, low salinity<br>B. rotundiformis (S)<br>121-162µm"}
       Copepods["Copepods"]
-      Artemia["Artemia<br>Brine shrmp"]
       eggs["Fish Eggs"]
       omega_3_6 -->Artemia
       PyPL1  --> Artemia
@@ -1571,8 +1574,35 @@ flowchart TD
 
     style subgraph2 fill:orange
     classDef asNode fill:grey, color:orange
-
 </div>
+
+<div class="mermaid">
+ flowchart LR
+    %% 3 gr to 50 gr : within a months
+    %% main food is shellfish: chopped mussel meat, low value fish, snail meat,
+    %% Feed crablets with fish, molluscs (snails, small bivalves, etc), animal entrails and boiled corn at 50-80% body weight
+    subgraph subgraph1["Benur Mud crab"]
+        direction TB
+        top1["🦞 ≤ 2 gr (≤ 2months) <br> SR: 30%~40% <br>Nature <  0.01%"] --> bottom1["🦞 ≥  5gr (2 - 3 months) SR ≥ 70%~80%"]
+    end
+    subgraph subgraph2["Top floating or/and<br>Bottom floating cage(Krankeng)"]
+        direction TB
+        top2[top] --> bottom2[bottom]
+    end
+    subgraph subgraph3["Top floating or/and<br>Bottom floating cage(Krankeng)"]
+        direction TB
+        top3[topx] --> bottom3[bottomx]
+    end
+
+    outside:::asNode --> subgraph1:::asNode
+    outside ---> top2 -->top3
+
+    style subgraph2 fill:orange
+    classDef asNode fill:grey, color:orange
+</div>
+
+
+
 <div class="mermaid">
 flowchart LR
   Aeraion("Aeration <= 6ft")
@@ -1681,28 +1711,9 @@ Barometric pressure is the weight of the atmosphere in a specific area, usually 
 * The waters off Changi, meanwhile, are saltier and suitable for fish that are more popular with Singapore consumers.
  They include red snapper, barramundi (Asian sea bass), golden pomfret and sea perch.
 
-1. item 1
-1. | Column One | Column Two |
-| --- | --- |
-| <img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">| <img src="https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600" alt="Alt Text" width="500" height="600"> |
-
-[Microalagae](https://pmc.ncbi.nlm.nih.gov/articles/PMC4745477/)
-
-Think of Pieces as a technical Tinkerbell from Peter Pan[^2].
-
-[^2]: This is a fairytale about a forever young boy who takes a group of British children to his home island, Neverland.
-
-Depending on how much cookie dough you eat, you’ll have about ==20-22== cookies from this recipe!
 
 # [embedded html to pdf](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
 
-<div>
-<p markdown="1">
-b[^2]
-</p>
-</div>
-
-[^b]: Now I am a footnote too.
 
 ![Nanochloropsus Japanese Chlorella](https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600)
 
@@ -1715,7 +1726,8 @@ Contains the following phytoplanktons:
 * Red phytoplankton: Rhodomonas salina, Rhodomonas lens, Porphyridium creuntum
 * Diatom strains include: Chaetocerors calcitrans, Pheaodactylum tricornutum, Thalassiosira weissfloggii. 
 
-For best shelf life, store in the back of the fridge away from the light, with temperatures ranging from 2.78°C - 5.55°C  degrees. We store phytoplankton at 2.78 degrees in a fridge with no light source.
+For best shelf life, store in the back of the fridge away from the light, with temperatures ranging from 2.78°C - 5.55°C. We store phytoplankton at 2.78 degrees 
+in a fridge with no light source.
 
 
 [Order form](https://www.seafdec.org.ph/wp-content/uploads/2020/12/Commodity-Order-Form_rev2020.pdf)
@@ -1837,10 +1849,9 @@ Batam
 Researchers typically categorize cannibalism in cultured fish into two main types, which are relevant for grouper fry:
 
 - Type I (Early Larval Cannibalism): This occurs in the larval phase and is not necessarily dependent on size differences. The cannibal attacks and damages part of a sibling (often the tail) but cannot swallow the victim whole, so the rest is disgorged. This can cause mortality and infections.
-- Type II (Late Juvenile or Adult Cannibalism): This form is directly linked to size variation within a group. A larger fish (cannibal) swallows a smaller sibling whole. This type often leads to more severe stock losses than Type I.
-- Type II (Late Juvenile or Adult Cannibalism): This form is directly linklinklinklinked to size variation within a group. A larger fish (cannibal) swallows a smaller sibling whole. This type often leads to more severe stock losses than Type I.
-- Type II (Late Juvenile or Adult Cannibalism): This form is directly linklinklinklinked to size variation within a group. A larger fish (cannibal) swallows a smaller sibling whole. This type often leads to more severe stock losses than Type I.
-
+- Type II (Late Juvenile or Adult Cannibalism): This form is directly linked to size variation within a group. A larger fish (cannibal) swallows a smaller sibling whole. 
+  This type often leads to more severe stock losses than Type I.
+-
 � Lighting Conditions and Cannibalism in Fish
 
 While the search results confirm that light intensity is an environmental factor studied for cannibalism mitigation, the specific research pertains to other species.
@@ -1981,9 +1992,9 @@ Setidaknya ada enam pengirim utama mendominasi dalam perdagangan gelembung ikan 
 Data ini tidak spesifik menyebut jenis ikan penghasil gelembung renang itu. Selain tirusan, gelembung yang biasa diperdagangkan juga produk turunan dari ikan malong (Muraenesox cinereus).
 
 # [Ikan Malong (Muraenesox cinereus)](https://indiabiodiversity.org/species/show/232787)
-Malong ( Muraenesox cinereus )adalah spesies ikan Sidat dalam keluarga pike conger, Muraenesocidae .
- Mereka terutama hidup di dasar lunak di perairan laut dan air payau hingga kedalaman 800 m (2.600 ft), tapi bisa masuk ke air tawar.
-
+Malong ( Muraenesox cinereus )adalah spesies ikan Sidat dalam keluarga pike conger, Muraenesocidae. Mereka terutama hidup di dasar lunak di perairan laut dan air payau 
+hingga kedalaman 800 m (2.600 ft), tapi bisa masuk ke air tawar.
+ 
 # [Gamat Hitam- Teripang hitam ](https://www.mitrausahatani.com/teripang-berhasil-dibudidayakan/)
 
 - [teripang](https://youtu.be/3O4dGg5DJc4?si=gpO6H6sVmOFNFKmP)q
@@ -2097,7 +2108,7 @@ It also works well for greenwater.
 
 Shellfish hatcheries: works very well with mussels. It has not been traditionally used with oysters and clams, however a study currently 
 being done at a university in Los Angeles indicates that it can work as well or better than Isochrysis and Pavlova with larvae and post set. 
-Storage: instant algae nannochloropsis can be stored in a refrigerator for 3 months (best if stored at -1° to 3°C) or it can be frozen for longer shelf life (2+ years). 
+Storage: **instant algae nannochloropsis can be stored in a refrigerator for 3 months (best if stored at -1° to 3°C) or it can be frozen for longer shelf life (2+ years).** 
 When frozen, the algae will “hard-freeze” like ice.
 
 ## Pavlova
@@ -2117,12 +2128,28 @@ such as rotifers or Artemia. Used for DHA enrichment of rotifers.
 
 It is also a good size for feeding brine shrimp and copepods. Isochrysis is the most commonly used algae for oysters, clams, mussels and scallops.
 
-## Tetraselmis
+## [Tetraselmis](https://aquaculturekings.com.au/blogs/articles/how-to-culture-tetraselmis?srsltid=AfmBOopBHxuLdcs2mrD2Oc1xKZljAokQoRTW7RRBDPqSipPl-NsHWgk5)
 
 Tetraselmis is a large green flagellate with a very high lipid level. It also contains natural amino acids that stimulate feeding in marine animals. 
 It is an excellent feed for larval shrimp. Used in conjunction with Nannochloropsis for producing rotifers.
 
-It is also a good size for feeding brine shrimp. A standard feed for oysters, clams, mussels and scallops.
+Tetraselmis is a nutrient-rich, motile green microalga with high lipid content; perfect for kickstarting your own live culture. Its active movement 
+encourages natural feeding in filter feeders and zooplankton, while its dense profile of chlorophyll, amino acids, and omega-3s supports healthy, 
+biodiverse systems. Grown in controlled conditions and shipped fresh, never stored or preserved, our Tetraselmis starter culture is ideal for reef tanks, 
+hatcheries, and aquaculture operations.
+- Rich in essential fatty acids, proteins, and chlorophyll
+- Naturally stimulates feeding in corals, clams, and zooplankton
+- Enhances biodiversity and promotes larval development
+- Improves nutrient export and overall water quality
+- It is also a good size for feeding brine shrimp. A standard feed for oysters, clams, mussels and scallops.
+- salinity:  1.018 to 1.022 SG salinity (23-29.2 ppt)
+- Each cell is roughly (12-14um) in size
+- <img src="https://reefs.com/blog/wp-content/uploads/2022/11/Tetraselmis-chui-2-980x735.jpg">
+
+[Tetraselmis’ most profound service to aquaculture](https://reefs.com/tetraselmis-chui-ideal-green-phyto-for-the-reef-aquarium-sustainable-aquaculture/) allowed for breeding of seemingly impossible reef fish species to cultivate. 
+It does this by enhancing the nutritional profile of zooplankton live feeds such as rotifers (Brachionus sp.), brine shrimp (Artemia sp.), 
+ciliates (Fabrea salina), sea fleas (Moina sp.), harpacticoid copepods (Tisbe sp. Tigriopus sp.), cyclopoid copepods (Apocyclops sp.) 
+and calanoid copepods (Acartia sp., Parvocalanus sp., Pseudodiaptomus sp.). 
 
 Rotifer Diet HD
 
@@ -2188,6 +2215,28 @@ or flakes. The harvested spirulina can then be used as a food supplement or in o
 [Harvest](https://spirulinasociety.org/how-to-harvest)
 
 <img src="https://cdn.myportfolio.com/fdbcc412-5db2-4962-bb73-8809d3dadc12/16511c57-60ce-46ae-890f-49cbec8a3eb5_rw_1920.jpg?h=9412c3082031758ee8dca6a29ace1e7b"  style="max-width: 100%;" / >
+
+
+mudcrab feed:
+Using three test diets with three different crude protein (CP) contents, the study proved that a basal diet with 48% CP has better numerical values in terms of feed conversion ratios and specific growth rates.
+
+Moreover, the study also showed that pellets with synthetic binders proved to be more water stable than pellets with natural binders. Three synthetic binders and natural binders (glutinous rice starch and carrageenan+CMC) showed best results.
+
+The study further showed that carrageenan combined with a synthetic binder improved apparent digestibility coefficients of crude protein and crude fat.
+
+To further test the efficiency and effectiveness of this formulated feed, pilot testing and technology roll out will be conducted to produce large quantities of feed for crabs in ponds.
+
+Crustaceans are good sources of different minerals and proteins, and mud crabs are common. Crabmeat is an excellent source of essential minerals, particularly potassium, calcium, phosphorus, iron, and zinc (Naczk et al., 2004; Kumari et al., 2015).
+Marine foods are rich in minerals such as iodine, sodium, magnesium, potassium, calcium, phosphorus, and iron, 
+
+Crabs eat an omnivorous diet. Smaller crabs eat algae, seaweed, worms, small crabs, and shrimp. Larger crabs can eat squid, snails, mussels, other crab and fish. 
+Our Mud Crab sites focus on a feed mixture of trash fish, formulated feed, squid, and shell fish.
+
+Crabs are notoriously picky eaters, and while the use of trash and shell fish etc carries with it obvious economic benefits, weaning the crabs off their natural diet 
+towards formulated feeds ensures faster growth, reduces mortality, 
+and prevents the outbreak of diseases.
+https://www.sciencedirect.com/science/article/pii/S2352513419300997
+
 
 </md-block>
 

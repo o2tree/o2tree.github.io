@@ -58,8 +58,9 @@ See [CHANGELOG.md](CHANGELOG.md).
 A consolidated changelog (including changes from the other xx Tooling modules) is available on the [Releases tab](https://github.com/o2tree/releases).
 
 ## Others
-- [Thermal conductivityy](http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/thrcn.html)
-- [rabbit fish hatchery - Ikan Dengkis]()
+- [Thermal conductivity](http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/thrcn.html)|[Brine system cold room](https://www.coldroom-china.com/refrigerant-brine-system-cold-room/)
+- [slurry ice maker](https://www.nissin-ref.co.jp/english/product_blog/2-2.html)
+- [Rabbit fish hatchery - Ikan Dengkis]()
 - [Anchovy to prevent histamine C5H9N3](https://patents.google.com/patent/KR101302202B1/en)
 - [Cages farming](https://repository.seafdec.org.ph/bitstream/handle/10862/2884/BuendiaR1998-checklist-of-species.pdf?sequence=1&isAllowed=y)
 - [Preparing salt water](https://patents.google.com/patent/KR101418824B1/en)
