@@ -146,6 +146,21 @@
 
 <md-block>
 
+# [Space Vector Pulse Width Modulation (SVPWM)](https://www.switchcraft.org/learning/2017/3/15/space-vector-pwm-intro)- Field Oriented Controller Motor
+One common, modern method for controlling three-phase induction motors and permanent magnet synchronous motors (aka BLAC or PMAC motors) is field oriented control, 
+which independently controls the magnetizing and torque-producing components of the stator current. This allows the torque-producing component to be kept orthogonal 
+to the rotor flux, maximizing torque production.
+
+Space vector pulse width modulation (SVPWM) is a technique used in the final step of field oriented control (FOC) 
+to determine the pulse-width modulated signals for the inverter switches in order to generate the desired 3-phase voltages to the motor.
+
+<img src="https://www.motioncontroltips.com/wp-content/uploads/2019/03/FOC-with-SVPWM-TI-Diagram-768x591.png"  style="max-width: 100%;" />
+
+[clark park function](https://www.ti.com/lit/an/bpra048/bpra048.pdf)
+
+[FPGA based Field Oriented Control (FOC) for driving Permanent Magnet Synchronous Motors (PMSM) or Brushless DC Motors (BLDC)](https://github.com/WangXuan95/FPGA-FOC)
+
+
 [Technitium DNS Server self hosting open source embedded pi Hole]
 - [docker compose](https://github.com/TechnitiumSoftware/DnsServer/blob/master/docker-compose.yml)
 
