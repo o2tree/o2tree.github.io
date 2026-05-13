@@ -12,7 +12,7 @@
 - [KPRI Lingga](http://o2tree.github.io/kpri_lingga.html)
 - [Italy point of Interest-Testing Mermaid](http://o2tree.github.io/italy.html)
 - [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html)| [Malaysia Arrival card](https://imigresen-online.imi.gov.my/mdac/main),<br>
-  [All Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/),[Singapore SG Arrival](https://eservices.ica.gov.sg/sgarrivalcard/)
+  [All Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/)|[Singapore SG Arrival](https://eservices.ica.gov.sg/sgarrivalcard/)
 
 - [Peta Usulan Sumber bahari](http://o2tree.github.io/kth/data/peta_usulan_sumber_bahari.pdf)
 - http://o2tree.github.io/lahanrumah3.html
@@ -36,9 +36,9 @@
 - [Chat GPT](https://chat.chatbot.app/gpt5?utm_source=GoogleAds&utm_medium=cpc&utm_campaign={campaign}&utm_id=22665487438&utm_term=182338911722&utm_content=757447283652&gad_source=1&gad_campaignid=22665487438&gclid=EAIaIQobChMIrK38ncCOjwMV9qhmAh3xgS2iEAAYASADEgLAJ_D_BwE)
 - [Peta ombak KPRI bintan](https://maritim.bmkg.go.id/cuaca/perairan/perairan-kep-bintan)
 - [Lahan Hijau (produksi, hutan lindung dan ahan putih)](https://gfw.global/PrU1JS)
-- [Whatsapp QR contact- Edy](http://o2tree.github.io/QR_Whatsapp.html)
-- [whatsapp QR Contact - Julina Lie](http://o2tree.github.io/QR_Whatsapp_Julina.html)
-- [Turnon vPN wireguard or openVPN then access router](http://192.168.27.1)
+- [Whatsapp QR contact- Edy](http://o2tree.github.io/QR_Whatsapp.html)|[whatsapp QR Contact - Julina Lie](http://o2tree.github.io/QR_Whatsapp_Julina.html)
+- [European Low-Voltage Directive](https://cetecomadvanced.com/en/news/low-voltage-directive/)
+- [Turnon VPN wireguard or openVPN then access router](http://192.168.27.1)
 - [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) | [ftp 192.168.0.1](ftp://192.168.0.1)
 
 - [PCBWay order prototype](https://www.pcbway.com/)| [Singapore xometry](https://xometry.sg/)
@@ -49,6 +49,7 @@
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=en
 - https://streamlit.io/generative-ai
+
 
 - https://melaniewalsh.github.io/Intro-Cultural-Analytics/07-Mapping/03-Publish-Your-Map.html
 
