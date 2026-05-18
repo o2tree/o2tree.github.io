@@ -59,6 +59,11 @@ See [CHANGELOG.md](CHANGELOG.md).
 A consolidated changelog (including changes from the other xx Tooling modules) is available on the [Releases tab](https://github.com/o2tree/releases).
 
 ## Others
+- [sand filter design](https://www.derwentestuary.org.au/assets/Water_Sensitive_Urban_Design_Guidelines_06_Chapter_6_Sand_Filters.pdf)
+- [The removal of protozoa and larger organisms by slow sand filters](https://pmc.ncbi.nlm.nih.gov/articles/PMC9859083/table/ijerph-20-01019-t002/)
+- [Bacteria removal by slow sand filters table](https://pmc.ncbi.nlm.nih.gov/articles/PMC9859083/table/ijerph-20-01019-t003/)|[Virus and surrogate removal by slow sand filters](https://pmc.ncbi.nlm.nih.gov/articles/PMC9859083/table/ijerph-20-01019-t004/)
+- [Turbidity removal by slow sand filters](https://pmc.ncbi.nlm.nih.gov/articles/PMC9859083/table/ijerph-20-01019-t005/)
+- [Inorganic contaminant removal by slow sand filters](https://pmc.ncbi.nlm.nih.gov/articles/PMC9859083/table/ijerph-20-01019-t006/)
 - [Thermal conductivity](http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/thrcn.html)|[Brine system cold room](https://www.coldroom-china.com/refrigerant-brine-system-cold-room/)
 - [slurry ice maker](https://www.nissin-ref.co.jp/english/product_blog/2-2.html)
 - [Rabbit fish hatchery - Ikan Dengkis]()
