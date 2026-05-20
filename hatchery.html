@@ -1448,98 +1448,101 @@ A[Start: New Scallop Arrives] --> B[Float Sealed Bag<br>15 mins for Temperature 
     I --> J[Light Acclimation: Keep lights off,<br>then gradually increase over weeks]
     
 </div>
-           <div class="mermaid">
-            graph LR
-            %% Benur vannamei
+<div class="mermaid">
+    graph LR
+    %% Benur vannamei
             Benur_Remark["<img src="https://ars.els-cdn.com/content/image/1-s2.0-S2667370322000406-ga1_lrg.jpg" width="800">"]
             BenurVPL_10["Vannamei Post Larva -10 days"]
             BenurVPL_15["Vannamei Post Larva - 15 days"]
             BenurVPL_10 ---> BenurVPL_15
             BenurVPL_10  --->|"sell and ship to customer"| qnt_1_1
             BenurVPL_15  --->|"sell and ship to customer"| qnt_1_2
-            subgraph select_req1_steps ["selection criteria"]
+    subgraph select_req1_steps ["selection criteria"]
               direction LR
               select_strong["discard slow molting PL"]
-            end
+    end
             BenurVPL_10 <---> select_req1_steps
 
-            subgraph shipment_req1_steps ["shipment to customer PL10 < 6 ~ 8 hours<br>PL-15 < 12~24 hours"]
-              direction LR
-              Stress_Test_1_1["stress test prior to packing<br>salinity test<br>salinity 0, 30 min then tank salinity 30 min<br> count life > 85%"]
+    subgraph shipment_req1_steps ["shipment to customer PL10 < 6 ~ 8 hours<br>PL-15 < 12~24 hours"]
+      direction LR
+        Stress_Test_1_1["stress test prior to packing<br>salinity test<br>salinity 0, 30 min then tank salinity 30 min<br> count life > 85%"]
 	      weight_Test_1_1["number of PL count per PL1,Pl10,P12,P? statistics"]
-              salinity["Both require 26–30°C and salinity 25–35 ppt"]
-              qnt_1_1["PL-10 qnty: 5000-10000/L(seawater-1 L)<br>+2/3  filled with O2(2L)"]
-              qnt_1_2["PL-15 qnty: 3000-5000/L(seawater-1 L)<br>2/3 filled with O2(2L)"]
-            end
+        salinity["Both require 26–30°C and salinity 25–35 ppt"]
+        qnt_1_1["PL-10 qnty: 5000-10000/L(seawater-1 L)<br>+2/3  filled with O2(2L)"]
+        qnt_1_2["PL-15 qnty: 3000-5000/L(seawater-1 L)<br>2/3 filled with O2(2L)"]
+    end
 
-            click BenurVPL_10 "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Vannemei Benur PL-10"
-            click BenurVPL_15 "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Vannemei Benur PL-15"
-          </div>
+    click BenurVPL_10 "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Vannemei Benur PL-10"
+    click BenurVPL_15 "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Vannemei Benur PL-15"
+</div>
 
 
 --
 
-        <div class="mermaid">
-            graph LR
-            %% Kerapu and seabass
+<div class="mermaid">
+  graph LR
+  %% Kerapu and seabass
 
-            FC0["Floating cage<br>Grading"]
-            FC1["Keramba tancap<br>Berpasir dibawah<br>Grading"]
-            FC2["Keramba dasar (0.5 m dari dasar)<br>Grading"]
-            P0["Pond - outdoor"]
-            P1(["Pond - indoor"])
+  FC0["Floating cage<br>Grading"]
+  FC1["Keramba tancap<br>Berpasir dibawah<br>Grading"]
+  FC2["Keramba dasar (0.5 m dari dasar)<br>Grading"]
+  P0["Pond - outdoor"]
+  P1(["Pond - indoor"])
 
-           subgraph pythoplankton["Marine Phytoplankton(microlgae and diatom) and/or freshwater pythoplanton<br>Media for MicroAlgae"]
-             direction LR
-	     %% Microalgae cultivation can be carried out with freshwater, seawater, water from estuaries, wastewater from agricultural, industrial operations and domestic wastewater [15].
-	     %% Algae media refers to the solution or culture in which algae grow. 
-             %% Nutrient that contained in the tofu wastewater are very useful for the production of Chlorella sp.
-             %% Chlorella sp. usually grows in seawater
-	     %% https://era.dpi.qld.gov.au/id/eprint/10985/1/SS-strain%20rotifer%20culture%20for%20finfish%20larvae%20with%20small%20mouth%20gape.pdf
-             culture_both["Chlorella vulgaris is green freshwater microalgae but  seawater tolerance"]
-             culture_pytho["Culture Marine pythoplankton/MicroAlgae (chlorella sp)"]
-             culture_fresh_pytho["Culture freshwater microalgae Spirulina and Chlorella vulgaris"]
-           end
+  subgraph pythoplankton["Marine Phytoplankton(microlgae and diatom) and/or freshwater pythoplanton<br>Media for MicroAlgae"]
+    direction LR
+	  %% Microalgae cultivation can be carried out with freshwater, seawater, water from estuaries, wastewater from agricultural, industrial operations and domestic wastewater [15].
+	  %% Algae media refers to the solution or culture in which algae grow. 
+    %% Nutrient that contained in the tofu wastewater are very useful for the production of Chlorella sp.
+    %% Chlorella sp. usually grows in seawater
+	  %% https://era.dpi.qld.gov.au/id/eprint/10985/1/SS-strain%20rotifer%20culture%20for%20finfish%20larvae%20with%20small%20mouth%20gape.pdf
+    %% acclimination pythoplankton to larva or zooplankkon if shock of salinity
+    %% feed the dry pythoplankon as needed frozen or dry as needed
+    
+    culture_both["Chlorella vulgaris is green freshwater microalgae but  seawater tolerance"]
+    culture_pytho["Culture Marine pythoplankton/MicroAlgae (chlorella sp)"]
+    culture_fresh_pytho["Culture freshwater microalgae Spirulina and Chlorella Vulgaris"]
+  end
            
-           subgraph MacroAlgae["Culture seaweeds/MacroAlage"]
-             direction LR
-             seaweed["Life green/brown seaweed-Sargassum"] -->Powder_seaweed["Make dry powder seaweed"] --> Fermented_seaweed["Fermented dry power seaweeed"]
-             seaweed---> Process_1["harvest the seed for future propagation"]
-            end 
+  subgraph MacroAlgae["Culture seaweeds/MacroAlage"]
+    direction LR
+    seaweed["Life green/brown seaweed-Sargassum"] -->Powder_seaweed["Make dry powder seaweed"] --> Fermented_seaweed["Fermented dry power seaweeed"]
+    seaweed---> Process_1["harvest the seed for future propagation"]
+  end 
             
-            subgraph Sandfish_Scallop["Culture Scallop/Sandfish"]
-             direction LR
-             MacroAlgae -->Sandfish["Sandfish and Scallop feed"]
-             culture_fresh_pytho -->Sandfish
-            end 
+  subgraph Sandfish_Scallop["Culture Scallop/Sandfish"]
+    direction LR
+    MacroAlgae -->Sandfish["Sandfish and Scallop feed"]
+    culture_fresh_pytho -->Sandfish
+  end 
 
-            subgraph plankton["Zooplankton culture"]
-              R0{"Rotifer Brachionus plicatilis  Large size 20-25°C<br>Euryhaline<br>Quality depend on its feeds"}
-              R1{"Rotifer B. rotundiformis Small size 28-35°C<br>Low salinity<br>Quality depends on its feeds"}
-              Copepods{"Copepods Bigger than Rotifer"}
-	      Monia{"Monia"}
-	      Daphina{"Daphina"}
-              MicroAlgae["Green phytoplanktons"] --->R0
-              MicroAlgae -->R1
-              MicroAlgae ----> Copepods
-            end
+  subgraph plankton["Zooplankton Culture-<br>acclimination pythoplankton feeding due to diff salinity"]
+    R0{"Rotifer Brachionus Plicatilis (most common) Large size 20-25°C<br>Euryhaline<br>Quality depend on its feeds"}
+    R1{"Rotifer B. rotundiformis Small size 28-35°C<br>Low Salinity<br>Quality depends on its feeds"}
+    Copepods{"Copepods Bigger than Rotifer"}
+	  Monia{"Monia"}
+	  Daphina{"Daphina"}
+    MicroAlgae["Green phytoplanktons"] --->R0
+    MicroAlgae -->R1
+    MicroAlgae ----> Copepods
+  end
 
-            Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
-            Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
-            Kerapu(["Grouper: female at birth: ♀<br>Larva Rearing"])  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
-            Kerapu -->|tidak perlu| FC1 --> FC22 --> Kerapu1
-            Seabass(["Asian Seabass: Male at birth: ♂<br> Larva Rearing"]) --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
-            Lobster["Lobster rearing"] -->FC2
-            click culture_fresh_pytho "https://algaeresearchsupply.com/products/algae-research-supply-algae-culture-chlorella-pyrenoidosa?srsltid=AfmBOoqYbKG86RMM1kP_KYZvTHlMmcgQWKry5cNg-7a28B-AxddtVZfK" "culture Chlorella"
-            click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
-            click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
-	    click R1 "https://snextracts.com/collections/for-rotifers-and-artemia" "Rotifer eggs collection"
-            style Kerapu1 fill:gold, color:black
-            style Seabass1 fill:gold, color:black
-            style R0 fill:blue, color:white
-            style R1 fill:green, color: black
-            style culture_both fill:green, color:white
-          </div>
+    Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
+    Kerapu1[/"Grouper Mature change sex ♂<br> Broodstock Rearing"/]
+    Kerapu(["Grouper: female at birth: ♀<br>Larva Rearing"])  --> |"size: 8-12cm  cuci air tawar"| FC0 --> |"mature/adult size"| FC22["floating cage bigger net size<br> and/or tambak lebih besar ↑O2<br> Brookstock around 3kg"]
+    Kerapu -->|tidak perlu| FC1 --> FC22 --> Kerapu1
+    Seabass(["Asian Seabass: Male at birth: ♂<br> Larva Rearing"]) --> |"size: 8 - 12cm  bersisik tidak perlu pasir"| FC0 -->|"Mature/adult size"| FC22 --> Seabass1
+    Lobster["Lobster rearing"] -->FC2
+    click culture_fresh_pytho "https://algaeresearchsupply.com/products/algae-research-supply-algae-culture-chlorella-pyrenoidosa?srsltid=AfmBOoqYbKG86RMM1kP_KYZvTHlMmcgQWKry5cNg-7a28B-AxddtVZfK" "culture Chlorella"
+    click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
+    click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
+	  click R1 "https://snextracts.com/collections/for-rotifers-and-artemia" "Rotifer eggs collection"
+    style Kerapu1 fill:gold, color:black
+    style Seabass1 fill:gold, color:black
+    style R0 fill:blue, color:white
+    style R1 fill:green, color: black
+    style culture_both fill:green, color:white
+ </div>
 
 
 
