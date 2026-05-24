@@ -1258,34 +1258,34 @@ timeline
 
 ---
 <div class="mermaid">
-%% Grouper eggs collection
-%%
+
 flowchart TD
-    A[Gamete Collection] --> B{Processing Method}
+    %% Grouper eggs collection
+    A["Gamete Collection"] --> B{"Processing Method"}
     B --> C
     B --> D
     
-    subgraph C [Sperm Cryopreservation]
+    subgraph C["Sperm Cryopreservation"]
         direction TB
-        C1[Dilute with Extender<br>+ Cryoprotectant DMSO/Glycerol<br>+ Antioxidant Melatonin]
-        C1 --> C2[Package in Straws]
-        C2 --> C3[Freeze in Liquid Nitrogen]
+        C1["Dilute with Extender<br>plus Cryoprotectant DMSO/Glycerol<br>plus Antioxidant Melatonin"]
+        C1 --> C2["Package in Straws"]
+        C2 --> C3["Freeze in Liquid Nitrogen"]
     end
     
-    subgraph D [Fresh Egg Transport]
+    subgraph D["Fresh Egg Transport"]
         direction TB
-        D1[Select resilient stage<br>Avoid morula/blastula]
-        D1 --> D2[Pack in oxygenated bags<br>or on moist substrate]
+        D1["Select resilient stage<br>Avoid morula/blastula"]
+        D1 --> D2["Pack in oxygenated bags<br>or on moist substrate"]
     end
     
-    C3["C3"] --> E[Transport in<br>Liquid Nitrogen Dry Shipper]
-    D2 --> F[Transport at<br>Controlled Temperature]
+    C3["C3"] --> E["Transport in<br>Liquid Nitrogen Dry Shipper"]
+    D2 --> F["Transport at<br>Controlled Temperature"]
     
-    E --> G[Thaw & Use at Destination Hatchery]
-    F --> H[Incubate & Hatch at Destination Hatchery]
+    E --> G["Thaw & Use at Destination Hatchery"]
+    F --> H["Incubate & Hatch at Destination Hatchery"]
     
-    C1 --> |Protects against<br>oxidative cryodamage| C3
-    D1 --> |Critical for<br>maintaining viability| D2
+    C1 --> |"Protects against<br>oxidative cryodamage"| C3
+    D1 --> |"Critical for<br>maintaining viability"| D2
 
 
 </div>
@@ -1312,8 +1312,8 @@ flowchart TD
 </div>
 
 <div class=mermaid>
-%% Teripang
 flowchart TD
+    %% Teripang
     A[Broodstock Conditioning<br>Rich Diet, Stable Conditions] --> B{Induced Spawning};
     
     B -- Thermal Shock /<br>Algal Stimulation --> C[Spawning & Fertilization];
@@ -1351,7 +1351,7 @@ flowchart TD
 </div>
 
 <div class="mermaid">
-    graph LR;
+  graph LR;
     %% Collecting Rotifer eggs
     %% x
     subgraph Rotifer["Collecting and storing Rotifer"]
@@ -1359,10 +1359,10 @@ flowchart TD
        Rotifer_eggs["Collecting rotifer eggs for store up to 2 years"]
        Rotifer_dormat["store rotifer in cold temperature forup to 8 weeks"]
        preserve_Pythoplankton["use Lugol to preserve pythoplaankton and zooplantok life (not the eggs) in dark botol"]
-    end
+  end
 
-    click Rotifer_eggs "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "Rotifer eggs"
-    click preserve_Pythoplankton "https://www.researchgate.net/publication/283211219_Marine_phytoplankton_preservation_with_Lugol's_a_comparison_of_solutions" "Lidol to preserve pythoplankton"
+  click Rotifer_eggs "https://www.globalseafood.org/advocate/trials-test-effects-of-hormone-supplemented-feed-on-sex-reversal-of-freshwater-prawns/" "Rotifer eggs"
+  click preserve_Pythoplankton "https://www.researchgate.net/publication/283211219_Marine_phytoplankton_preservation_with_Lugol's_a_comparison_of_solutions" "Lidol to preserve pythoplankton"
 </div>
 
 
@@ -1517,11 +1517,14 @@ A[Start: New Scallop Arrives] --> B[Float Sealed Bag<br>15 mins for Temperature 
   end 
 
   subgraph plankton["Zooplankton Culture-<br>acclimination pythoplankton feeding due to diff salinity"]
-    R0{"Rotifer Brachionus Plicatilis (most common) Large size 20-25°C<br>Euryhaline<br>Quality depend on its feeds"}
+    %% Rotifers should be cultured at lower temperatures and similar salinities to the fish larval rearing tanks or acclimated for at least 6 h to larval rearing conditions before transfer.
+    %% 
+    R0{"Rotifer Brachionus Plicatilis (most common) Large size 20-25°C<br>Euryhaline<br>Optimum salinity: 10-35ppt<br>Quality depend on its feeds"}
     R1{"Rotifer B. rotundiformis Small size 28-35°C<br>Low Salinity<br>Quality depends on its feeds"}
-    Copepods{"Copepods Bigger than Rotifer"}
+    Copepods["Copepods Bigger than Rotifer<br><font color="blue">no need enrichment prior to feed to larvae<br>unlike rotifer, artemia</font>"]
 	  Monia{"Monia"}
 	  Daphina{"Daphina"}
+    Fairy_shrimp["Fairy shrimp(freshwater) vs brine shrimp (seawater)"]
     MicroAlgae["Green phytoplanktons"] --->R0
     MicroAlgae -->R1
     MicroAlgae ----> Copepods
@@ -1537,6 +1540,7 @@ A[Start: New Scallop Arrives] --> B[Float Sealed Bag<br>15 mins for Temperature 
     click Seabass "https://www.seafdec.org.ph/2011/seabass-hatchery/" "Seabass Hatchery"
     click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
 	  click R1 "https://snextracts.com/collections/for-rotifers-and-artemia" "Rotifer eggs collection"
+    click R0 "https://www.sciencedirect.com/science/article/abs/pii/S0044848600003690" "culture at larva salinity"
     style Kerapu1 fill:gold, color:black
     style Seabass1 fill:gold, color:black
     style R0 fill:blue, color:white
@@ -1552,9 +1556,13 @@ flowchart TD
 
     subgraph plankton["Plankton feed to Larvae"]
       PyPL1["Pythoplanton"]
-      R0{"Rotifer L Type ΔT,<br> 20°C-25°C,Euryhaline<br>B. plicatilis (L)<br>171-238µm "} --> R0_1["Rotifer Large eggs collection"]
-      R1{"Rotifer S Type ΔT,<br> 28°C-35°C, Low Salinity<br>B. rotundiformis (S)<br>121-162µm"}-->R2_1["eggs collection<br><font color="red">pick small eggs  to have small size Rotifer</font>"]
-      R2_1 --> SR1{"Rotifer SStype<br>Choose smallest eggs S type"}
+
+      subgraph rotifer ["optimum salinity: 10-35ppt<br> can hatch from eggs"]
+        R0{"Rotifer L Type ΔT,<br> 20°C-25°C,Euryhaline<br>B. plicatilis (L)<br>171-238µm "} --> R0_1["Rotifer Large eggs collection"]
+        R1{"Rotifer S Type ΔT,<br> 28°C-35°C, Low Salinity<br>B. rotundiformis (S)<br>121-162µm"}-->R2_1["eggs collection<br><font color="red">pick small eggs  to have small size Rotifer</font>"]
+        R2_1 --> SR1{"Rotifer SStype<br>Choose smallest eggs S type"}
+      end
+
       Copepods["Copepods"]
       Artemia["Artemia<br>Brine shrmp"]
       eggs["Fish Eggs"]
@@ -1792,12 +1800,41 @@ Highlights
 
 
 ## Rotifer
-Copepods and rotifers are both types of small aquatic organisms, particularly important in marine and freshwater ecosystems
- as they are a food source for many fish and other invertebrates. However, they belong to 
+Copepods and rotifers are both types of small aquatic organisms, particularly important in marine and freshwater ecosystems 
+as they are a food source for many fish and other invertebrates. However, they belong to 
 different groups: copepods are crustaceans (Arthropoda), while rotifers are rotifers (Rotifera).
 Copepods are more common in reef tanks, where they contribute to the tank's overall biodiversity
 and can be cultured. Rotifers, on the other hand, often require specific conditions
 and are typically cultured separately, but they can be a valuable food source, especially for corals. 
+
+|Rotifer Water quality parameters |Optimal Ranges|
+|---------------------------------|--------------|
+|Salinity |10-35 ppt|
+|Temperature |22-30°C|
+|Dissolved oxygen |>4 ppm|
+|pH |7-8.5|
+|Total ammonia nitrogen |d”5 ppm|
+
+### [Rotifer enrichment](https://algagendirect.com/blogs/marine-fish-nutrition/live-rotifers-for-sale-ultimate-aquarium-nutrition-guide)
+
+[rotifer vector for feed](https://www.podyourreef.com/blogs/care/how-brachionus-rotifers-fuel-coral-growth-in-reef-aquariums?srsltid=AfmBOoqUwL1_H2_DcCfZ9BR_C6-j9BnAB-TaIEYmPeBCKbnmwWeGcmX8)
+
+Marine microalgae contain the full spectrum of important
+nutritional components that is needed for larval development, including fatty acids
+(especially ARA, EPA, or DHA), sterols, carbohydrates, proteins, and vitamins.
+
+The most commonly used algae for growing rotifers
+are Chlorella and Nannochloropsis, which provide high growth rates and healthy
+rotifers. However, 
+* Chlorella provides essentially no ARA, EPA and DHA. 
+* Nannochloropsis contains a high content of EPA, which can be converted to DHA by some fishes. 
+* Apart from this, Isochrysis is an important feed for rotifers, contains DHA which could be directly used by the fish larvae
+
+The last 12-24 hours of feeding are the most important for determining the nutritional value of the rotifer. This provides substantial enrichment by gut loading
+of the rotifer with the desired feed. Optimum time need to be identified for proper incorporation of enrichment media into the rotifer tissues and 8 hours of
+enrichment has been found to be optimum in different studies. Enrichment for
+more than 24 hours needs to be avoided b
+
 
 Copepods:
 Classification: Crustaceans (Arthropoda). 
@@ -1902,11 +1939,6 @@ dilengkapi bantalan sehingga mampu menjaga kelenturan terhadap gelombang laut se
 
 * The waters off Changi, meanwhile, are saltier and suitable for fish that are more popular with Singapore consumers.
  They include red snapper, barramundi (Asian sea bass), golden pomfret and sea perch.
-
-1. item 1
-1. | Column One | Column Two |
-| --- | --- |
-| <img src="https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg" alt="Alt Text" width="500" height="600">| <img src="https://rlutah.com/cdn/shop/files/Nanochloropsusjapanesechlorella.png?v=1729365450&width=600" alt="Alt Text" width="500" height="600"> |
 
 The Pacific oyster can tolerate a wide temperature range from -2° to 35°C, but for optimal reproduction temperatures over 20°C are required. 
 This may explain why there appear to be no self-sustaining populations of Pacific oysters on the West Coast and why oyster farming in this region requires 
@@ -2354,7 +2386,6 @@ sold in fresh condition at the local markets or iced and transported to distant 
 
 Sea cucumbers, prized for their commercial value, benefit from diets containing microalgae such as Chaetoceros and Isochrysis, 
 which enhance growth and survival rates. Similarly, for sea urchins and seahorses, microalgae like Isochrysis and Chaetoceros are 
-<img src="https://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpeg">
 recommended for larvae, promoting survival, growth, and metamorphosis, especially the black-lip pearl oyster (Pinctada margaritifera) [165, 166].
 
 
