@@ -1357,7 +1357,7 @@ flowchart TD
     subgraph Rotifer["Collecting and storing Rotifer"]
        direction  LR
        Rotifer_eggs["Collecting rotifer eggs for store up to 2 years"]
-       Rotifer_dormat["store rotifer in cold temperature forup to 8 weeks"]
+       Rotifer_dormat["store rotifer in cold temperature for up to 8 weeks"]
        preserve_Pythoplankton["use Lugol to preserve pythoplaankton and zooplantok life (not the eggs) in dark botol"]
   end
 
@@ -1518,16 +1518,17 @@ A[Start: New Scallop Arrives] --> B[Float Sealed Bag<br>15 mins for Temperature 
 
   subgraph plankton["Zooplankton Culture-<br>acclimination pythoplankton feeding due to diff salinity"]
     %% Rotifers should be cultured at lower temperatures and similar salinities to the fish larval rearing tanks or acclimated for at least 6 h to larval rearing conditions before transfer.
-    %% 
-    R0{"Rotifer Brachionus Plicatilis (most common) Large size 20-25°C<br>Euryhaline<br>Optimum salinity: 10-35ppt<br>Quality depend on its feeds"}
+    %% yeast as feed source to zoeplankton
+    R0{"Rotifer Brachionus Plicatilis (most common) Large size 20°C-25°C<br>Euryhaline<br>Optimum salinity: 10-35ppt<br>Quality depend on its feeds"}
     R1{"Rotifer B. rotundiformis Small size 28-35°C<br>Low Salinity<br>Quality depends on its feeds"}
     Copepods["Copepods Bigger than Rotifer<br><font color="blue">no need enrichment prior to feed to larvae<br>unlike rotifer, artemia</font>"]
 	  Monia{"Monia"}
-	  Daphina{"Daphina"}
+	  Daphina["Daphina magna"]
     Fairy_shrimp["Fairy shrimp(freshwater) vs brine shrimp (seawater)"]
     MicroAlgae["Green phytoplanktons"] --->R0
     MicroAlgae -->R1
     MicroAlgae ----> Copepods
+    Yeast["Yeast feed to zoeplankton"]
   end
 
     Seabass1[/"Seabass Mature change sex 5kg ♀ <br> Broodstock  Rearing"/]
@@ -1541,6 +1542,7 @@ A[Start: New Scallop Arrives] --> B[Float Sealed Bag<br>15 mins for Temperature 
     click Kerapu "https://www.seafdec.org.ph/hatchery-seedstock/" "Grouper Hatchery"
 	  click R1 "https://snextracts.com/collections/for-rotifers-and-artemia" "Rotifer eggs collection"
     click R0 "https://www.sciencedirect.com/science/article/abs/pii/S0044848600003690" "culture at larva salinity"
+    click Daphina "https://www.aquaticlivefood.com.au/how-to-hatch-daphnia-eggs-a-comprehensive-guide/" "Daphina hatching and culture"
     style Kerapu1 fill:gold, color:black
     style Seabass1 fill:gold, color:black
     style R0 fill:blue, color:white
@@ -1849,6 +1851,20 @@ Habitat: Found in freshwater environments, including lakes, ponds, and even temp
 Diet: Primarily feed on algae and other small organisms. 
 Reef Tank Role: Serve as a food source, especially for corals and larval fish. 
 Cultures: Typically cultured in separate tanks, often using algae or specialized feed. 
+
+# Daphnia magna
+Daphnia feed on small, suspended particles in the water. They are suspension feeders (filter feeders)
+|Table 1. AdaMa used for incubating diapausing eggs (Kluttgen et al., 1994).|
+|---------------------------------------------------------------------------|
+
+| --- |---- |
+|CaCl2 2H2O (117.6 g l-1) |23 ml|
+|SeO2 (0.0035 g l-1) |1 ml|
+|NaHCO3 (25.2 g l-1) |22 ml|
+|Fresh distilled water (20°C) |10 l|
+|Sea salt |3.33 g|
+
+aArtificial daphnia Medium.
 
 # Eel (ikan sidat)
 * Tambak deep 0.80 ~ 1.20m

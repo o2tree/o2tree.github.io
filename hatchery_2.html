@@ -285,7 +285,7 @@ Threonine
 Tryptophan
 Valine 
 
-[Microalgae open pond design](https://www.linkedin.com/pulse/practical-guide-designing-open-photobioreactors-ponds-chetankumar-cvadf)\
+[Microalgae open pond design](https://www.linkedin.com/pulse/practical-guide-designing-open-photobioreactors-ponds-chetankumar-cvadf)
 
 [another pond design](https://extension.okstate.edu/fact-sheets/photobioreactor-design-for-algal-biomass-production)
 
@@ -362,6 +362,8 @@ fertigation or seed treatment.
 	* How to keep rotifers alive? You can store live rotifers for one week in the refrigerator. Just give them a little algae every other day.
 Some people do indeed freeze rotifers and feed them out to their corals.
 Just make sure they don't get freezer burn!
+
+* [best salinity 17ppt](https://pdfs.semanticscholar.org/3c10/d7e10b1624b58b5c37d0b10babf4d3fa5285.pdf)
 
 [Lugol preservation technique](https://www.jstage.jst.go.jp/article/pbr/17/4/17_P170407/_pdf/-char/en)
 
@@ -1008,6 +1010,7 @@ timeline
 <div class="mermaid">
     graph LR;
     %% Collecting Rotifer eggs
+    %% rotifer optimum salinity: 17ppt https://pdfs.semanticscholar.org/3c10/d7e10b1624b58b5c37d0b10babf4d3fa5285.pdf
     %% x
     subgraph Rotifer["Collecting and storing Rotifer"]
        direction  LR
@@ -1100,7 +1103,7 @@ timeline
 
 <div class="mermaid">
     graph LR;
-    %%  Artemia Culture - Cysts are a potential vector for pathogen introduction to the culture system
+    %% Artemia Culture - Cysts are a potential vector for pathogen introduction to the culture system
     %% Cysts must be physically separated from the live Artemia after hatching
     %% decapsulation,hatching,enrichment, and  storage
     %% Artemia Decapsulation Requirements
@@ -1119,8 +1122,17 @@ timeline
        Step1["preparation saline water<br>air buble<br>Keep light on to keep temperature"]
        egg_weight_per_L["10 gram/4L saline water"]
        light["A light intensity of 2000 lux<br> triggers their biological hatching mechanism<br>embryonic diapause, synchronizes the hatch for uniformity,Max: viable nauplii."]
-       Not_conatain["<font color="red">do not use any aluminium parts</font>"]
+       Not_conatain["<font color="red">do not use any aluminium parts</font><br>Separate cyst by magnet"]
     end
+
+    subgraph decapsulating_Artemia["decapsulating artemia eggs"]
+       direction  LR
+       %% https://bpb-us-e2.wpmucdn.com/sites.ua.edu/dist/9/604/files/2025/01/decapsulating_brine_shrimp_eggs.pdf
+       soaking_bleach["soaking with bleach NaOCl or Sodium Carbonate Na2CO3<br>media for bleach 10-15C<br>. temp raise could kill"]
+       feed_direcly["feed to larvae without hatching is possible"]
+       storage_1["store the decapsuslating at salinity 300+ppt and cold"]
+    end
+
 
     subgraph Feeding_Artemia["Feeding after Hatch Artermia (24 hours)"]
       direction  LR
@@ -1142,14 +1154,15 @@ timeline
        cold_storage["Cold Storage"]
     end
 
-    subgraph Artemia_culture["Artemia growth and eggs"]
+    subgraph Artemia_culture["Artemia growth birth nauplii or stress to lay eggs"]
        direction  LR
-       condition_culture["3-6 months will be adult artemia<br><font color="blue"> salinity 50?-80?ppt <br> harvest eggs with salinity: 80?-100?ppt</font>"]
+       condition_culture["3-6 months will be adult artemia<br><font color="blue"> to stress by increase salinity 50?-80?ppt and lower O2 <br> harvest eggs with salinity: 80?-100?ppt</font>"]
        Harvesting["scrap from the tank walls<br>hydrate it with lamp for 24hours"]
     end
 
     click Step1 "https://www.pubs.ext.vt.edu/content/dam/pubs_ext_vt_edu/600/600-106/CNRE-60.pdf" "Culture Artemia"
     click feed_macroalgae "https://link.springer.com/article/10.1007/s10499-025-02165-8" "feed palm kernel extract or macroalgae"
+    click soaking_bleach "https://artemia.inveaquaculture.com/wp-content/uploads/2021/03/decapsINVE-final25jan.png" "soaking bleach"
 
 </div>
 
@@ -1235,18 +1248,27 @@ Temperature: Keep your culture container between 24°C-28°C in the dark for opt
 Hatching Time: Eggs will naturally hatch in 24 to 72 hours.Feeding: Once hatched, 
 the microscopic nauplii will need a food source such as phytoplankton to survive and mol
 
-<img src="https://www.journals.uchicago.edu/cms/asset/11e82323-46aa-430c-9013-5f89f44328c9/fg3.jpg">
+<img src="https://www.journals.uchicago.edu/cms/asset/11e82323-46aa-430c-9013-5f89f44328c9/fg3.jpg" style="max-width: 100%;" />
 
-<img src="https://www.journals.uchicago.edu/cms/asset/8014b854-b145-4431-9719-b0957a91e23d/fg5.jpg">
+<img src="https://www.journals.uchicago.edu/cms/asset/8014b854-b145-4431-9719-b0957a91e23d/fg5.jpg" style="max-width: 100%;" />
 
 
-# Artemia Hatching Requirements
+# [Artemia Hatching Requirements](http://www.artemia-international.com/default.asp?contentID=581)
 * Temperature: 26-30°C, pH: 8.0-9.0, Dissolved oxygen: < 4 mg/L 
 * Light level: ~2000 lux
 * Salinity: 25-35 ppt
 * Hatching density: ≤ 2 g dry cysts/L (up to 5 g/L with supplemental O2)
 * Sodium bicarbonate (NaHCO3): 0.5 g/L
 * Antifoam (silicone based): 1 ml/100 L
+
+
+* Sodium Carbonate Na2CO3
+* Sodium Hypochlorite NaOCl (house hold bleach)
+
+
+* Artemia cyst as pathogen vectors
+
+[size each day rotifer](https://t.me/indoliveseafood/2989)
 
 <p>A light intensity of 2000 lux is recommended for hatching Artemia (brine shrimp) because it triggers their biological hatching mechanism. 
 It provides the energy needed to break their embryonic diapause, synchronizes the hatch for uniformity, and maximizes the number of viable nauplii. 
@@ -1257,6 +1279,7 @@ if light levels are insufficient.Synchronizes Hatching: Constant light exposure 
 of baby brine shrimp.Aids in Harvesting: Artemia nauplii are naturally phototactic (highly attracted to bright light). Maintaining a light source makes it much easier to 
 separate the hatched shrimp from the unhatched cysts and empty shells during harvesting</p>
 
+<img src="https://artemia.inveaquaculture.com/wp-content/uploads/2021/03/decapsINVE-final25jan.png" style="max-width: 100%;" />
 
 # Artemia feed
 * Palm Kernel Exract contains 15% protein, 6% lipids, 51% nitrogen-free extract (NFE), 14% fiber, and 6% ash of dry weight, which made it a suitable aquafeed
@@ -1267,7 +1290,7 @@ separate the hatched shrimp from the unhatched cysts and empty shells during har
 * PKE has been primarily used as fertilizer and animal feed substitutes because they are cheap and accessible (Shayne 2000). 
   PKE also contains many probiotic bacteria, such as Lactobacilli that exert beneficial effects in maintaining a healthy gut 
   and digestive system of the host (Navidshad et al. 2016).
-* <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10499-025-02165-8/MediaObjects/10499_2025_2165_Fig4_HTML.png?as=webp">
+* <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10499-025-02165-8/MediaObjects/10499_2025_2165_Fig4_HTML.png?as=webp" style="max-width: 100%;" />
 
 # Storage Artemia
 Decapsulated cysts can be drained of excess water and stored in an airtight container in a refrigerator for up to two weeks. For longer-term storage (two months
@@ -1284,6 +1307,9 @@ Salinity: 20-30 ppt
 Density: ≤ 300 nauplii/ml
 DC DHA dosage: 0.6 g/L
 Enrichment duration: 20-24 hours
+
+di salinity rendah artemia menetas di induk (beranak), di salinitas tinggi akan bertelur
+
 
 
 Archaeplastida: Diversification of Red Algae and the Green Plant Lineage
@@ -1802,9 +1828,12 @@ https://o2tree.github.io/image/1e9f2371-9b22-45b5-ac31-7c265bb21894.jpegrecommen
 
 
 
-# Giant Freshwater Prawn - Macrobrachium rosenbergii 
+# [Giant Freshwater Prawn - Macrobrachium rosenbergii](https://www.seafdec.org.ph/giant-freshwater-prawn/)
 
 * Giant freshwater prawn is the largest and fastest growing freshwater prawn widely distributed in Indian rivers confluent of the sea. It migrates between river and estuary.
+  * Developmental stages of M. rosenbergii larvae exposed to [**neutral (pH 7.7 ± 0.4)**](https://www.sciencedirect.com/science/article/pii/S2405844022012774), ~mild-acidic (pH 6.4 ± 0.5) and acidic (pH 5.4 ± 0.2)~ conditions.
+  * [Water Quality](https://agritech.tnau.ac.in/fishery/fish_freshwaterprawn.html)
+
 
 * The sexes are separate, males are considerably larger having large cephalothorax, and long and robust second chelate legs than females.
 
@@ -1823,6 +1852,26 @@ and 40 larvae/l in the second phase (V-XI larval stage). It takes about 35 days 
 
 * The larvae are fed exclusively with freshly hatched brine shrimp nauplii (BSN) 3-4 times in a day up to 10 days. BSN is gradually replaced with egg-custard 
 till larvae complete zoea-XI stages and metamorphosed to post-larvae (PL).
+  * egg custard containing mussel or fish flesh, squid, or other ingredients
+  * Egg custard preparation:
+    The egg custard was prepared by using 10 g of high calcium milk powder, 1 egg, 0.2 g of fish oil, 
+    0.01 g of complex vitamin, 0.01 g of vitamin C, 0.1 g of soy lecithin and 1 drop of food colouring (red colour to enhance attraction) 
+    (Abidin et al., 2010; Muda et al., 2021). All ingredients were mixed well and steamed for 15 min. 
+    The egg custard was left to cool at room temperature, cut into 2 × 2 cm2 and kept in a freezer. To ensure freshness quality, egg custard was prepared weekly.
+  * The other options could be small and light pelagic fish eggs or fish roe, which are highly nutritious (Mouritsen, 2023). Those fish eggs are soft and light, 
+    and they can float, move freely, or remain suspended in the water column. If not overfed, fish eggs do not pollute the water, as their nutrients are encapsulated in 
+    cell walls, similar to those of live food organisms. Eggs from marine species (e.g., tuna, king mackerel, mullet fish, bigeye scad fish, seabass, etc.) are available 
+    in large volumes as byproducts of fish processing factories.
+  * the size of eggs matters, as their size needs to be smaller than the size of the mouth of the larvae. One potential source of fish roe is the bigeye 
+    scad (Selar crumenophthalmus), a member of the family Carangidae. 
+  * Egg custard
+      Egg: 2 no.
+      Shrimp: 25 gm
+      Corn floor: 20 gm
+      Milk powder: 25 gm
+      Yeast: 2 gm
+      Cod liver oil: 3 ml
+      Vit mix: 2 gm
 
 * PL are shifted to another tank and gradually acclimatized to freshwater, where they are reared for 10-15 days before shifting to the nursery tanks. 
 Survival of 35% is achieved at PL stage.
@@ -1837,6 +1886,30 @@ and preying on their smaller counterparts.
 
 “The hope is that by confining the fish in smaller spaces with higher densities, they will be more likely to feed consistently and grow at similar rates,” Zaczek explained. “
 If the fish are of similar size, they are less likely to turn on each other.”
+
+
+[Maintenance of brood stock](https://courseware.cutm.ac.in/wp-content/uploads/2020/06/Session-7.-Theory-Breeding-MR.pdf)
+* Sex ratio for brood stock early juveniles are stocked in ponds @ 3-4/m² and adults @ 2 nos/m². Male(1) :Female(4) .
+* Size of pond may very from 0.2-1.6 ha with avg. depth of 0.9 m
+* Salinity: fresh water; although culture in salinity range 10 ppt-25 ppt is also possible.
+* Hardness: 100 ppm CaCO3
+* pH: 7- 8.5
+* Opt. temp: 29-31˚C
+* Feeding: pelleted feed with 35-40% protein at 3-4% total body wt. about 3 times per day.
+* Others items-tapioca, trash fish, mollucs, prawn wastes etc.
+* Prawn attain maturity in 4-7 months
+
+ Most farmers select larger females, which usually carry
+more eggs, but this may not be good practice. Selecting
+fast-growing, berried females from ponds three months
+after they were stocked, rather than choosing large
+females six months after stocking, has a positive genetic
+effect on weight at harvest.
+• Collecting the faster growing females and rearing them
+in dedicated broodstock ponds would enable you to use
+selection to improve grow-out performance and also
+give you the ability to hold the animals until their clutch
+size becomes larger (after later mating moults)
 
 
 
