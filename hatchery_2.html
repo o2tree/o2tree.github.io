@@ -1,12 +1,20 @@
 <html lang="en">
   <head>
    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta charset="utf-8">
+   <meta charset="utf-8">
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css" integrity="sha384-vlBdW0r3AcZO/HboRPznQNowvexd3fY8qHOWkBi5q7KGgqJ+F48+DceybYmrVbmB" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.js" integrity="sha384-AtrdNsnxl/75rvBneBVH7DtOvCxSVahR2zWqle1coBKd8DEmLoviqNeJSx64gNAs" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
     <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
      <title>Hatchery Seaweed (Macroalgae) - Pembibitan</title>
       <script id="sap-ui-bootstrap"
@@ -144,6 +152,7 @@
 <md-block>
 
 # [Fairy shrimp (freshwater)](https://bettasandart.com/hatching/) vs Artermia (seawater)
+
 - [fairy shrimp culture](https://www.arizonafairyshrimp.com/hatrais.html)
 The use of fairy shrimp (Streptocephalus spp.) as a live feed for aquaculture is not
 well-known in Indonesia. On top of that, fairy shrimp mostly portrayed incorrectly in Indonesia
@@ -152,6 +161,55 @@ importance of fairy shrimp Streptocephalus spp. as an alternative live feed as w
 the potential application and suitability for its future implementation in Indonesian aquaculture
 industry
 
+- $x + y$
+- $x - y$
+- $x \times y$ 
+- $x \div y$
+- $\dfrac{x}{y}$
+- $\sqrt{x}$
+
+# [Nitrogen](https://www.hamzasreef.com/Contents/Calculators/NitrogenIonConversion.php)
+* nitrate-nitrogen (NO3-N) 
+* nitrite-nitrogen (NO2-N)
+* [total ammonia value (NH3 + NH4)](https://www.hamzasreef.com/Contents/Calculators/FreeAmmonia.php)
+
+* NH3 = NH3-N * 1.21589
+* NH4 = NH4-N * 1.28786
+* NO2 = NO2-N * 3.28443
+* NO3 = NO3-N * 4.42664
+
+Comparison BreakdownFeatureUrea (\(CO(NH_2)_2\))Ammonium (\(NH_{4}^{+}\))Nitrate (\(NO_{3}^{-}\))
+Nitrogen ContentVery high (~46%)Variable (depends on source)Variable (depends on source)Plant AvailabilitySlow (requires microbial conversion)FastInstantMobility in SoilLow (until converted to nitrate)Low (binds to clay/humus)High (moves freely with water)Leaching RiskLow initially, increases after conversionVery lowHigh (washes away in heavy rain)Volatilization RiskHigh (risk of gas loss if left on surface)LowNone
+
+Sargassum contains a diverse array of macro and micronutri-ents essential for plant growth. 
+* protein:  11-13% of dry weight, 
+* fat : 1-2%
+* Nitrogen: 3-5%
+* phosphorus and potassium: 17-35%
+* Vitamin C, vitamin A, and several B vitamins C14:0,C16:0,C18:1 C20:4
+
+
+
+|Chemical Composition Comparison|
+|-------------------------------|
+
+|Parameter	|Urea	|Ammonium Nitrate|
+|-----------|-----|----------------|
+|Chemical Formula|	CO(NH₂)₂|	NH₄NO₃|
+|Nitrogen Content|	~46%	|~34–35%|
+|Nitrogen Form	|Amide nitrogen|	Ammonium + Nitrate nitrogen|
+|Molecular Weight|	60 g/mol|	80 g/mol|
+|Appearance	|White crystalline/prilled solid|	White granular/prilled solid|
+
+|Nitrogen Availability and Release Behavior|
+|Aspect	|Urea	|Ammonium Nitrate|
+|Initial Availability	|Slow|	Fast|
+|Conversion Required	Yes (hydrolysis)|	No|
+|Loss Risk	|High (volatilization)|	Low|
+|Performance in Cold Soil|	Moderate|	Excellent|
+
+[Nitrogen in microalgae vs soil plant](https://www.researchgate.net/publication/323996864_Comparative_effects_of_ammonium_nitrate_and_urea_on_growth_and_photosynthetic_efficiency_of_three_bloom-forming_cyanobacteria)
+[nitrogen in microalage 2](https://hal.inrae.fr/hal-02869455v1/document)
 
 pythoplankton: freshwater (P limited), seawater (N and Si limited- C:N:P= 106C:16N:1P)
 Fe, M,Zn,Na,Ca, Mn,hiamine, biotin, B12
@@ -286,6 +344,15 @@ Tryptophan
 Valine 
 
 [Microalgae open pond design](https://www.linkedin.com/pulse/practical-guide-designing-open-photobioreactors-ponds-chetankumar-cvadf)
+
+[Growth Microalgae as fuel](https://agsci.oregonstate.edu/sites/agscid7/files/bioenergy/education/algae_final_interactive.pdf)
+
+<img src="https://down-sg.img.susercontent.com/file/71282d8f0c1dac97b5cffbbf9f91f14e.webp">
+
+<img src="https://down-sg.img.susercontent.com/file/f61554a99bdd5136592c8b16ab29bad8.webp">
+
+[Miracle Gro](https://t.me/indoliveseafood/2998)
+
 
 [another pond design](https://extension.okstate.edu/fact-sheets/photobioreactor-design-for-algal-biomass-production)
 
@@ -852,7 +919,9 @@ Tank Specifications:
 - Dark-colored tanks (reduces stress in larvae).  
 
 ---
-# Seacucumber 
+# [Seacucumber](https://baike.baidu.com/en/item/Dalian%20Sea%20Cucumber/33548)
+
+[sargassum as feed](https://sargassumhub.org/wp-content/uploads/2020/11/Desrochers-et-al-2020-Sargassum-uses-guide-ADVANCED-DRAFT_13Nov.pdf)
 
 ## 2. Broodstock Seacucumber  Collection & Conditioning
 ### 🔍 Selection Criteria  
