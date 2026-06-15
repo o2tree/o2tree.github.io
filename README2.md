@@ -54,6 +54,16 @@ Jambi, Jambi Timur 36142
 
 0 822 8912 8535
 
+---- 
+```
+	Edy Likin     (李良才)     Lǐ Liáng Cái
+
+	Julina Lie    (李 优 丽)    Lǐ  Yōu Lì
+
+	Claris Likin (李可慧)     Lǐ Kě Huì
+
+	Rency Likin (李可欣)     Lǐ Kě Xīn
+```
 
 
 mkdir .github/actions/ansible
