@@ -75,7 +75,15 @@ architecture-beta
      V ----> M["Business Visa 'M'<br>Multiyear, multi-entry 5 years"]
      TR["240 hours  Transit Without Visa (TWOV)"] -->Ports["60 ports in china"]  --->ThirdV["Third country destiantion/region"]
      V ---->NV["region china free visa for  Indonesia"] -->HN["Hainnan"]
-     NV ---> YN1[" Xishuangbanna Yunnan by air <br> Mohan Rail"]
+     NV ---> YN1["Xishuangbanna Yunnan by air <br> Mohan Rail"]
+     Arrival_Card["China arrival card or Mobile App NIA 12367"]
+     Charter_Car["China chacter car"]
+
+     click Arrival_Card "https://s.nia.gov.cn/mps/main-en.html" "Arrival Card"
+     click  V "https://en.nia.gov.cn/" "Direct China questionare Visa"
+     click TR "https://travelchinawith.me/china-visa/240-hour-visa-free-china/#frequently-asked-questions" "Transist visa 240hr FAQ"
+     click Charter_Car "https://travelchinawith.me/china-tour-services/charter-car-service-in-china/" "charter car"
+
 </div>
 
 <div class="mermaid">
@@ -89,11 +97,20 @@ architecture-beta
      LA2["Luan Prabang, Laos"] <--->|"High speed D 07:00"| CNK1["Kungming south, China"]
      CHN1["Nanning China"] <-->|"USD 30.00"| VN["Hanoi"]
 
+
 </div>
 
 
+<div class="mermaid">
+     graph LR
+     %% Xian, Hotel N: 034  15.424, E108 56.790
+     %% https://images.chinahighlights.com/allpicture/2026/04/4dda5267befa4226a5471370bc0ecde5.webp
 
 
+     xian["Xian- Internaional airport"] <-->|"30km 🚄 train:120CNY"| Hotel["Holiday Inn Express Bell Tower:start 5July"]
+     xian_metro["Xian metro"]
+     terracota["Terracota"]
+     xian_town["xian city"] <-->|"65km"| terracota
 
 
  <md-block>
@@ -201,7 +218,7 @@ Airport: 30 km (about a 30-40 minute taxi ride) from Xi'an Xianyang Internationa
 Xi'an City Wall: 1.5 to 2 miles (approx. 5-10 minute drive) away.
 Muslim Quarter & Bell Tower: Roughly 2 to 2.5 miles away.
 
-
+<img src="https://images.chinahighlights.com/allpicture/2026/04/4dda5267befa4226a5471370bc0ecde5.webp">
 
 Unseen China is a land of incredible beauty and undiscovered places,
  offering breathtaking landscapes that even locals might not believe exist. 
@@ -344,7 +361,30 @@ xxx Time | Singapore| Fuzhou, Fujian| Xiamen to Fuzhou 186 km<br>https://www.goo
 
 
 
+|Date (version 0.1) 05 July 2025 | From | To/At| Description|
+|:--------------------------|------|-----|-----------|
+|<font size="4"> 🄰 🛧 05 July (Sunday) Time: 19:05 Scoot TR134 |Singapore to |Xian,China<br>July 6 (Monday),<br>Time:00:40</font>||
+|Hotel offer a 24-hour complimentary pick-up service from the airport or train station. ???|
+|Yongxing Alley to try a variety of local snacks and soak up the vibrant atmosphere of Xi'an.|
+|In the evening, visit the Tang Dynasty Ever-bright City to watch a fantastic performance and admire the dazzling night views|
+| July 6 (Monday) ① Hotel Xi'an|
+| July 7          ②      | Xi'an - Terracotta Army - Huaqing Palace ( B / L )???|
+|After breakfast, visit the Terracotta Army Museum to uncover the mysteries of Emperor Qin Shi Huang's mausoleum. Marvel at the grandeur of the terracotta warriors, feeling the might of the Qin army. Later, head to Huaqing Palace, where you can stroll through the ancient and charming palace architecture, learn about the love story between Emperor Tang Minghuang and Yang Guifei, and enjoy the beautiful scenery of Mount Li|
+| July 8          ③      | Xi'an - Mount Hua Scenic Area ( B / L )???|
+|Following breakfast, make your way to the Mount Hua Scenic Area. Known for its precipitousness, Mount Hua is acclaimed as the "Most Perilous Mountain Under Heaven." You can choose to hike up the mountain, challenging yourself and enjoying the stunning peaks and breathtaking views along the way; or take a cable car for an easy ascent to the summit, where you can overlook the continuous mountain ranges and appreciate the extraordinary craftsmanship of nature. On the summit, visit the five main peaks—east, west, south, north, and central—to experience the majesty and beauty of Mount Hua.|
+| July 9          ④   Hotel: Luxury hotel near Hukou Waterfall???   |
+|Xi'an - Xuanyuan Temple - Yellow Emperor's Mausoleum - Hukou Waterfall ( B / L )|
+|10 july|Xi'an - Ming City Wall - Big Wild Goose Pagoda Square - Muslim Street - Departure ( B )|
+|<font size="4"> 🄱 🛧 10 July (Friday) Time: 17:05 China Eastern Airline MU-867|Xian, China |to  Hanoi, Vietnam<br>Time:18:55</font>|<font color="red"> Claris may join</font>|
+| July 10  ① Hotel in Hanoy|
+| July 11  ② Hotel in Hanoy, Visit Halon Bay|
+| July 12  ② Hotel in Hanoy, Visit ???|
+|<font size="4"> 🄲 🛧 13 July (Monday)  Time: 16:00: SQ195| Hanoi, Vietnam to |Singapore<br>Time:20:45</font>|<font color="red"></font>|
+
+
+
 <img src="https://www.travelchinaguide.com/images/map/beijing-shanghai-railway.jpg">
+
 <img src="https://www.travelchinaguide.com/images/map/train/shanghai-hangzhou-highspeed.jpg">
 
 https://www.travelchinaguide.com/china-trains/international-schedule.htm
