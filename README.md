@@ -11,9 +11,9 @@
 - [Tanjung Kampeh Palemebang](http://o2tree.github.io/tanjungkampeh.html)
 - [KPRI Lingga](http://o2tree.github.io/kpri_lingga.html)
 - [Italy point of Interest-Testing Mermaid](http://o2tree.github.io/italy.html)
-- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html)| [Malaysia Arrival card](https://imigresen-online.imi.gov.my/mdac/main),<br>
+- [China Visa type for Indonesia and point of interest](http://o2tree.github.io/china.html)|[China Xian](http://o2tree.github.io/china_xian.html)
+- [Malaysia Arrival card](https://imigresen-online.imi.gov.my/mdac/main) |<br>
   [All Indonesia Immigrasi](https://allindonesia.imigrasi.go.id/)|[Singapore SG Arrival](https://eservices.ica.gov.sg/sgarrivalcard/)
-
 - [Peta Usulan Sumber bahari](http://o2tree.github.io/kth/data/peta_usulan_sumber_bahari.pdf)
 - http://o2tree.github.io/lahanrumah3.html
 - [PenyuBiru map](http://o2tree.github.io/penyubiru.html)|[lobster Cages in Vietnam](https://www.youtube.com/watch?v=YgScYfo3fK8&t=43s)

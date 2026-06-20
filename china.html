@@ -69,7 +69,6 @@ architecture-beta
 
 <div class="mermaid">
      graph LR
-     %% This is a comment!!!
      %% China Visa
      V["China visa Category"] --->L["Tourism visa 'L' or <br>Group Tour visa"]
      V ----> M["Business Visa 'M'<br>Multiyear, multi-entry 5 years"]
@@ -77,7 +76,7 @@ architecture-beta
      V ---->NV["region china free visa for  Indonesia"] -->HN["Hainnan"]
      NV ---> YN1["Xishuangbanna Yunnan by air <br> Mohan Rail"]
      Arrival_Card["China arrival card or Mobile App NIA 12367"]
-     Charter_Car["China chacter car"]
+     Charter_Car["China charther car"]
 
      click Arrival_Card "https://s.nia.gov.cn/mps/main-en.html" "Arrival Card"
      click  V "https://en.nia.gov.cn/" "Direct China questionare Visa"
@@ -88,32 +87,35 @@ architecture-beta
 
 <div class="mermaid">
      graph LR
-     %% This is a comment!!!
      %% China Visa
      HK["Hong Kong, Kwoloon station"] <--->|"direct to 60 TWOV ports"| xiamen["high speed rail or/to xiamen"]
      HK e1@<---> |"USD 25.00 00:18-00:25"| shenzen["Shenzen high speed rail for more > 60 ports destination"] <---> CN["other part of china"]
      e1@{ animate: true }
      LA["Vientiane, Laos"] <--->|"High speed rail USD45"| CNK["China Kunming"]
-     LA2["Luan Prabang, Laos"] <--->|"High speed D 07:00"| CNK1["Kungming south, China"]
+     LA2["Luan Prabang, Laos"] <--->|"High speed D 07:00"| CNK1["Kungming South, China"]
      CHN1["Nanning China"] <-->|"USD 30.00"| VN["Hanoi"]
-
-
 </div>
 
 
 <div class="mermaid">
-     graph LR
+  graph LR
      %% Xian, Hotel N: 034  15.424, E108 56.790
      %% https://images.chinahighlights.com/allpicture/2026/04/4dda5267befa4226a5471370bc0ecde5.webp
 
+    xian["Xian-Internaional airport"] <-->|"🚄 :120CNY,  30km"| Hotel["Holiday Inn Express Bell Tower 5 July"]
+    xian_cen_st["Xian 西安 Central station"] <-->|"65km, duration 50-60min ,7-9 CNY"| terracota_station["tourist bus label Terracotta Warriors"]
+    xian_metro["Xian metro"]
+    terracota["Terracota"]
+    xian <---->|"🚄🚄 402km 3 ~ 4:39hours,<br>🚄🚄🚄 1.5 ~ 2hours"| Luoyang["Luoyang 洛阳"] <--> Shaolin["shaolin Temple"]
+    Luoyang <-->|"🚄🚄 194km  2 hours"| Kaifeng["Kaifeng - justice Bao"]
 
-     xian["Xian- Internaional airport"] <-->|"30km 🚄 train:120CNY"| Hotel["Holiday Inn Express Bell Tower:start 5July"]
-     xian_metro["Xian metro"]
-     terracota["Terracota"]
-     xian_town["xian city"] <-->|"65km"| terracota
+    click terracota_station "https://www.chinadiscovery.com/xian-tours/xian-transportation/train-stations-to-terracotta-warriors.html" "Terracotta Warriors"
+    click Luoyang "https://www.chinaxiantour.com/dengfeng-attractions/shaolin-temple.html" "shaolin temple louyang"
+    click xian_metro "http://o2tree.github.io/china_xian.html" "china map and xian"
+</div>
 
 
- <md-block>
+<md-block>
 
 [Lithium battery in Airline](https://www.csair.com/mcms/mcmsNewSite/en/sg/#/orders/order/lkxlzldcdyxgd)
 - < 160Whours
@@ -125,7 +127,7 @@ architecture-beta
 - [High speed train price listing](https://www.travelchinaguide.com/china-trains/high-speed/?srsltid=AfmBOooThY87_5xpAYYC3v1R2UIcX1Rxenq5FM2knyI6-Lk9BddYgSMox)
 - [Xiamen airline](https://www.xiamenair.com/en-sg/)
 - [China airline](https://www.china-airlines.com/)
-[China Embassy in Singapore](http://sg.china-embassy.gov.cn/eng/lsfwx/va/zgqz/202305/t20230531_11086630.htm)
+- [China Embassy in Singapore](http://sg.china-embassy.gov.cn/eng/lsfwx/va/zgqz/202305/t20230531_11086630.htm)
 
 - [China Visa Singapore](www.visaforchina.com.sg): 
    - Tourist Purpose of Visit: L
@@ -139,8 +141,6 @@ architecture-beta
 Q: Can I apply for TWOV when entering mainland China from Hong Kong by road or train?
 
 **A: No, you can’t apply for TWOV when entering mainland China from Hong Kong by road or train, cause there’s no eligible port available. Travel by flight or cruise.**
-
-
 
 
 third country (region) from China - transit visa 240 hours
@@ -198,17 +198,14 @@ Documents   showing the itinerary including air ticket booking record (round
 2. Information on the planned visit (arrival and departure dates, place(s) to be   visited, etc.)
 3. Information on the inviting entity or individual (name, contact telephone   number, address, official stamp, signature of the legal representative or the   inviting individual)
 
-
-
 # [China visa free](https://wise.com/au/blog/china-visa-free)
 
-- [Brief visa free latest information](https://www.china-briefing.com/news/china-visa-free-travel-policies-complete-guide/)
+- [Brief Visa free latest information](https://www.china-briefing.com/news/china-visa-free-travel-policies-complete-guide/)
 - [China National Immigration](https://en.nia.gov.cn/)
 
 [China’s Hidden Mountain Worlds](https://www.youtube.com/watch?v=enaQkrEvhcU)
 
 [Huashan tour](https://www.asiaodysseytravel.com/xian-tours/huashan-mountain-hike-tour.html)
-
 
 [Xian airport to Holiday hotel](https://www.google.com/maps/dir/Xi'an+Xianyang+International+Airport,+CQP4%2BRWW,+Wei+Cheng+Qu,+Xianyang,+Shaanxi,+China/Holiday+Inn+Express+Xi'An+Ancient+Town+West,+No+288+Northern+Section+Of+Huancheng,+%E8%A5%BF%E5%A4%A7%E8%A1%97+Xi'An,+Shaanxi,+China,+710082/@34.2930296,108.8766281,9328m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0x36647f86fa101c45:0xe18dd0e1534f5a68!2m2!1d108.7573294!2d34.437111!1m5!1m1!1s0x36637a15931f8ec9:0xf92edadb911933aa!2m2!1d108.92209!2d34.266075?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D)
 
@@ -233,9 +230,6 @@ Unseen China is a land of incredible beauty and undiscovered places,
  These natural wonders, ancient towns, and remote villages invite you to experience the authentic side of China, far beyond the tourist hotspots.
 
 
-
-
-
 ## Yunnan
 ---
 [China’s Xishuangbanna](https://www.travelandtourworld.com/news/article/indonesia-cambodia-vietnam-singapore-thailand-and-malaysia-travelers-gain-exclusive-visa-free-entry-to-chinas-xishuangbanna/)
@@ -246,8 +240,17 @@ Unseen China is a land of incredible beauty and undiscovered places,
 
 ## Xian
     - Grand Tang Dynasty Ever Bright City 
-    - Ancient City Wall 
+    - Ancient City Wall , Shaanxi History Museum, Muslim Quarter
     - Terracotta Warriors Museum (40km from Xian)- pit one, two and three
+    - Sightseeing Bus Line 5 (306) from city center to tarracota museum
+    - Metro Line 2: from the city centre to Beidajie Station;
+    - Metro Line 1 Transfer: Get ready for your journey from Beidajie to Fangzhicheng Station!
+    - Metro Line 9: from Fangzhicheng to Huaqing Pool Station (Exit C);
+    - Lintong Bus 602: From Huaqing Pool to the Terracotta Army;
+    - <img src="https://www.chinadiscovery.com/assets/images/xian/xian-train-stations-to-terracotta-warriors/Xian-train-stations-to-Terracotta-Warriors.jpg">
+    - <img src="https://www.chinadiscovery.com/assets/images/xian/xian-attractions-map/Xian-Attractions-Map.jpg">
+    - <img src="https://www.chinadiscovery.com/assets/images/xian/top-tourist-attractions/Xian-Top-Attractions-Map.jpg">
+    - <img src="https://www.chinadiscovery.com/assets/images/xian/how-to-get-to-terracotta-warriors/terracotta-warriors-location-map.jpg">
 
 ## Louyang
     - [Xian to hennan (sholin temple](https://www.asiaodysseytravel.com/china-tours-from-xian/luoyang-shaolin-temple-from-xian.html)
@@ -258,6 +261,7 @@ Unseen China is a land of incredible beauty and undiscovered places,
     - Shaolin Temple (74 km, about a 70-minute drive) in Dengfeng City
     - Kaifeng, Luoyang & Shaolin Temple
     - Louyang to shanghai (high speed train 06:00)
+
     - <img src="https://www.asiaodysseytravel.com/images/china-tours/maps/henan-tour-map-700.jpg">
     
 ### Xian to Huashang (1.5 hours)
@@ -266,9 +270,8 @@ Unseen China is a land of incredible beauty and undiscovered places,
 
 <div class="mermaid">
      graph LR
-     %% This is a comment!!!
      %% China Visa
-     Xian["Xian"] ---> XTRIP1["Taracota Museum"]
+     Xian["Xian City Center"] ---> XTRIP1["Taracota Museum"]
      Xian <---> |"stay over night"| XTRIP2["Huashan"]
      Xian ---> |"01:30 high speed Train"| XTRIP3["Louyang"] ---> L1["Louyang Muesuem"]
      XTRIP3 --> L2["Denfeng"] ---> |"01:10 hours drive"| S["Shaulin temple"]
