@@ -30,6 +30,10 @@ https://umaine.edu/cooperative-aquaculture/wp-content/uploads/sites/75/2015/11/W
 
 - Tanjung Pinang ~ Mesanak ~ Duyung - Senayan- Pancur
 
+# python list, tuple, dictionary as function parameters
+- [python on dictionary as parameters](https://note.nkmk.me/en/python-dict-keys-items-set/)
+
+
 # Address
 
 Talip Likin
