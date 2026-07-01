@@ -1,0 +1,699 @@
+<html lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
+    <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
+
+  <title>Laser Space wireless  Communication</title>
+  <script id="sap-ui-bootstrap"
+                        src="https://ui5.sap.com/resources/sap-ui-core.js"
+                        data-sap-ui-theme="sap_horizon"
+                        data-sap-ui-libs='sap.ui.documentation, sap.ui.layout, sap.m, sap.uxap, sap.f, sap.tnt, sap.ui.codeeditor, sap.ui.unified'
+                        data-sap-ui-compat-version="edge"
+                        data-sap-ui-async="true"
+                        data-sap-ui-on-init="module:my/app/main"
+                        data-sap-ui-resource-roots='{"my.app": "./"}'>
+  </script>
+	<script>
+                        sap.ui.getCore().attachInit(function () {
+                        sap.ui.require(["sap/ui/core/mvc/XMLView"], function (XMLView) {
+                        XMLView.create({ viewName: "Quickstart.App" }).then(function (oView) {
+                            oView.placeAt("content");
+                        });
+                       });
+                     });
+  </script>
+  <script>
+                  	var oMenu = new sap.m.Menu({
+			title: "random 2",
+			itemSelected: function (oEvent) {
+				var oItem = oEvent.getParameter("item"),
+					sItemPath = "";
+				while (oItem instanceof sap.m.MenuItem) {
+					sItemPath = oItem.getText() + " > " + sItemPath;
+					oItem = oItem.getParent();
+				}
+
+				sItemPath = sItemPath.substr(0, sItemPath.lastIndexOf(" > "));
+
+				sap.m.MessageToast.show("itemSelected: " + sItemPath);
+			},
+			items: [
+				new sap.m.MenuItem({
+					text: "fridge",
+					icon: "sap-icon://fridge",
+					items: [
+						new sap.m.MenuItem({
+							text: "accidental leave",
+							icon: "sap-icon://accidental-leave",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://factory",
+									text: "factory"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flag",
+									text: "flag"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flight",
+									text: "flight"
+								})
+							]
+						}),
+						new sap.m.MenuItem({
+							text: "iphone",
+							icon: "sap-icon://iphone",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://video",
+									text: "video"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://loan",
+									text: "loan"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://commission-check",
+									text: "commission check"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://doctor",
+									text: "doctor"
+								})
+							]
+						})
+					]
+				}),
+				new sap.m.MenuItem({
+					text: "globe",
+					icon: "sap-icon://globe",
+					items: [
+						new sap.m.MenuItem({
+							text: "e-care",
+							icon: "sap-icon://e-care"
+						})
+					]
+				})
+			]
+		});
+
+  </script>
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+</style>
+  </head>
+  <!-- script src="https://unpkg.com/@tailwindcss/browser@4"></script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <body class="sapUiBody" id="content">
+    <h1>Test Page for Laser <code>sap.ui.unified.Calendar</code></h1>
+    <div>Single day Selection Calendar</div>
+    <br>
+      <!-- div class="relative w-[500px]">
+        <img src="https://www.khueapps.com/media/images/2025-02/cute-dog.webp" />
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
+            <h3 class="text-xl text-white font-bold">
+                Hey, I Am The Big Boss</h3>
+            <p class="mt-2 text-sm text-gray-300">Some description text. Some dummy text here. Welcome to KhueApps.com.
+            </p>
+        </div>
+    </div -->
+
+     <!--div -->
+<div id="event1" style="display:inline-block; vertical-align: top; width: 60%; min-width: 350px; max-width: 600px;"></div >
+<md-block>
+# Laser Space Communications
+
+Another example of using laser links to network LEO and GEO satellites is the SpaceDataHighway (SDH), a public-private partnership between the European Space Agency and Airbus. 
+The commercial service utilizes the European Data Relay System (EDRS) to provide high bandwidth capability to LEO satellites and airborne platforms by means of optical communications 
+via the EDRS-A and EDRS-C geostationary satellites and ground stations in Europe.
+
+The Starlink project is groundbreaking and transformative, but it is not without competition. One of the biggest competitors is OneWeb, 
+a UK-based company that also aims to build a satellite network for global broadband service. Another formidable rival is Amazon’s Project Kuiper, 
+which plans to deploy over 3,000 satellites for similar purposes.
+
+Furthermore, China's state-run space agency is also working on a global broadband service called Tianlink. Each of these competitors 
+brings unique strategies and resources to the table, thereby contributing to an increasingly dynamic and competitive landscape in satellite-based internet services.
+
+[china laser space communication](https://www.scmp.com/news/asia/southeast-asia/article/3358687/philippines-becomes-worlds-top-solar-spender-amid-middle-east-energy-crisis?module=perpetual_scroll_1_AI&pgtype=article)
+
+[laserspace vs microwave link](https://www.quora.com/Why-is-laser-communication-faster-than-microwave-or-radio-communication)
+
+<img src="https://res.cloudinary.com/tbmg/c_scale,w_400,f_auto,q_auto/v1718814785/sites/adt/articles/2024/insider/20240620_Aerospace_Story3_image4.jpg">
+
+<img src="https://qph.cf2.quoracdn.net/main-qimg-f6ed0d8d845f20ab63b607df5979c369-pjlq">
+
+A microwave oven usually uses a magnetron, whereas a WiFi router uses an electronic oscillator. They both generate microwave electromagnetic radiation at the same frequency — 2.4GHz. 
+The difference being that the magnetron is a cheap way of making a higher power with less control.
+
+[baseband laserspace communication](https://www.exail.com/photonics/space/laser-communication-in-space)
+
+[LiNbO3 electro-optical modulator components](https://www.exail.com/product/low-noise-optical-amplifiers-photonics)
+for high-speed space communication
+In the last decade, Exail has already been involved in more than 20 projects, for which the company has supplied more than 200 modulators for different flying users worldwide, either for big players or space agencies, and for LEO or GEO satellites, but also onboard the ISS. 850 nm, 1064 nm and 1550 nm amplitude modulator and phase modulator were supplied, as Breadboard, Engineering, Qualification and Flight models.
+
+The main modulator specifications and environmental operating conditions are given below in the table. These values refer to the FM operating conditions, knowing that more stringent and higher values on the test conditions are applied to the Qualified Models during the qualification phases.
+
+Exail example of flight model modulator
+Example of Flight Model Modulator
+
+
+
+[transcelestial](https://linktr.ee/transcelestial)
+[website](https://transcelestial.space)
+[wiresock](https://www.wiresock.net/wiresock-secure-connect/download) vs Wireguard
+WireSock Secure Connect is a high-performance WireGuard VPN client for Windows, delivering advanced features and superior performance compared to 
+the official WireGuard application. It supports selective application tunneling, exclusion of specific IP addresses, advanced WireGuard obfuscation, 
+and DPI bypass capabilities, along with many other customization options for a secure, reliable, and efficient VPN experience.
+
+
+
+In space laser communication, the choice between Rayleigh and Rician channel models and accounting for the Doppler effect is a foundational element of system design. 
+The difference comes down to two primary factors: the geometry of the link (does it have a dominant Line-of-Sight path?) and the intense relative motion inherent to satellite systems.
+
+🌐 Rayleigh vs. Rician: Fading in a Nutshell
+The key difference between these two fading models is the presence of a strong, dominant Line-of-Sight (LoS) path:
+
+Rayleigh Fading: This model is used when there is no dominant LoS path between the transmitter and receiver. The received signal is the sum of many scattered, 
+reflected signals with random phases and amplitudes, which can interfere constructively or destructively . Mathematically, the channel's envelope follows a Rayleigh distribution .
+
+Rician Fading: This model is used when there is a strong, stable LoS path, along with other scattered signals . This makes Rician fading a less "severe" fading condition than Rayleigh. 
+ dominant LoS component has a fixed amplitude and phase, while the scattered paths add variation on top of it.
+
+The key parameter that distinguishes a Rician channel is the K-factor. It is defined as the ratio of the power in the dominant LoS path to the power in the scattered paths :
+
+K = (Power in LoS Path) / (Power in Scattered Paths)
+
+A high K-factor signifies a very strong LoS signal (like a clear space-to-space link), while a low K-factor (K ≈ 0) means the LoS signal is negligible,
+and the channel behaves like a Rayleigh fading channel . For a system engineer, the K-factor is a crucial input for link budget calculations and performance simulations.
+
+🛰️ The Doppler Effect in LEO Satellites
+While fading models describe the strength of the signal, the Doppler effect describes the shift in frequency of the received signal due to the relative motion between 
+the satellite and the ground station.
+
+For LEO satellites, this is a significant challenge. Their relative velocity is extremely high, causing Doppler shifts that are much more substantial 
+than those in terrestrial networks . This can disrupt the orthogonality of subcarriers in multi-carrier systems and degrade overall performance .
+
+Two key concepts are relevant here :
+
+Doppler Shift Magnitude: The total frequency shift of the signal.
+
+Differential Doppler: The difference in Doppler shift experienced by different users within the same coverage cell. This is a major concern because it creates intercarrier interference 
+and cannot be corrected by a single, system-wide frequency compensation .
+
+🎯 How to Apply This to Your Modeling
+When you're modeling the channel for a space laser communication project, here’s how to think about these concepts:
+
+Choose Your Fading Model:
+
+Space-to-Space Links (e.g., LEO-to-LEO): In the vacuum of space, there are no objects to create scattering. The channel is dominated by an unimpeded LoS path. 
+The Rician model with a very high K-factor is the most accurate choice.
+
+Space-to-Ground Links: The signal passes through the Earth's atmosphere. Atmospheric turbulence causes changes in the refractive index, which act as scattering and can blur the beam . 
+While the LoS path is still the strongest, the presence of turbulence creates a fading effect that is often modeled using a Rician distribution with a moderate K-factor. 
+For highly turbulent conditions or low-elevation angles, some models (like Gamma-Gamma) are used to capture more severe fading .
+
+Account for Doppler (Especially for Ground Links): Your modeling must account for Doppler shifts. Key steps include:
+
+Calculate the Time-Varying Doppler: This is determined by the satellite's altitude and its changing position relative to the ground station. It will be at a maximum when the satellite 
+is approaching or receding directly overhead .
+
+Plan for Differential Doppler: In any system with multiple users, implement advanced DSP techniques or network-level strategies (like user clustering) to manage the residual Doppler 
+spread across your coverage area .
+
+
+Excellent. This is where the theory meets the hardware. Implementing Rayleigh/Rician fading and Doppler compensation in FPGA is a well-established field, with specific, proven architectures you can reference. Here’s how to frame this expertise for your CV, drawing directly from the current state of the art.
+
+💡 The "How-To" for Your CV (and Your Work)
+1. Generating Rayleigh and Rician Fading in FPGA
+For your CV, you want to show you understand the "how," not just the "what." Here's a powerful technical description to adapt:
+
+FPGA Implementation of Fading Channels: Proficient in the real-time implementation of fading channel emulators on FPGA. Experience applying the sum-of-sinusoids (SOS) method with the Method of Exact Doppler Spread (MEDS) to generate uncorrelated Rayleigh fading sequences . I am familiar with architectures that transform a Rayleigh generator into a Rician one by adding a dominant, stationary component, with the K-factor made variable through a simple weighting coefficient on the LOS path . This includes using Xilinx DDS (Direct Digital Synthesizer) IP blocks as an efficient and resource-conscious method for synthesizing the required frequencies on the FPGA .
+
+Key technical highlights to pull from:
+
+SOS + MEDS: The paper "Implementation of a real-time Rayleigh, Rician and AWGN multipath channel emulator" describes using this method to emulate a 6-path Rician channel. It uses two banks of frequency generators (e.g., 7 and 8 DDS blocks) to create the independent in-phase and quadrature components of the fading .
+
+Box-Muller Method: The same paper implements the AWGN generator for setting the SNR using the Box-Muller method, which is relatively easy to implement in hardware .
+
+Modeling Atmospheric Turbulence: For FSO (Free-Space Optics) specifically, atmospheric turbulence (scintillation) is a major factor. Systems that model turbulence often use Log-Normal or more complex distributions, and an FPGA-based FSO channel emulator can be used to test receiver performance under severe turbulence and high wind speeds .
+
+2. Implementing Doppler Compensation in FPGA
+Doppler is a critical challenge for LEO satellite and laser comms, with frequency shifts at Ku/Ka-band reaching hundreds of kHz and, for laser systems, a staggering ±4.5 GHz . Your FPGA implementation expertise is directly relevant here:
+
+Doppler Compensation and Simulation: Experienced in the FPGA implementation of algorithms for Doppler effect compensation. This includes frequency offset estimation based on pilot structures (e.g., multi-symbol/multi-pilot joint sequences) and time-domain compensation using linear resampling to correct for the compression/expansion of the signal waveform . I understand the practical constraints of designing with parallel processing architectures on FPGA to handle high data rates while maintaining performance and low resource consumption . This is crucial for meeting the size, weight, and power (SWaP) constraints of a space payload .
+
+Key technical highlights to pull from:
+
+Parallel Processing: The paper "Doppler Effect Compensation Method Based on Multi-Symbol Multi-Pilot Joint Sequence Frequency Offset Estimation and FPGA Implementation" proposes a four-way parallel FPGA implementation of its compensation algorithm. This allows the system to function at a lower clock speed while still ensuring performance—a critical technique for high-speed designs .
+
+Doppler Simulation: You can also reference your understanding of generating Doppler curves in real-time. The paper "FPGA-based doppler frequency offset simulation method for low earth orbit satellite communication systems" presents a method using a DDS architecture to generate carrier signals that follow a theoretical Doppler curve in the time-frequency domain .
+
+✍️ How to Integrate This into Your CV
+Add this as a dedicated bullet point under your "Space & Optical Systems Knowledge" section:
+
+FPGA-based Channel Modeling & Doppler Compensation: Hands-on experience with the FPGA implementation of real-time Rayleigh/Rician fading emulators, using the sum-of-sinusoids (SoS) and Method of Exact Doppler Spread (MEDS) to generate independent fading paths with variable K-factors . Skilled in implementing Doppler frequency offset estimation and compensation, including processing architectures to handle high-dynamic LEO scenarios (e.g., ±4.5 GHz Doppler in laser links) and time-domain resampling to correct waveform compression/expansion . Familiar with resource-optimized implementations using Xilinx DDS IP blocks and parallel processing to meet stringent SWaP constraints for space-grade applications
+
+
+
+
+Yes, absolutely. The concept of a "dynamic K-factor" controlled by software is not only feasible but is actively researched for satellite communication systems. The approach you're describing involves a clear and effective architecture: a control plane (running on an RTOS) that computes a new K-factor value, which is then applied to the fading generator in the FPGA data plane.
+
+This is a textbook example of a Software-Defined Hardware architecture, which is highly relevant for modern, adaptive communication payloads.
+
+🧠 The Architecture: Control Plane (RTOS) and Data Plane (FPGA)
+The system can be cleanly split into two domains:
+
+Control Plane (CPU + RTOS): The "Brain"
+
+Its role is to perform complex, non-time-critical calculations and manage system state.
+
+It receives real-time environmental data (e.g., rain rate from a sensor or weather forecast data).
+
+It uses this data to compute the desired channel parameter. In your case, this involves using a model, such as the ITU-R P.838 power-law relationship (γ_R = k * R^α), to calculate rain attenuation from a rain rate. It can then use an analytical relationship to translate this attenuation into a new, statistically accurate K-factor for your Rician channel model.
+
+It then sends this calculated value (e.g., via a memory-mapped register or a high-speed bus like AXI) to the FPGA.
+
+Data Plane (FPGA): The "Executor"
+
+The FPGA runs the high-speed fading generator that processes the incoming signal.
+
+It receives the new K-factor value from the CPU and applies it to its internal fading model in real-time.
+
+The FPGA's job is to maintain a statistically valid distribution for the fading envelope. By taking a new K-factor from the CPU, the Rician generator's distribution (e.g., its mean and variance) can be instantly updated, dynamically shifting the channel model between Rician (strong LoS) and Rayleigh (no LoS) conditions.
+
+📊 Statistical Sufficiency: Modeling K as a Random Variable
+The real sophistication of this approach lies in acknowledging that the K-factor is not a static constant but a random variable itself. Rain attenuation, caused by inhomogeneous rainfall, is a stochastic process, which in turn makes the K-factor it influences a random variable.
+
+To reflect this accurately, your RTOS should not just provide a single K value but rather parameters that allow the FPGA to model a statistical distribution for K, such as:
+
+Log-normal distribution: Useful for modeling the variability in rain attenuation.
+
+Gamma distribution: Also considered for characterizing rain attenuation in these models.
+
+The RTOS can compute the distribution's parameters (e.g., mean and variance) based on the current climatic conditions and send them to the FPGA. The FPGA can then generate a time-varying K that follows the correct statistical distribution for the current environment.
+
+✍️ How to Frame This for Your CV
+Add this to your "Space & Optical Systems Knowledge" section, building on the earlier points:
+
+Software-Controlled Channel Modeling: Architecting a Software-Defined Hardware system for real-time channel emulation. The Control Plane (CPU/RTOS) computes critical channel parameters using propagation models like ITU-R P.838 to convert rain rate into a dynamic Ricean K-factor. This value is communicated to the Data Plane (FPGA) to adjust its fading generator in real-time. The implementation accounts for the statistical nature of the K-factor, modeling it as a random variable (e.g., Log-normal or Gamma distribution) to accurately reflect the stochastic impact of rainfall on a communication channel.
+
+This demonstrates a deep understanding of system-level design, combining communication theory, embedded software, and FPGA implementation in a way that is directly applicable to a dynamic satellite communication payload.
+
+
+Payload Integration and Power in AIT Procedures
+For the Senior Space Systems Engineer role at Transcelestial, understanding how payloads are integrated and powered during AIT is essential. Here's how it works in practice.
+
+The Core Challenge: Power is Mission Assurance
+Power is the lifeblood of any satellite payload. Your laser communication terminal (CENTAURI) is the payload, and its integration requires rigorous testing to ensure it won't fail or destabilize the spacecraft bus during operation.
+
+The fundamental issue: high-power payloads can cause significant voltage drops across the satellite bus. For example, a SAR payload consuming ~150A can cause voltage drops that may prevent both the satellite bus electronics and the payload from operating correctly. This is why worst-case analysis of harness and contact resistance is mandatory before integration.
+
+How Power AIT Works: The Test Architecture
+The power test setup for payload integration uses specialized equipment called Power SCOE (Special Check Out Equipment):
+
+Component	Function
+Solar Array Simulator	Emulates the I-V curves of solar panels throughout orbit, including eclipse transitions
+Battery Emulator	Replicates charge/discharge profiles, state-of-charge (SoC) drift, and thermal effects instead of using risky physical batteries
+Payload Load Simulator	Accurately mimics your laser terminal's consumption, including dynamic surges from communication bursts or steering mirror operations
+Protection Unit (ProUST)	Independent second-level protection that activates within 15-20 microseconds if an anomaly occurs
+The Power SCOE connects to the satellite's power bus and allows engineers to verify the payload can operate without destabilizing the entire spacecraft.
+
+Real-World Implementation: A Practical Example
+A concrete example is the 5 m S-SAR satellite:
+
+Dual independent fully regulated buses: 30.5V bus powers platform equipment and data transmission; 32.5V bus powers the high-power SAR payload
+
+Non-isolated Weinberg converters used for battery discharge regulation to meet pulse load demands
+
+Verification: Software simulation and payload integration tests validated the bus could handle high-power pulse loads before flight
+
+What This Means for Your Laser Terminal Integration
+For your optical payload (CENTAURI) on a client satellite bus, you'll need to:
+
+Define electrical interfaces in the Interface Control Document (ICD), specifying nominal and maximum load currents, inrush limits, and fault tolerance requirements
+
+Test with a bus emulator that replicates the satellite's power rails (e.g., 3.3V, 5V, and a higher bus voltage for the laser) with current measurement and software-controlled power switching
+
+Characterize your payload's power profile—especially dynamic behavior from fast-steering mirrors, laser firing, and thermal control systems
+
+Verify under worst-case conditions, including eclipse transitions (power source switching), payload surges, and fault injection scenarios
+
+Key Takeaway for Your CV
+When you describe your AIT experience for space laser terminals, emphasize:
+
+"Led payload power integration and verification, including interface definition, worst-case voltage drop analysis, and validation using Power SCOE with solar array and battery emulation to verify bus stability under dynamic laser comm loads."
+
+This demonstrates you understand the systems-level thinking required for space missions—not just designing the FPGA, but ensuring your payload can actually fly.
+
+
+
+
+
+✅ Summary for Your CV
+For your CV or interview, you can frame this knowledge concisely:
+
+Channel Modeling: Proficient in statistical modeling of optical and RF channels. Deeply understand the application of Rician (for high Line-of-Sight, space-to-space links) 
+and Rayleigh (for heavily scattered, non-LoS conditions) models, as well as the critical role of the K-factor in defining the fading severity.
+
+Doppler Compensation: Experienced in characterizing and mitigating the challenges of high-dynamic links, particularly the significant Doppler shifts and differential Doppler effects 
+inherent to LEO satellite communications.
+
+Would you like to explore how these models are typically implemented in a practical FPGA testbench for space applications?
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Openthreead border
+
+<img src="https://hackster.imgix.net/uploads/attachments/1506110/image_nfVb5DSr3A.png?auto=compress%2Cformat&w=740&h=555&fit=max">
+
+	> git clone --recurse-submodules https://github.com/openthread/openthread.git
+	> cd openthread/
+
+OpenThread Border Router
+A Thread Border Router connects a Thread network to other IP-based networks, such as Wi-Fi or Ethernet.
+
+A Thread Border Router supports the following functions:
+
+End-to-end IP connectivity via routing between Thread devices and other external IP networks.
+Bidirectional DNS-based service discovery via mDNS (on a Wi-Fi/Ethernet link) and SRP (on a Thread network).
+DHCPv6 Prefix Delegation to obtain IPv6 prefixes for a Thread network.
+NAT64 for connecting to IPv4 networks.
+External Thread Commissioning (for example, a mobile phone) to authenticate and join a Thread device to a Thread network.
+OpenThread's implementation of a Border Router is called OpenThread Border Router (OTBR).
+
+More information about Thread can be found at threadgroup.org. Thread is a registered trademark of the Thread Group, Inc.
+
+
+[Arus dan gelombang](https://www.scribd.com/doc/304674129/Arus-Dan-Gelombang-Air-Laut)
+Three-dimensional polyculture aquaculture involves raising multiple aquatic species at different levels or depths within the same system,
+ optimizing space utilization and resource management. This approach mimics natural ecosystems, enhancing biodiversity
+ and promoting a more sustainable and productive aquaculture practice
+
+<img src="https://images.squarespace-cdn.com/content/v1/53edc2b0e4b0472dbe760c43/1552134006120-1PKKLTHMIH8ITSGRROMH/Indonesian+Through+Flow?format=2500w">
+
+<img src="https://www.researchgate.net/publication/348674299/figure/fig1/AS:11431281250683872@1717955373868/a-Schematic-map-of-the-throughflow-from-the-Pacific-to-Indian-Ocean-The-solid-and.png">
+
+
+[Indonesia mountain and low land](https://www.worldatlas.com/upload/41/ab/7c/id-01.jpg)
+
+[world atlas](https://www.worldatlas.com/upload/2d/51/9b/artboard-3.png)
+
+* [Travel vann to sumbawa Panca sari disamping mataram mall lama ( near also to aston hotel)](https://www.google.com/maps/dir//Jl.+Panca+Usaha+Blok+A+No.8,+Cilinaya,+Kec.+Cakranegara,+Kota+Mataram)
+</md-block>
+
+<div class="mermaid">
+	flowchart TD
+		A[Oyster Spawns] --> B[Larvae Float & Develop]
+		B --> C[Spat Settles on Cultch]
+		C --> D["Extended Land-Based Nursery<br>(~45+ Days)"]
+		D --> E["Transfer to Ocean<br>Nets/Cages"]
+		E --> F["Grow to Adult Size<br>(1-2 Years)"]
+		F --> G["Pearl Nucleation<br>Surgery"]
+		G --> H["Final Grow-Out Period<br>(2-3 Years)"]
+		H --> I[Harvest Pearl]
+</div>
+
+
+<div class="mermaid">
+treemap-beta
+"Category A"
+    "Item A1": 10
+    "Item A2": 20
+"Category B"
+    "Item B1": 15
+    "Item B2": 25
+ </div>  
+<div  class="sapUiBody sapUiSizeCompact"  id="sidebar">
+<div id="consent_blackbar"></div>
+<md-block>
+
+③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
+
+⓪
+① ② ③ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩
+⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ 
+
+🄰 🄱 🄲 🄳 🄴 🄵 🄶 🄷 🄸 🄹 🄺 🄻 🄼 🄽 🄾 🄿 🅀 🅁 🅂 🅃 🅄 🅅 🅆 🅇 🅈 🅉 
+Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ
+[Geo tagging](https://www.evenx.com/geo-tagging-using-qr-codes)
+
+⓿
+❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿
+⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴
+
+
+</md-block>
+
+</div>
+  <script type="module">
+      import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
+    </script>
+    <script type="module">
+     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+      mermaid.registerIconPacks([
+        { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
+        { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
+      ]);
+     mermaid.initialize({ startOnLoad: true });
+</script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gojs/release/go-debug.js"></script>
+
+<!-- Footer container, https://tailwindcss.com/docs/theme -->
+<!-- https://tw-elements.com/docs/standard/navigation/footer/ -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<footer class="bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left">
+  <div class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-white/10 lg:justify-between">
+    <div class="me-12 hidden lg:block">  <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Social network icons container -->
+    <div class="flex justify-center">
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 320 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4 ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 512 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 488 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+        </svg>
+      </a>
+      <a href="#!" class="[&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 496 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
+  <div class="mx-6 py-10 text-center md:text-left">
+    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <!-- TW Elements section -->
+      <div class="">
+        <h6
+          class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+          <span class="me-3 [&>svg]:h-4 [&>svg]:w-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+            </svg>
+          </span>
+          TW Elements
+        </h6>
+        <p>
+          Here you can use rows and columns to organize your footer
+          content. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.
+        </p>
+      </div>
+      
+      <!-- Products section -->
+      <div>
+        <h6
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Products
+        </h6>
+        <p class="mb-4">
+          <a href="#!">Angular</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">React</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Vue</a>
+        </p>
+        <p>
+          <a href="#!">Laravel</a>
+        </p>
+      </div>
+      
+      <!-- Useful links section -->
+      <div>
+        <h6
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Useful links
+        </h6>
+        <p class="mb-4">
+          <a href="#!">Pricing</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Settings</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Orders</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+      </div>
+      
+      <!-- Contact section -->
+      <div>
+        <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">  Contact </h6>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+              <path
+                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+            </svg>
+          </span>
+          Jakarta xxx, Indonesia
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+              <path
+                d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+            </svg>
+          </span>
+          info@example.com
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+          + 01 234 567 88
+        </p>
+        <p class="flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+          + 62 9999 0000
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright section -->
+  <div class="bg-black/5 p-6 text-center">
+    <span>© 2025 Copyright:</span>
+    <a class="font-semibold" href="https://tw-elements.com/" >TW Elements</a >
+  </div>
+</footer>
+
+  </body>
+</html>
