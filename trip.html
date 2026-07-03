@@ -1,143 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>China Tours - Xi'an & Luoyang & Hanoi</title>
 
-  <meta charset="utf-8">
-                <title>China Tours</title>
-                <script id="sap-ui-bootstrap"
-                        src="https://ui5.sap.com/resources/sap-ui-core.js"
-                        data-sap-ui-libs="sap.m"
-                        data-sap-ui-theme="sap_bluecrystal" 
-                        data-sap-ui-compat-version="edge"
-                        data-sap-ui-async="true"
-                        data-sap-ui-on-init="module:my/app/main"
-                        data-sap-ui-resource-roots='{"my.app": "./"}'>
-                </script>
-<style>
-  .mermaidTooltip {
-      position: absolute;
-      text-align: center;
-      max-width: 200px;
-      padding: 2px;
-      font-family: 'trebuchet ms', verdana, arial;
-      font-size: 12px;
-      background: #ffffde;
-      border: 1px solid #aaaa33;
-      border-radius: 2px;
-      pointer-events: none;
-      z-index: 100;
-    }
-</style>
+    <!-- OpenUI5 Bootstrap -->
+    <script id="sap-ui-bootstrap"
+        src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-compat-version="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-on-init="module:my/app/main"
+        data-sap-ui-resource-roots='{"my.app": "./"}'>
+    </script>
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Mermaid Tooltip Style -->
+    <style>
+        .mermaidTooltip {
+            position: absolute;
+            text-align: center;
+            max-width: 200px;
+            padding: 2px;
+            font-family: 'trebuchet ms', verdana, arial;
+            font-size: 12px;
+            background: #ffffde;
+            border: 1px solid #aaaa33;
+            border-radius: 2px;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #f0f4f8;
+        }
+
+        .content-wrapper {
+            background: white;
+            padding: 30px 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #8B0000;
+            border-bottom: 4px solid #8B0000;
+            padding-bottom: 12px;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: #a52a2a;
+            margin-top: 30px;
+            font-size: 22px;
+        }
+
+        h3 {
+            color: #c0392b;
+            font-size: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f7f5;
+        }
+
+        tr:hover {
+            background-color: #f0e8e0;
+        }
+
+        .highlight-red {
+            color: #cc0000;
+            font-weight: bold;
+        }
+
+        .highlight-blue {
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .flight-icon {
+            color: #1a5276;
+            font-size: 18px;
+        }
+
+        .day-marker {
+            display: inline-block;
+            background: #8B0000;
+            color: white;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+
+        .attraction-number {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+
+        .attraction-list {
+            columns: 2 220px;
+            column-gap: 30px;
+            background: #faf7f3;
+            padding: 18px 22px;
+            border-radius: 8px;
+            border-left: 5px solid #8B0000;
+            margin: 15px 0;
+        }
+
+        .attraction-list li {
+            list-style: none;
+            padding: 3px 0;
+            border-bottom: 1px dotted #e0d6cc;
+        }
+
+        .attraction-list li:last-child {
+            border-bottom: none;
+        }
+
+        .calendar {
+            background: #faf7f3;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid #ddd;
+            float: right;
+            margin: 0 0 15px 20px;
+        }
+
+        .calendar table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .calendar th {
+            background: #8B0000;
+            color: white;
+            padding: 4px 10px;
+            font-weight: normal;
+        }
+
+        .calendar td {
+            padding: 4px 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .calendar .today {
+            background: #f1c40f;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .btn-outline-custom {
+            color: #8B0000;
+            border-color: #8B0000;
+            border-radius: 25px;
+            padding: 6px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 0;
+        }
+
+        .btn-outline-custom:hover {
+            background: #8B0000;
+            color: white;
+        }
+
+        code {
+            background: #f0ece6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .footer-note {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 18px 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-note a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        .trip-phase {
+            background: #eaf2f8;
+            padding: 12px 18px;
+            border-radius: 6px;
+            border-left: 6px solid #1a5276;
+            margin: 18px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .content-wrapper {
+                padding: 15px;
+            }
+            .attraction-list {
+                columns: 1;
+            }
+            .calendar {
+                float: none;
+                margin: 10px auto;
+                display: inline-block;
+            }
+            table {
+                font-size: 12px;
+            }
+            td,
+            th {
+                padding: 6px 8px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .print-only {
+                display: block;
+            }
+            body {
+                background: white;
+                padding: 10px;
+            }
+            .content-wrapper {
+                box-shadow: none;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
- <body class="sapUiBody" id="content">
+<body class="sapUiBody" id="content">
 
+    <div class="content-wrapper">
 
-<md-block>
+        <!-- ============================================================ -->
+        <!-- TITLE -->
+        <!-- ============================================================ -->
 
-[China Immigration and other information](http://o2tree.github.io/china.html)
+        <h1>
+            <i class="fas fa-flag" style="color:#8B0000;"></i>
+            China Tours – Xi'an &amp; Luoyang &amp; Hanoi
+            <span style="font-size:16px; font-weight:normal; color:#555; display:block; margin-top:4px;">
+                <i class="fas fa-calendar-alt"></i> July 2026
+            </span>
+        </h1>
 
-[China Arrival Card how to fill in information](https://uk.trip.com/guide/china/china-arrival-card.html)
+        <!-- ============================================================ -->
+        <!-- QUICK LINKS -->
+        <!-- ============================================================ -->
 
-[web arrival card form etc](https://s.nia.gov.cn/ArrivalCardFillingPC/entry-registation-home)
+        <div class="no-print" style="margin:15px 0 20px;">
+            <a href="http://o2tree.github.io/china.html" target="_blank" class="btn-outline-custom">
+                <i class="fas fa-info-circle"></i> China Immigration
+            </a>
+            <a href="https://uk.trip.com/guide/china/china-arrival-card.html" target="_blank" class="btn-outline-custom">
+                <i class="fas fa-id-card"></i> Arrival Card Guide
+            </a>
+            <a href="https://s.nia.gov.cn/ArrivalCardFillingPC/entry-registation-home" target="_blank" class="btn-outline-custom">
+                <i class="fas fa-file-alt"></i> Web Arrival Form
+            </a>
+            <a href="https://www.chinatravel.com/guide/china-entry-and-exit" target="_blank" class="btn-outline-custom">
+                <i class="fas fa-passport"></i> Entry/Exit Guide
+            </a>
+            <a href="http://o2tree.github.io/china_xian.html" target="_blank" class="btn-outline-custom">
+                <i class="fas fa-map-marked-alt"></i> Xi'an Map
+            </a>
+        </div>
 
-[Not required health declartion form](https://www.chinatravel.com/guide/china-entry-and-exit)
+        <div style="clear:both;"></div>
 
-```
-     July 2026
-Su Mo Tu We Th Fr Sa
-          1  2  3  4
-5  6  7  8  9 10  11
-12 13 14 15 16 17 18
-19 20 21 22 23 24 25
-26 27 28 29 30 31
+        <!-- ============================================================ -->
+        <!-- CALENDAR -->
+        <!-- ============================================================ -->
 
-```
-    ① Mausoleum of the First Qin Emperor (Qin Shi Huang Tomb)       ② Huaqing Palace
-    ③ Banpo Village                                                 ④ Xi'an City Wall (Chengqiang)
-    ⑤ Bell Tower (Zhonglou)                                         ⑥ Bell and Drum Tower Square
-    ⑦ Tomb of Emperor Jing Di (Hanyangling)                         ⑧ Muslim Quarter
-    ⑨ Xian Great Mosque                                             ⑩ Big Wild Goose Pagoda (Dayanta)
-    ⑪ ~Tang Dynasty Show~ Song of Eternal Sorrow                    ⑫ Guangren Temple
-    ⑬ Shaanxi History Museum                                        ⑭ Drum Tower (Gulou)
-    ⑮ Xian Museum & Small Wild Goose Pagoda (Xiaoyanta) 
-    
-    ⑯ Shaolin temple                                                ⑰ Longmen grouta
-    ⑱                                                               ⑲
+        <div class="calendar">
+            <strong style="color:#8B0000;">July 2026</strong>
+            <table>
+                <tr>
+                    <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td><td class="today">6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+                </tr>
+                <tr>
+                    <td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
+                </tr>
+                <tr>
+                    <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+                </tr>
+                <tr>
+                    <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td>
+                </tr>
+            </table>
+            <div style="font-size:11px; margin-top:6px; color:#666;">
+                <span style="background:#f1c40f; padding:0 6px;">&#9632;</span> Today
+            </div>
+        </div>
 
+        <!-- ============================================================ -->
+        <!-- ATTRACTIONS LIST -->
+        <!-- ============================================================ -->
 
+        <h2><i class="fas fa-landmark"></i> Xi'an Attractions</h2>
 
-[China xian map and Louyang](http://o2tree.github.io/china_xian.html)
+        <div class="attraction-list">
+            <ul>
+                <li><span class="attraction-number">①</span> Mausoleum of the First Qin Emperor (Qin Shi Huang Tomb)</li>
+                <li><span class="attraction-number">②</span> Huaqing Palace</li>
+                <li><span class="attraction-number">③</span> Banpo Village</li>
+                <li><span class="attraction-number">④</span> Xi'an City Wall (Chengqiang)</li>
+                <li><span class="attraction-number">⑤</span> Bell Tower (Zhonglou)</li>
+                <li><span class="attraction-number">⑥</span> Bell and Drum Tower Square</li>
+                <li><span class="attraction-number">⑦</span> Tomb of Emperor Jing Di (Hanyangling)</li>
+                <li><span class="attraction-number">⑧</span> Muslim Quarter</li>
+                <li><span class="attraction-number">⑨</span> Xian Great Mosque</li>
+                <li><span class="attraction-number">⑩</span> Big Wild Goose Pagoda (Dayanta)</li>
+                <li><span class="attraction-number">⑪</span> Tang Dynasty Show – Song of Eternal Sorrow</li>
+                <li><span class="attraction-number">⑫</span> Guangren Temple</li>
+                <li><span class="attraction-number">⑬</span> Shaanxi History Museum</li>
+                <li><span class="attraction-number">⑭</span> Drum Tower (Gulou)</li>
+                <li><span class="attraction-number">⑮</span> Xian Museum &amp; Small Wild Goose Pagoda (Xiaoyanta)</li>
+                <li><span class="attraction-number">⑯</span> Shaolin Temple</li>
+                <li><span class="attraction-number">⑰</span> Longmen Grottoes</li>
+            </ul>
+        </div>
 
+        <!-- ============================================================ -->
+        <!-- ITINERARY TABLE -->
+        <!-- ============================================================ -->
 
-|Date (version 0.2) 05 July 2025 <font color="red"> Must carry passport for entrance</font>| From | To/At| Description|
-|:--------------------------|------|-----|-----------|
-|<font size="4"> 🄰 🛧 05 July (Sunday) Time: 19:05 Scoot TR134 |Singapore to |Xian,China<br>July 6 (Monday),<br>Time:00:40</font> 🚘Taxi to Hotel||
-| July 6 (Monday) ① Miko Oriental Hotel/breakfast included|Xi'an - Ming City Wall - Big Wild Goose Pagoda Square - Muslim Street - Departure ( B )
-|Yongxing Alley to try a variety of local snacks and soak up the vibrant atmosphere of Xi'an.|
-|In the evening, visit the Tang Dynasty Ever-bright City to watch a fantastic performance and admire the dazzling night views|
-| July 7 ② Miko Oriental Hotel, <font color="blue">  Xi'an - Terracotta Army:: tour guide</font>| afternoon: Huaqing Palace ( B / L ) to catch a live show|
-|After breakfast, visit the Terracotta Army Museum to uncover the mysteries of Emperor Qin Shi Huang's mausoleum. Marvel at the grandeur of the terracotta warriors, feeling the might of the Qin army. Later, head to Huaqing Palace, where you can stroll through the ancient and charming palace architecture, learn about the love story between Emperor Tang Minghuang and Yang Guifei, and enjoy the beautiful scenery of Mount Li|
-| July 8  ③ Miko Oriental Hotel    Xi'an - Mount Hua Scenic Area ( B / L )???|
-|Following breakfast, make your way to the Mount Hua Scenic Area. Known for its precipitousness, Mount Hua is acclaimed as the "Most Perilous Mountain Under Heaven." You can choose to hike up the mountain, challenging yourself and enjoying the stunning peaks and breathtaking views along the way; or take a cable car for an easy ascent to the summit, where you can overlook the continuous mountain ranges and appreciate the extraordinary craftsmanship of nature. On the summit, visit the five main peaks—east, west, south, north, and central—to experience the majesty and beauty of Mount Hua.|
-| July 9  ④ High speed train🚄🚄( to Hotel: Holiday Inn Express LUOYANG LONGMEN <br><font color="red">breakfast 2 guests</font>| Shaolin temple  | 🚐 Take bus (1-2 hours) and see shaolin temple training show
-|10 july  ⑤ Groute Longmen, High speed train 🚄🚄 Xian North station 13:50?, take Didi 🚘 to Xian International airport |
-|<font size="4"> 🄱 🛧 10 July (Friday) Time: 17:05 China Eastern Airline MU-867|Xian, China |to  Hanoi, Vietnam<br>Time:18:55</font>|<font color="red">
-| July 10  ① 🚘 Hanoy Airbnb (Home in Hang Trong) and Dinner, NIGHT|[Get to Airbnb Holel](https://goo.gl/maps/yqkjb13goRYig6K87?g_st=atm)
-| July 11  ② Hanoy Airbnb , Visit 🚢 Halong bay World’s Natural Heritage Site by UNESCO|travel time: 2hours by bus then by<br> [Deluxe cruise](https://www.halongbaycruises.com/cruise/day-cruises): day trip<b>(lunch, dinner at the ship)</b>|
-|July 12  ③ Hanoy Airbnb | <b>catch up Rest and Church  rushing</b> and City tours |
-|[Hercules 1 day cruise](https://herculescruise.com)- transport to/from Hanoi provided|[hanoi to Tuan Chau Harbour transportation](https://bhayacruises.com/blog/get-from-hanoi-to-halong-bay/?_ga=2.156526898.840765350.1746411464-580238582.1737355827#_gl=1*8tkpo7*_gcl_au*MTA2NDQ1NDcyNC4xNzQ1MjAxMDAz)|[Tour frorm tuan-chau-harbour](https://bhayacruises.com/blog/tuan-chau-harbour/)|
-|<font size="4"> 🄲 🛧 13 July (Monday)④ Time: 16:00: SQ195| Hanoi, Vietnam to |Singapore<br>Time:20:45</font>|<font color="red"></font>
+        <h2><i class="fas fa-route"></i> Itinerary</h2>
 
+        <p style="color:#cc0000; font-weight:bold; background:#fff5f5; padding:8px 14px; border-radius:6px; border:1px solid #ffcccc;">
+            <i class="fas fa-exclamation-triangle"></i>
+            Version 0.2 – 05 July 2025 &nbsp;|&nbsp;
+            <i class="fas fa-passport"></i> Must carry passport for entrance
+        </p>
 
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:22%;">Date</th>
+                    <th style="width:18%;">From</th>
+                    <th style="width:18%;">To / At</th>
+                    <th style="width:42%;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
 
-```
-李良才
-```
-```
-Lǐ Liáng Cái
-```
+                <!-- DAY 0: Departure -->
+                <tr>
+                    <td>
+                        <span class="day-marker">🄰</span>
+                        <strong>05 July (Sun)</strong><br>
+                        <span style="font-size:12px; color:#555;">
+                            <i class="fas fa-plane flight-icon"></i> 19:05 Scoot TR134
+                        </span>
+                    </td>
+                    <td><strong>Singapore</strong></td>
+                    <td><strong>Xian, China</strong><br>
+                        <span style="font-size:12px; color:#555;">
+                            Arrives 06 July 00:40
+                        </span>
+                    </td>
+                    <td>
+                        <i class="fas fa-taxi"></i> Taxi to Hotel
+                        <br><span style="font-size:12px; color:#666;">Overnight flight</span>
+                    </td>
+                </tr>
 
+                <!-- DAY 1 -->
+                <tr>
+                    <td>
+                        <span class="day-marker">①</span>
+                        <strong>06 July (Mon)</strong>
+                    </td>
+                    <td><strong>Miko Oriental Hotel</strong><br>
+                        <span style="font-size:11px; color:#666;">Breakfast included</span>
+                    </td>
+                    <td>Xi'an</td>
+                    <td>
+                        <strong>City Wall</strong> – Big Wild Goose Pagoda Square – Muslim Street
+                        <br><span style="font-size:12px; color:#555;">
+                            <i class="fas fa-utensils"></i> Yongxing Alley – local snacks
+                            <br><i class="fas fa-theater-masks"></i> Evening: Tang Dynasty Ever-bright City show
+                        </span>
+                    </td>
+                </tr>
 
-```
-李 优 丽
-```
+                <!-- DAY 2 -->
+                <tr>
+                    <td>
+                        <span class="day-marker">②</span>
+                        <strong>07 July (Tue)</strong>
+                    </td>
+                    <td><strong>Miko Oriental Hotel</strong><br>
+                        <span style="font-size:11px; color:#666;">Breakfast included</span>
+                    </td>
+                    <td>
+                        <span class="highlight-blue">Xi'an – Terracotta Army</span>
+                        <br><span style="font-size:11px; color:#666;">Tour guide</span>
+                    </td>
+                    <td>
+                        <strong>Terracotta Army Museum</strong> – Emperor Qin Shi Huang's mausoleum
+                        <br><span style="font-size:12px; color:#555;">
+                            <i class="fas fa-utensils"></i> Lunch included
+                            <br>Afternoon: <strong>Huaqing Palace</strong> – love story of Emperor Tang Minghuang &amp; Yang Guifei
+                            <br><i class="fas fa-mountain"></i> Mount Li views
+                        </span>
+                    </td>
+                </tr>
 
-```
-Lǐ  Yōu Lì
-```
+                <!-- DAY 3 -->
+                <tr>
+                    <td>
+                        <span class="day-marker">③</span>
+                        <strong>08 July (Wed)</strong>
+                    </td>
+                    <td><strong>Miko Oriental Hotel</strong><br>
+                        <span style="font-size:11px; color:#666;">Breakfast included</span>
+                    </td>
+                    <td><strong>Mount Hua Scenic Area</strong></td>
+                    <td>
+                        <strong>"Most Perilous Mountain Under Heaven"</strong>
+                        <br><span style="font-size:12px; color:#555;">
+                            <i class="fas fa-hiking"></i> Hike up or <i class="fas fa-cable-car"></i> cable car
+                            <br>Visit the five main peaks – east, west, south, north, central
+                            <br><i class="fas fa-utensils"></i> Lunch included
+                        </span>
+                    </td>
+                </tr>
 
+                <!-- DAY 4 -->
+                <tr>
+                    <td>
+                        <span class="day-marker">④</span>
+                        <strong>09 July (Thu)</strong>
+                    </td>
+                    <td>
+                        <i class="fas fa-train"></i> <strong>High Speed Train</strong>
+                        <br><span style="font-size:11px; color:#666;">Xi'an → Luoyang</span>
+                    </td>
+                    <td>
+                        <strong>Holiday Inn Express</strong><br>
+                        <span style="font-size:11px; color:#666;">LUOYANG LONGMEN</span>
+                        <br><span style="font-size:10px; color:#888;">Breakfast for 2 guests</span>
+                    </td>
+                    <td>
+                        <strong>Shaolin Temple</strong>
+                        <br><span style="font-size:12px; color:#555;">
+                            <i class="fas fa-bus"></i> Bus 1–2 hours
+                            <br><i class="fas fa-dragon"></i> Shaolin training show
+                        </span>
+                    </td>
+                </tr>
 
-```
-李可欣
-```
+                <!-- DAY 5 -->
+                <tr>
+                    <td>
+                        <span class="day-marker">⑤</span>
+                        <strong>10 July (Fri)</strong>
+                    </td>
+                    <td>
+                        <strong>Longmen Grottoes</strong>
+                        <br><span style="font-size:11px; color:#666;">Morning visit</span>
+                    </td>
+                    <td>
+                        <i class="fas fa-train"></i> <strong>High Speed Train</strong>
+                        <br><span style="font-size:11px; color:#666;">Luoyang → Xi'an North</span>
+                        <br><span style="font-size:11px; color:#666;">13:50 departure</span>
+                        <br><i class="fas fa-taxi"></i> Didi to Airport
+                    </td>
+                    <td>
+                        <span style="font-weight:bold; color:#1a5276;">
+                            <i class="fas fa-plane flight-icon"></i> MU-867 17:05
+                        </span>
+                        <br>Xi'an → <strong>Hanoi, Vietnam</strong>
+                        <br><span style="font-size:12px; color:#555;">Arrives 18:55</span>
+                    </td>
+                </tr>
 
-```
-Lǐ Kě Xīn
-```
+                <!-- VIETNAM PHASE -->
+                <tr style="background:#eaf2f8;">
+                    <td colspan="4" style="text-align:center; font-weight:bold; color:#1a5276;">
+                        <i class="fas fa-map-pin"></i> VIETNAM – HANOI &amp; HALONG BAY
+                    </td>
+                </tr>
 
-</md-block>
+                <!-- DAY 6 -->
+                <tr>
+                    <td>
+                        <span class="day-marker">①</span>
+                        <strong>10 July (Fri)</strong>
+                        <br><span style="font-size:11px; color:#666;">Evening arrival</span>
+                    </td>
+                    <td>Hanoi</td>
+                    <td>
+                        <strong>Airbnb – Hang Trong</strong>
+                        <br><span style="font-size:11px; color:#666;">
+                            <a href="https://goo.gl/maps/yqkjb13goRYig6K87?g_st=atm" target="_blank">
+                                <i class="fas fa-map-marker-alt"></i> View on Map
+                            </a>
+                        </span>
+                    </td>
+                    <td>
+                        <i class="fas fa-utensils"></i> Dinner in Hanoi
+                        <br><span style="font-size:12px; color:#555;">Explore local cuisine</span>
+                    </td>
+                </tr>
+
+                <!-- DAY 7 -->
+                <tr>
+                    <td>
+                        <span class="day-marker">②</span>
+                        <strong>11 July (Sat)</strong>
+                    </td>
+                    <td>Hanoi</td>
+                    <td>
+                        <strong>Halong Bay</strong>
+                        <br><span style="font-size:11px; color:#666;">UNESCO World Heritage</span>
+                    </td>
+                    <td>
+                        <i class="fas fa-ship"></i> <strong>Deluxe Day Cruise</strong>
+                        <br><span style="font-size:12px; color:#555;">
+                            <i class="fas fa-bus"></i> 2 hours by bus each way
+                            <br><i class="fas fa-utensils"></i> Lunch &amp; Dinner on ship
+                            <br>Visit: <a href="https://www.halongbaycruises.com/cruise/day-cruises" target="_blank">Day Cruise Info</a>
+                        </span>
+                    </td>
+                </tr>
+
+                <!-- DAY 8 -->
+                <tr>
+                    <td>
+                        <span class="day-marker">③</span>
+                        <strong>12 July (Sun)</strong>
+                    </td>
+                    <td>Hanoi</td>
+                    <td>
+                        <strong>City Tours</strong>
+                        <br><span style="font-size:11px; color:#666;">Rest &amp; Explore</span>
+                    </td>
+                    <td>
+                        <i class="fas fa-church"></i> Church visiting
+                        <br><span style="font-size:12px; color:#555;">
+                            <i class="fas fa-shopping"></i> Local markets
+                            <br><i class="fas fa-coffee"></i> Relax and catch up
+                        </span>
+                    </td>
+                </tr>
+
+                <!-- DAY 9: Departure -->
+                <tr style="background:#fef9e7;">
+                    <td>
+                        <span class="day-marker">🄲</span>
+                        <strong>13 July (Mon)</strong>
+                        <br><span style="font-size:12px; color:#1a5276;">
+                            <i class="fas fa-plane flight-icon"></i> SQ195 16:00
+                        </span>
+                    </td>
+                    <td><strong>Hanoi, Vietnam</strong></td>
+                    <td><strong>Singapore</strong><br>
+                        <span style="font-size:11px; color:#555;">Arrives 20:45</span>
+                    </td>
+                    <td>
+                        <i class="fas fa-check-circle" style="color:#27ae60;"></i>
+                        <strong>Return to Singapore</strong>
+                        <br><span style="font-size:12px; color:#555;">End of tour</span>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <!-- ============================================================ -->
+        <!-- CRUISE INFO -->
+        <!-- ============================================================ -->
+
+        <div style="background:#fdf2e9; padding:15px 20px; border-radius:8px; border-left:6px solid #e67e22; margin:20px 0;">
+            <h3 style="margin-top:0; color:#e67e22;">
+                <i class="fas fa-ship"></i> Halong Bay Cruise Options
+            </h3>
+            <div style="display:flex; flex-wrap:wrap; gap:10px 25px;">
+                <div>
+                    <a href="https://herculescruise.com" target="_blank">
+                        <i class="fas fa-anchor"></i> Hercules 1 Day Cruise
+                    </a>
+                    <br><span style="font-size:12px; color:#555;">Transport to/from Hanoi provided</span>
+                </div>
+                <div>
+                    <a href="https://bhayacruises.com/blog/get-from-hanoi-to-halong-bay/" target="_blank">
+                        <i class="fas fa-route"></i> Hanoi → Tuan Chau Harbour
+                    </a>
+                </div>
+                <div>
+                    <a href="https://bhayacruises.com/blog/tuan-chau-harbour/" target="_blank">
+                        <i class="fas fa-anchor"></i> Tuan Chau Harbour Guide
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NAMES IN CHINESE -->
+        <!-- ============================================================ -->
+
+        <h2><i class="fas fa-user-friends"></i> Travellers</h2>
+
+        <div style="display:flex; flex-wrap:wrap; gap:20px 40px; background:#faf7f3; padding:15px 22px; border-radius:8px; font-size:18px;">
+            <div>
+                <span style="font-size:20px;">👤</span>
+                <strong>李良才</strong>
+                <span style="font-size:14px; color:#555; display:block;">Lǐ Liáng Cái</span>
+            </div>
+            <div>
+                <span style="font-size:20px;">👩</span>
+                <strong>李优丽</strong>
+                <span style="font-size:14px; color:#555; display:block;">Lǐ Yōu Lì</span>
+            </div>
+            <div>
+                <span style="font-size:20px;">👧</span>
+                <strong>李可欣</strong>
+                <span style="font-size:14px; color:#555; display:block;">Lǐ Kě Xīn</span>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- FOOTER -->
+        <!-- ============================================================ -->
+
+        <div class="footer-note no-print">
+            <i class="fas fa-globe-asia"></i>
+            <a href="http://o2tree.github.io/china.html" target="_blank">China Immigration Info</a>
+            &nbsp;|&nbsp;
+            <a href="http://o2tree.github.io/china_xian.html" target="_blank">Xi'an Map</a>
+            &nbsp;|&nbsp;
+            <i class="fas fa-print" style="cursor:pointer;" onclick="window.print();"></i> Print
+            <br>
+            <span style="font-size:12px; opacity:0.7;">
+                <i class="far fa-calendar-alt"></i> July 2026 &nbsp;|&nbsp;
+                Version 2.0 &nbsp;|&nbsp;
+                <i class="fas fa-passport"></i> Remember to carry your passport at all times
+            </span>
+        </div>
+
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPTS -->
+    <!-- ============================================================ -->
+
     <script type="module">
-      import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+        mermaid.registerIconPacks([
+            { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
+            { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
+        ]);
+
+        mermaid.initialize({
+            startOnLoad: true,
+            securityLevel: 'loose',
+            logLevel: 1
+        });
     </script>
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>    
-    <script type="module">
-     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 
-      mermaid.registerIconPacks([
-        { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
-        { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
-      ]);
-     mermaid.initialize({ startOnLoad: true,
-          securityLevel: 'loose',
-          logLevel: 1
-       });
-</script>
-  </body>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+</body>
 </html>
