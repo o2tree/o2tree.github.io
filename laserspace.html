@@ -8,6 +8,18 @@
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
 
    <title>Laser Space wireless  Communication</title>
+
+   <!-- 1. Include MathJax for formula rendering -->
+  <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+
    <script id="sap-ui-bootstrap"
         src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
         data-sap-ui-libs="sap.m"
