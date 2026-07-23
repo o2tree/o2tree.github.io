@@ -42,7 +42,7 @@
 - [ftp o2tree.tplinkdns.com](ftp://o2tree.tplinkdns.com) | [ftp 192.168.0.1](ftp://192.168.0.1)
 
 - [PCBWay order prototype](https://www.pcbway.com/)| [Singapore xometry](https://xometry.sg/)
-- [Indonesia Coretax](http://www.coretaxdjp.pajak.go.id)
+- [Indonesia Coretax](http://www.coretaxdjp.pajak.go.id)|[cek KTP NIK](https://nik.zakiego.com)
 
 - [Ansible and github workflow](https://github.com/artis3n/ansible-collection-tailscale/blob/main/pyproject.toml)
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)

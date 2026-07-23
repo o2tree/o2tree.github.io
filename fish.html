@@ -6,7 +6,10 @@
   <meta charset="utf-8">
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
    <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
-    <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
+   <!-- KaTeX for beautiful math rendering -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css" integrity="sha384-vlBdW0r3AcZO/HboRPznQNowvexd3fY8qHOWkBi5q7KGgqJ+F48+DceybYmrVbmB" crossorigin="anonymous" />
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.js" integrity="sha384-AtrdNsnxl/75rvBneBVH7DtOvCxSVahR2zWqle1coBKd8DEmLoviqNeJSx64gNAs" crossorigin="anonymous"></script>
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
                 <title>BBL-Benur Lobster</title>
                 <script id="sap-ui-bootstrap"
@@ -117,6 +120,40 @@
       pointer-events: none;
       z-index: 100;
     }
+
+  .formula-box {
+            background: #f0f5fe;
+            border-left: 5px solid #0d6efd;
+            padding: 15px 22px;
+            border-radius: 14px;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+  .card-formula {
+            background: #ffffff;
+            border: 1px solid #e2e9f3;
+            border-radius: 20px;
+            padding: 20px 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            margin-bottom: 25px;
+        }
+  .badge-formula {
+            background: #0d6efd10;
+            color: #0d6efd;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            border: 1px solid #0d6efd20;
+        }
+  .katex-display {
+            margin: 0.5rem 0;
+        }
+
+
+
+
+
 </style>
   </head>
   <!-- script src="https://unpkg.com/@tailwindcss/browser@4"></script -->
@@ -888,7 +925,7 @@ sold in fresh condition at the local markets or iced and transported to distant 
 [Scallop](https://downeastinstitute.org/hatchery/sea-scallops/)
 <img  src="https://www.wa.gov.au/system/files/2024-04/scallop_research.jpg" style="max-width: 100%;" />
 [Hatchery tank](https://enduramaxx.co.uk/enduramaxx/scallop-hatchery-tanks/)
-{scallop and lobster cage](https://www.alibaba.com/product-detail/scallop-hatchery-lantern-scallop-culture-lantern_11000005993291.html)
+[scallop and lobster cage](https://www.alibaba.com/product-detail/scallop-hatchery-lantern-scallop-culture-lantern_11000005993291.html)
 
 
 # Lobster (Udang Kara)
