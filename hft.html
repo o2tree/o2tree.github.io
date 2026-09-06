@@ -1,0 +1,2222 @@
+<html lang="en">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <meta charset="utf-8">
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="shortcut icon" >
+   <link type="image/x-icon" href="resources/sap/ui/core/mimes/logo/txtonly_16x16.ico" rel="icon" >
+    <!-- script src="https://assets.adobedtm.com/ccc66c06b30b/fb4d4151404c/launch-514cd2e59b75.min.js"></script -->
+
+                <title>HFT</title>
+                <script id="sap-ui-bootstrap"
+                        src="https://ui5.sap.com/resources/sap-ui-core.js"
+                        data-sap-ui-theme="sap_horizon"
+                        data-sap-ui-libs='sap.ui.documentation, sap.ui.layout, sap.m, sap.uxap, sap.f, sap.tnt, sap.ui.codeeditor, sap.ui.unified'
+                        data-sap-ui-compat-version="edge"
+                        data-sap-ui-async="true"
+                        data-sap-ui-on-init="module:my/app/main"
+                        data-sap-ui-resource-roots='{"my.app": "./"}'>
+                </script>
+		 <script>
+                        sap.ui.getCore().attachInit(function () {
+                        sap.ui.require(["sap/ui/core/mvc/XMLView"], function (XMLView) {
+                        XMLView.create({ viewName: "Quickstart.App" }).then(function (oView) {
+                            oView.placeAt("content");
+                        });
+                       });
+                     });
+                  </script>
+                  <script>
+                  	var oMenu = new sap.m.Menu({
+			title: "random 2",
+			itemSelected: function (oEvent) {
+				var oItem = oEvent.getParameter("item"),
+					sItemPath = "";
+				while (oItem instanceof sap.m.MenuItem) {
+					sItemPath = oItem.getText() + " > " + sItemPath;
+					oItem = oItem.getParent();
+				}
+
+				sItemPath = sItemPath.substr(0, sItemPath.lastIndexOf(" > "));
+
+				sap.m.MessageToast.show("itemSelected: " + sItemPath);
+			},
+			items: [
+				new sap.m.MenuItem({
+					text: "fridge",
+					icon: "sap-icon://fridge",
+					items: [
+						new sap.m.MenuItem({
+							text: "accidental leave",
+							icon: "sap-icon://accidental-leave",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://factory",
+									text: "factory"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flag",
+									text: "flag"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://flight",
+									text: "flight"
+								})
+							]
+						}),
+						new sap.m.MenuItem({
+							text: "iphone",
+							icon: "sap-icon://iphone",
+							items: [
+								new sap.m.MenuItem({
+									icon: "sap-icon://video",
+									text: "video"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://loan",
+									text: "loan"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://commission-check",
+									text: "commission check"
+								}),
+								new sap.m.MenuItem({
+									icon: "sap-icon://doctor",
+									text: "doctor"
+								})
+							]
+						})
+					]
+				}),
+				new sap.m.MenuItem({
+					text: "globe",
+					icon: "sap-icon://globe",
+					items: [
+						new sap.m.MenuItem({
+							text: "e-care",
+							icon: "sap-icon://e-care"
+						})
+					]
+				})
+			]
+		});
+
+                  </script>
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+</style>
+  <!-- script src="https://unpkg.com/@tailwindcss/browser@4"></script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="mermaid">
+%% systemverilog
+graph TB
+    subgraph "Non-Reentrant (Static) Task - DANGEROUS"
+        T1["Thread 1: Call task"] --> VAR["Shared Variables<br/>(One Copy)"]
+        T2["Thread 2: Call task"] --> VAR
+        VAR -->|"Corrupted!"| RESULT["Unpredictable Results"]
+    end
+    
+    subgraph "Reentrant (Automatic) Task - SAFE"
+        T3["Thread 1: Call task"] --> VAR1["Private Variables<br/>(Copy 1)"]
+        T4["Thread 2: Call task"] --> VAR2["Private Variables<br/>(Copy 2)"]
+        VAR1 -->|"Thread 1 Data"| RESULT1["Correct Results"]
+        VAR2 -->|"Thread 2 Data"| RESULT2["Correct Results"]
+    end
+    
+    classDef bad fill:#ffcdd2,stroke:#b71c1c
+    classDef good fill:#c8e6c9,stroke:#1b5e20
+    
+    class T1,T2,VAR,RESULT bad
+    class T3,T4,VAR1,VAR2,RESULT1,RESULT2 good
+
+
+</div>
+<div class="mermaid">
+
+graph LR
+    subgraph "ELECTRICAL (Today)"
+        direction TB
+        subgraph "Package 0"
+            CPU0_E["CPU<br/>(Intel)"]
+            PCIe0["PCIe<br/>Controller"]
+            CPU0_E --- PCIe0
+        end
+        
+        subgraph "Package 1"
+            CPU1_E["CPU<br/>(Intel)"]
+            PCIe1["PCIe<br/>Controller"]
+            CPU1_E --- PCIe1
+        end
+        
+        PCIe0 <==>|"UPI/xGMI<br/>━━━━━━━━━━━━<br/>• Copper traces<br/>• 32 GT/s<br/>• Board-level<br/>• ~10-20 inches"| PCIe1
+    end
+    
+    subgraph "OPTICAL (Tomorrow)"
+        direction TB
+        subgraph "Package 0 (Next-Gen)"
+            CPU0_O["CPU"]
+            EIC0_O["EIC Chiplet<br/>(Electrical-to-Optical)"]
+            Optical0_O["Optical Engine"]
+            CPU0_O --- EIC0_O
+            EIC0_O --- Optical0_O
+        end
+        
+        subgraph "Package 1 (Next-Gen)"
+            CPU1_O["CPU"]
+            EIC1_O["EIC Chiplet<br/>(Electrical-to-Optical)"]
+            Optical1_O["Optical Engine"]
+            CPU1_O --- EIC1_O
+            EIC1_O --- Optical1_O
+        end
+        
+        Optical0_O <==>|"CXL.io/mem<br/>━━━━━━━━━━━━<br/>• Optical fiber/waveguide<br/>• 64+ GT/s<br/>• On-package EIC<br/>• mm-scale to km-scale"| Optical1_O
+    end
+
+    classDef electrical fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    classDef optical fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    classDef pcie fill:#fff9c4,stroke:#f57f17,stroke-width:1px
+    classDef eic fill:#ffccbc,stroke:#d84315,stroke-width:2px
+    classDef optengine fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
+    
+    class CPU0_E,CPU1_E electrical
+    class CPU0_O,CPU1_O optical
+    class PCIe0,PCIe1 pcie
+    class EIC0_O,EIC1_O eic
+    class Optical0_O,Optical1_O optengine
+
+</div>
+
+
+
+<div class="mermaid">
+
+block-beta
+    columns 3
+    
+    HOST["HOST SYSTEM"]:3
+    
+    CPU["CPU Cores<br/>(Risk/Strat)"] --> RAM["DDR4/5<br/>(Main Memory)"]
+    CPU --> PCIe["PCIe Root Complex<br/>(VT-d / IOMMU)"]
+    PCIe --> NIC["Network<br/>(10-100G)"]
+    
+    space:3
+    
+    FPGA_BOX["FPGA Card"]:3
+    
+    FPGA_CORE["FPGA<br/>(Xilinx/Intel)"] --> DMA["DMA Engine<br/>PCIe TLPs"]
+    FPGA_CORE --> SCRATCH["HBM/URAM<br/>Scratchpad"]
+    
+    CPU -.->|Control| FPGA_CORE
+    PCIe <-->|DMA| DMA
+    NIC <-->|Packets| FPGA_CORE
+
+</div>
+
+<div class="mermaid">
+flowchart LR
+    subgraph Host
+        CPU
+        RAM["(DDR4/5)"]
+        RC[PCIe Root Complex]
+        NET[10-100G NIC]
+    end
+    
+    subgraph FPGA_Device[FPGA Accelerator]
+        direction TB
+        FP["FPGA Fabric"]
+        DMA["DMA Engine"]
+        HBM["HBM-(High Bandwidth Memory)/URAM (Ultra RAM)"]
+    end
+    
+    CPU <--> RAM
+    CPU <--> RC
+    RC <--> NET
+    
+    RC <==>|"PCIe TLPs"| DMA
+    DMA <--> FP
+    FP <--> HBM
+    NET <-->|"Ethernet"| FP
+    
+    CPU -.->|"Config/Control"| FP
+
+
+    %% click HBM "https://arxiv.org/pdf/2510.08137" "High bandwidth Memory"
+    %% click HBM "https://www.simms.co.uk/tech-talk/what-is-hbm-high-bandwidth-memory/" "High Bandwidth memory"
+    %% https://engineering.purdue.edu/~vshriva/courses/papers/mp5_2022.pdf
+    %% https://www.cadence.com/zh_CN/home/explore/ucie-technology.html
+    %% Melalui SMS: kirim pesan dengan format Cek#KTP#NIK ke nomor 0815-3636-9999.
+
+
+<div>
+
+<div class="mermaid">
+
+flowchart LR
+    subgraph Developer["👨‍💻 Developer"]
+        PUSH["git push"]
+        PR["Open PR"]
+    end
+    
+    subgraph GitHub["⚙️ GitHub"]
+        ACTIONS["GitHub Actions"]
+        WORKFLOWS[".github/workflows/"]
+    end
+    
+    subgraph Display["📊 Display Methods"]
+        COMMENT["💬 PR Comments<br/>• Quick preview<br/>• Stats<br/>• Code blocks"]
+        ARTIFACT["📦 Artifacts<br/>• Full download<br/>• All files<br/>• Reports"]
+        PAGES["🌐 GitHub Pages<br/>• API docs<br/>• Website<br/>• Landing page"]
+        LIVE["🚀 Live Preview<br/>• Vercel<br/>• Netlify<br/>• Dashboard"]
+    end
+    
+    subgraph Output["📄 HTML Output"]
+        INDEX["index.html"]
+        DOCS["API Documentation"]
+        COVERAGE["Coverage Reports"]
+        BENCH["Benchmark Results"]
+        DASHBOARD["Performance Dashboard"]
+    end
+    
+    PUSH --> ACTIONS
+    PR --> ACTIONS
+    ACTIONS --> WORKFLOWS
+    WORKFLOWS --> Display
+    
+    COMMENT --> INDEX
+    COMMENT --> STATS["Stats & Badges"]
+    
+    ARTIFACT --> COVERAGE
+    ARTIFACT --> BENCH
+    
+    PAGES --> DOCS
+    PAGES --> INDEX
+    
+    LIVE --> DASHBOARD
+    LIVE --> UI["UI Preview"]
+    
+    style Developer fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style GitHub fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style Display fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Output fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+    subgraph Input["📥 Input"]
+        CODE["Source Code"]
+        HTML["HTML Files"]
+        RUST["Rust Code"]
+    end
+    
+    subgraph Build["🔨 Build Stage"]
+        COMPILE["cargo build"]
+        DOC["cargo doc"]
+        BENCH["cargo bench"]
+        TEST["cargo test"]
+    end
+    
+    subgraph Generate["📊 Generate HTML"]
+        COVERAGE[Coverage Report<br/>cargo tarpaulin]
+        DOCS[API Documentation<br/>cargo doc]
+        PERF[Performance Report<br/>cargo bench]
+        CUSTOM[Custom HTML<br/>docs/ directory]
+    end
+    
+    subgraph Workflows["⚙️ GitHub Workflows"]
+        CI["CI.yml<br/>- Build<br/>- Test<br/>- Lint"]
+        DOCS_DEPLOY["Deploy Docs<br/>- Build docs<br/>- Deploy to Pages"]
+        COV_DEPLOY["Coverage<br/>- Generate<br/>- Upload"]
+        PREVIEW["Preview<br/>- Deploy to Vercel<br/>- Comment PR"]
+    end
+    
+    subgraph Display["📺 Display Methods"]
+        PR_COMMENT["💬 PR Comment<br/>Summary + Stats"]
+        ARTIFACTS["📦 Artifacts<br/>Full Reports"]
+        PAGES["🌐 GitHub Pages<br/>API Documentation"]
+        LIVE["🚀 Live Preview<br/>Vercel/Netlify"]
+    end
+    
+    CODE --> COMPILE
+    HTML --> CUSTOM
+    RUST --> COMPILE
+    
+    COMPILE --> TEST
+    COMPILE --> BENCH
+    COMPILE --> DOC
+    
+    TEST --> COVERAGE
+    DOC --> DOCS
+    BENCH --> PERF
+    
+    COVERAGE --> COV_DEPLOY
+    DOCS --> DOCS_DEPLOY
+    CUSTOM --> PREVIEW
+    PERF --> CI
+    
+    COV_DEPLOY --> ARTIFACTS
+    COV_DEPLOY --> PR_COMMENT
+    
+    DOCS_DEPLOY --> PAGES
+    
+    PREVIEW --> LIVE
+    PREVIEW --> PR_COMMENT
+    
+    CI --> ARTIFACTS
+    CI --> PR_COMMENT
+    
+    PR_COMMENT --> USER["👨‍💻 Developer"]
+    ARTIFACTS --> USER
+    PAGES --> USER
+    LIVE --> USER
+    
+    style Input fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style Build fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style Generate fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Workflows fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    style Display fill:#fce4ec,stroke:#b71c1c,stroke-width:2px
+    style USER fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+
+</div>
+  
+<div class="mermaid">
+
+graph LR
+    subgraph "Current State"
+        CPU_E["CPU"]
+        Copper["Copper Traces"]
+        Memory["Memory"]
+        CPU_E --- Copper
+        Copper --- Memory
+    end
+    
+    subgraph "Transition Phase"
+        CPU_EIC["CPU"]
+        EIC["EIC Chiplet"]
+        Copper_Opt["Hybrid<br/>Copper/ Optical"]
+        Memory_Opt["Memory"]
+        CPU_EIC --- EIC
+        EIC --- Copper_Opt
+        Copper_Opt --- Memory_Opt
+    end
+    
+    subgraph "Future State"
+        CPU_Opt["CPU"]
+        EIC_Opt["EIC Chiplet"]
+        Fiber["Optical Fiber"]
+        Memory_Opt2["Optical Memory"]
+        CPU_Opt --- EIC_Opt
+        EIC_Opt --- Fiber
+        Fiber --- Memory_Opt2
+    end
+    
+    CPU_E --> CPU_EIC
+    Copper --> Copper_Opt
+    Memory --> Memory_Opt
+    
+    CPU_EIC --> CPU_Opt
+    Copper_Opt --> Fiber
+    Memory_Opt --> Memory_Opt2
+    
+    classDef current fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    classDef transition fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    classDef future fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    
+    class CPU_E,Copper,Memory current
+    class CPU_EIC,EIC,Copper_Opt,Memory_Opt transition
+    class CPU_Opt,EIC_Opt,Fiber,Memory_Opt2 future
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+    subgraph A [SOC / Chiplet 1]
+        direction LR
+        Core1[CPU Core]
+        Core2[CPU Core]
+        Mem1[Memory]
+        AXIBridge[AXI-to-UCIe<br>Offload Engine]
+        Core1 --- Mem1
+        Core2 --- Mem1
+        Core1 --- AXIBridge
+        Core2 --- AXIBridge
+    end
+
+    subgraph B [Chiplet 2]
+        direction LR
+        AXIBridge2[AXI-to-UCIe<br>Offload Engine]
+        Accel[Accelerator]
+        Mem2[Memory]
+        Accel --- Mem2
+        Accel --- AXIBridge2
+    end
+
+    AXIBridge ---|UCIe Interconnect| AXIBridge2
+
+
+
+</div>
+
+<div class="mermaid">
+graph TB
+    subgraph "HIL Verification Platform"
+        
+        subgraph "Host System"
+            H1[MATLAB/Simulink<br/>Test Case Generation]
+            H2[Python Scripts<br/>Automation & Analysis]
+            H3[UVM Testbench<br/>Verification Environment]
+        end
+
+        subgraph "Real-Time Target Machine"
+            R1[PLECS RT Box / Speedgoat<br/>Real-Time Simulator]
+            R2[Analog I/O<br/>ADC/DAC 16-bit, 2Msps]
+            R3[Digital I/O<br/>PWM/GPIO 3.3V/5V]
+            R4[Communication<br/>SPI/I2C/CAN/UART]
+        end
+
+        subgraph "Device Under Test"
+            D1[FPGA/SoC<br/>DUT Hardware]
+            D2[Analog Front-End<br/>Sensors/Actuators]
+            D3[Digital Core<br/>CPU/MCU]
+            D4[Mixed-Signal<br/>ADC/DAC/PLL]
+        end
+    end
+
+    %% Connections
+    H1 -->|"Test Vectors"| R1
+    H2 -->|"Automation"| R1
+    H3 -->|"Verification"| R1
+    
+    R1 -->|"Analog Stimulus"| R2
+    R1 -->|"Digital Stimulus"| R3
+    R1 -->|"Protocol Commands"| R4
+    
+    R2 -->|"Analog I/O"| D2
+    R3 -->|"Digital I/O"| D3
+    R4 -->|"Serial Comms"| D4
+    
+    D2 -->|"Sensor Data"| D4
+    D3 -->|"Control Signals"| D2
+    D4 -->|"Mixed-Signal"| D1
+
+    %% Styles
+    classDef host fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef target fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef dut fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    
+    class H1,H2,H3 host
+    class R1,R2,R3,R4 target
+    class D1,D2,D3,D4 dut
+
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+    subgraph Host["🖥️ Host System (MATLAB/Simulink)"]
+        TC[Test Case Generator]
+        VC[Vector Converter]
+        AN[Analysis Engine]
+        DB[Database/Results]
+    end
+
+    subgraph RTT["⚡ Real-Time Target (PLECS RT Box)"]
+        FS[Frame Scheduler]
+        AI[Analog Input<br/>ADC 16-bit]
+        AO[Analog Output<br/>DAC 16-bit]
+        DI[Digital Input<br/>GPIO]
+        DO[Digital Output<br/>PWM/GPIO]
+        COM[Communication<br/>SPI/I2C/CAN]
+    end
+
+    subgraph DUT["🔌 Device Under Test (FPGA/SoC)"]
+        AFE[Analog Front-End<br/>Sensors]
+        ADC[Analog-to-Digital<br/>Converter]
+        DAC[Digital-to-Analog<br/>Converter]
+        CPU[Digital Core<br/>ARM/RISC-V]
+        PMIC[Power Management<br/>IC]
+    end
+
+    TC --> VC --> FS
+    FS --> AO
+    FS --> DO
+    FS --> COM
+    
+    AO --> AFE
+    DO --> CPU
+    COM --> CPU
+    
+    AFE --> ADC
+    ADC --> AI
+    CPU --> DI
+    CPU --> DAC
+    
+    AI --> AN
+    DI --> AN
+    AN --> DB
+    
+    %% Power-aware verification
+    PMIC -->|"Voltage/Current"| ADC
+    CPU -->|"PMIC Control"| PMIC
+
+    style Host fill:#e3f2fd
+    style RTT fill:#f3e5f5
+    style DUT fill:#e8f5e9
+
+
+</div>
+
+<div class="mermaid">
+
+graph TB
+    subgraph UVM["UVM Layer"]
+        U1[Sequencer]
+        U2[Driver]
+        U3[Monitor]
+        U4[Scoreboard]
+        U5[Coverage]
+    end
+
+    subgraph AMS["SystemC-AMS"]
+        S1[Analog Model]
+        S2[Power Model]
+        S3[Real-Number]
+    end
+
+    subgraph IF["Interface"]
+        I1[Coupler]
+        I2[Signal I/F]
+        I3[Power I/F]
+    end
+
+    U1 --> U2
+    U2 --> I2
+    I2 --> S1
+    S1 --> I3
+    I3 --> DUT
+    
+    DUT --> S3
+    S3 --> I2
+    I2 --> U3
+    U3 --> U4
+    U3 --> U5
+    
+    I1 <--> U1
+    I1 <--> S2
+
+    style UVM fill:#e1f5fe
+    style AMS fill:#f3e5f5
+    style IF fill:#e8f5e9
+
+
+</div>
+
+<div class="mermaid">
+
+graph TB
+    subgraph UVM["UVM Layer"]
+        U1[Sequencer]
+        U2[Driver]
+        U3[Monitor]
+        U4[Scoreboard]
+        U5[Coverage]
+    end
+
+    subgraph AMS["SystemC-AMS"]
+        S1[Analog Model]
+        S2[Power Model]
+        S3[Real-Number]
+    end
+
+    subgraph IF["Interface"]
+        I1[Coupler]
+        I2[Signal I/F]
+        I3[Power I/F]
+    end
+
+    U1 --> U2
+    U2 --> I2
+    I2 --> S1
+    S1 --> I3
+    I3 --> DUT
+    
+    DUT --> S3
+    S3 --> I2
+    I2 --> U3
+    U3 --> U4
+    U3 --> U5
+    
+    I1 <--> U1
+    I1 <--> S2
+
+    style UVM fill:#e1f5fe
+    style AMS fill:#f3e5f5
+    style IF fill:#e8f5e9
+
+</div>
+
+
+
+<md-block>
+
+[cxl.mem](https://cxl.io/mem)
+
+https://www.hahwul.com/blog/2025/jekyll-to-zola/
+
+https://crystal-lang.org
+
+
+[UCIe (Universal Chiplet Interconnect Express)](https://www.cadence.com/zh_CN/home/explore/ucie-technology.html) is an emerging standard for chiplet-to-chiplet communication, 
+while PCIe is the established standard for board-level interconnect. In HFT, this matters because:
+  * PCIe is what we use today (FPGA cards plug into PCIe slots)
+  * UCIe is what might replace/augment it for future tightly-coupled FPGA/CPU systems
+
+Let me explain the differences and implications for the shared memory region.
+UCIe (Universal Chiplet Interconnect Express) and PCIe represent two fundamentally different approaches to the Shared Memory Region 
+  — the former is a die-level interconnect, the latter is a board-level one. This distinction reshapes everything about latency, coherency, and memory ordering in HFT.
+
+CXL.mem vs CXL.cache protocol benchmarks?
+
+[system verilog design](https://www.systemverilog.io/design/)
+
+Current Status (2026)
+UCIe 1.0/1.1 spec is finalized, but commercial HFT deployments are still PCIe-based because:
+Intel Agilex / AMD Versal FPGAs use PCIe/CXL, not UCIe chiplets
+UCIe requires advanced packaging (2.5D interposer or 3D stacking) — expensive, thermally challenging
+CXL.cache (the cache-coherent protocol) is still maturing; most implementations use CXL.io or CXL.mem
+The near-term reality: CXL (Compute Express Link) over PCIe is the stepping stone. CXL.mem allows the FPGA to access host memory coherently, but still through the PCIe physical layer. True UCIe (on-package) is likely 3-5 years out for HFT.
+
+Qvisor vs Qemu
+---
+QVisor: The Specialized Scheduling Hypervisor
+QVisor is a research concept from ETH Zurich designed to solve a very specific problem in networking. 
+It is a "scheduling hypervisor" that allows multiple tenants to use their own packet scheduling policies on the same, existing network switches.
+
+Core Purpose: To abstract and virtualize the scheduling resources of a switch (like its buffers and prioritization logic) 
+so that different tenants can define their own traffic scheduling algorithms, as if they had dedicated hardware.
+
+How It Works: Tenants specify their desired scheduling policies for their traffic. The network operator defines how resources should be shared between tenants. 
+QVisor then synthesizes a single, joint scheduling strategy that meets all these requirements and deploys it onto the underlying hardware.
+
+Differentiation: QVisor is a "scheduling hypervisor," not a "machine hypervisor" like QEMU. It operates on packet scheduling policies within network switches, 
+not on virtual machines running on a server.
+
+Logger
+---
+[How to Implement a Ring Buffer for Embedded Logging and Telemetry](https://hubble.com/community/guides/how-to-implement-a-ring-buffer-for-embedded-logging-and-telemetry/)
+[Quill vs spdlog: Which C++ Logger Is Better for Low-Latency Applications?](https://dev.to/odygrd/quill-vs-spdlog-which-c-logger-is-better-for-low-latency-applications-408)
+[https://github.com/odygrd/quill](https://github.com/odygrd/quill)
+```
+cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ ..
+
+
+mkdir build && cd build
+cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_CXX_STANDARD=17 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+
+cmake --build . --parallel $(nproc)
+
+
+```
+or
+```
+export CC=clang
+export CXX=clang++
+cmake ..
+
+```
+[https://github.com/gabime/spdlog](https://github.com/gabime/spdlog)
+
+
+XDP
+---
+
+DPDK
+---
+Data Plane vs. Control Plane Logging
+A critical distinction for high-performance applications like SDR is separating logging for the control plane (configuration, management) 
+from the data plane (the main signal processing and packet forwarding loop).
+
+Control Plane Logs: These are typically managed through standard APIs and can be INFO, WARNING, or ERROR level. 
+They are important for system administration but are generally not latency-sensitive.
+
+Data Plane Logs (RTE_LOG_DP): Logging inside the data path must be handled with extreme care. 
+DPDK provides special macros like RTE_LOG_DP() and compile-time flags such as RTE_LOG_DP_LEVEL for this purpose. 
+The goal is to ensure that debug logging in this critical path is compiled out by default to avoid any performance penalty. 
+It must be explicitly enabled at compile time, making it a powerful debugging tool for developers that doesn't affect production performance. 
+The vhost library, for instance, explicitly splits its logging into VHOST_LOG_CONFIG and VHOST_LOG_DATA to enforce this separation.
+
+📝 Recommended Steps for Your SDR App
+Define log types for your main SDR components (e.g., RF frontend, baseband processing, network stack).
+
+Use RTE_LOG for all non-critical, configuration, and management logging.
+
+Use RTE_LOG_DP for any debug logging inside your main packet processing loop.
+
+Implement a custom sink using rte_openlog_stream or the experimental rte_log_sink_set() if you need to send logs to a custom location or format them in a specific way.
+
+This setup provides robust, performance-aware logging suitable for a complex SDR system, 
+allowing you to monitor and debug effectively without slowing down your data path.
+
+
+UPI (Ultra Path Interconnect) is not a traditional parallel bus with individual control/address/data pins. 
+Like PCIe and Infinity Fabric, it is a SerDes-based serial link — the "pins" are differential pairs carrying high-speed serialized data.
+
+
+NUMA socket control vs processor cores pinning
+---------
+Core Pinning: Your Application's "Home Base"
+Core pinning (or CPU affinity) assigns a specific thread or process to run exclusively on a designated CPU core . 
+Its primary goal is to create a predictable, low-latency execution environment by shielding critical threads from OS and hardware interference.
+
+NUMA Socket Control: Managing the Data "Neighborhood"
+NUMA (Non-Uniform Memory Access) socket control manages the physical topology of the hardware, specifically how CPUs and memory are arranged in multi-socket servers . A key principle is that a CPU socket can access its local memory much faster than memory attached to another socket (remote memory) .
+
+NUMA control aims to maximize the probability of local memory access. It involves:
+
+Thread Binding: Pinning a thread to a core on a specific socket .
+
+Memory Allocation: Ensuring that memory is allocated from the local NUMA node of the pinned thread. For example, an HFT matching engine can be configured to allocate memory on the same NUMA node it runs on .
+
+PCIe Device Locality: Placing critical I/O devices like the network interface card (NIC) on the same NUMA node as the processing threads to avoid latency penalties from the data traveling across the CPU interconnect .
+
+AXI4 and UCIe are not competing standards, but rather protocols that operate at completely different levels of a computing system. They serve distinct but complementary roles, especially in the context of modern, high-performance multicore designs.
+
+The short answer to your question is yes, AXI4 is extremely relevant for multicore systems . Its relevance, however, is not in replacing UCIe, but as the primary internal communication fabric that must connect to external protocols like UCIe.
+
+🎯 AXI4: The Internal Communication Standard
+AXI4 (Advanced eXtensible Interface) is the de facto standard for on-chip communication within a System-on-Chip (SoC) . It's the protocol that different cores, accelerators, and peripherals inside a single chip use to talk to each other .
+
+Purpose: High-performance, high-frequency communication between multiple IP blocks within a single die .
+
+Domain: On-chip interconnect (Network-on-Chip or traditional bus).
+
+Key Features: Supports multiple outstanding transactions, burst transfers, and separate read/write channels for efficient, parallel data movement .
+
+Multicore Relevance: As more cores are integrated onto a single chip, AXI4 becomes the backbone that allows them to efficiently share data and access memory. This is why modern SoCs, including multicore CPUs and GPUs from Arm, rely on it .
+
+However, AXI4 has a known limitation for large-scale systems: its strict ordering requirements for transactions with the same ID can become very complex and performance-limiting when scaled across many hops in a large network .
+
+🧩 UCIe: The Chiplet Interconnect Standard
+UCIe (Universal Chiplet Interconnect Express) is a new standard designed to solve a different problem: how to connect multiple chiplets (smaller dies) within a single package .
+
+Purpose: High-speed, low-latency, and energy-efficient communication between chiplets from different vendors inside the same package .
+
+Domain: Die-to-Die interconnect (chiplet-to-chiplet).
+
+Key Features: Standardized physical layer, protocol stack, and high data rates (up to 64 GT/s in UCIe 3.0) to create an open chiplet ecosystem .
+
+Multicore Relevance: As monolithic scaling slows, the industry is moving towards chiplets. UCIe enables you to build a complex, multi-chiplet system by seamlessly connecting cores, memory, and accelerators that are spread across different dies .
+
+🔗 How They Connect: The "Offload Engine"
+The key to their coexistence is a "bridging" architecture, often called an Offload Engine, which is the main subject of the provided research papers .
+
+This engine sits between the AXI-based internal fabric of a chiplet and the UCIe external link. Its job is to "translate" AXI transactions into UCIe-compatible data packets (called Flits) and vice-versa .
+
+This Engine typically performs the following tasks:
+
+AXI Interface: Directly connects to the SoC's AXI bus, handling the complex handshakes and transaction management .
+
+Protocol Engine (PE): Manages the state of the UCIe link and the Flit Construction/Deconstruction process .
+
+Flit Construction/Deconstruction: Serializes data and control signals from the AXI interface into Flits that can be sent over UCIe, and parses incoming Flits back into AXI-compatible transactions .
+
+💎 Summary
+To put it simply:
+
+AXI4 is the "internal language" of your multicore chip. It's how all the components on the die talk to each other, making it highly relevant for multicore architecture .
+
+UCIe is the "universal language" for talking to other chiplets. It's how your chip connects to others in a larger, multi-die system .
+
+They are not alternatives; the Offload Engine acts as the translator, bridging the AXI internal network to the UCIe external network and enabling the creation of scalable, heterogeneous multicore systems . This allows designers to build a powerful, multicore SoC using AXI4 internally and then integrate it seamlessly into a larger chiplet-based system using UCIe.
+
+If you're designing a chiplet-based system, a well-designed AXI-to-UCIe bridge is a fundamental requirement.
+
+
+Remote Direct Memory Access (RDMA)
+RDMA is a technology that allows data to be transferred directly from the memory of one computer into the memory of another without 
+involving either operating system's CPU. This "kernel bypass" is achieved by enabling the network interface card (NIC) to manage the transfer.
+
+The Fundamental Building Block: This capability is built on top of the Virtual Interface Architecture (VIA), which provides a framework for user-level, 
+zero-copy networking. Key to this is the concept of memory registration, where memory is "pinned down" and registered with the RDMA NIC, 
+preventing the OS from swapping it out and providing the physical address for DMA.
+
+Eliminating Overhead: By bypassing the kernel and its TCP/IP stack, RDMA drastically reduces CPU usage and latency, 
+making it suitable for high-bandwidth networks (25, 40, 50, and 100GbE
+
+While a dedicated example of a fully integrated "RDMA memory-to-memory TCP/IP SDR" solution is not directly available, 
+the search results clearly show that RDMA is the established technology for achieving high-performance memory-to-memory 
+transfers over a network. The principles of memory registration, one-sided operations, and kernel bypass are exactly what 
+enable an SDR system to stream large volumes of raw signal data between distributed nodes with the low latency required for real-time processing. 
+By using standard RDMA protocols like RoCE or iWARP, this can be accomplished over standard TCP/IP network infrastructure, making it a practical solution 
+for modern high-performance SDR applications.
+
+RDMA: Direct Data Placement for Real-Time Processing
+This is where RDMA comes in. Its primary role in a demodulator context is to enable a high-speed, low-latency "memory-to-memory" data transfer that bypasses the CPU entirely.
+
+Direct Path to Processing Memory: RDMA allows the network interface card (NIC) to write incoming digitized samples directly into the memory of the server—be it main system memory or even a GPU's memory. This is known as direct data placement.
+
+Zero-Copy and Kernel Bypass: This process is "zero-copy" because it eliminates unnecessary data copies, and it bypasses the operating system's kernel, freeing up the CPU for its primary task: the demodulation itself.
+
+Low Latency Triggering: Some advanced systems can even use RDMA to set up a low-latency trigger, so the processing unit (like a GPU) starts working on the newly arrived data the moment the RDMA transfer is complete, without waiting for a CPU instruction
+
+
+
+[Silicon ](https://leetsilicon.com)
+
+[systemverilog](https://www.cl.cam.ac.uk/teaching/2425/ECAD+Arch/exercise-modelsim.html)
+
+[riscv ](https://riscv.or.jp/wp-content/uploads/syntacore_riscv_ip.pdf)
+
+[The Promise of Atomics](https://codecrash.me/trying-to-understand-atomics)
+
+[rust slice](https://codecrash.me/understanding-rust-slices)
+
+https://doc.rust-lang.org/std/primitive.slice.html
+Conceptually, a slice is easy to grasp. Like the documentation states, it allows you to view into a sequence of memory. 
+
+The power of slices is that you “view” into sequences of memories that do not belong to you, like parts of the contents of a Vec<T> 1. Slices are one of the best ways 
+  to pass around sequences of data that you might read from or write to, but do not need to own (e.g. you’re creating a copy of it to store somewhere else, etc.).
+
+
+[openGL Preprocessor](https://codecrash.me/an-opengl-preprocessor-for-rust)
+Tera for rust vs Jinja2
+[sukr statics html template](https://sukr.io/getting-started)
+[seith](https://seite.sh/docs/getting-started)
+
+[spring acuator](https://www.digitalocean.com/community/tutorials/spring-boot-actuator-endpoints)
+
+[research spring bot](https://www.researchgate.net/publication/383000857_Spring_Boot_Actuator_Monitoring_and_Managing_Production-Ready_Applications)
+
+[solace](https://docs.solace.com/Get-Started/get-started-lp.htm)
+
+[crunc (in c language) instead of runc(in go language)](https://github.com/containers/crun)
+podman --runtime /usr/bin/crun run --rm --memory 512k fedora echo it works
+
+[pangolin vs tailscale](https://pangolin.net/blog/posts/pangolin-v-tailscale)
+
+[setup pangolin](https://deployn.de/blog/setup-pangolin/)
+
+[docker firefox](https://deployn.de/blog/neko-install/)
+
+[home assistant](https://deployn.de/blog/home-assistant-docker/)
+
+[gitea](https://deployn.de/blog/gitea-docker/)
+
+[myscale database](https://github.com/myscale/MyScaleDB)
+MyScaleDB is the SQL vector database that enables developers to build production-ready and scalable AI applications using familiar SQL. 
+It is built on top of ClickHouse and optimized for AI applications and solutions, allowing developers to effectively manage and process massive volumes of data.
+
+
+[Pods instead of Compose-Files](https://www.lackhove.de/blog/selfhosting/)
+[podlet](https://github.com/containers/podlet?tab=readme-ov-file)
+For multi-container applications, we can leverage Podman's pods, which basically allow network communication between containers 
+over localhost ports, sparing me the complexity of container networks. Paperless-ngx, for instance, requires a redis container in addition to 
+the application itself. So for this, I have the following container files:
+
+<img src="https://www.techtransit.org/wp-content/uploads/2023/04/ansible-navigator-execution-environment-1024x683.webp">
+
+https://github.com/afbjorklund/lima-gui
+
+[Ai ramalama](https://github.com/containers/ramalama)
+
+[Fully Automated Document Management System with Paperless-NGX](https://turalali.com/how-i-built-a-fully-automated-document-management-system-with-paperless-ngx/)
+
+https://oneuptime.com/blog/post/2026-03-04-how-to-deploy-a-spring-boot-application-as-a-systemd-service-on-rhel/view
+
+[example spring boot actuator](https://oneuptime.com/blog/post/2026-01-25-custom-actuator-endpoints-spring-boot/view)
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20250318160722633679/Spring-Boot-Starter-Actuator_.webp">
+
+[systemd](https://www.lackhove.de/blog/selfhosting/)
+[pikvm](https://pikvm.org/)
+ 
+[stirling pdf](# stirling pdf)
+[stirling config](https://mariushosting.com/how-to-install-stirling-pdf-on-your-ugreen-nas/)
+
+```
+podman pull stirlingtools/stirling-pdf:latest
+mkdir -p ~/StirlingPDF/{trainingData,extraConfigs,customFiles,logs,pipeline}
+podman run -d \
+  --name stirling-pdf \
+  -p 8080:8080 \
+  -v ~/StirlingPDF/trainingData:/usr/share/tessdata \
+  -v ~/StirlingPDF/extraConfigs:/configs \
+  -v ~/StirlingPDF/customFiles:/customFiles/ \
+  -v ~/StirlingPDF/logs:/logs/ \
+  -v ~/StirlingPDF/pipeline:/pipeline/ \
+  -e DOCKER_ENABLE_SECURITY=false \
+  -e LANGS=en_GB \
+  stirlingtools/stirling-pdf:latest
+
+```
+https://ostechnix.com/stirling-pdf-best-open-source-self-hosted-pdf-manipulation-tool/
+
+https://docs.stirlingpdf.com/Installation/Windows%20Installation/
+
+https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v2.6.0
+
+container_podman_stirling_pdf
+================================
+version: '3.3'
+services:
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf:latest
+    ports:
+      - '8080:8080'
+    volumes:
+      - ~/StirlingPDF/trainingData:/usr/share/tessdata
+      - ~/StirlingPDF/extraConfigs:/configs
+      - ~/StirlingPDF/customFiles:/customFiles/
+      - ~/StirlingPDF/logs:/logs/
+      - ~/StirlingPDF/pipeline:/pipeline/
+    environment:
+      - DOCKER_ENABLE_SECURITY=false
+      - LANGS=en_GB
+
+
+https://greenwebpage.com/community/how-to-use-rsync-to-sync-local-and-remote-files-and-directories-in-ubuntu-22-04/
+
+https://sites.ualberta.ca/~clange/Linux/openSUSE/15.6/instructions/openSUSE156_user.html#remote
+
+[zfs, btrfs and e4](https://www.alessioligabue.it/en/blog/btrfs-zfs-ext4-comparison#:~:text=You%20are%20a%20Desktop%2FLaptop,openSUSE)%20use%20it%20by%20default.)
+
+<img src="https://access.redhat.com/webassets/avalon/d/Red_Hat_Enterprise_Linux-5-Deployment_Guide-en-US/images/9b9fc97cbd107fd1c1942a292b92feec/lvg.png">
+
+- You are a Desktop/Laptop Linux user: Go with ext4 if you want maximum simplicity and compatibility. 
+  Choose btrfs if you want system snapshots (for easy rollbacks of updates) and compression. 
+- Many modern distributions (such as Fedora and openSUSE) use it by default.
+
+* You are building a home NAS (e.g. Unraid, Proxmox): This is the btrfs vs. zfs battle. 
+* Choose ZFS if absolute integrity of your media and backups is priority #1 and you have enough RAM (minimum 8GB+). 
+* Choose btrfs if you prefer flexibility (e.g., add disks of different sizes) and want a lighter system.
+
+[Promox](https://www.alessioligabue.it/en/blog/install-proxmox)
+[proxmox wihout ehernet](https://dev.to/varungujarathi9/setting-up-proxmox-on-a-laptop-without-an-ethernet-port-28n8)
+[proxmox -1](https://github.com/retiarylime/proxmox-laptop-wifi)
+
+<img src="https://i.sstatic.net/AJQfFMO8.jpg">
+
+# RAII in rust
+
+https://benjamincongdon.me/blog/2025/12/23/RAII-Guards-and-Newtypes-in-Rust/
+
+# [Money Laundering](https://www.ingenique.net/anti-money-laundering-whitepapers/)
+- Dasseti 
+
+#  [Dynamic array c - stb_ds.h or vector.h](https://lazarusoverlook.com/posts/vector-c-library/)
+[stb_ds.h](https://nothings.org/stb_ds/) is a public-domain, single-header-file C library that provides high-performance, cache-friendly data structures like dynamic arrays and hash tables.
+The library itself does not manage a general-purpose "cache" in the sense of a CPU cache (e.g., an LRU cache) but its design leverages principles like data locality 
+to perform efficiently with modern CPU caching. 
+
+[hashtable map](https://hackmd.io/q9KOSSvlRUG0w9APyqBgEw)
+[video on hashtable](https://www.youtube.com/watch?v=ncHmEUmJZf4)
+
+[hashtable 1](https://codecapsule.com/2013/05/13/implementing-a-key-value-store-part-5-hash-table-implementations/)
+[hashtale 2](https://attractivechaos.wordpress.com/2018/10/01/advanced-techniques-to-implement-fast-hash-tables/)
+
+
+```
+#define STB_DS_IMPLEMENTATION
+#include "stb_ds.h"
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    // Define a hash table (string key, integer value)
+    stbds_hmput(my_cache, "key1", 100);
+    stbds_hmput(my_cache, "key2", 200);
+
+    // --- Cache Lookup (Retrieval) ---
+    // Use stbds_hmget to retrieve a value. If the key isn't found, it returns the default value for the type (0 for int)
+    int value = stbds_hmget(my_cache, "key1");
+    printf("Value for key1: %d\n", value);
+
+    // Check for a non-existent key.
+    int value_missing = stbds_hmget(my_cache, "key3");
+    // You must verify if a key exists using stbds_hmget or stbds_hmdefaults because 0 is a valid value.
+    if (stbds_hmget(my_cache, "key3")) {
+         // Key exists and value is non-zero
+    } else {
+        // Key not found or value is 0. 
+    }
+
+    // --- Cache Update/Insertion ---
+    // If "key1" exists, it updates the value; otherwise, it inserts a new entry
+    stbds_hmput(my_cache, "key1", 150);
+
+    // --- Iterating over the cache ---
+    for (int i = 0; i < stbds_hmlen(my_cache); ++i) {
+        printf("Key: %s, Value: %d\n", my_cache[i].key, my_cache[i].value);
+    }
+
+    // --- Cache Management (Clearing) ---
+    stbds_hmclear(my_cache);
+
+    return 0;
+}
+```
+# [Namespace isolation](https://securitylabs.datadoghq.com/articles/container-security-fundamentals-part-2/)
+
+<img src="https://labs.iximiuz.com/content/files/tutorials/container-filesystem-from-scratch/__static__/mount-namespaces.png">
+
+<img src="https://datadog-securitylabs.imgix.net/img/container-security-fundamentals/part-2/isolation-layers.png?auto=format&w=896&dpr=1.75">
+
+
+
+# slots vs dictionary python in HFT
+# https://www.gankinterview.cn/en/blog/is-python-just-a-toy-how-to-discuss-the-boundaries-between-python-and-rustc-in-h
+
+Advantages and Disadvantages of __slots__ :
+
+The proper use of __slots__ is to save space in objects. Instead of having a dynamic dict that allows adding attributes to objects at anytime, 
+there is a static structure which does not allow additions after creation. This use of __slots__ eliminates the overhead of one __dict__ for every object. 
+While this is sometimes a useful optimization, it would be completely unnecessary if the Python interpreter was dynamic enough so that it would only require 
+the dict when there actually were additions to the object.
+
+Unfortunately there is a side effect to slots. They change the behavior of the objects that have slots in a way that can be abused by control freaks and static typing weenies. 
+This is bad, because the control freaks should be abusing the metaclasses and the static typing weenies should be abusing decorators, since in Python, 
+there should be only one obvious way of doing something.
+
+
+4. Practical Drill: Optimizing Slow Code
+
+Besides theory, interviews often include "live refactoring." The interviewer might provide a logically correct but extremely poor-performing Python snippet (e.g., a simple limit order book matching engine) and point out that it is too slow in backtesting.
+
+Your task is not to rewrite it in C++, but to explore the limits of Python:
+
+    Algorithm Complexity Analysis: Optimize nested lookups of O(N2)O(N2) to O(N)O(N) or O(log⁡N)O(logN) (using dictionaries or the bisect module).
+    Data Structure Selection: Use collections.deque instead of list to optimize head insertion/deletion operations; or use the array module instead of list to store pure numerical data.
+    JIT Compilation: As a last resort, mention using Numba or PyPy to just-in-time compile critical hotspots, which shows you possess the vision to solve performance bottlenecks from an engineering perspective.
+    
+# futex 
+
+
+A syscall is invoked with syscall(). Standard library calls like read(), open(), and write() used for 
+interacting with file descriptors (files, sockets, pipes) are wrappers for syscall.
+
+The signature for calling it is like this where ... is the arguments taken for that specific syscall defined by the number:
+
+
+
+
+```c++
+
+#include <unistd.h>
+#include <sys/syscall.h>
+
+int main() {
+    syscall(SYS_write, 1, "Hello\n", 6);
+    return 0;
+}
+
+struct Lock{
+    // 0 - unlocked, 1 - locked
+    std::atomic_int state{0};
+
+    void lock(){
+        int unlocked = 0;
+        while(!state.compare_exchange_strong(unlocked, 1)){
+            unlocked = 0;
+            futex_wait(&state, 1);
+        }
+    }
+
+    void unlock(){
+        state.store(0);
+        futex_wake(&state);
+    }
+};
+
+int unlocked = 0;
+while(!state.compare_exchange_strong(unlocked, 1)){
+     unlocked = 0;
+     futex_wait(&state, 1);
+}
+
+
+
+#include <linux/futex.h>
+#include <unistd.h>
+#include <sys/syscall.h>
+#include <cstddef>
+#include <atomic>
+
+std::atomic_int futex_var = 0;
+
+
+void futex_wait(std::atomic_int *addr, int expected) {
+    syscall(SYS_futex, addr, FUTEX_WAIT, expected, NULL, NULL, 0);
+}
+
+void futex_wake(std::atomic_int *addr, int threads=1) {
+    syscall(SYS_futex, addr, FUTEX_WAKE, threads, NULL, NULL, 0);
+}
+
+
+struct CondVar{
+
+    // each seq represents the notify epoch
+    // this prevents lost wake up (if a notify was called between !predicate and futex_wait)
+    // it prevents the lost wakeup because notify causes seq to increment, so we won't be sleeping anymore
+    std::atomic_int seq{0};
+
+    void wait(std::function<bool(void)>& predicate){
+        // if !predicate -> futex_wait
+        int cur = seq.load();
+        while(!predicate()){
+            futex_wait(&seq, cur);
+            cur = seq.load();
+        }
+    }
+
+    void notify_one(){
+        seq.fetch_add(1);
+        futex_wake(&seq);
+    }
+
+    void notify_all(){
+        seq.fetch_add(1);
+        futex_wake(&seq, INT_MAX);
+    }
+};
+
+```
+
+[unshare namespace run in unix](https://linuxconcept.com/commands/unshare)
+
+Benefits of Using unshare and Namespaces
+Process Isolation: Able to run processes independently, preventing interference and providing security.
+Resource Management: Efficiently manage and allocate resources without affecting the global environment.
+Testing and Development: Create isolated test environments for development and testing purposes without needing full virtual machines.
+
+```
+https://dev.to/ajinkya_singh_2c02bd40423/mount-namespace-practice-guide-4c84
+
+unshare -rn
+
+sudo unshare --net bash
+
+sudo unshare --mount bash
+
+sudo lsns
+
+
+```
+
+|Command	|Description|
+|---------|-----------|
+|podman images -f dangling=true	|List dangling images|
+|podman image prune -f	|Remove only dangling images|
+|podman image prune -a -f	|Remove all unused images|
+|podman container prune -f	|Remove stopped containers|
+|podman tag localhost/my-image-old:latest localhost/my-image-new:v1| rename tag|
+|podman build --rm -t my-image .| remove all the dangling images after build|
+
+
+Automatically Remove Dangling Images After Build
+If you're building images and want to prevent dangling layers, add --rm when building:
+
+podman build --rm -t my-image .
+
+   16  xbps-query -f webkit2gtk41-devel | grep javascriptcore
+   17  pnpm tauri dev
+   18  ENV PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/local/lib/pkgconfig
+   19  xbps-install -S webkit2gtk-devel pkg-config
+   20  xbps-install -S webkit2gtk4-devel pkg-config
+   21   xbps-install -S void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
+   22  pkg-config --modversion webkit2gtk-4.0  # For GTK4
+   23  export PKG_CONFIG_PATH=/usr/lib/pkgconfig
+   24  pkg-config --modversion webkit2gtk-4.0  # For GTK4
+   25  xbps-query -l | grep gtk+3-devel
+   26  find /usr -name "gdk-3.0.pc"
+   27  export PKG_CONFIG_PATH=/usr/lib/pkgconfig
+   28  pkg-config --modversion gdk-3.0
+   29  sudo xbps-install -S atk-devel cairo-devel pango-devel gdk-pixbuf-devel
+   30   xbps-install -S atk-devel cairo-devel pango-devel gdk-pixbuf-devel
+   31  historypwd
+
+To migrate Podman images to another hard drive, you can either permanently change the storage location or create portable copies of your images. Here are the most common and reliable methods.
+
+🔄 Method 1: Permanently Relocate Storage (Change graphRoot)
+
+This method changes the directory where Podman stores all images and containers. It's best if the new hard drive will be the primary storage location.
+
+Step-by-step guide:
+
+1. Find your current storage path with podman info | grep graphRoot .
+2. Save all images from the current location to archive files using podman save .
+3. Stop and remove all containers and images from Podman's management .
+4. Change the configuration to point to the new location on your hard drive by editing the storage configuration file (e.g., ~/.config/containers/storage.conf for a user) and setting the graphroot option to the new path .
+5. Reload the images from the archives you saved using podman load .
+
+Best for: Making a new hard drive the default, permanent location for all Podman data.
+
+📦 Method 2: Create Portable Image Archives (Save/Load)
+
+This method creates standalone .tar files of your images, which you can copy anywhere.
+
+How to do it:
+
+· Save an image: podman save -o myimage.tar IMAGE_NAME_OR_ID . You can save multiple images to one file.
+· Load an image: podman load -i myimage.tar .
+
+Best for: Creating backups, transferring images to offline machines, or sharing images .
+
+🌐 Method 3: Transfer Between Hosts (podman image scp)
+
+This command uses SSH to copy images directly between two systems. It works even if the destination is a different user account on the same machine .
+
+Example commands:
+
+· Copy to a remote host: podman image scp myimage username@remote_host:: .
+· Copy between users locally: podman image scp myimage otheruser@localhost:: .
+
+Best for: Quickly copying images over a network without creating intermediate files, especially between different user accounts .
+
+⚙️ Method 4: Extract Image Contents for File Access
+
+If you need direct access to the files inside an image (like the root filesystem), you can extract them to a directory.
+
+One method is to:
+
+1. Create a temporary container: podman create --name temp_container IMAGE_NAME.
+2. Export its filesystem: podman export temp_container | tar -x -C /path/on/new/drive .
+3. Remove the container: podman rm temp_container.
+
+Best for: Inspecting or using an image's file contents outside of a container.
+
+💡 Key Considerations
+
+· Manage Data Separately: These methods primarily move the image layers. For persistent data (like databases), remember to separately backup and migrate any volumes or bind mounts used by your containers .
+· Check Compatibility: When loading or transferring images between different Podman versions or systems, ensure compatibility to avoid errors .
+
+📝 Summary of Methods
+
+To choose a method, consider your goal:
+
+· Make a new hard drive the main storage: Use Method 1.
+· Create a backup or offline copy: Use Method 2.
+· Copy an image to another computer quickly: Use Method 3.
+· Get the files inside an image: Use Method 4.
+
+If you know which specific method best fits your task or need help with a particular step (like editing the storage.conf file), let me know and I can provide more detailed instructions.
+
+# Dioxus
+[pass paramete on rsx!](https://users.rust-lang.org/t/understanding-dioxus-signals-or-state-management-in-general/111611/4)
+
+Seaweed Processing Factory
+This food brings many health benefits such as supporting 
+* thyroid function,
+* digestive function and 
+* reducing the risk of cancer, 
+* diabetes, 
+* cardiovascular disease, etc. 
+
+In addition, seaweed has the ability to speed up wound recovery. Effective brand and a reasonable choice for the menu of people after surgery. 
+Postpartum women often eat seaweed to restore health.
+Currently, more than 90% of seaweed consumed in Korea comes from seaweed farms. Because natural production is decreasing, seaweed farms
+have provided large quantities to serve consumer demand.
+
+
+# [container guide](https://documentation.suse.com/container/all/html/Container-guide/index.html)
+
+1. sudo systemctl start containerbuild-regionsrv
+2. sudo systemctl enable containerbuild-regionsrv
+3. podman build --network host build-directory/
+
+FROM registry.suse.com/suse/sle15 
+    RUN zypper ref && zypper --non-interactive in example 
+    ENV BACKUP=/backup 
+    RUN mkdir -p $BACKUP 
+    COPY configuration_example /etc/example/ 
+    ENTRYPOINT ["/etc/bin/example"] 
+
+[openBSD vs FreeBSD malloc for securiy](https://conclusive.tech/glossary/freebsd-vs-openbsd-which-is-right-for-you/)
+
+<img src="https://documentation.suse.com/container/all/html/Container-guide/images/container-workflow.png">
+
+<img src="https://documentation.suse.com/container/all/html/Container-guide/images/pods_architecture.png">
+
+[Incus](https://blog.hetherington.uk/2025/02/running-unifi-network-application-in-an-incus-container/)
+
+
+# Grub 
+
+```
+# If you change this file, run 'update-grub' afterwards to update
+# /boot/grub/grub.cfg.
+# For full documentation of the options in this file, see:
+#   info -f grub -n 'Simple configuration'
+
+GRUB_DEFAULT=0
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+
+# ============================================================
+# HFT LOW-LATENCY CONFIGURATION FOR DELL LAPTOP
+# ============================================================
+# Isolates cores 1,2,3 for HFT application, keeps core 0 for system
+# IMPORTANT: For 4-core isolation, we use 1-3 (cores 1,2,3) 
+#            leaving core 0 for OS/housekeeping
+# ============================================================
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash \
+    isolcpus=1-3 \
+    nohz_full=1-3 \
+    rcu_nocbs=1-3 \
+    irqaffinity=0 \
+    processor.max_cstate=1 \
+    intel_idle.max_cstate=0 \
+    idle=poll \
+    skew_tick=1 \
+    tsc=reliable \
+    nmi_watchdog=0 \
+    audit=0 \
+    acpi=noirq \
+    pcie_aspm=off"
+
+# Uncomment to enable BadRAM filtering, modify to suit your needs
+# This works with Linux (no patch required) and with any kernel that obtains
+# the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+#GRUB_BADRAM="0x01234567,0xfefefefe,0x89abcdef,0xefefefef"
+
+# Uncomment to disable graphical terminal (grub-pc only)
+#GRUB_TERMINAL=console
+
+# The resolution used on graphical terminal
+# note that you can use only modes which your graphic card supports via VBE
+# you can see them in real GRUB with the command `vbeinfo'
+#GRUB_GFXMODE=640x480
+
+# Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
+#GRUB_DISABLE_LINUX_UUID=true
+
+# Uncomment to disable generation of recovery mode menu entries
+#GRUB_DISABLE_RECOVERY="true"
+
+# Uncomment to get a beep at grub start
+#GRUB_INIT_TUNE="480 440 1"
+```
+
+```
+# If you change this file, run 'update-grub' afterwards to update
+# /boot/grub/grub.cfg.
+# For full documentation of the options in this file, see:
+#   info -f grub -n 'Simple configuration'
+
+GRUB_DEFAULT=0
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+
+# ============================================================
+# HFT LOW-LATENCY CONFIGURATION FOR DELL INSPIRON 13 5000
+# Dedicated cores: 2 and 3 (physical cores 3-4)
+# Housekeeping cores: 0 and 1
+# Wireless (iwlwifi) IRQ 130 pinned to core 0 via irqaffinity
+# ============================================================
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash \
+    isolcpus=2,3 \
+    nohz_full=2,3 \
+    rcu_nocbs=2,3 \
+    irqaffinity=0,1 \
+    processor.max_cstate=1 \
+    intel_idle.max_cstate=0 \
+    idle=poll \
+    skew_tick=1 \
+    tsc=reliable \
+    nmi_watchdog=0 \
+    audit=0 \
+    acpi=noirq \
+    pcie_aspm=off \
+    pci=noaer \
+    pci=realloc=off"
+
+# Uncomment to enable BadRAM filtering, modify to suit your needs
+# This works with Linux (no patch required) and with any kernel that obtains
+# the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+#GRUB_BADRAM="0x01234567,0xfefefefe,0x89abcdef,0xefefefef"
+
+# Uncomment to disable graphical terminal (grub-pc only)
+#GRUB_TERMINAL=console
+
+# The resolution used on graphical terminal
+# note that you can use only modes which your graphic card supports via VBE
+# you can see them in real GRUB with the command `vbeinfo'
+#GRUB_GFXMODE=640x480
+
+# Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
+#GRUB_DISABLE_LINUX_UUID=true
+
+# Uncomment to disable generation of recovery mode menu entries
+#GRUB_DISABLE_RECOVERY="true"
+
+# Uncomment to get a beep at grub start
+#GRUB_INIT_TUNE="480 440 1"
+```
+```
+sudo nano /etc/systemd/system/irq-affinity.service
+
+[Unit]
+Description=Set IRQ affinity for HFT wireless card
+After=network.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c 'echo 1 > /proc/irq/130/smp_affinity'
+ExecStart=/bin/sh -c 'echo 1 > /proc/irq/130/smp_affinity_list'
+ExecStart=/bin/sh -c 'echo 1 > /sys/class/net/wlp1s0/device/msi_irqs/130/affinity' 2>/dev/null || true
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+# False sharing
+Understanding the Technique: C++17's Interference Constants
+False-sharing occurs when two threads modify different variables that happen to reside on the same CPU cache line. 
+This forces the CPUs' caches to constantly invalidate and re-synchronize the entire line, causing severe performance penalties . 
+To prevent this, you need to ensure data accessed by different threads is on separate cache lines.
+
+```
+#include <new> // for the interference size constants
+#include <atomic>
+#include <thread>
+
+// Structure for two threads to operate on safely
+struct HFTCounters {
+    // This alignment ensures 'counter_a' starts on its own cache line
+    alignas(std::hardware_destructive_interference_size) std::atomic<int> counter_a{0};
+    
+    // A full cache line of padding is implicitly added here by the alignment specifier
+    
+    // This alignment ensures 'counter_b' starts on its own cache line
+    alignas(std::hardware_destructive_interference_size) std::atomic<int> counter_b{0};
+};
+
+HFTCounters counters;
+
+void thread1_work() {
+    for (int i = 0; i < 10'000'000; ++i) {
+        counters.counter_a.fetch_add(1, std::memory_order_relaxed);
+    }
+}
+
+void thread2_work() {
+    for (int i = 0; i < 10'000'000; ++i) {
+        counters.counter_b.fetch_add(1, std::memory_order_relaxed);
+    }
+}
+
+
+
+struct Metrics {
+    alignas(64) std::atomic<int> orders; // Starts on its own cache line
+    alignas(64) std::atomic<int> trades; // Starts on a new cache line
+};
+
+
+
+class HFTEngine {
+    static constexpr int MAX_CORES = 16;
+    
+    // Per-core state: MESI-friendly
+    struct CoreState {
+        alignas(CACHE_LINE_SIZE) 
+        uint64_t orders_processed = 0;
+        alignas(CACHE_LINE_SIZE)
+        uint64_t last_timestamp = 0;
+    } core_state[MAX_CORES];
+    
+    // Shared, read-only data: MESI S state
+    alignas(CACHE_LINE_SIZE)
+    struct MarketData {
+        uint64_t best_bid;
+        uint64_t best_ask;
+        uint64_t timestamp;
+    } market_data;
+    
+public:
+    void process_on_core(int core_id, const MarketUpdate& update) {
+        // This thread exclusively owns this cache line
+        // Transitions: I→M (no invalidation traffic)
+        core_state[core_id].orders_processed++;
+        core_state[core_id].last_timestamp = update.timestamp;
+    }
+    
+    void update_market_data(const MarketData& data) {
+        // Write to shared data:
+        // MESI: S→M (must invalidate all cores)
+        // → Causes bus traffic, careful with frequency!
+        market_data.best_bid = data.best_bid;
+        market_data.best_ask = data.best_ask;
+    }
+};
+
+
+graph TB
+    subgraph "MEMORY HIERARCHY"
+        DRAM[("MAIN MEMORY (DRAM)
+        'The Source of Truth'")]
+        
+        subgraph "L3 CACHE (Shared)"
+            L3_0[L3 Cache 0]
+            L3_1[L3 Cache 1]
+            L3_2[L3 Cache 2]
+            L3_3[L3 Cache 3]
+        end
+        
+        subgraph "CORE 0"
+            L1_0[L1/L2 Cache<br/>Private]
+            CPU0[Core 0]
+        end
+        
+        subgraph "CORE 1"
+            L1_1[L1/L2 Cache<br/>Private]
+            CPU1[Core 1]
+        end
+        
+        subgraph "CORE 2"
+            L1_2[L1/L2 Cache<br/>Private]
+            CPU2[Core 2]
+        end
+        
+        subgraph "CORE 3"
+            L1_3[L1/L2 Cache<br/>Private]
+            CPU3[Core 3]
+        end
+    end
+    
+    DRAM --- L3_0
+    DRAM --- L3_1
+    DRAM --- L3_2
+    DRAM --- L3_3
+    
+    L3_0 --- L1_0
+    L3_1 --- L1_1
+    L3_2 --- L1_2
+    L3_3 --- L1_3
+    
+    L1_0 --- CPU0
+    L1_1 --- CPU1
+    L1_2 --- CPU2
+    L1_3 --- CPU3
+    
+    subgraph "Snoop Bus / Interconnect"
+        BUS[Snoop Bus<br/>Cache Coherency Traffic]
+    end
+    
+    L1_0 --- BUS
+    L1_1 --- BUS
+    L1_2 --- BUS
+    L1_3 --- BUS
+    L3_0 --- BUS
+    L3_1 --- BUS
+    L3_2 --- BUS
+    L3_3 --- BUS
+
+
+
+
+
+flowchart TD
+    subgraph "Memory Access Request"
+        REQ[CPU Request]
+        REQ --> READ{Read or Write?}
+        READ -->|Read| READ_FLOW
+        READ -->|Write| WRITE_FLOW
+    end
+    
+    subgraph "Read Flow"
+        READ_FLOW[Read Request]
+        READ_FLOW --> CHECK{Check Core's Cache}
+        CHECK -->|HIT| READ_HIT[Return from Cache]
+        CHECK -->|MISS| READ_BUS[Broadcast on Snoop Bus]
+        READ_BUS --> OTHER{Other Core Has Line?}
+        OTHER -->|No| READ_MEM[Load from DRAM/L3<br/>State: E]
+        OTHER -->|Yes in S| READ_SHARED[Load from remote cache<br/>State: S]
+        OTHER -->|Yes in M| READ_MODIFIED[Remote writes back to DRAM<br/>M→S, read core gets S]
+    end
+    
+    subgraph "Write Flow"
+        WRITE_FLOW[Write Request]
+        WRITE_FLOW --> CHECK_W{Check Core's Cache}
+        CHECK_W -->|HIT E or M| WRITE_LOCAL[Local Write<br/>E→M or M→M<br/>No bus traffic!]
+        CHECK_W -->|HIT S| WRITE_SHARED[Broadcast Invalidate<br/>S→M<br/>All other caches: S→I]
+        CHECK_W -->|MISS I| WRITE_MISS[Broadcast RFO<br/>I→M<br/>Invalidate all copies]
+    end
+    
+    READ_HIT --> DONE[Done]
+    READ_MEM --> DONE
+    READ_SHARED --> DONE
+    READ_MODIFIED --> DONE
+    WRITE_LOCAL --> DONE
+    WRITE_SHARED --> DONE
+    WRITE_MISS --> DONE
+
+
+class NoAllocTradingEngine {
+    // 1. Pre-allocate ALL memory upfront
+    alignas(CACHE_LINE_SIZE) 
+    struct PerCoreMemory {
+        Order orders[100000];      // Pre-allocated per core
+        Execution execs[50000];    // Pre-allocated per core
+        size_t order_idx{0};
+        size_t exec_idx{0};
+    } core_memory[MAX_CORES];
+    
+public:
+    // 2. Zero-allocation allocation (just bump pointer)
+    Order* allocate_order(int core_id) {
+        PerCoreMemory& mem = core_memory[core_id];
+        if (mem.order_idx >= 100000) {
+            return nullptr;  // Handle overflow
+        }
+        Order* order = &mem.orders[mem.order_idx++];
+        
+        // 3. Initialize order (trivial)
+        order->clear();
+        return order;
+    }
+    
+    // 4. Reset after each batch/tick
+    void reset_core(int core_id) {
+        core_memory[core_id].order_idx = 0;
+        core_memory[core_id].exec_idx = 0;
+    }
+};
+
+```
+
+# coherency cache
+
+The MESI Protocol: The Industry Standard
+MESI (Modified, Exclusive, Shared, Invalid) is the most widely used cache coherence protocol, introduced by Intel in the Pentium processor . 
+It assigns one of four states to every cache lin
+
+
+# [Qemu on esp32](https://github.com/AryanBhirud/ESP32_on_QEMU)
+
+[Mock](https://www.throwtheswitch.org/cmock)
+
+[freeRTOS emulation](https://www.freertos.org/Documentation/02-Kernel/03-Supported-devices/04-Demos/03-Emulation-and-simulation/Linux/FreeRTOS-simulator-for-Linux)
+
+https://github.com/esp-rs/esp-wifi.git .
+# Or if you need a specific branch:
+git clone -b your-branch https://github.com/esp-rs/esp-wifi.git .
+
+```
+```
+git clone https://github.com/espressif/qemu
+brew install libgcrypt
+./configure --target-list=xtensa-softmmu \
+--enable-gcrypt --enable-debug \
+--enable-sanitizers \
+--disable-strip --disable-user \
+--disable-capstone --disable-vnc \
+--disable-sdl --disable-gtk
+ninja -C build
+```
+```
+qemu-system-xtensa -nographic -machine esp32 \
+-nic user,model=open_eth,
+id=lo0,hostfwd=tcp::8000-:80 \
+-drive file=merged_qemu.bin,
+if=mtd,format=raw
+```
+
+```
+docker build -t esp\_qemu .
+
+
+docker run -it --name esp --rm -p 8000:8000 \
+-v $(pwd)/build:/app \
+esp-qemu:latest qemu-system-xtensa \
+-nographic -machine esp32 \
+-nic user,model=open\_eth,
+id=lo0,hostfwd=tcp::8000-:80 \
+-drive file=merged\_qemu.bin,
+if=mtd,format=raw
+```
+
+[esp32 on qemu](https://techknowhow.club/index.php/2025/08/20/esp32-on-qemu/)
+
+GrapheneOS creates fresh processes (via exec) when spawning applications instead of using the traditional Zygote spawning model. 
+
+
+#  C anc CPP ABI
+- gcc test_c.c -c
+- g++ test_cpp_c.cpp -S
+- g++ test_cpp_c.cpp test_c.o
+
+* [c++ plus rust](https://www.encodian.com/blog/create-and-insert-a-document-approval-sheet-using-powerautomate-approval-data/)
+
+* [embedded template c++ Library](https://www.etlcpp.com/releases.html)
+
+* [SAP Ui5 architecture](https://www.tutorialspoint.com/sap_ui5/sap_ui5_architecture.htm)
+* [SAp U5 hana](https://sapui5.hana.ondemand.com/sdk/#/topic/28b59ca857044a7890a22aec8cf1fee9)
+* [sap ui5 example](https://openui5.org/)
+* [sap flori tutorial](https://ui5.sap.com//#/topic/3da5f4be63264db99f2e5b04c5e853db)
+* [Flori web design](https://experience.sap.com/fiori-design-web/action-placement/)
+* [shell flori tool bar](https://experience.sap.com/fiori-design-web/flexible-column-layout/)
+* [sap grid view html](https://experience.sap.com/fiori-design-web/flexible-grid/)
+* [Dioxus](https://codesandbox.io/p/github/mattdanielbrown/Dioxus-Example-Projects/master?file=%2Fecommerce-site%2Fsrc%2Fmain.rs%3A19%2C26)
+* [Bookmark](https://www.croftsoft.com/library/tutorials/rust-dioxus-project-setup/) 
+* [docsite dioxus tailwind components](https://github.com/42Angouleme/dioxus-tw-components)
+
+[Coral](https://www.kkp.go.id/storage/Berita/kkp-berhasil-tambah-lagi-2-kawasan-konservasi-laut-PjYn.jpg)rus
+
+rust containers:
+struct  option 
+struct  Result 
+
+## json vs jsonl
+
+##  Safe C++
+
+1. A new "safe" context where only a rigorously safe
+	   subset of C++ is allowed
+2. Borrow checking to prevent use-after-free bugs
+3. Initialization analysis for type safety
+4. Pattern matching, choice types, and borrowing
+5. Thread-safety features similar to Rust's
+		send and sync type traits
+6. Explicit mutation for references
+7. A model for object relocation
+
+
+Market trends
+---
+The dried air bladders called fish maws are exported mainly to
+*  China and Singapore for the manufacture of isinglass, which is used in beverage and cosmetic
+industry as well as Chinese traditional medicines (Dutta et al., 2014). The lesser and medium sciaenids are mostly
+sold in fresh condition at the local markets or iced and transported to distant interior markets of Odisha, West
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+
+
+
+Comparison: Soil pH vs. Water pH & Soil Salinity vs. Brackish Salinity in Mangroves (Indonesia, Lingga Region)
+1. Soil pH vs. Water pH in Mangroves
+Parameter	Soil pH	Water pH
+Typical Range	6.0–8.5 (slightly acidic to alkaline)	6.5–8.5 (varies with tides)
+Influencing Factors	- Organic matter decomposition (acidic) <br> - Sulfide oxidation (acidic) <br> - Tidal flushing (neutralizing) <br> - Mangrove root exudates	- Tidal influence (seawater pH ~8.1) <br> - Freshwater input (lower pH) <br> - Organic acids from leaf litter
+Measurement Method	- 1:1 soil-water slurry (standard) <br> - 1:2.5 or saturated paste (more precise)	- Direct pH electrode in water sample
+Expected in Lingga	6.5–7.8 (moderately acidic to neutral due to peat and tidal influence)	7.2–8.2 (brackish influence from Malacca Strait)
+2. Soil Salinity vs. Brackish Water Salinity in Mangroves
+Parameter	Soil Salinity	Brackish Water Salinity
+Typical Range	5–30 ppt (hypersaline in dry zones)	5–25 ppt (varies with tides)
+Influencing Factors	- Tidal inundation (salt deposition) <br> - Evaporation (increases salinity) <br> - Freshwater seepage (dilutes salt) <br> - Mangrove salt exclusion (roots filter salt)	- Tidal mixing (seawater ~35 ppt + river input) <br> - Rainfall dilution (monsoon effect) <br> - Distance from sea (higher upstream)
+Measurement Method	- EC meter (1:5 soil-water extract) <br> - Saturated paste extract (more accurate)	- Salinity refractometer/EC meter <br> - Lab analysis (chlorinity)
+Expected in Lingga	10–25 ppt (moderate-high due to tidal influence)	15–25 ppt (brackish, influenced by Malacca Strait & rivers)
+Key Findings for Lingga Mangroves (Indonesia)
+pH Dynamics:
+
+Soil pH is slightly acidic to neutral (6.5–7.8) due to organic matter and tidal buffering.
+Water pH is more stable (7.2–8.2) due to seawater influence.
+Salinity Variations:
+
+Soil salinity (10–25 ppt) is influenced by tidal cycles and evaporation.
+Brackish water (15–25 ppt) reflects a mix of seawater and river inputs.
+Ecological Implications:
+
+Mangrove species (e.g., Rhizophora, Avicennia) adapt to moderate salinity & pH fluctuations.
+High salinity (>25 ppt) may reduce biodiversity, favoring salt-tolerant species.
+Recommendations for Study in Lingga
+Field Measurements:
+Use pH/EC meters for soil & water samples.
+Compare dry vs. wet season salinity changes.
+Lab Analysis:
+Test soil texture (clay/sand affects salt retention).
+Analyze porewater salinity for finer gradients.
+Would you like specific methods for sampling or data analysis in this region?
+
+
+yes
+
+Great! Below is a detailed methodology for sampling and analyzing soil pH, water pH, and salinity in the mangrove ecosystems of Lingga, Indonesia, including field and lab techniques.
+
+1. Field Sampling Protocol
+A. Soil Sampling (for pH & Salinity)
+Sampling Design:
+Use stratified random sampling across different zones (seaward, mid, landward).
+Collect 3–5 replicates per zone for statistical reliability.
+Depth of Sampling:
+Surface (0–10 cm) – Most affected by tides & root activity.
+Subsurface (10–30 cm) – For salt accumulation trends.
+Tools Required:
+Stainless steel auger or soil corer.
+Clean plastic bags (avoid metal/contamination).
+GPS for location marking.
+B. Water Sampling (for pH & Salinity)
+Sampling Points:
+Tidal creeks (high/low tide).
+Porewater (from soil pits).
+Adjacent river/sea (reference).
+Collection Method:
+Use sterile bottles (rinsed 3x with sample water).
+Avoid air bubbles (affects pH).
+Measure in-situ (pH, EC, temp) with portable meters.
+2. Laboratory Analysis
+A. Soil pH Measurement
+1:1 Soil-Water Slurry Method (Standard for Mangroves):
+Mix 10g dry soil + 10mL distilled water, stir, wait 30 mins.
+Measure with calibrated pH meter (buffer at 4.01, 7.01, 10.01).
+Saturated Paste Method (More Precise):
+Add water until soil glistens, wait 1 hour, extract liquid for pH.
+B. Soil Salinity (EC – Electrical Conductivity)
+1:5 Soil-Water Extract:
+Mix 20g soil + 100mL distilled water, shake 1 hour, filter.
+Measure EC (µS/cm) and convert to ppt (≈ EC × 0.64).
+Saturated Paste Extract (SPE):
+More accurate for saline soils (measures "real" porewater salinity).
+C. Water pH & Salinity
+pH: Use fresh samples (avoid CO₂ absorption).
+Salinity:
+Refractometer (direct reading in ppt).
+EC Meter (convert using EC × 0.47 ≈ ppt for brackish water).
+3. Data Analysis & Interpretation
+A. Statistical Tools
+Descriptive Stats: Mean ± SD for pH/salinity per zone.
+ANOVA/T-test: Compare zones/seasons.
+Correlation: pH vs. salinity, soil vs. water.
+B. Mapping & Trends
+GIS/Interpolation: Plot spatial salinity gradients.
+Seasonal Variation: Compare monsoon vs. dry season.
+4. Expected Challenges & Solutions
+Challenge	Solution
+Tidal access limitations	Sample at low tide.
+Electrode drift in saline water	Frequent calibration with KCl buffers.
+Organic matter interference	Use SPE method for salinity.
+5. Equipment Checklist
+✅ Field: pH/EC meter, refractometer, GPS, auger, sample bottles.
+✅ Lab: Analytical balance, shaker, filter papers, calibration buffers.
+
+Next Steps for Your Study
+Pilot Sampling: Test methods in 1–2 sites before full survey.
+Local Collaboration: Engage with Universitas Riau or LIPI for lab access.
+Climate Data: Obtain rainfall/tide charts for Lingga.
+Would you like a sample data sheet template or references for mangrove soil studies in SE Asia?
+
+# use nc (netcat) instead of telnet for debugging
+
+nc -zv localhost 5432
+
+
+
+[DBOS vs. Other Systems](https://github.com/dbos-inc/dbos-transact-golang/tree/main)
+---
+DBOS vs. Temporal
+Both DBOS and Temporal provide durable execution, but DBOS is implemented in a lightweight Postgres-backed library whereas Temporal 
+is implemented in an externally orchestrated server.
+
+You can add DBOS to your program by installing this open-source library, connecting it to Postgres, and annotating workflows and steps. 
+By contrast, to add Temporal to your program, you must rearchitect your program to move your workflows and steps (activities) to a Temporal worker, 
+configure a Temporal server to orchestrate those workflows, and access your workflows only through a Temporal client. This blog post makes the comparison in more detail.
+
+When to use DBOS: You need to add durable workflows to your applications with minimal rearchitecting, or you are using Postgres.
+
+When to use Temporal: You don't want to add Postgres to your stack, or you need a language DBOS doesn't support yet.
+
+DBOS vs. Airflow
+DBOS and Airflow both provide workflow abstractions. Airflow is targeted at data science use cases, providing many out-of-the-box connectors 
+but requiring workflows be written as explicit DAGs and externally orchestrating them from an Airflow cluster. Airflow is designed for batch operations 
+and does not provide good performance for streaming or real-time use cases. DBOS is general-purpose, but is often used for data pipelines, 
+allowing developers to write workflows as code and requiring no infrastructure except Postgres.
+
+When to use DBOS: You need the flexibility of writing workflows as code, or you need higher performance than Airflow is capable of (particularly 
+for streaming or real-time use cases).
+
+When to use Airflow: You need Airflow's ecosystem of connectors.
+
+DBOS vs. Celery/BullMQ
+DBOS provides a similar queue abstraction to dedicated queueing systems like Celery or BullMQ: you can declare queues, submit tasks to them, 
+and control their flow with concurrency limits, rate limits, timeouts, prioritization, etc. However, DBOS queues are durable and Postgres-backed 
+and integrate with durable workflows. For example, in DBOS you can write a durable workflow that enqueues a thousand tasks and waits for their results.
+ DBOS checkpoints the workflow and each of its tasks in Postgres, guaranteeing that even if failures or interruptions occur, 
+ the tasks will complete and the workflow will collect their results. By contrast, Celery/BullMQ are Redis-backed and don't provide workflows, 
+ so they provide fewer guarantees but better performance.
+
+When to use DBOS: You need the reliability of enqueueing tasks from durable workflows.
+
+When to use Celery/BullMQ: You don't need durability, or you need very high throughput beyond what your Postgres server can support.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+</md-block>
+
+</div>
+  <script type="module">
+      import markdownToHtml from 'https://cdn.jsdelivr.net/npm/markdown-to-html@0.0.13/+esm';
+    </script>
+    <script type="module">
+     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+      mermaid.registerIconPacks([
+        { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
+        { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
+      ]);
+      mermaid.initialize({
+        startOnLoad: true,
+        maxTextSize: 100000000, // 将这个值调大，例如 90000
+        });
+</script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+<!-- Footer container, https://tailwindcss.com/docs/theme -->
+<!-- https://tw-elements.com/docs/standard/navigation/footer/ -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<footer
+  class="bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left">
+  <div
+    class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-white/10 lg:justify-between">
+    <div class="me-12 hidden lg:block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Social network icons container -->
+    <div class="flex justify-center">
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 320 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4 ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 512 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 488 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+        </svg>
+      </a>
+      <a href="#!" class="me-6 [&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+        </svg>
+      </a>
+      <a href="#!" class="[&>svg]:h-4 [&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 496 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+          <path
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
+  <div class="mx-6 py-10 text-center md:text-left">
+    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <!-- TW Elements section -->
+      <div class="">
+        <h6
+          class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+          <span class="me-3 [&>svg]:h-4 [&>svg]:w-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+            </svg>
+          </span>
+          TW Elements
+        </h6>
+        <p>
+          Here you can use rows and columns to organize your footer
+          content. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.
+        </p>
+      </div>
+      <!-- Products section -->
+      <div>
+        <h6
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Products
+        </h6>
+        <p class="mb-4">
+          <a href="#!">Angular</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">React</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Vue</a>
+        </p>
+        <p>
+          <a href="#!">Laravel</a>
+        </p>
+      </div>
+      <!-- Useful links section -->
+      <div>
+        <h6
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Useful links
+        </h6>
+        <p class="mb-4">
+          <a href="#!">Pricing</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Settings</a>
+        </p>
+        <p class="mb-4">
+          <a href="#!">Orders</a>
+        </p>
+        <p>
+          <a href="#!">Help</a>
+        </p>
+      </div>
+      <!-- Contact section -->
+      <div>
+        <h6
+          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Contact
+        </h6>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+              <path
+                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+            </svg>
+          </span>
+          New York, NY 10012, US
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+              <path
+                d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+            </svg>
+          </span>
+          info@example.com
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+          + 65 9069 8888
+        </p>
+        <p class="flex items-center justify-center md:justify-start">
+          <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+          + 65 9069 9999
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Copyright section-->
+  <div class="bg-black/5 p-6 text-center">
+    <span>© 2025 Copyright:</span>
+    <a class="font-semibold" href="https://tw-elements.com/"
+      >TW Elements</a
+    >
+  </div>
+</footer>
+
+  </body>
+</html>
