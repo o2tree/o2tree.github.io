@@ -1576,7 +1576,10 @@ Would you like a sample data sheet template or references for mangrove soil stud
         { name: 'logos', loader: () => fetch('https://unpkg.com/@iconify-json/logos@1/icons.json').then((res) => res.json()) },
         { name: 'hugeicons', loader: () => fetch('https://unpkg.com/@iconify-json/hugeicons@1/icons.json').then((res) => res.json()) }
       ]);
-     mermaid.initialize({ startOnLoad: true });
+      mermaid.initialize({
+        startOnLoad: true,
+        maxTextSize: 90000, // 将这个值调大，例如 90000
+        });
 </script>
 <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 

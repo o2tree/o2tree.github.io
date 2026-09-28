@@ -123,6 +123,150 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+<md-block>
+
+The Hardware Bottleneck: Wi-Fi vs. Native XDP
+XDP Native mode requires a wired Ethernet NIC with a driver that explicitly implements the XDP hook (like i40e, ice, mlx5, ixgbe, or virtio_net).
+ Your Inspiron 13 5000 is a thin-and-light laptop that relies on Wi-Fi (such as Intel AX201 or Qualcomm QCA61x4A) for its primary network connection, 
+ as confirmed by Dell's specifications for the 5300 and 5370 models in this series.
+
+The Linux drivers for these Wi-Fi chipsets (iwlwifi, ath10k, etc.) do not contain the code to execute an XDP program at the driver's DMA ring. 
+Therefore, the kernel cannot attach an XDP program in Native mode; it will automatically fall back to Generic mode.
+
+
+
+
+
+# [SEQLock Properties](https://www.cppstories.com/)
+A SEQLock (Sequential Lock) is a specialized reader-writer synchronization primitive in the Linux kernel designed for scenarios where reads vastly outnumber writes, 
+and readers are willing to retry if they detect a concurrent modification. Its core property is providing lockless, wait-free reads while ensuring no writer starvation
+A SEQLock maintains an even/odd sequence counter (seqcount_t) that acts as a consistency flag:
+
+Writer's Exclusive Access: A writer acquires an internal spinlock to serialize against other writers, then increments the counter to make it odd before modifying data. After finishing, it increments again to make it even.
+
+Reader's Speculative Read: A reader reads the counter (must be even), copies the data, then re-reads the counter. If the value changed or is now odd, a writer intervened, so the reader discards its copy and retries the entire read.
+
+Key Properties
+Lockless & Wait-Free Readers: Readers never block, never acquire a lock, and never spin on a writer.
+
+Zero Writer Starvation: Writers never wait for readers; they only contend with other writers on the spinlock.
+
+Priority for Writers: This is the inverse of typical rwlock behavior, where readers can starve writers.
+
+No Locking Overhead: Readers incur only the cost of two counter reads and a data copy, making them extremely cheap.
+
+
+# Single Producer Multi Consumer Queue ("SPMC"), Multicast Queue
+
+1. Fastest, Simple
+2. share memory
+3. Ring Buffer
+
+# matching algoritm
+
+Matching Algorithm Types
+1. Price-Time Priority (FIFO)
+The most common algorithm. Orders at the same price are filled strictly by arrival time—the first order at a price level is the first matched.
+
+Key characteristics:
+* Price is the primary priority; time is the tiebreaker
+* Encourages traders to submit orders early
+* An order loses priority and is re-queued if quantity is increased, price is changed, or account number is changed
+Exchanges using FIFO:
+* NASDAQ (continuous trading),NYSE,SGX (primary algorithm), HKEX (continuous trading)
+
+2. Pro-Rata Allocation
+Orders at the same price are filled proportionally to their size. A larger order receives a proportionally larger share of the incoming aggressor's quantity.
+
+Key characteristics:
+* Encourages traders to place large limit orders
+* Provides a sense of fairness—everyone gets some fill
+* Can lead to "quote stuffing" and less time to cancel before execution
+
+Exchanges using Pro-Rata:
+* CME (for SOFR futures and certain products), SGX (only for EY products)
+
+3. Hybrid Algorithms
+Most large exchanges use configurable algorithms that combine FIFO, Pro-Rata, and market-maker preferences.
+
+CME Globex supports:
+* Allocation: Enhanced pro-rata with top-order priority and a minimum allocation of two lots; residual quantity allocated FIFO
+* FIFO: Pure price-time
+* FIFO with LMM: FIFO with Lead Market Maker priority
+* Threshold Pro-Rata: Pro-rata only above a certain size threshold
+* Configurable: Exchange-defined combination
+
+```
+enum class MatchAlgorithm {
+    FIFO,
+    PRO_RATA,
+    ALLOCATION,
+    THRESHOLD_PRO_RATA,
+    CONFIGURABLE
+};
+
+class MatchingEngine {
+    MatchAlgorithm algorithm_;
+    
+    void match(Order& aggressor) {
+        switch (algorithm_) {
+            case MatchAlgorithm::FIFO: match_fifo(aggressor); break;
+            case MatchAlgorithm::PRO_RATA: match_pro_rata(aggressor); break;
+            case MatchAlgorithm::ALLOCATION: match_allocation(aggressor); break;
+            // ...
+        }
+    }
+};
+```
+
+```
+
+Directory Layout
+text
+cpp_module_src/
+├── include/hft/matching/
+│   ├── concepts/
+│   │   └── match_strategy_concept.h      # C++20 concept definition
+│   ├── strategies/
+│   │   ├── fifo_strategy.h               # FIFO (Price-Time Priority)
+│   │   ├── pro_rata_strategy.h           # Pro-Rata allocation
+│   │   └── allocation_strategy.h         # CME-style hybrid
+│   ├── core/
+│   │   ├── match_result.h                # MatchResult, MatchResultSet
+│   │   ├── matching_stats.h              # MatchingStats (atomics)
+│   │   ├── order_queue.h                 # Lock-free SPSC queue
+│   │   └── matching_engine.h             # Template engine
+│   ├── bbo/
+│   │   ├── bbo_cache.h                   # Atomic BBO cache
+│   │   └── bbo_snapshot.h                # Seqlock-consistent snapshot
+│   └── matching.h                        # Umbrella header (includes all)
+│
+└── src/matching/
+    └── (empty — header-only)
+
+```
+
+# rtos
+
+```
+#include <fbsched.h>
+int fbsschedself(int schdle, char *name, struct fbs_sched_buf *sched_buf);
+
+
+#include <fbsched.h>
+
+/* Assume this process has already been scheduled via fbsschedself() */
+while (fbswait() == 0) {
+    /* Perform deterministic, cyclic work here */
+    read_sensors();
+    compute_control_output();
+    write_actuators();
+    /* Loop returns to fbswait() to wait for the next minor cycle */
+}
+
+```
+
+</md-block>
 
 <div class="mermaid">
 %% systemverilog
@@ -148,6 +292,7 @@ graph TB
 
 
 </div>
+
 <div class="mermaid">
 
 graph LR
@@ -472,8 +617,6 @@ flowchart LR
 
     AXIBridge ---|UCIe Interconnect| AXIBridge2
 
-
-
 </div>
 
 <div class="mermaid">
@@ -481,9 +624,9 @@ graph TB
     subgraph "HIL Verification Platform"
         
         subgraph "Host System"
-            H1[MATLAB/Simulink<br/>Test Case Generation]
-            H2[Python Scripts<br/>Automation & Analysis]
-            H3[UVM Testbench<br/>Verification Environment]
+            H1["MATLAB/Simulink<br/>Test Case Generation"]
+            H2["Python Scripts<br/>Automation & Analysis"]
+            H3["UVM Testbench<br/>Verification Environment"]
         end
 
         subgraph "Real-Time Target Machine"
@@ -674,7 +817,7 @@ graph TB
     style IF fill:#e8f5e9
 
 </div>
-
+</md-block>
 
 
 <md-block>
