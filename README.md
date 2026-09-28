@@ -46,6 +46,7 @@
 
 - [Ansible and github workflow](https://github.com/artis3n/ansible-collection-tailscale/blob/main/pyproject.toml)
 - [github source code](https://github.com/o2tree/o2tree.github.io/tree/main)
+- [Qvisor](https://www.research-collection.ethz.ch/server/api/core/bitstreams/ec041c42-6e40-472b-bf17-b46d8dba31a4/content)
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=auto&_x_tr_tl=id&_x_tr_hl=en
 - https://o2tree-carrd-co.translate.goog/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=en
 - https://streamlit.io/generative-ai
@@ -77,3 +78,4 @@ A consolidated changelog (including changes from the other xx Tooling modules) i
 - [NH3 toxic level](https://aquariumscience.org/wp-content/uploads/2019/09/5.2.1-toxic-ammonia-levels-4.jpg)
 - [Pupuk Mahkota Ammonium sulfate (ZA), TSP, NPK](https://pupukmahkota.co.id/en/documents)|[petro kimia gersik](https://petrokimia-gresik.com/product-category/pupuk)
 - [fertelizer](https://www.fertilizer.org/wp-content/uploads/2023/01/2016_ifa_reetz.pdf)| [Nutrient mixing fertelizer](https://github.com/TUCACSD/NutrientMixingAlgorithm/tree/main)
+- [lighter butane refiller](https://img.lazcdn.com/g/p/f86863a939f2c40a064dd0958e0aaae9.jpg_2200x2200q80.jpg_.webp)
