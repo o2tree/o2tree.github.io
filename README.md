@@ -79,3 +79,7 @@ A consolidated changelog (including changes from the other xx Tooling modules) i
 - [Pupuk Mahkota Ammonium sulfate (ZA), TSP, NPK](https://pupukmahkota.co.id/en/documents)|[petro kimia gersik](https://petrokimia-gresik.com/product-category/pupuk)
 - [fertelizer](https://www.fertilizer.org/wp-content/uploads/2023/01/2016_ifa_reetz.pdf)| [Nutrient mixing fertelizer](https://github.com/TUCACSD/NutrientMixingAlgorithm/tree/main)
 - [lighter butane refiller](https://img.lazcdn.com/g/p/f86863a939f2c40a064dd0958e0aaae9.jpg_2200x2200q80.jpg_.webp)
+
+## Batam bus guide
+- [Telaga punggur - KPRI mall (change bus)- bus KOR 8 dan KOR 2](https://wikiroutes.info/maps/dir///@1.150115,104.016049,12z)
+- [Mega Mall batam  center - Batam Hang Nadim airport ( bus line 7 or KOR 7)](https://moovitapp.com/index/en/public_transit-line-kor_7-Batam-5423-1141210-136320274-0)
